@@ -6,6 +6,7 @@ RUN npm ci
 
 COPY src ./src
 COPY public ./public
+COPY index.html vite.config.js tailwind.config.js postcss.config.js ./
 RUN npm run build
 
 FROM node:20 AS backend-builder
