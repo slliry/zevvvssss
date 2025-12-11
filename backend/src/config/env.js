@@ -13,6 +13,11 @@ const env = {
   databasePath: path.resolve(rootDir, process.env.DATABASE_PATH || './data/app.db'),
   jwtSecret: process.env.JWT_SECRET || 'change-me',
   corsOrigin: process.env.CORS_ORIGIN || 'http://localhost:5173',
+  adminSeed: {
+    email: process.env.SEED_ADMIN_EMAIL,
+    password: process.env.SEED_ADMIN_PASSWORD,
+    name: process.env.SEED_ADMIN_NAME,
+  },
 };
 
 export default env;
