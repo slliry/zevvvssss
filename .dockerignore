@@ -1,0 +1,14 @@
+node_modules
+backend/node_modules
+backend/data
+.git
+.gitignore
+.env
+backend/.env
+dist
+*.log
+Dockerfile
+README.md~
+*.sqlite
+*.db
+.DS_Store
