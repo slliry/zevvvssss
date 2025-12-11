@@ -2,7 +2,6 @@ import fs from 'node:fs';
 import path from 'node:path';
 import Database from 'better-sqlite3';
 import env from '../config/env.js';
-import { findAdminByEmail, createAdmin } from '../services/adminService.js';
 import { hashPassword, isPasswordHashed } from '../utils/password.js';
 
 const dbDir = path.dirname(env.databasePath);
@@ -40,9 +39,14 @@ db.exec(`
 const seed = env.adminSeed;
 if (seed?.email && seed?.password) {
   const fallbackName = seed.name?.trim() || 'Demo Admin';
-  if (!findAdminByEmail(seed.email)) {
+  const existing = db.prepare('SELECT id FROM admins WHERE email = ?').get(seed.email);
+  if (!existing) {
     const passwordHash = isPasswordHashed(seed.password) ? seed.password : hashPassword(seed.password);
-    createAdmin({ email: seed.email, passwordHash, name: fallbackName });
+    const stmt = db.prepare(
+      'INSERT INTO admins (email, password_hash, name, created_at) VALUES (?, ?, ?, ?)'
+    );
+    const now = new Date().toISOString();
+    stmt.run(seed.email, passwordHash, fallbackName, now);
     console.log(`[db] Auto-created admin ${seed.email}`);
   }
 }
