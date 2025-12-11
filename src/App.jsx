@@ -6,6 +6,7 @@ import Hero from './components/Hero.jsx';
 import Modules from './components/Modules.jsx';
 import Tasks from './components/Tasks.jsx';
 import Benefits from './components/Benefits.jsx';
+import Metrics from './components/Metrics.jsx';
 import Testimonials from './components/Testimonials.jsx';
 import Integrations from './components/Integrations.jsx';
 import CTA from './components/CTA.jsx';
@@ -57,6 +58,8 @@ function LandingPage() {
       <Tasks />
       <SectionDivider />
       <Benefits />
+      <SectionDivider />
+      <Metrics />
       <SectionDivider />
       <Testimonials />
       <SectionDivider />

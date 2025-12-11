@@ -172,7 +172,7 @@ export default function AdminDashboard() {
                 name="status"
                 value={filters.status}
                 onChange={handleFilterChange}
-                className="bg-transparent text-sm text-white focus:outline-none"
+                className="admin-select bg-transparent text-sm text-white focus:outline-none"
               >
                 <option value="">Все статусы</option>
                 {REQUEST_STATUSES.map((status) => (
