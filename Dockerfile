@@ -33,6 +33,5 @@ COPY --from=backend-builder /app/backend ./
 USER app
 
 EXPOSE 4000
-VOLUME ["/data"]
 
 CMD ["node", "src/server.js"]
