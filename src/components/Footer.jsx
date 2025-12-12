@@ -26,8 +26,8 @@ export default function Footer() {
         <div className="mb-16 grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-5">
           <div className="lg:col-span-2">
             <div className="mb-6 flex items-center gap-2">
-              <img src="/logozeus.svg" alt="Zeus GRC" className="h-10 w-auto" />
-              <span className="text-2xl tracking-tight">Zeus GRC</span>
+              <img src="/ZEUS_NEW_LOGO_WHITE.svg" alt="Zeus GRC" className="h-10 w-auto" />
+
             </div>
             <p className="mb-6 text-gray-400 leading-relaxed">
               Комплексная платформа для управления рисками, комплаенсом и непрерывностью бизнеса.

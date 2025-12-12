@@ -58,9 +58,8 @@ export default function Testimonials() {
         <div className="relative mx-auto max-w-4xl">
           <div
             key={`${currentIndex}-${direction}`}
-            className={`rounded-3xl bg-gradient-to-br from-[#0066FF] to-[#00D4FF] p-12 text-white shadow-[0_20px_60px_rgba(0,102,255,0.25)] ${
-              direction === 'next' ? 'testimonial-slide-next' : 'testimonial-slide-prev'
-            }`}
+            className={`rounded-3xl bg-gradient-to-br from-[#004aad] to-[#0066cc] p-12 text-white shadow-[0_20px_60px_rgba(0,74,173,0.25)] ${direction === 'next' ? 'testimonial-slide-next' : 'testimonial-slide-prev'
+              }`}
           >
             <div className="mb-6 flex gap-1">
               {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
@@ -93,11 +92,10 @@ export default function Testimonials() {
                     setDirection(index > currentIndex ? 'next' : 'prev');
                     setCurrentIndex(index);
                   }}
-                  className={`h-2 rounded-full transition-all duration-500 ease-out ${
-                    index === currentIndex
-                      ? 'w-12 bg-[#0066FF]'
+                  className={`h-2 rounded-full transition-all duration-500 ease-out ${index === currentIndex
+                      ? 'w-12 bg-[#004aad]'
                       : 'w-2 bg-gray-300/70 hover:bg-gray-400/90'
-                  }`}
+                    }`}
                 />
               ))}
             </div>

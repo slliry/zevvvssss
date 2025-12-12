@@ -67,7 +67,7 @@ export default function Tasks() {
               style={{ transitionDelay: `${index * 80}ms` }}
             >
               <div className="flex-shrink-0">
-                <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-[#0066FF] to-[#00D4FF] text-xl font-semibold text-white transition-transform group-hover:scale-110">
+                <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-[#004aad] to-[#0066cc] text-xl font-semibold text-white transition-transform group-hover:scale-110">
                   {task.number}
                 </div>
               </div>

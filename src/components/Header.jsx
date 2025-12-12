@@ -33,7 +33,7 @@ export default function Header() {
             <Link
               key={item}
               to={`/#${item.toLowerCase()}`}
-              className={`text-[#1A1A1A] font-normal transition-all duration-300 hover:text-[#0066FF] ${scrolled ? 'text-xs' : 'text-sm'}`}
+              className={`text-[#1A1A1A] font-normal transition-all duration-300 hover:text-[#004aad] ${scrolled ? 'text-xs' : 'text-sm'}`}
             >
               {item}
             </Link>
@@ -42,17 +42,29 @@ export default function Header() {
 
         <Link
           to="/request"
-          className={`hidden rounded-full bg-[#0066FF] font-normal text-white transition-all hover:bg-[#0052CC] hover:shadow-lg md:block ${scrolled ? 'px-4 py-1.5 text-xs' : 'px-5 py-2 text-sm'}`}
+          className={`hidden rounded-full bg-[#004aad] font-normal text-white transition-all hover:bg-[#003580] hover:shadow-lg md:block ${scrolled ? 'px-4 py-1.5 text-xs' : 'px-5 py-2 text-sm'}`}
         >
           Оставить заявку
         </Link>
 
         <button
-          className="p-2 md:hidden"
+          className="bg-transparent p-2 text-[#1A1A1A] transition-colors hover:text-[#004aad] md:hidden"
           onClick={() => setIsMenuOpen((prev) => !prev)}
           aria-label="Toggle navigation"
+          style={{ background: 'none', border: 'none' }}
         >
-          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          {isMenuOpen ? (
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          ) : (
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          )}
         </button>
       </div>
 
@@ -63,7 +75,7 @@ export default function Header() {
               <Link
                 key={item}
                 to={`/#${item.toLowerCase()}`}
-                className="py-2 text-[#1A1A1A] transition-colors hover:text-[#0066FF]"
+                className="py-2 text-[#1A1A1A] transition-colors hover:text-[#004aad]"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item}
@@ -71,7 +83,7 @@ export default function Header() {
             ))}
             <Link
               to="/request"
-              className="mt-2 rounded-full bg-[#0066FF] px-6 py-3 text-center text-white transition-all hover:bg-[#0052CC] hover:shadow-lg"
+              className="mt-2 rounded-full bg-[#004aad] px-6 py-3 text-center text-white transition-all hover:bg-[#003580] hover:shadow-lg"
               onClick={() => setIsMenuOpen(false)}
             >
               Оставить заявку

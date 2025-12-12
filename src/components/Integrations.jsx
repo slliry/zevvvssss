@@ -166,7 +166,7 @@ export default function Integrations() {
           <p className="mb-4 text-gray-600">Не нашли нужную интеграцию?</p>
           <Link
             to="/request"
-            className="inline-block rounded-3xl border-2 border-[#0066FF] bg-white px-8 py-3 text-[#0066FF] transition-all hover:bg-[#0066FF] hover:text-white hover:shadow-lg"
+            className="inline-block rounded-3xl border-2 border-[#004aad] bg-white px-8 py-3 text-[#004aad] transition-all hover:bg-[#004aad] hover:text-white hover:shadow-lg"
           >
             Обсудить кастомную интеграцию
           </Link>

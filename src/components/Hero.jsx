@@ -16,12 +16,12 @@ export default function Hero() {
 
       <div className="relative mx-auto max-w-[1440px] px-6 lg:px-12 w-full">
         <div className="max-w-4xl">
-          <p className="mb-4 inline-flex items-center rounded-full border border-[#0066FF]/20 px-4 py-1 text-sm font-semibold uppercase tracking-widest text-[#0066FF]">
+          <p className="mb-4 inline-flex items-center rounded-full border border-[#004aad]/20 px-4 py-1 text-sm font-semibold uppercase tracking-widest text-[#004aad]">
             Zeus Platform
           </p>
           <h1 className="mb-6 text-5xl tracking-tight text-[#1A1A1A] md:text-6xl lg:text-7xl">
             Комплексная платформа <br />
-            <span className="bg-gradient-to-r from-[#0066FF] to-[#00D4FF] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#004aad] to-[#0066cc] bg-clip-text text-transparent">
               управления GRC
             </span>
           </h1>
@@ -32,7 +32,7 @@ export default function Hero() {
           <div className="flex flex-col gap-4 sm:flex-row">
             <Link
               to="/request"
-              className="group flex items-center justify-center gap-2 rounded-3xl bg-[#0066FF] px-8 py-4 text-white transition-colors hover:bg-[#0052CC]"
+              className="group flex items-center justify-center gap-2 rounded-3xl bg-[#004aad] px-8 py-4 text-white transition-colors hover:bg-[#003580]"
             >
               Попробовать бесплатно
               <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />

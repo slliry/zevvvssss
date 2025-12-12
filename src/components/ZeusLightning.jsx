@@ -54,7 +54,7 @@ export default function ZeusLightning() {
                     </filter>
                     <linearGradient id="lightningGradient" x1="0%" y1="0%" x2="0%" y2="100%">
                         <stop offset="0%" stopColor="#00D4FF" stopOpacity="1" />
-                        <stop offset="50%" stopColor="#0066FF" stopOpacity="0.9" />
+                        <stop offset="50%" stopColor="#004aad" stopOpacity="0.9" />
                         <stop offset="100%" stopColor="#00D4FF" stopOpacity="0.7" />
                     </linearGradient>
                 </defs>

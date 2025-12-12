@@ -43,13 +43,13 @@ export default function Benefits() {
           {benefits.map(({ icon: Icon, title, description, stats }, index) => (
             <article
               key={title}
-              className="rounded-3xl border border-gray-200 bg-white p-8 text-center transition-all duration-500 hover:-translate-y-1 hover:border-[#0066FF] hover:shadow-xl"
+              className="rounded-3xl border border-gray-200 bg-white p-8 text-center transition-all duration-500 hover:-translate-y-1 hover:border-[#004aad] hover:shadow-xl"
               style={{ transitionDelay: `${index * 80}ms` }}
             >
-              <div className="mb-6 inline-flex h-20 w-20 items-center justify-center rounded-3xl bg-gradient-to-br from-[#0066FF] to-[#00D4FF]">
+              <div className="mb-6 inline-flex h-20 w-20 items-center justify-center rounded-3xl bg-gradient-to-br from-[#004aad] to-[#0066cc]">
                 <Icon className="text-white" size={36} />
               </div>
-              <div className="mb-4 bg-gradient-to-r from-[#0066FF] to-[#00D4FF] bg-clip-text text-4xl text-transparent">
+              <div className="mb-4 bg-gradient-to-r from-[#004aad] to-[#0066cc] bg-clip-text text-4xl text-transparent">
                 {stats}
               </div>
               <h3 className="mb-3 text-2xl">{title}</h3>

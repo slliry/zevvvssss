@@ -1,4 +1,4 @@
-import { Shield, FileCheck, AlertTriangle, ListTodo, CheckSquare } from 'lucide-react';
+import { Shield, FileCheck, AlertTriangle, ListTodo, CheckSquare, AlertCircle, ShieldAlert } from 'lucide-react';
 import { motion } from 'motion/react';
 
 // Central featured module
@@ -12,7 +12,7 @@ const centralModule = {
     'Связь с рисками и процессами',
     'Автоматическая оценка',
   ],
-  color: 'from-[#0066FF] to-[#0052CC]',
+  color: 'from-[#004aad] to-[#003580]',
 };
 
 // Surrounding modules
@@ -21,29 +21,37 @@ const modules = [
     icon: AlertTriangle,
     title: 'Risk Management',
     description: 'Автоматизированная оценка ИТ- и ИС-рисков',
-    color: 'from-[#0066FF] to-[#00D4FF]',
-    position: 'top-left',
+    color: 'from-[#004aad] to-[#0066cc]',
   },
   {
     icon: FileCheck,
     title: 'Audit & Compliance',
     description: 'Формирование плана аудитов и проверок',
-    color: 'from-[#00D4FF] to-[#0066FF]',
-    position: 'top-right',
+    color: 'from-[#0066cc] to-[#004aad]',
+  },
+  {
+    icon: AlertCircle,
+    title: 'Инцидент уязвимость',
+    description: 'Управление инцидентами безопасности и уязвимостями',
+    color: 'from-[#004aad] to-[#003580]',
+  },
+  {
+    icon: ShieldAlert,
+    title: 'Операционные риски',
+    description: 'Мониторинг и управление операционными рисками',
+    color: 'from-[#003580] to-[#004aad]',
   },
   {
     icon: ListTodo,
     title: 'Task Management',
     description: 'Автоматические триггеры и мониторинг',
-    color: 'from-[#0052CC] to-[#0066FF]',
-    position: 'bottom-left',
+    color: 'from-[#0066cc] to-[#004aad]',
   },
   {
     icon: CheckSquare,
     title: 'Control Management',
     description: 'Централизованное управление контролем',
-    color: 'from-[#00D4FF] to-[#0052CC]',
-    position: 'bottom-right',
+    color: 'from-[#004aad] to-[#0066cc]',
   },
 ];
 
@@ -70,52 +78,22 @@ export default function Modules() {
             <svg className="h-full w-full" xmlns="http://www.w3.org/2000/svg">
               <defs>
                 <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="#0066FF" stopOpacity="0.2" />
-                  <stop offset="100%" stopColor="#00D4FF" stopOpacity="0.2" />
+                  <stop offset="0%" stopColor="#004aad" stopOpacity="0.2" />
+                  <stop offset="100%" stopColor="#0066cc" stopOpacity="0.2" />
                 </linearGradient>
               </defs>
-              {/* Lines from center to corners */}
-              <line x1="50%" y1="50%" x2="20%" y2="20%" stroke="url(#lineGradient)" strokeWidth="2" strokeDasharray="5,5" />
-              <line x1="50%" y1="50%" x2="80%" y2="20%" stroke="url(#lineGradient)" strokeWidth="2" strokeDasharray="5,5" />
-              <line x1="50%" y1="50%" x2="20%" y2="80%" stroke="url(#lineGradient)" strokeWidth="2" strokeDasharray="5,5" />
-              <line x1="50%" y1="50%" x2="80%" y2="80%" stroke="url(#lineGradient)" strokeWidth="2" strokeDasharray="5,5" />
             </svg>
           </div>
 
           {/* Grid layout */}
-          <div className="grid grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-8">
-            {/* Top modules */}
-            {modules.slice(0, 2).map((module, index) => {
-              const Icon = module.icon;
-              return (
-                <motion.div
-                  key={module.title}
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: '-50px' }}
-                  transition={{ duration: 0.5, delay: index * 0.1, ease: 'easeOut' }}
-                  whileHover={{ y: -8, transition: { duration: 0.3 } }}
-                  className="group relative overflow-hidden rounded-3xl border border-gray-200 bg-white p-8"
-                >
-                  <div className="relative z-10">
-                    <div className={`mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br ${module.color} text-white`}>
-                      <Icon size={28} />
-                    </div>
-                    <h3 className="mb-3 text-2xl font-semibold">{module.title}</h3>
-                    <p className="leading-relaxed text-gray-600">{module.description}</p>
-                  </div>
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#0066FF]/5 to-[#00D4FF]/5 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-                </motion.div>
-              );
-            })}
-
-            {/* Central featured module - spans full width */}
+          <div className="grid grid-cols-1 gap-6 lg:grid-cols-3 lg:gap-8">
+            {/* Central featured module - spans 2 columns on top */}
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, margin: '-50px' }}
-              transition={{ duration: 0.6, delay: 0.2, ease: 'easeOut' }}
-              className="group relative col-span-1 overflow-hidden rounded-3xl border-2 border-[#0066FF]/30 bg-gradient-to-br from-[#0066FF] to-[#00D4FF] p-10 text-white shadow-[0_20px_60px_rgba(0,102,255,0.3)] lg:col-span-2"
+              transition={{ duration: 0.6, delay: 0.1, ease: 'easeOut' }}
+              className="group relative col-span-1 overflow-hidden rounded-3xl border-2 border-[#004aad]/30 bg-gradient-to-br from-[#004aad] to-[#0066cc] p-10 text-white shadow-[0_20px_60px_rgba(0,74,173,0.3)] lg:col-span-2"
             >
               <div className="relative z-10">
                 <div className="mb-6 flex h-20 w-20 items-center justify-center rounded-3xl bg-white/20 backdrop-blur-sm">
@@ -163,8 +141,33 @@ export default function Modules() {
               />
             </motion.div>
 
-            {/* Bottom modules */}
-            {modules.slice(2, 4).map((module, index) => {
+            {/* First module on top row */}
+            {modules.slice(0, 1).map((module, index) => {
+              const Icon = module.icon;
+              return (
+                <motion.div
+                  key={module.title}
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: '-50px' }}
+                  transition={{ duration: 0.5, delay: 0.15, ease: 'easeOut' }}
+                  whileHover={{ y: -8, transition: { duration: 0.3 } }}
+                  className="group relative overflow-hidden rounded-3xl border border-gray-200 bg-white p-8"
+                >
+                  <div className="relative z-10">
+                    <div className={`mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br ${module.color} text-white`}>
+                      <Icon size={28} />
+                    </div>
+                    <h3 className="mb-3 text-2xl font-semibold">{module.title}</h3>
+                    <p className="leading-relaxed text-gray-600">{module.description}</p>
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#004aad]/5 to-[#0066cc]/5 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                </motion.div>
+              );
+            })}
+
+            {/* Remaining 5 modules in 3-column grid */}
+            {modules.slice(1).map((module, index) => {
               const Icon = module.icon;
               return (
                 <motion.div
@@ -183,7 +186,7 @@ export default function Modules() {
                     <h3 className="mb-3 text-2xl font-semibold">{module.title}</h3>
                     <p className="leading-relaxed text-gray-600">{module.description}</p>
                   </div>
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#0066FF]/5 to-[#00D4FF]/5 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#004aad]/5 to-[#0066cc]/5 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                 </motion.div>
               );
             })}

@@ -61,7 +61,7 @@ export default function Metrics() {
                         transition={{ duration: 0.5, delay: 0, ease: 'easeOut' }}
                         className="rounded-3xl border border-gray-200 bg-white p-8"
                     >
-                        <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-[#0066FF] to-[#00D4FF]">
+                        <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-[#004aad] to-[#0066cc]">
                             <TrendingUp className="text-white" size={28} />
                         </div>
                         <h3 className="mb-4 text-2xl font-semibold">Снижение затрат</h3>
@@ -70,15 +70,15 @@ export default function Metrics() {
                                 <div className="text-sm text-gray-500">До ZEUS</div>
                                 <div className="text-5xl font-bold text-gray-400">20</div>
                             </div>
-                            <div className="mb-2 text-3xl text-[#0066FF]">→</div>
+                            <div className="mb-2 text-3xl text-[#004aad]">→</div>
                             <div>
                                 <div className="text-sm text-gray-500">После ZEUS</div>
-                                <div className="bg-gradient-to-r from-[#0066FF] to-[#00D4FF] bg-clip-text text-5xl font-bold text-transparent">
+                                <div className="bg-gradient-to-r from-[#004aad] to-[#0066cc] bg-clip-text text-5xl font-bold text-transparent">
                                     10
                                 </div>
                             </div>
                         </div>
-                        <div className="mb-3 text-2xl font-semibold text-[#0066FF]">↓ 25-30%</div>
+                        <div className="mb-3 text-2xl font-semibold text-[#004aad]">↓ 25-30%</div>
                         <p className="text-gray-600">
                             Снижение количества внешних штрафов и санкций на до 35% (Forrester)
                         </p>
@@ -92,7 +92,7 @@ export default function Metrics() {
                         transition={{ duration: 0.5, delay: 0.1, ease: 'easeOut' }}
                         className="rounded-3xl border border-gray-200 bg-white p-8"
                     >
-                        <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-[#00D4FF] to-[#0066FF]">
+                        <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-[#0066cc] to-[#004aad]">
                             <Target className="text-white" size={28} />
                         </div>
                         <h3 className="mb-6 text-2xl font-semibold">Эффективность аудитов</h3>
@@ -100,28 +100,28 @@ export default function Metrics() {
                             <div>
                                 <div className="mb-2 flex items-center justify-between">
                                     <span className="text-sm text-gray-600">Экономия времени</span>
-                                    <span className="text-2xl font-bold text-[#0066FF]">45%</span>
+                                    <span className="text-2xl font-bold text-[#004aad]">45%</span>
                                 </div>
                                 <div className="h-2 rounded-full bg-gray-100">
-                                    <div className="h-2 w-[45%] rounded-full bg-gradient-to-r from-[#0066FF] to-[#00D4FF]" />
+                                    <div className="h-2 w-[45%] rounded-full bg-gradient-to-r from-[#004aad] to-[#0066cc]" />
                                 </div>
                             </div>
                             <div>
                                 <div className="mb-2 flex items-center justify-between">
                                     <span className="text-sm text-gray-600">Покрытие точек</span>
-                                    <span className="text-2xl font-bold text-[#00D4FF]">90%</span>
+                                    <span className="text-2xl font-bold text-[#0066cc]">90%</span>
                                 </div>
                                 <div className="h-2 rounded-full bg-gray-100">
-                                    <div className="h-2 w-[90%] rounded-full bg-gradient-to-r from-[#00D4FF] to-[#0066FF]" />
+                                    <div className="h-2 w-[90%] rounded-full bg-gradient-to-r from-[#0066cc] to-[#004aad]" />
                                 </div>
                             </div>
                             <div>
                                 <div className="mb-2 flex items-center justify-between">
                                     <span className="text-sm text-gray-600">Устранение несоответствий</span>
-                                    <span className="text-2xl font-bold text-[#0066FF]">60%</span>
+                                    <span className="text-2xl font-bold text-[#004aad]">60%</span>
                                 </div>
                                 <div className="h-2 rounded-full bg-gray-100">
-                                    <div className="h-2 w-[60%] rounded-full bg-gradient-to-r from-[#0066FF] to-[#00D4FF]" />
+                                    <div className="h-2 w-[60%] rounded-full bg-gradient-to-r from-[#004aad] to-[#0066cc]" />
                                 </div>
                             </div>
                         </div>
@@ -135,7 +135,7 @@ export default function Metrics() {
                         transition={{ duration: 0.5, delay: 0.2, ease: 'easeOut' }}
                         className="rounded-3xl border border-gray-200 bg-white p-8"
                     >
-                        <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-[#0052CC] to-[#00D4FF]">
+                        <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-[#003580] to-[#0066cc]">
                             <BarChart3 className="text-white" size={28} />
                         </div>
                         <h3 className="mb-4 text-2xl font-semibold">Рост зрелости ИБ</h3>
@@ -144,15 +144,15 @@ export default function Metrics() {
                                 <div className="text-sm text-gray-500">До внедрения</div>
                                 <div className="text-5xl font-bold text-gray-400">1.5</div>
                             </div>
-                            <div className="mb-2 text-3xl text-[#0066FF]">→</div>
+                            <div className="mb-2 text-3xl text-[#004aad]">→</div>
                             <div>
                                 <div className="text-sm text-gray-500">После внедрения</div>
-                                <div className="bg-gradient-to-r from-[#0066FF] to-[#00D4FF] bg-clip-text text-5xl font-bold text-transparent">
+                                <div className="bg-gradient-to-r from-[#004aad] to-[#0066cc] bg-clip-text text-5xl font-bold text-transparent">
                                     3.5
                                 </div>
                             </div>
                         </div>
-                        <div className="mb-3 text-2xl font-semibold text-[#0066FF]">↑ до уровня 3-4</div>
+                        <div className="mb-3 text-2xl font-semibold text-[#004aad]">↑ до уровня 3-4</div>
                         <p className="text-gray-600">Достижение уровня зрелости 3-4 в течение 12-18 месяцев</p>
                     </motion.div>
                 </div>
@@ -162,7 +162,7 @@ export default function Metrics() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: '-50px' }}
                     transition={{ duration: 0.5, delay: 0.3, ease: 'easeOut' }}
-                    className="mt-12 rounded-2xl bg-gradient-to-r from-[#0066FF]/5 to-[#00D4FF]/5 p-6 text-center"
+                    className="mt-12 rounded-2xl bg-gradient-to-r from-[#004aad]/5 to-[#0066cc]/5 p-6 text-center"
                 >
                     <p className="text-sm text-gray-600">
                         *Данные основаны на результатах внедрения Zeus GRC в организациях различного масштаба за период
