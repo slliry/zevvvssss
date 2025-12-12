@@ -35,7 +35,7 @@ function Layout() {
   return (
     <div className="min-h-screen bg-[#F7FFFE] text-[#1A1A1A]">
       <Header />
-      <main className="relative">
+      <main className="relative -mt-20">
         <FloatingParticles />
         <Outlet />
       </main>

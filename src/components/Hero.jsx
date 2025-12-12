@@ -10,11 +10,11 @@ export default function Hero() {
     <section
       ref={sectionRef}
       id="решения"
-      className={`fade-section ${isVisible ? 'fade-section--visible' : ''} relative overflow-hidden py-20 md:py-32 lg:py-40`}
+      className={`fade-section ${isVisible ? 'fade-section--visible' : ''} relative overflow-hidden min-h-screen flex items-center`}
     >
       <ZeusLightning />
 
-      <div className="relative mx-auto max-w-[1440px] px-6 lg:px-12">
+      <div className="relative mx-auto max-w-[1440px] px-6 lg:px-12 w-full">
         <div className="max-w-4xl">
           <p className="mb-4 inline-flex items-center rounded-full border border-[#0066FF]/20 px-4 py-1 text-sm font-semibold uppercase tracking-widest text-[#0066FF]">
             Zeus Platform

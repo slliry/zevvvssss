@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 
@@ -6,24 +6,34 @@ const menuItems = ['Решения', 'Модули', 'Преимущества',
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-gray-200 bg-[#E8F2F6]/95 backdrop-blur-sm">
-      <div className="mx-auto flex min-h-[4rem] max-w-[1440px] items-center justify-between px-6 py-0.5 lg:px-12">
-        <Link to="/" className="flex items-center pl-2" aria-label="Zeus GRC на главную">
+    <header className={`sticky z-50 mx-3 lg:mx-6 transition-all duration-300 ${scrolled ? 'top-2' : 'top-3'}`}>
+      <div className={`relative flex max-w-[1100px] mx-auto items-center justify-between rounded-full border border-white/30 bg-white/50 backdrop-blur-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.04)] transition-all duration-300 ${scrolled ? 'min-h-[2.5rem] px-3 py-1 lg:px-5' : 'min-h-[3rem] px-4 py-1.5 lg:px-6'}`}>
+        <Link to="/" className="flex items-center" aria-label="Zeus GRC на главную">
           <img
             src="/logozeus.svg"
             alt="Zeus GRC"
-            className="h-16 w-auto sm:h-20 lg:h-22 lg:max-w-[260px] transition-[filter] duration-200 hover:drop-shadow-[0_6px_30px_rgba(0,102,255,0.35)]"
+            className={`w-auto transition-all duration-300 ${scrolled ? 'h-8 sm:h-9 lg:h-10 lg:max-w-[160px]' : 'h-10 sm:h-12 lg:h-14 lg:max-w-[200px]'} hover:drop-shadow-[0_6px_30px_rgba(0,102,255,0.35)]`}
           />
         </Link>
 
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav className={`hidden items-center md:flex transition-all duration-300 ${scrolled ? 'gap-4' : 'gap-6'}`}>
           {menuItems.map((item) => (
             <Link
               key={item}
               to={`/#${item.toLowerCase()}`}
-              className="text-[#1A1A1A] font-normal transition-colors hover:text-[#0066FF]"
+              className={`text-[#1A1A1A] font-normal transition-all duration-300 hover:text-[#0066FF] ${scrolled ? 'text-xs' : 'text-sm'}`}
             >
               {item}
             </Link>
@@ -32,7 +42,7 @@ export default function Header() {
 
         <Link
           to="/request"
-          className="hidden rounded-3xl bg-[#0066FF] px-6 py-3 font-normal text-white transition-colors hover:bg-[#0052CC] md:block"
+          className={`hidden rounded-full bg-[#0066FF] font-normal text-white transition-all hover:bg-[#0052CC] hover:shadow-lg md:block ${scrolled ? 'px-4 py-1.5 text-xs' : 'px-5 py-2 text-sm'}`}
         >
           Оставить заявку
         </Link>
@@ -47,7 +57,7 @@ export default function Header() {
       </div>
 
       {isMenuOpen && (
-        <div className="border-t border-gray-200 px-6 py-4 md:hidden">
+        <div className="mt-2 rounded-2xl border border-white/20 bg-white/70 backdrop-blur-lg shadow-[0_8px_32px_0_rgba(0,0,0,0.08)] px-6 py-4 md:hidden">
           <nav className="flex flex-col gap-4">
             {menuItems.map((item) => (
               <Link
@@ -61,7 +71,7 @@ export default function Header() {
             ))}
             <Link
               to="/request"
-              className="mt-2 rounded-3xl bg-[#0066FF] px-6 py-3 text-center text-white transition-colors hover:bg-[#0052CC]"
+              className="mt-2 rounded-full bg-[#0066FF] px-6 py-3 text-center text-white transition-all hover:bg-[#0052CC] hover:shadow-lg"
               onClick={() => setIsMenuOpen(false)}
             >
               Оставить заявку
