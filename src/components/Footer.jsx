@@ -51,10 +51,10 @@ export default function Footer() {
           <div className="flex flex-col items-center justify-between gap-4 text-sm text-gray-400 md:flex-row">
             <p>© 2025 Zeus GRC. Все права защищены.</p>
             <div className="flex gap-6">
-              <a href="#" className="transition-colors hover:text-white">
+              <a href="#" className="text-white transition-colors hover:text-white">
                 Политика конфиденциальности
               </a>
-              <a href="#" className="transition-colors hover:text-white">
+              <a href="#" className="text-white transition-colors hover:text-white">
                 Условия использования
               </a>
             </div>

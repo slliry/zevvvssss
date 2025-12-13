@@ -4,18 +4,17 @@ import { motion } from 'motion/react';
 import useInView from '../hooks/useInView.js';
 
 const integrations = [
-  { name: 'Microsoft Azure', logo: '🔷', color: 'from-blue-500 to-blue-600' },
-  { name: 'Jira', logo: '🔵', color: 'from-blue-600 to-indigo-600' },
-  { name: 'ServiceNow', logo: '🟢', color: 'from-green-500 to-emerald-600' },
-  { name: '1C', logo: '🟡', color: 'from-yellow-500 to-orange-500' },
-  { name: 'Slack', logo: '💬', color: 'from-purple-500 to-pink-500' },
-  { name: 'SAP', logo: '🔶', color: 'from-orange-500 to-red-500' },
-  { name: 'Confluence', logo: '📘', color: 'from-blue-500 to-purple-500' },
-  { name: 'GitHub', logo: '⚫', color: 'from-gray-700 to-gray-900' },
-  { name: 'GitLab', logo: '🦊', color: 'from-orange-600 to-red-600' },
-  { name: 'Teams', logo: '👥', color: 'from-blue-600 to-purple-600' },
-  { name: 'Bitbucket', logo: '🔷', color: 'from-blue-700 to-blue-900' },
-  { name: 'Zoom', logo: '📹', color: 'from-blue-500 to-cyan-500' },
+  // Endpoint / Threat Protection
+  { name: 'Nmap', logo: '/nmap_logo.png', color: 'from-blue-500 to-blue-700' },
+  { name: 'Nessus', logo: '/Nessus-Professional-FullColor-RGB.svg', color: 'from-green-500 to-emerald-600' },
+  { name: 'Kaspersky', logo: '/Kaspersky_logo.svg', color: 'from-red-500 to-red-700' },
+  { name: 'CrowdStrike', logo: '/CrowdStrike_logo.svg', color: 'from-red-600 to-orange-600' },
+  { name: 'Trellix', logo: '/Trellix_Logo.svg', color: 'from-blue-600 to-indigo-700' },
+  // Виртуализация и инфраструктура
+  { name: 'VMware', logo: '/Vmware-by-broadcom.svg', color: 'from-blue-500 to-cyan-600' },
+  // Identity & Access Management
+  { name: 'Active Directory', logo: '/active-directory-1.svg', color: 'from-blue-700 to-indigo-800' },
+  { name: 'Keycloak', logo: '/Logo_of_Keycloak.svg', color: 'from-indigo-600 to-purple-700' },
 ];
 
 // Triple the array for infinite scroll
@@ -140,9 +139,14 @@ export default function Integrations() {
                   className={`absolute inset-0 bg-gradient-to-br ${integration.color} opacity-0 transition-opacity duration-300 group-hover:opacity-5`}
                 />
 
-                <div className="relative z-10 text-center">
-                  <div className="mb-3 text-6xl">{integration.logo}</div>
-                  <h3 className="text-base font-semibold text-gray-800">{integration.name}</h3>
+                <div className="relative z-10 flex flex-col items-center justify-center text-center">
+                  <div className="flex h-32 w-32 items-center justify-center">
+                    <img
+                      src={integration.logo}
+                      alt={integration.name}
+                      className="max-h-full max-w-full object-contain"
+                    />
+                  </div>
                 </div>
 
                 {/* Animated corner accent */}

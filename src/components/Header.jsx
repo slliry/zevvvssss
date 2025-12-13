@@ -68,29 +68,33 @@ export default function Header() {
         </button>
       </div>
 
-      {isMenuOpen && (
-        <div className="mt-2 rounded-2xl border border-white/20 bg-white/70 backdrop-blur-lg shadow-[0_8px_32px_0_rgba(0,0,0,0.08)] px-6 py-4 md:hidden">
-          <nav className="flex flex-col gap-4">
-            {menuItems.map((item) => (
-              <Link
-                key={item}
-                to={`/#${item.toLowerCase()}`}
-                className="py-2 text-[#1A1A1A] transition-colors hover:text-[#004aad]"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {item}
-              </Link>
-            ))}
+      {/* Mobile Menu with Animation */}
+      <div
+        className={`absolute left-3 right-3 top-full mt-2 overflow-hidden rounded-2xl border border-white/20 bg-white/70 backdrop-blur-lg shadow-[0_8px_32px_0_rgba(0,0,0,0.08)] transition-all duration-300 ease-in-out md:hidden ${isMenuOpen
+            ? 'max-h-96 opacity-100'
+            : 'max-h-0 opacity-0 border-transparent'
+          }`}
+      >
+        <nav className="flex flex-col gap-4 px-6 py-4">
+          {menuItems.map((item) => (
             <Link
-              to="/request"
-              className="mt-2 rounded-full bg-[#004aad] px-6 py-3 text-center text-white transition-all hover:bg-[#003580] hover:shadow-lg"
+              key={item}
+              to={`/#${item.toLowerCase()}`}
+              className="py-2 text-[#1A1A1A] transition-colors hover:text-[#004aad]"
               onClick={() => setIsMenuOpen(false)}
             >
-              Оставить заявку
+              {item}
             </Link>
-          </nav>
-        </div>
-      )}
+          ))}
+          <Link
+            to="/request"
+            className="mt-2 rounded-full bg-[#004aad] px-6 py-3 text-center text-white transition-all hover:bg-[#003580] hover:shadow-lg"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Оставить заявку
+          </Link>
+        </nav>
+      </div>
     </header>
   );
 }
