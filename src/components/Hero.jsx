@@ -1,10 +1,19 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import useInView from '../hooks/useInView.js';
+import useTypingEffect from '../hooks/useTypingEffect.js';
 import ZeusLightning from './ZeusLightning.jsx';
 
 export default function Hero() {
   const [sectionRef, isVisible] = useInView(0.2);
+
+  const heading1 = "Комплексная платформа";
+  const heading2 = "управления GRC";
+  const description = "Zeus GRC объединяет управление активами, рисками, аудитом и контролем в единой автоматизированной системе. Обеспечьте соответствие требованиям и прозрачность бизнес-процессов.";
+
+  const [displayedHeading1, heading1Complete] = useTypingEffect(heading1, 30, 200);
+  const [displayedHeading2, heading2Complete] = useTypingEffect(heading2, 30, heading1Complete ? 50 : 999999);
+  const [displayedDescription] = useTypingEffect(description, 15, heading2Complete ? 50 : 999999);
 
   return (
     <section
@@ -20,13 +29,14 @@ export default function Hero() {
             Zeus Platform
           </p>
           <h1 className="mb-6 text-5xl tracking-tight text-[#1A1A1A] md:text-6xl lg:text-7xl">
-            Комплексная платформа <br />
+            {displayedHeading1}
+            <br />
             <span className="bg-gradient-to-r from-[#004aad] to-[#0066cc] bg-clip-text text-transparent">
-              управления GRC
+              {displayedHeading2}
             </span>
           </h1>
           <p className="mb-10 max-w-2xl text-xl text-gray-600 md:text-2xl">
-            Zeus GRC объединяет управление активами, рисками, аудитом и контролем в единой автоматизированной системе. Обеспечьте соответствие требованиям и прозрачность бизнес-процессов.
+            {displayedDescription}
           </p>
 
           <div className="flex flex-col gap-4 sm:flex-row">

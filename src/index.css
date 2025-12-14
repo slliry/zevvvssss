@@ -348,6 +348,13 @@ body {
       opacity: 0.35;
     }
   }
+
+  .typing-cursor {
+    display: inline-block;
+    margin-left: 2px;
+    animation: blink 1s step-end infinite;
+    color: #004aad;
+  }
 }
 
 @keyframes slideInNext {
@@ -569,6 +576,19 @@ body {
 
   100% {
     transform: translateY(-200px) translateX(-30px) scaleY(1.2);
+    opacity: 0;
+  }
+}
+
+@keyframes blink {
+
+  0%,
+  50% {
+    opacity: 1;
+  }
+
+  51%,
+  100% {
     opacity: 0;
   }
 }
