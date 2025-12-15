@@ -2,14 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, Globe } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
-
-const menuItems = [
-  { label: 'Решения', id: 'solutions' },
-  { label: 'Модули', id: 'modules' },
-  { label: 'Преимущества', id: 'benefits' },
-  { label: 'Отзывы', id: 'testimonials' },
-  { label: 'Контакты', id: 'contacts' }
-];
+import { useTranslation } from 'react-i18next';
 
 const languages = [
   { code: 'ru', label: 'RU' },
@@ -22,6 +15,15 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
   const { currentLanguage, changeLanguage } = useLanguage();
+  const { t } = useTranslation();
+
+  const menuItems = [
+    { label: t('header.menu.solutions'), id: 'solutions' },
+    { label: t('header.menu.modules'), id: 'modules' },
+    { label: t('header.menu.benefits'), id: 'benefits' },
+    { label: t('header.menu.testimonials'), id: 'testimonials' },
+    { label: t('header.menu.contacts'), id: 'contacts' }
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -105,7 +107,7 @@ export default function Header() {
             to="/request"
             className={`rounded-full bg-[#004aad] font-normal text-white transition-all hover:bg-[#003580] hover:shadow-lg ${scrolled ? 'px-4 py-1.5 text-xs' : 'px-5 py-2 text-sm'}`}
           >
-            Оставить заявку
+            {t('header.cta')}
           </Link>
         </div>
 
@@ -179,7 +181,7 @@ export default function Header() {
             className="mt-4 rounded-full bg-[#004aad] px-6 py-3 text-center text-white transition-all hover:bg-[#003580] hover:shadow-lg"
             onClick={() => setIsMenuOpen(false)}
           >
-            Оставить заявку
+            {t('header.cta')}
           </Link>
         </nav>
       </div>
