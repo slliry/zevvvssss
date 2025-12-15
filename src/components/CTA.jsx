@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import useInView from '../hooks/useInView.js';
 
 export default function CTA() {
+  const { t } = useTranslation();
   const [sectionRef, isVisible] = useInView();
 
   return (
@@ -29,17 +31,17 @@ export default function CTA() {
             {/* Content */}
             <div className="relative z-10">
               <h2 className="mb-6 text-4xl font-bold text-white md:text-5xl lg:text-6xl">
-                Готовы начать?
+                {t('cta.title')}
               </h2>
               <p className="mx-auto mb-10 max-w-2xl text-lg text-white/90 md:text-xl lg:text-2xl leading-relaxed">
-                Получите бесплатную консультацию и узнайте, как Zeus GRC может трансформировать управление рисками в вашей компании
+                {t('cta.description')}
               </p>
               <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
                 <Link
                   to="/request"
                   className="group flex items-center justify-center gap-2 rounded-full bg-white px-10 py-5 text-lg font-semibold text-[#004aad] shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl"
                 >
-                  Получить консультацию
+                  {t('cta.button')}
                   <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
                 </Link>
               </div>

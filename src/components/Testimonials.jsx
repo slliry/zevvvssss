@@ -1,35 +1,37 @@
 import { useState } from 'react';
 import { ChevronLeft, ChevronRight, Star } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import useInView from '../hooks/useInView.js';
 
-const testimonials = [
-  {
-    name: 'Александр Петров',
-    position: 'Директор по информационной безопасности',
-    company: 'ФинТехБанк',
-    text: 'Zeus GRC позволил нам централизовать управление рисками и значительно ускорить процесс подготовки отчетности для регуляторов. Интеграция заняла всего 10 дней.',
-    rating: 5,
-  },
-  {
-    name: 'Мария Соколова',
-    position: 'Руководитель отдела комплаенс',
-    company: 'РосТелеком',
-    text: 'Удобный интерфейс и мощная аналитика. Теперь мы видим полную картину рисков в реальном времени и можем оперативно принимать решения.',
-    rating: 5,
-  },
-  {
-    name: 'Дмитрий Иванов',
-    position: 'CIO',
-    company: 'Энергопром',
-    text: 'Отличное решение для крупных компаний. Масштабируемость и возможность кастомизации под наши процессы — именно то, что нам было нужно.',
-    rating: 5,
-  },
-];
-
 export default function Testimonials() {
+  const { t } = useTranslation();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState('next');
   const [sectionRef, isVisible] = useInView();
+
+  const testimonials = [
+    {
+      name: t('testimonials.items.1.name'),
+      position: t('testimonials.items.1.position'),
+      company: t('testimonials.items.1.company'),
+      text: t('testimonials.items.1.text'),
+      rating: 5,
+    },
+    {
+      name: t('testimonials.items.2.name'),
+      position: t('testimonials.items.2.position'),
+      company: t('testimonials.items.2.company'),
+      text: t('testimonials.items.2.text'),
+      rating: 5,
+    },
+    {
+      name: t('testimonials.items.3.name'),
+      position: t('testimonials.items.3.position'),
+      company: t('testimonials.items.3.company'),
+      text: t('testimonials.items.3.text'),
+      rating: 5,
+    },
+  ];
 
   const nextTestimonial = () => {
     setDirection('next');
@@ -45,13 +47,13 @@ export default function Testimonials() {
     <section
       ref={sectionRef}
       className={`fade-section ${isVisible ? 'fade-section--visible' : ''} py-20 md:py-32`}
-      id="отзывы"
+      id="testimonials"
     >
       <div className="mx-auto max-w-[1440px] px-6 lg:px-12">
         <div className="mb-16 text-center">
-          <h2 className="mb-4 text-4xl md:text-5xl">Отзывы клиентов</h2>
+          <h2 className="mb-4 text-4xl md:text-5xl">{t('testimonials.title')}</h2>
           <p className="mx-auto max-w-2xl text-xl text-gray-600">
-            Что говорят о нас компании, которые уже используют Zeus GRC
+            {t('testimonials.subtitle')}
           </p>
         </div>
 
@@ -93,8 +95,8 @@ export default function Testimonials() {
                     setCurrentIndex(index);
                   }}
                   className={`h-2 rounded-full transition-all duration-500 ease-out ${index === currentIndex
-                      ? 'w-12 bg-[#004aad]'
-                      : 'w-2 bg-gray-300/70 hover:bg-gray-400/90'
+                    ? 'w-12 bg-[#004aad]'
+                    : 'w-2 bg-gray-300/70 hover:bg-gray-400/90'
                     }`}
                 />
               ))}

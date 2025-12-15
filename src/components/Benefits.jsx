@@ -1,41 +1,43 @@
 import { Zap, Lock, Users } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import useInView from '../hooks/useInView.js';
 
-const benefits = [
-  {
-    icon: Zap,
-    title: 'Снижение затрат на комплаенс',
-    description: 'Экономия на соблюдении нормативных требований и санкций за счёт автоматизации',
-    stats: '25-30%',
-  },
-  {
-    icon: Lock,
-    title: 'Эффективность аудитов',
-    description: 'Экономия времени на подготовку данных и ускорение процесса проведения аудита',
-    stats: '45-90%',
-  },
-  {
-    icon: Users,
-    title: 'Покрытие ключевых точек',
-    description: 'Повышение процента ключевых точек контроля при подготовке к аудиту',
-    stats: '90%',
-  },
-];
-
 export default function Benefits() {
+  const { t } = useTranslation();
   const [sectionRef, isVisible] = useInView();
+
+  const benefits = [
+    {
+      icon: Zap,
+      title: t('benefits.items.costReduction.title'),
+      description: t('benefits.items.costReduction.description'),
+      stats: t('benefits.items.costReduction.stats'),
+    },
+    {
+      icon: Lock,
+      title: t('benefits.items.auditEfficiency.title'),
+      description: t('benefits.items.auditEfficiency.description'),
+      stats: t('benefits.items.auditEfficiency.stats'),
+    },
+    {
+      icon: Users,
+      title: t('benefits.items.coverage.title'),
+      description: t('benefits.items.coverage.description'),
+      stats: t('benefits.items.coverage.stats'),
+    },
+  ];
 
   return (
     <section
       ref={sectionRef}
       className={`fade-section ${isVisible ? 'fade-section--visible' : ''} py-20 md:py-32`}
-      id="преимущества"
+      id="benefits"
     >
       <div className="mx-auto max-w-[1440px] px-6 lg:px-12">
         <div className="mb-16 text-center">
-          <h2 className="mb-4 text-4xl md:text-5xl">Почему Zeus GRC</h2>
+          <h2 className="mb-4 text-4xl md:text-5xl">{t('benefits.title')}</h2>
           <p className="mx-auto max-w-2xl text-xl text-gray-600">
-            Преимущества, которые выделяют нас среди конкурентов
+            {t('benefits.subtitle')}
           </p>
         </div>
 

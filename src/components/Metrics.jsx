@@ -1,36 +1,10 @@
 import { TrendingUp, BarChart3, Target } from 'lucide-react';
 import { motion } from 'motion/react';
+import { useTranslation } from 'react-i18next';
 import useInView from '../hooks/useInView.js';
 
-const metrics = [
-    {
-        icon: TrendingUp,
-        title: 'Снижение затрат',
-        before: '20',
-        after: '10',
-        description: 'Снижение количества внешних штрафов и санкций на до 35% (Forrester)',
-        improvement: '↓ 25-30%',
-    },
-    {
-        icon: Target,
-        title: 'Эффективность аудитов',
-        stats: [
-            { label: 'Экономия времени на подготовку данных', value: '45%' },
-            { label: 'Повышение процента ключевых точек', value: '90%' },
-            { label: 'Ускорение процесса устранения несоответствий', value: '60%' },
-        ],
-    },
-    {
-        icon: BarChart3,
-        title: 'Рост зрелости ИБ',
-        before: '1.5',
-        after: '3.5',
-        description: 'Достижение уровня зрелости 3-4 в течение 12-18 месяцев',
-        improvement: '↑ до уровня 3-4',
-    },
-];
-
 export default function Metrics() {
+    const { t } = useTranslation();
     const [sectionRef, isVisible] = useInView();
 
     return (
@@ -46,9 +20,9 @@ export default function Metrics() {
                     viewport={{ once: true, margin: '-100px' }}
                     transition={{ duration: 0.6, ease: 'easeOut' }}
                 >
-                    <h2 className="mb-4 text-4xl md:text-5xl">Измеримые результаты</h2>
+                    <h2 className="mb-4 text-4xl md:text-5xl">{t('metrics.title')}</h2>
                     <p className="mx-auto max-w-2xl text-xl text-gray-600">
-                        Реальные показатели эффективности внедрения Zeus GRC
+                        {t('metrics.subtitle')}
                     </p>
                 </motion.div>
 
@@ -64,23 +38,23 @@ export default function Metrics() {
                         <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-[#004aad] to-[#0066cc]">
                             <TrendingUp className="text-white" size={28} />
                         </div>
-                        <h3 className="mb-4 text-2xl font-semibold">Снижение затрат</h3>
+                        <h3 className="mb-4 text-2xl font-semibold">{t('metrics.items.costReduction.title')}</h3>
                         <div className="mb-6 flex items-end gap-8">
                             <div>
-                                <div className="text-sm text-gray-500">До ZEUS</div>
+                                <div className="text-sm text-gray-500">{t('metrics.items.costReduction.before')}</div>
                                 <div className="text-5xl font-bold text-gray-400">20</div>
                             </div>
                             <div className="mb-2 text-3xl text-[#004aad]">→</div>
                             <div>
-                                <div className="text-sm text-gray-500">После ZEUS</div>
+                                <div className="text-sm text-gray-500">{t('metrics.items.costReduction.after')}</div>
                                 <div className="bg-gradient-to-r from-[#004aad] to-[#0066cc] bg-clip-text text-5xl font-bold text-transparent">
                                     10
                                 </div>
                             </div>
                         </div>
-                        <div className="mb-3 text-2xl font-semibold text-[#004aad]">↓ 25-30%</div>
+                        <div className="mb-3 text-2xl font-semibold text-[#004aad]">{t('metrics.items.costReduction.improvement')}</div>
                         <p className="text-gray-600">
-                            Снижение количества внешних штрафов и санкций на до 35% (Forrester)
+                            {t('metrics.items.costReduction.description')}
                         </p>
                     </motion.div>
 
@@ -95,11 +69,11 @@ export default function Metrics() {
                         <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-[#0066cc] to-[#004aad]">
                             <Target className="text-white" size={28} />
                         </div>
-                        <h3 className="mb-6 text-2xl font-semibold">Эффективность аудитов</h3>
+                        <h3 className="mb-6 text-2xl font-semibold">{t('metrics.items.auditEfficiency.title')}</h3>
                         <div className="space-y-6">
                             <div>
                                 <div className="mb-2 flex items-center justify-between">
-                                    <span className="text-sm text-gray-600">Экономия времени</span>
+                                    <span className="text-sm text-gray-600">{t('metrics.items.auditEfficiency.timeSaving')}</span>
                                     <span className="text-2xl font-bold text-[#004aad]">45%</span>
                                 </div>
                                 <div className="h-2 rounded-full bg-gray-100">
@@ -108,7 +82,7 @@ export default function Metrics() {
                             </div>
                             <div>
                                 <div className="mb-2 flex items-center justify-between">
-                                    <span className="text-sm text-gray-600">Покрытие точек</span>
+                                    <span className="text-sm text-gray-600">{t('metrics.items.auditEfficiency.coverage')}</span>
                                     <span className="text-2xl font-bold text-[#0066cc]">90%</span>
                                 </div>
                                 <div className="h-2 rounded-full bg-gray-100">
@@ -117,7 +91,7 @@ export default function Metrics() {
                             </div>
                             <div>
                                 <div className="mb-2 flex items-center justify-between">
-                                    <span className="text-sm text-gray-600">Устранение несоответствий</span>
+                                    <span className="text-sm text-gray-600">{t('metrics.items.auditEfficiency.resolution')}</span>
                                     <span className="text-2xl font-bold text-[#004aad]">60%</span>
                                 </div>
                                 <div className="h-2 rounded-full bg-gray-100">
@@ -138,22 +112,22 @@ export default function Metrics() {
                         <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-[#003580] to-[#0066cc]">
                             <BarChart3 className="text-white" size={28} />
                         </div>
-                        <h3 className="mb-4 text-2xl font-semibold">Рост зрелости ИБ</h3>
+                        <h3 className="mb-4 text-2xl font-semibold">{t('metrics.items.maturityGrowth.title')}</h3>
                         <div className="mb-6 flex items-end gap-8">
                             <div>
-                                <div className="text-sm text-gray-500">До внедрения</div>
+                                <div className="text-sm text-gray-500">{t('metrics.items.maturityGrowth.before')}</div>
                                 <div className="text-5xl font-bold text-gray-400">1.5</div>
                             </div>
                             <div className="mb-2 text-3xl text-[#004aad]">→</div>
                             <div>
-                                <div className="text-sm text-gray-500">После внедрения</div>
+                                <div className="text-sm text-gray-500">{t('metrics.items.maturityGrowth.after')}</div>
                                 <div className="bg-gradient-to-r from-[#004aad] to-[#0066cc] bg-clip-text text-5xl font-bold text-transparent">
                                     3.5
                                 </div>
                             </div>
                         </div>
-                        <div className="mb-3 text-2xl font-semibold text-[#004aad]">↑ до уровня 3-4</div>
-                        <p className="text-gray-600">Достижение уровня зрелости 3-4 в течение 12-18 месяцев</p>
+                        <div className="mb-3 text-2xl font-semibold text-[#004aad]">{t('metrics.items.maturityGrowth.improvement')}</div>
+                        <p className="text-gray-600">{t('metrics.items.maturityGrowth.description')}</p>
                     </motion.div>
                 </div>
 
@@ -165,8 +139,7 @@ export default function Metrics() {
                     className="mt-12 rounded-2xl bg-gradient-to-r from-[#004aad]/5 to-[#0066cc]/5 p-6 text-center"
                 >
                     <p className="text-sm text-gray-600">
-                        *Данные основаны на результатах внедрения Zeus GRC в организациях различного масштаба за период
-                        12-18 месяцев
+                        {t('metrics.disclaimer')}
                     </p>
                 </motion.div>
             </div>

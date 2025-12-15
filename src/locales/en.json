@@ -1,0 +1,282 @@
+{
+    "header": {
+        "menu": {
+            "solutions": "Solutions",
+            "modules": "Modules",
+            "benefits": "Benefits",
+            "testimonials": "Testimonials",
+            "contacts": "Contacts"
+        },
+        "cta": "Request Demo"
+    },
+    "hero": {
+        "badge": "Zeus Platform",
+        "heading1": "Comprehensive GRC",
+        "heading2": "Management Platform",
+        "description": "Asset, risk, audit, and control management in a single automated system.",
+        "cta": "Try for Free"
+    },
+    "modules": {
+        "title": "Platform Modules",
+        "subtitle": "All the essential tools for effective GRC management in one system",
+        "items": {
+            "assetManagement": {
+                "title": "Asset Management",
+                "description": "The foundation of the GRC system - asset management with registry, documents, and automated criticality assessment",
+                "features": {
+                    "registry": "Asset registry with owners",
+                    "documents": "Documents and attachments",
+                    "connections": "Links to risks and processes",
+                    "assessment": "Automated assessment"
+                }
+            },
+            "riskManagement": {
+                "title": "Risk Management",
+                "description": "Automated IT and IS risk assessment"
+            },
+            "auditCompliance": {
+                "title": "Audit & Compliance",
+                "description": "Audit and inspection plan generation"
+            },
+            "incidentVulnerability": {
+                "title": "Incident & Vulnerability",
+                "description": "Security incident and vulnerability management"
+            },
+            "operationalRisks": {
+                "title": "Operational Risks",
+                "description": "Operational risk monitoring and management"
+            },
+            "taskManagement": {
+                "title": "Task Management",
+                "description": "Automated triggers and monitoring"
+            },
+            "controlManagement": {
+                "title": "Control Management",
+                "description": "Centralized control management"
+            }
+        }
+    },
+    "tasks": {
+        "title": "What We Solve",
+        "subtitle": "Key challenges that Zeus GRC helps address",
+        "items": {
+            "001": {
+                "title": "Asset Management",
+                "description": "Automated tracking of tangible and intangible organizational assets"
+            },
+            "002": {
+                "title": "Risk Management",
+                "description": "Automated generation, quantitative and qualitative assessment of IT and IS risks"
+            },
+            "003": {
+                "title": "Integration & Interaction",
+                "description": "Ability to integrate with third-party information systems"
+            },
+            "004": {
+                "title": "Control Effectiveness Assessment",
+                "description": "Regular evaluation of implemented control effectiveness"
+            },
+            "005": {
+                "title": "Audit Automation",
+                "description": "Automatic report and plan generation, audit process automation"
+            },
+            "006": {
+                "title": "Control & Monitoring",
+                "description": "Automated control of measure execution and task completion monitoring"
+            },
+            "007": {
+                "title": "Document Flow & Approval",
+                "description": "Automatic approval sheet generation, document repositories"
+            },
+            "008": {
+                "title": "Process Automation",
+                "description": "Process criticality assessment and routine operation automation"
+            }
+        }
+    },
+    "benefits": {
+        "title": "Why Zeus GRC",
+        "subtitle": "Advantages that set us apart from competitors",
+        "items": {
+            "costReduction": {
+                "title": "Compliance Cost Reduction",
+                "description": "Savings on regulatory compliance and penalties through automation",
+                "stats": "25-30%"
+            },
+            "auditEfficiency": {
+                "title": "Audit Efficiency",
+                "description": "Time savings on data preparation and accelerated audit process",
+                "stats": "45-90%"
+            },
+            "coverage": {
+                "title": "Key Point Coverage",
+                "description": "Increased percentage of key control points during audit preparation",
+                "stats": "90%"
+            }
+        }
+    },
+    "metrics": {
+        "title": "Measurable Results",
+        "subtitle": "Real performance indicators from Zeus GRC implementation",
+        "items": {
+            "costReduction": {
+                "title": "Cost Reduction",
+                "before": "Before ZEUS",
+                "after": "After ZEUS",
+                "improvement": "↓ 25-30%",
+                "description": "Reduction in external fines and penalties by up to 35% (Forrester)"
+            },
+            "auditEfficiency": {
+                "title": "Audit Efficiency",
+                "timeSaving": "Time savings",
+                "coverage": "Point coverage",
+                "resolution": "Non-compliance resolution"
+            },
+            "maturityGrowth": {
+                "title": "Security Maturity Growth",
+                "before": "Before implementation",
+                "after": "After implementation",
+                "improvement": "↑ to level 3-4",
+                "description": "Achieving maturity level 3-4 within 12-18 months"
+            }
+        },
+        "disclaimer": "*Data based on Zeus GRC implementation results in organizations of various scales over a 12-18 month period"
+    },
+    "testimonials": {
+        "title": "Client Testimonials",
+        "subtitle": "What companies already using Zeus GRC say about us",
+        "items": {
+            "1": {
+                "name": "Alexander Petrov",
+                "position": "Chief Information Security Officer",
+                "company": "FinTechBank",
+                "text": "Zeus GRC allowed us to centralize risk management and significantly accelerate the regulatory reporting process. Integration took only 10 days."
+            },
+            "2": {
+                "name": "Maria Sokolova",
+                "position": "Head of Compliance",
+                "company": "RosTelecom",
+                "text": "User-friendly interface and powerful analytics. Now we see the complete risk picture in real-time and can make decisions promptly."
+            },
+            "3": {
+                "name": "Dmitry Ivanov",
+                "position": "CIO",
+                "company": "Energoprom",
+                "text": "Excellent solution for large companies. Scalability and customization for our processes - exactly what we needed."
+            }
+        }
+    },
+    "integrations": {
+        "title": "Integrations",
+        "subtitle": "Easily integrates with your existing systems",
+        "notFound": "Didn't find the integration you need?",
+        "cta": "Discuss Custom Integration"
+    },
+    "cta": {
+        "title": "Ready to Start?",
+        "description": "Get a free consultation and learn how Zeus GRC can transform risk management in your company",
+        "button": "Get Consultation"
+    },
+    "footer": {
+        "description": "Comprehensive platform for risk management, compliance, and business continuity.",
+        "columns": {
+            "product": {
+                "title": "Product",
+                "items": {
+                    "modules": "Modules",
+                    "integrations": "Integrations",
+                    "pricing": "Pricing",
+                    "documentation": "Documentation"
+                }
+            },
+            "company": {
+                "title": "Company",
+                "items": {
+                    "about": "About",
+                    "careers": "Careers",
+                    "blog": "Blog",
+                    "contacts": "Contacts"
+                }
+            },
+            "resources": {
+                "title": "Resources",
+                "items": {
+                    "knowledge": "Knowledge Base",
+                    "webinars": "Webinars",
+                    "cases": "Case Studies",
+                    "support": "Support"
+                }
+            }
+        },
+        "copyright": "© 2025 Zeus GRC. All rights reserved.",
+        "privacy": "Privacy Policy",
+        "terms": "Terms of Use"
+    },
+    "request": {
+        "badge": "Request",
+        "title": "Fill out the form and we'll prepare a consultation",
+        "subtitle": "Tell us about your challenges — the Zeus team will suggest the optimal implementation scenario.",
+        "form": {
+            "title": "Company Information",
+            "fields": {
+                "name": {
+                    "label": "Full Name",
+                    "placeholder": "John Smith"
+                },
+                "company": {
+                    "label": "Company",
+                    "placeholder": "Zeus Group"
+                },
+                "email": {
+                    "label": "Email",
+                    "placeholder": "you@company.com"
+                },
+                "phone": {
+                    "label": "Phone",
+                    "placeholder": "+1 (555) 123-4567"
+                },
+                "role": {
+                    "label": "Role",
+                    "options": {
+                        "ciso": "CISO / Security Officer",
+                        "risk": "Risk Manager",
+                        "compliance": "Compliance Officer",
+                        "it": "IT Director",
+                        "other": "Other Role"
+                    }
+                },
+                "message": {
+                    "label": "Tasks or Context",
+                    "placeholder": "What processes do you want to automate? Which regulations are important?..."
+                }
+            },
+            "submit": "Submit Request",
+            "submitting": "Submitting…",
+            "cooldown": "Done! Retry in {{seconds}}s"
+        },
+        "perks": {
+            "title": "What You'll Get",
+            "subtitle": "After submitting the form, we'll schedule a meeting, select a relevant scenario, and provide materials for internal company justification.",
+            "items": {
+                "analysis": {
+                    "title": "Personal Analysis",
+                    "description": "We'll determine your current maturity level and propose a Zeus GRC implementation roadmap."
+                },
+                "demo": {
+                    "title": "Demo Access",
+                    "description": "Get sandbox access to test key platform scenarios."
+                },
+                "integration": {
+                    "title": "Integration Plan",
+                    "description": "We'll prepare an integration scheme with your systems and launch timeline estimate."
+                }
+            }
+        },
+        "messages": {
+            "success": "Thank you! We'll contact you within one business day.",
+            "successTitle": "Request Submitted",
+            "error": "An error occurred, please try again later.",
+            "cooldownError": "We've already received your request. Please wait {{seconds}}s before resubmitting."
+        }
+    }
+}

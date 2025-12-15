@@ -1,50 +1,52 @@
+import { useTranslation } from 'react-i18next';
 import useInView from '../hooks/useInView.js';
 
-const tasks = [
-  {
-    number: '001',
-    title: 'Управление активами',
-    description: 'Автоматизированный учёт материальных и нематериальных активов организации',
-  },
-  {
-    number: '002',
-    title: 'Управление рисками',
-    description: 'Автоматизированная генерация, количественная и качественная оценка ИТ- и ИС-рисков',
-  },
-  {
-    number: '003',
-    title: 'Интеграция и взаимодействие',
-    description: 'Возможность интеграции со сторонними информационными системами',
-  },
-  {
-    number: '004',
-    title: 'Оценка эффективности контролей',
-    description: 'Регулярная оценка результативности внедрённых контролей',
-  },
-  {
-    number: '005',
-    title: 'Автоматизация аудита',
-    description: 'Автоматическое формирование отчёта и плана, автоматизация процесса проведения аудита',
-  },
-  {
-    number: '006',
-    title: 'Контроль и мониторинг',
-    description: 'Автоматизация контроля за исполнением мероприятий и мониторинг выполнения задач',
-  },
-  {
-    number: '007',
-    title: 'Документооборот и согласование',
-    description: 'Автоматическое формирование листа согласования, наличие репозиториев для документов',
-  },
-  {
-    number: '008',
-    title: 'Автоматизация процессов',
-    description: 'Оценка критичности процессов и автоматизация рутинных операций',
-  },
-];
-
 export default function Tasks() {
+  const { t } = useTranslation();
   const [sectionRef, isVisible] = useInView();
+
+  const tasks = [
+    {
+      number: '001',
+      title: t('tasks.items.001.title'),
+      description: t('tasks.items.001.description'),
+    },
+    {
+      number: '002',
+      title: t('tasks.items.002.title'),
+      description: t('tasks.items.002.description'),
+    },
+    {
+      number: '003',
+      title: t('tasks.items.003.title'),
+      description: t('tasks.items.003.description'),
+    },
+    {
+      number: '004',
+      title: t('tasks.items.004.title'),
+      description: t('tasks.items.004.description'),
+    },
+    {
+      number: '005',
+      title: t('tasks.items.005.title'),
+      description: t('tasks.items.005.description'),
+    },
+    {
+      number: '006',
+      title: t('tasks.items.006.title'),
+      description: t('tasks.items.006.description'),
+    },
+    {
+      number: '007',
+      title: t('tasks.items.007.title'),
+      description: t('tasks.items.007.description'),
+    },
+    {
+      number: '008',
+      title: t('tasks.items.008.title'),
+      description: t('tasks.items.008.description'),
+    },
+  ];
 
   return (
     <section
@@ -53,9 +55,9 @@ export default function Tasks() {
     >
       <div className="mx-auto max-w-[1440px] px-6 lg:px-12">
         <div className="mb-16 text-center">
-          <h2 className="mb-4 text-4xl md:text-5xl">Что мы решаем</h2>
+          <h2 className="mb-4 text-4xl md:text-5xl">{t('tasks.title')}</h2>
           <p className="mx-auto max-w-2xl text-xl text-gray-600">
-            Ключевые задачи, которые помогает решить Zeus GRC
+            {t('tasks.subtitle')}
           </p>
         </div>
 

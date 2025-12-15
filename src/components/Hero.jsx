@@ -1,15 +1,17 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import useInView from '../hooks/useInView.js';
 import useTypingEffect from '../hooks/useTypingEffect.js';
 import ZeusLightning from './ZeusLightning.jsx';
 
 export default function Hero() {
+  const { t } = useTranslation();
   const [sectionRef, isVisible] = useInView(0.2);
 
-  const heading1 = "Комплексная платформа";
-  const heading2 = "управления GRC";
-  const description = "Zeus GRC объединяет управление активами, рисками, аудитом и контролем в единой автоматизированной системе. Обеспечьте соответствие требованиям и прозрачность бизнес-процессов.";
+  const heading1 = t('hero.heading1');
+  const heading2 = t('hero.heading2');
+  const description = t('hero.description');
 
   const [displayedHeading1, heading1Complete] = useTypingEffect(heading1, 30, 200);
   const [displayedHeading2, heading2Complete] = useTypingEffect(heading2, 30, heading1Complete ? 50 : 999999);
@@ -18,7 +20,7 @@ export default function Hero() {
   return (
     <section
       ref={sectionRef}
-      id="решения"
+      id="solutions"
       className={`fade-section ${isVisible ? 'fade-section--visible' : ''} relative overflow-hidden min-h-screen flex items-center`}
     >
       <ZeusLightning />
@@ -26,7 +28,7 @@ export default function Hero() {
       <div className="relative mx-auto max-w-[1440px] px-6 lg:px-12 w-full">
         <div className="max-w-4xl">
           <p className="mb-4 inline-flex items-center rounded-full border border-[#004aad]/20 px-4 py-1 text-sm font-semibold uppercase tracking-widest text-[#004aad]">
-            Zeus Platform
+            {t('hero.badge')}
           </p>
           <h1 className="mb-6 text-5xl tracking-tight text-[#1A1A1A] md:text-6xl lg:text-7xl">
             {displayedHeading1}
@@ -44,7 +46,7 @@ export default function Hero() {
               to="/request"
               className="group flex items-center justify-center gap-2 rounded-3xl bg-[#004aad] px-8 py-4 text-white transition-colors hover:bg-[#003580]"
             >
-              Попробовать бесплатно
+              {t('hero.cta')}
               <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
             </Link>
           </div>

@@ -1,63 +1,64 @@
 import { Shield, FileCheck, AlertTriangle, ListTodo, CheckSquare, AlertCircle, ShieldAlert } from 'lucide-react';
 import { motion } from 'motion/react';
-
-// Central featured module
-const centralModule = {
-  icon: Shield,
-  title: 'Asset Management',
-  description: 'Управление активами с реестром, документами и автоматической оценкой критичности',
-  features: [
-    'Реестр активов с владельцами',
-    'Документы и вложения',
-    'Связь с рисками и процессами',
-    'Автоматическая оценка',
-  ],
-  color: 'from-[#004aad] to-[#003580]',
-};
-
-// Surrounding modules
-const modules = [
-  {
-    icon: AlertTriangle,
-    title: 'Risk Management',
-    description: 'Автоматизированная оценка ИТ- и ИС-рисков',
-    color: 'from-[#004aad] to-[#0066cc]',
-  },
-  {
-    icon: FileCheck,
-    title: 'Audit & Compliance',
-    description: 'Формирование плана аудитов и проверок',
-    color: 'from-[#0066cc] to-[#004aad]',
-  },
-  {
-    icon: AlertCircle,
-    title: 'Инцидент уязвимость',
-    description: 'Управление инцидентами безопасности и уязвимостями',
-    color: 'from-[#004aad] to-[#003580]',
-  },
-  {
-    icon: ShieldAlert,
-    title: 'Операционные риски',
-    description: 'Мониторинг и управление операционными рисками',
-    color: 'from-[#003580] to-[#004aad]',
-  },
-  {
-    icon: ListTodo,
-    title: 'Task Management',
-    description: 'Автоматические триггеры и мониторинг',
-    color: 'from-[#0066cc] to-[#004aad]',
-  },
-  {
-    icon: CheckSquare,
-    title: 'Control Management',
-    description: 'Централизованное управление контролем',
-    color: 'from-[#004aad] to-[#0066cc]',
-  },
-];
+import { useTranslation } from 'react-i18next';
 
 export default function Modules() {
+  const { t } = useTranslation();
+
+  const centralModule = {
+    icon: Shield,
+    title: t('modules.items.assetManagement.title'),
+    description: t('modules.items.assetManagement.description'),
+    features: [
+      t('modules.items.assetManagement.features.registry'),
+      t('modules.items.assetManagement.features.documents'),
+      t('modules.items.assetManagement.features.connections'),
+      t('modules.items.assetManagement.features.assessment'),
+    ],
+    color: 'from-[#004aad] to-[#003580]',
+  };
+
+  const modules = [
+    {
+      icon: AlertTriangle,
+      title: t('modules.items.riskManagement.title'),
+      description: t('modules.items.riskManagement.description'),
+      color: 'from-[#004aad] to-[#0066cc]',
+    },
+    {
+      icon: FileCheck,
+      title: t('modules.items.auditCompliance.title'),
+      description: t('modules.items.auditCompliance.description'),
+      color: 'from-[#0066cc] to-[#004aad]',
+    },
+    {
+      icon: AlertCircle,
+      title: t('modules.items.incidentVulnerability.title'),
+      description: t('modules.items.incidentVulnerability.description'),
+      color: 'from-[#004aad] to-[#003580]',
+    },
+    {
+      icon: ShieldAlert,
+      title: t('modules.items.operationalRisks.title'),
+      description: t('modules.items.operationalRisks.description'),
+      color: 'from-[#003580] to-[#004aad]',
+    },
+    {
+      icon: ListTodo,
+      title: t('modules.items.taskManagement.title'),
+      description: t('modules.items.taskManagement.description'),
+      color: 'from-[#0066cc] to-[#004aad]',
+    },
+    {
+      icon: CheckSquare,
+      title: t('modules.items.controlManagement.title'),
+      description: t('modules.items.controlManagement.description'),
+      color: 'from-[#004aad] to-[#0066cc]',
+    },
+  ];
+
   return (
-    <section className="py-20 md:py-32" id="модули">
+    <section className="py-20 md:py-32" id="modules">
       <div className="mx-auto max-w-[1440px] px-6 lg:px-12">
         <motion.div
           className="mb-16 text-center"
@@ -66,9 +67,9 @@ export default function Modules() {
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.6, ease: 'easeOut' }}
         >
-          <h2 className="mb-4 text-4xl md:text-5xl">Модули платформы</h2>
+          <h2 className="mb-4 text-4xl md:text-5xl">{t('modules.title')}</h2>
           <p className="mx-auto max-w-2xl text-xl text-gray-600">
-            Все необходимые инструменты для эффективного управления GRC в одной системе
+            {t('modules.subtitle')}
           </p>
         </motion.div>
 
@@ -99,9 +100,9 @@ export default function Modules() {
                 <div className="mb-6 flex h-20 w-20 items-center justify-center rounded-3xl bg-white/20 backdrop-blur-sm">
                   <Shield className="text-white" size={40} />
                 </div>
-                <h3 className="mb-4 text-3xl font-bold text-white">Asset Management</h3>
+                <h3 className="mb-4 text-3xl font-bold text-white">{centralModule.title}</h3>
                 <p className="mb-6 text-lg leading-relaxed text-white/90">
-                  Фундамент системы GRC - управление активами с реестром, документами и автоматической оценкой критичности
+                  {centralModule.description}
                 </p>
                 <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
                   {centralModule.features.map((feature, idx) => (

@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'motion/react';
+import { motion, useMotionValue, useAnimationFrame } from 'motion/react';
+import { useTranslation } from 'react-i18next';
 import useInView from '../hooks/useInView.js';
 
 const integrations = [
@@ -21,70 +22,24 @@ const integrations = [
 const infiniteIntegrations = [...integrations, ...integrations, ...integrations];
 
 export default function Integrations() {
+  const { t } = useTranslation();
   const [sectionRef, isVisible] = useInView();
-  const [offset, setOffset] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
-  const [isDragging, setIsDragging] = useState(false);
-  const pauseTimeoutRef = useRef(null);
+  const x = useMotionValue(0);
+  const CARD_WIDTH = 200; // 48 * 4 (w-48) + gap
+  const TOTAL_WIDTH = integrations.length * CARD_WIDTH;
 
-  // Auto-scroll effect
-  useEffect(() => {
-    if (isPaused || isDragging) return;
+  // Continuous auto-scroll animation
+  useAnimationFrame((time, delta) => {
+    const currentX = x.get();
+    const newX = currentX - 0.5; // Move 0.5px per frame (slower)
 
-    const interval = setInterval(() => {
-      setOffset((prev) => {
-        const newOffset = prev - 1;
-        // Reset when scrolled through one set
-        if (Math.abs(newOffset) >= integrations.length * 200) {
-          return 0;
-        }
-        return newOffset;
-      });
-    }, 30); // Smooth 30fps
-
-    return () => clearInterval(interval);
-  }, [isPaused, isDragging]);
-
-  const handleDragStart = () => {
-    setIsDragging(true);
-  };
-
-  const handleDragEnd = (event, info) => {
-    setIsDragging(false);
-
-    // Apply the drag offset
-    setOffset((prev) => {
-      const newOffset = prev + info.offset.x;
-      // Normalize offset to prevent jumping
-      const maxOffset = integrations.length * 200;
-      if (Math.abs(newOffset) >= maxOffset) {
-        return newOffset % maxOffset;
-      }
-      return newOffset;
-    });
-
-    // Set pause state
-    setIsPaused(true);
-
-    // Clear any existing timeout
-    if (pauseTimeoutRef.current) {
-      clearTimeout(pauseTimeoutRef.current);
+    // Reset when scrolled through one set
+    if (Math.abs(newX) >= TOTAL_WIDTH) {
+      x.set(0);
+    } else {
+      x.set(newX);
     }
-
-    // Resume after 3 seconds
-    pauseTimeoutRef.current = setTimeout(() => {
-      setIsPaused(false);
-    }, 3000);
-  };
-
-  // Cleanup on unmount
-  useEffect(() => {
-    return () => {
-      if (pauseTimeoutRef.current) {
-        clearTimeout(pauseTimeoutRef.current);
-      }
-    };
-  }, []);
+  });
 
   return (
     <section
@@ -99,9 +54,9 @@ export default function Integrations() {
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.6, ease: 'easeOut' }}
         >
-          <h2 className="mb-4 text-4xl md:text-5xl">Интеграции</h2>
+          <h2 className="mb-4 text-4xl md:text-5xl">{t('integrations.title')}</h2>
           <p className="mx-auto max-w-2xl text-xl text-gray-600">
-            Легко интегрируется с вашими существующими системами
+            {t('integrations.subtitle')}
           </p>
         </motion.div>
 
@@ -113,11 +68,10 @@ export default function Integrations() {
 
           <motion.div
             drag="x"
-            dragConstraints={{ left: 0, right: 0 }}
+            dragConstraints={{ left: -TOTAL_WIDTH, right: 0 }}
             dragElastic={0.1}
-            onDragStart={handleDragStart}
-            onDragEnd={handleDragEnd}
-            style={{ x: offset }}
+            dragMomentum={false}
+            style={{ x }}
             className="flex cursor-grab gap-6 active:cursor-grabbing"
           >
             {infiniteIntegrations.map((integration, index) => (
@@ -167,12 +121,12 @@ export default function Integrations() {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="mt-16 text-center"
         >
-          <p className="mb-4 text-gray-600">Не нашли нужную интеграцию?</p>
+          <p className="mb-4 text-gray-600">{t('integrations.notFound')}</p>
           <Link
             to="/request"
             className="inline-block rounded-3xl border-2 border-[#004aad] bg-white px-8 py-3 text-[#004aad] transition-all hover:bg-[#004aad] hover:text-white hover:shadow-lg"
           >
-            Обсудить кастомную интеграцию
+            {t('integrations.cta')}
           </Link>
         </motion.div>
       </div>

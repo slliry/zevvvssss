@@ -1,28 +1,30 @@
 import { useEffect, useState } from 'react';
 import { ArrowRight, Mail, Phone, Building2 } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import { apiRequest } from '../lib/apiClient.js';
-
-const perks = [
-  {
-    title: 'Персональный разбор',
-    description: 'Определим ваш текущий уровень зрелости и предложим дорожную карту внедрения Zeus GRC.',
-  },
-  {
-    title: 'Демо-доступ',
-    description: 'Получите доступ к песочнице, чтобы протестировать ключевые сценарии платформы.',
-  },
-  {
-    title: 'План интеграции',
-    description: 'Подготовим схему интеграции с вашими системами и оценку сроков запуска.',
-  },
-];
 
 const COOLDOWN_SECONDS = 15;
 
 export default function Request() {
+  const { t } = useTranslation();
   const [status, setStatus] = useState({ type: null, message: '' });
   const [loading, setLoading] = useState(false);
   const [cooldownLeft, setCooldownLeft] = useState(0);
+
+  const perks = [
+    {
+      title: t('request.perks.items.analysis.title'),
+      description: t('request.perks.items.analysis.description'),
+    },
+    {
+      title: t('request.perks.items.demo.title'),
+      description: t('request.perks.items.demo.description'),
+    },
+    {
+      title: t('request.perks.items.integration.title'),
+      description: t('request.perks.items.integration.description'),
+    },
+  ];
 
   useEffect(() => {
     if (cooldownLeft <= 0) return undefined;
@@ -37,7 +39,7 @@ export default function Request() {
     if (cooldownLeft > 0) {
       setStatus({
         type: 'error',
-        message: `Мы уже получили заявку. Подождите ${cooldownLeft} с перед повторной отправкой.`,
+        message: t('request.messages.cooldownError', { seconds: cooldownLeft }),
       });
       return;
     }
@@ -55,14 +57,14 @@ export default function Request() {
       });
       setStatus({
         type: 'success',
-        message: 'Спасибо! Мы свяжемся с вами в течение рабочего дня.',
+        message: t('request.messages.success'),
       });
       form.reset();
       setCooldownLeft(COOLDOWN_SECONDS);
     } catch (error) {
       setStatus({
         type: 'error',
-        message: error.message ?? 'Произошла ошибка, попробуйте позже.',
+        message: error.message ?? t('request.messages.error'),
       });
     } finally {
       setLoading(false);
@@ -74,13 +76,13 @@ export default function Request() {
       <div className="mx-auto max-w-[1200px] px-6 lg:px-12">
         <div className="mb-10 text-center">
           <p className="mb-4 inline-flex items-center rounded-full border border-[#0066FF]/20 px-4 py-1 text-sm font-semibold uppercase tracking-widest text-[#0066FF]">
-            Заявка
+            {t('request.badge')}
           </p>
           <h1 className="mb-4 text-4xl font-normal text-[#1A1A1A] md:text-5xl">
-            Заполните форму, и мы подготовим консультацию
+            {t('request.title')}
           </h1>
           <p className="text-lg text-gray-600 md:text-xl">
-            Расскажите о ваших задачах — команда Zeus предложит оптимальный сценарий внедрения.
+            {t('request.subtitle')}
           </p>
         </div>
 
@@ -88,69 +90,69 @@ export default function Request() {
           <form
             onSubmit={handleSubmit}
             className="rounded-3xl bg-white p-8 shadow-[0_35px_80px_rgba(0,102,255,0.08)]"
-            >
-            <h2 className="mb-6 text-2xl font-normal text-[#1A1A1A]">Данные компании</h2>
+          >
+            <h2 className="mb-6 text-2xl font-normal text-[#1A1A1A]">{t('request.form.title')}</h2>
             <div className="grid gap-5 md:grid-cols-2">
               <label className="flex flex-col gap-2 text-sm font-medium text-gray-700">
-                Имя и фамилия
+                {t('request.form.fields.name.label')}
                 <input
                   required
                   type="text"
                   name="name"
                   className="rounded-2xl border border-gray-200 px-4 py-3 text-base text-[#1A1A1A] outline-none transition focus:border-[#0066FF] focus:ring-2 focus:ring-[#0066FF]/30"
-                  placeholder="Алексей Петров"
+                  placeholder={t('request.form.fields.name.placeholder')}
                 />
               </label>
               <label className="flex flex-col gap-2 text-sm font-medium text-gray-700">
-                Компания
+                {t('request.form.fields.company.label')}
                 <input
                   required
                   type="text"
                   name="company"
                   className="rounded-2xl border border-gray-200 px-4 py-3 text-base text-[#1A1A1A] outline-none transition focus:border-[#0066FF] focus:ring-2 focus:ring-[#0066FF]/30"
-                  placeholder="Zeus Group"
+                  placeholder={t('request.form.fields.company.placeholder')}
                 />
               </label>
               <label className="flex flex-col gap-2 text-sm font-medium text-gray-700">
-                Email
+                {t('request.form.fields.email.label')}
                 <input
                   required
                   type="email"
                   name="email"
                   className="rounded-2xl border border-gray-200 px-4 py-3 text-base text-[#1A1A1A] outline-none transition focus:border-[#0066FF] focus:ring-2 focus:ring-[#0066FF]/30"
-                  placeholder="you@company.com"
+                  placeholder={t('request.form.fields.email.placeholder')}
                 />
               </label>
               <label className="flex flex-col gap-2 text-sm font-medium text-gray-700">
-                Телефон
+                {t('request.form.fields.phone.label')}
                 <input
                   type="tel"
                   name="phone"
                   className="rounded-2xl border border-gray-200 px-4 py-3 text-base text-[#1A1A1A] outline-none transition focus:border-[#0066FF] focus:ring-2 focus:ring-[#0066FF]/30"
-                  placeholder="+7 (900) 123-45-67"
+                  placeholder={t('request.form.fields.phone.placeholder')}
                 />
               </label>
               <label className="flex flex-col gap-2 text-sm font-medium text-gray-700 md:col-span-2">
-                Роль
+                {t('request.form.fields.role.label')}
                 <select
                   name="role"
                   className="rounded-2xl border border-gray-200 px-4 py-3 text-base text-[#1A1A1A] outline-none transition focus:border-[#0066FF] focus:ring-2 focus:ring-[#0066FF]/30"
                 >
-                  <option value="ciso">CISO / Руководитель по безопасности</option>
-                  <option value="risk">Менеджер по рискам</option>
-                  <option value="compliance">Комплаенс-офицер</option>
-                  <option value="it">IT-директор</option>
-                  <option value="other">Другая роль</option>
+                  <option value="ciso">{t('request.form.fields.role.options.ciso')}</option>
+                  <option value="risk">{t('request.form.fields.role.options.risk')}</option>
+                  <option value="compliance">{t('request.form.fields.role.options.compliance')}</option>
+                  <option value="it">{t('request.form.fields.role.options.it')}</option>
+                  <option value="other">{t('request.form.fields.role.options.other')}</option>
                 </select>
               </label>
               <label className="flex flex-col gap-2 text-sm font-medium text-gray-700 md:col-span-2">
-                Задачи или контекст
+                {t('request.form.fields.message.label')}
                 <textarea
                   name="message"
                   rows={4}
                   maxLength={700}
                   className="rounded-2xl border border-gray-200 px-4 py-3 text-base text-[#1A1A1A] outline-none transition focus:border-[#0066FF] focus:ring-2 focus:ring-[#0066FF]/30 resize-none"
-                  placeholder="Какие процессы хотите автоматизировать? Какие нормативы важны?..."
+                  placeholder={t('request.form.fields.message.placeholder')}
                 />
               </label>
             </div>
@@ -160,10 +162,10 @@ export default function Request() {
               className="group mt-8 flex w-full items-center justify-center gap-2 rounded-3xl bg-[#0066FF] px-8 py-4 text-center text-white transition hover:bg-[#0052CC] disabled:cursor-not-allowed disabled:opacity-70"
             >
               {loading
-                ? 'Отправляем…'
+                ? t('request.form.submitting')
                 : cooldownLeft > 0
-                  ? `Готово! Повторно через ${cooldownLeft} с`
-                  : 'Отправить заявку'}
+                  ? t('request.form.cooldown', { seconds: cooldownLeft })
+                  : t('request.form.submit')}
               <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
             </button>
             {status.type === 'error' && (
@@ -175,10 +177,9 @@ export default function Request() {
 
           <div className="rounded-3xl border border-white/40 bg-gradient-to-br from-[#E8F2F6] to-white p-8">
             <div className="mb-8">
-              <h3 className="mb-3 text-2xl font-normal text-[#1A1A1A]">Что вы получите</h3>
+              <h3 className="mb-3 text-2xl font-normal text-[#1A1A1A]">{t('request.perks.title')}</h3>
               <p className="text-gray-600">
-                После отправки формы мы назначим встречу, подберём релевантный сценарий и передадим материалы
-                для аргументации внутри компании.
+                {t('request.perks.subtitle')}
               </p>
             </div>
             <ul className="mb-8 space-y-4">
@@ -215,7 +216,7 @@ export default function Request() {
               ✓
             </div>
             <div>
-              <p className="text-base font-semibold text-emerald-800">Заявка отправлена</p>
+              <p className="text-base font-semibold text-emerald-800">{t('request.messages.successTitle')}</p>
               <p>{status.message}</p>
             </div>
             <button
