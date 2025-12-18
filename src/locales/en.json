@@ -278,5 +278,321 @@
             "error": "An error occurred, please try again later.",
             "cooldownError": "We've already received your request. Please wait {{seconds}}s before resubmitting."
         }
+    },
+    "assetManagement": {
+        "title": "Asset Management",
+        "subtitle": "The foundation of the GRC system - asset management with registry, documents, and automated criticality assessment",
+        "backToModules": "Back to Modules",
+        "badge": "GRC Module",
+        "heroDescription": "Create a unified database of all company assets with automated assessment of their criticality and value. Store documentation, track owners, link assets with risks and controls. Get up-to-date analytics and dashboards for making informed information security decisions.",
+        "beforeAfter": {
+            "title": "Solution Benefits",
+            "subtitle": "Why systematic asset management matters",
+            "before": "Challenges",
+            "solution": "Zeus Solution",
+            "result": "Results"
+        },
+        "problems": {
+            "scattered": "No unified asset registry",
+            "noDependencies": "Unable to assess asset criticality",
+            "noModel": "Manual documentation management",
+            "noOwners": "Unclear asset ownership",
+            "differentSystems": "No connection to risks and controls",
+            "noTracking": "Complex analytics and reporting"
+        },
+        "solutions": {
+            "centralized": "Unified registry of all company assets",
+            "linkedRisks": "Automated criticality assessment",
+            "autoLinks": "Document and attachment storage",
+            "digitalModel": "Links to owners and departments",
+            "integrations": "Integration with risks and controls",
+            "autoUpdate": "Real-time dashboards and analytics"
+        },
+        "results": {
+            "fullPicture": "Complete asset control",
+            "linkedProcesses": "Management transparency",
+            "digitalModel": "Informed risk decisions",
+            "timeSaving": "Time savings on administration",
+            "transparency": "Regulatory compliance",
+            "riskBasis": "Enhanced cybersecurity"
+        },
+        "features": {
+            "title": "Key Features",
+            "subtitle": "Complete set of tools for effective asset management",
+            "registry": {
+                "title": "Asset Registry",
+                "description": "Creation and maintenance of a unified asset database with links to owners, departments, and types."
+            },
+            "documents": {
+                "title": "Documents and Attachments",
+                "description": "Storage of supporting documentation: contracts, instructions, assessments."
+            },
+            "dashboard": {
+                "title": "Dashboard and Analytics",
+                "description": "Display of key asset data: status, criticality, value, owners."
+            },
+            "connections": {
+                "title": "Links to Risks and Processes",
+                "description": "Linking assets to risks, controls, tasks, and audits."
+            },
+            "integration": {
+                "title": "Integration with GRC Modules",
+                "description": "Display of assets in risk, audit, control, and task cards."
+            },
+            "assessment": {
+                "title": "Automated Asset Assessment",
+                "description": "Solution for analysis, classification, criticality assessment, and asset prioritization to optimize resource management"
+            }
+        },
+        "valuation": {
+            "title": "Asset Valuation",
+            "subtitle": "Determining asset value using customizable assessment templates",
+            "parametersTitle": "Considered Parameters",
+            "parameters": {
+                "regulatory": "Regulatory",
+                "legal": "Legal",
+                "reputational": "Reputational",
+                "operational": "Operational",
+                "financial": "Financial",
+                "security": "H&S and Individual"
+            },
+            "calculationTitle": "Automated Calculation",
+            "calculation": {
+                "confidentiality": "Confidentiality",
+                "integrity": "Integrity",
+                "criticality": "Criticality",
+                "financialLoss": "Potential Financial Losses"
+            },
+            "customization": {
+                "title": "Flexible Customization",
+                "description": "Flexible customization of methods and criteria to company policies."
+            },
+            "standardization": {
+                "title": "Assessment Standardization",
+                "description": "Assessment standardization, transparent prioritization, and risk management support."
+            }
+        },
+        "benefits": {
+            "title": "Benefits",
+            "transparency": {
+                "title": "Transparency and Control",
+                "description": "Transparency and control of GRC obligations execution."
+            },
+            "taskReduction": {
+                "title": "Reduced Overdue Tasks",
+                "description": "Reduction in the number of overdue or forgotten tasks."
+            },
+            "centralization": {
+                "title": "Centralized Responsibility",
+                "description": "Centralization of responsibility and improved discipline."
+            },
+            "compliance": {
+                "title": "Regulatory Evidence",
+                "description": "Providing evidence of regulatory compliance."
+            }
+        },
+        "cta": {
+            "title": "Ready to Start with Asset Management?",
+            "description": "Get a free consultation and learn how the asset management module can transform your GRC system",
+            "button": "Get Consultation"
+        }
+    },
+    "auditCompliance": {
+        "title": "Audit & Compliance",
+        "backToModules": "Back to Modules",
+        "heroDescription": "Automate audit and compliance processes with a unified platform. Create audit plans, conduct checks with checklists, register non-conformities, and manage corrective actions. Get complete analytics and reporting to demonstrate regulatory compliance.",
+        "beforeAfter": {
+            "title": "Solution Benefits",
+            "subtitle": "How audit automation increases efficiency",
+            "before": "Challenges",
+            "solution": "Zeus Solution",
+            "result": "Results"
+        },
+        "problems": {
+            "manual": "Manual audit and inspection management",
+            "scattered": "Scattered documentation and evidence",
+            "noTracking": "No control over CAPA execution",
+            "timeConsuming": "High preparation time costs",
+            "noEvidence": "Difficulty collecting evidence",
+            "riskMissed": "Risk of missing critical non-conformities"
+        },
+        "solutions": {
+            "planning": "Audit plan creation and approval",
+            "checklists": "Conducting audits with checklists and evidence",
+            "capa": "Non-conformity registration and CAPA management",
+            "monitoring": "Compliance monitoring and auto-notifications",
+            "integration": "Integration with asset, risk, and control modules",
+            "automation": "Automatic report and analytics generation"
+        },
+        "results": {
+            "efficiency": "Reduced audit costs",
+            "transparency": "Increased transparency and regulator trust",
+            "compliance": "Quick identification and resolution of violations",
+            "quality": "Centralized evidence management",
+            "centralized": "Compliance with internal policies and standards",
+            "standards": "Compliance with international standards"
+        },
+        "cta": {
+            "title": "Ready to Start with Audit & Compliance?",
+            "description": "Get a free consultation and learn how the audit module can optimize your inspection processes",
+            "button": "Get Consultation"
+        }
+    },
+    "taskManagement": {
+        "title": "Task Management",
+        "backToModules": "Back to Modules",
+        "heroDescription": "Centralize management of all organizational tasks in a unified system. Create tasks from risks, audits, and controls, assign responsible parties, set deadlines, and track execution. Automatic reminders and triggers ensure timely completion of critical tasks.",
+        "beforeAfter": {
+            "title": "Solution Benefits",
+            "subtitle": "How centralized task management increases efficiency",
+            "before": "Challenges",
+            "solution": "Zeus Solution",
+            "result": "Results"
+        },
+        "problems": {
+            "scattered": "Tasks scattered across different systems",
+            "noTracking": "No unified execution control",
+            "missedDeadlines": "Missed deadlines",
+            "noAccountability": "Unclear responsible parties and executors",
+            "manualReminders": "Manual reminders and notifications",
+            "noIntegration": "No link between tasks and risks/controls"
+        },
+        "solutions": {
+            "creation": "Task creation from risks, audits, and controls",
+            "assignment": "Assignment of responsible parties and executors",
+            "comments": "Comments and attachments for tasks",
+            "deadlines": "Deadline management with automatic reminders",
+            "dashboard": "Dashboard and task execution statuses",
+            "integration": "Integration with other GRC modules"
+        },
+        "results": {
+            "centralized": "Centralized control of all organizational assets",
+            "security": "Enhanced security and manageability of critical resources",
+            "risks": "Reduced risks related to loss or unauthorized access",
+            "compliance": "Support for ISO, regulatory, and industry standards compliance",
+            "transparency": "Transparency and accountability in task management",
+            "efficiency": "Increased team efficiency"
+        },
+        "cta": {
+            "title": "Ready to Start with Task Management?",
+            "description": "Get a free consultation and learn how the task management module can increase your team's efficiency",
+            "button": "Get Consultation"
+        }
+    },
+    "controlManagement": {
+        "title": "Control Management",
+        "backToModules": "Back to Modules",
+        "heroDescription": "Ensure centralized management of control measures aimed at risk reduction, regulatory compliance, and internal policy adherence. The module allows you to design, implement, assess, and monitor control effectiveness across the entire organization.",
+        "beforeAfter": {
+            "title": "Solution Benefits",
+            "subtitle": "How effective control management reduces risks",
+            "before": "Challenges",
+            "solution": "Zeus Solution",
+            "result": "Results"
+        },
+        "problems": {
+            "scattered": "Scattered controls without unified approach",
+            "noEffectiveness": "No control effectiveness assessment",
+            "manualTesting": "Manual control testing and verification",
+            "noEvidence": "Difficulty collecting evidence",
+            "noRiskLink": "No link between controls and risks",
+            "inefficient": "Ineffective or missing controls"
+        },
+        "solutions": {
+            "catalog": "Control catalog with descriptions and classification",
+            "effectiveness": "Control effectiveness assessment",
+            "riskLinks": "Links to risks and assets",
+            "auditControl": "Audit control and work monitoring",
+            "planning": "Planning and executing checks",
+            "evidence": "Centralized evidence collection"
+        },
+        "results": {
+            "operationalRisk": "Reduced operational and regulatory risk",
+            "efficiency": "Increased control system efficiency and transparency",
+            "audit": "Audit and inspection readiness at any time",
+            "compliance": "Support for compliance and internal control culture",
+            "centralized": "Centralized evidence collection",
+            "improvements": "Formation of recommendations and improvement plans"
+        },
+        "cta": {
+            "title": "Ready to Start with Control Management?",
+            "description": "Get a free consultation and learn how the control management module can reduce your organization's risks",
+            "button": "Get Consultation"
+        }
+    },
+    "riskManagement": {
+        "title": "Risk Management",
+        "backToModules": "Back to Modules",
+        "heroDescription": "Comprehensive risk management at all organizational levels. The module combines strategic, operational risks, vulnerabilities, and incident management in a unified system with advanced analytics and visualization.",
+        "subModules": {
+            "title": "Module Components",
+            "subtitle": "Risk Management includes three key sub-modules for comprehensive risk management",
+            "operational": {
+                "title": "Operational Risk Management",
+                "description": "Managing operational risks across all business processes",
+                "features": {
+                    "assessment": "Probability and impact assessment",
+                    "collection": "Risk collection and recording",
+                    "controls": "Control and mitigation planning",
+                    "monitoring": "Monitoring and reporting"
+                }
+            },
+            "vulnerability": {
+                "title": "Vulnerability Management",
+                "description": "Managing vulnerabilities from detection to remediation",
+                "features": {
+                    "integration": "Integrates vulnerability data from scanners",
+                    "classification": "Classification, criticality assessment, and prioritization",
+                    "assignment": "Assignment of responsible parties and deadline control",
+                    "transparency": "Transparent processing from detection to closure"
+                }
+            },
+            "incident": {
+                "title": "Incident Management",
+                "description": "Fast registration and management of incidents of any nature",
+                "features": {
+                    "registration": "Registration and documentation of incidents",
+                    "rootCause": "Root cause identification and corrective actions",
+                    "control": "Execution control and reporting",
+                    "automation": "Investigation process automation"
+                }
+            }
+        },
+        "beforeAfter": {
+            "title": "Solution Benefits",
+            "subtitle": "How risk management enhances business resilience",
+            "before": "Problems",
+            "solution": "Zeus Solution",
+            "result": "Result"
+        },
+        "problems": {
+            "noVisibility": "Lack of risk management transparency",
+            "manualAssessment": "Manual risk assessment and classification",
+            "noIntegration": "No integration with audit, assets, and compliance",
+            "reactiveApproach": "Reactive approach to risk management",
+            "noMonitoring": "Absence of key indicator monitoring",
+            "inconsistentMethodology": "Inconsistent risk assessment methodology"
+        },
+        "solutions": {
+            "riskRegistry": "Risk identification and classification, registry creation",
+            "methodology": "Risk assessment methodology configuration",
+            "integration": "Integration with audit, assets, compliance",
+            "roleModel": "Role-based access model support",
+            "versioning": "Data versioning and change history",
+            "kri": "Key Risk Indicators (KRI) monitoring, notification setup"
+        },
+        "results": {
+            "transparency": "Risk management transparency at all levels",
+            "decisions": "Data-driven decision making based on analytics",
+            "incidents": "Reduced probability of incident occurrence",
+            "compliance": "Compliance with standards and regulatory requirements",
+            "stability": "Enhanced process stability and manageability",
+            "visualization": "Risk visualization through matrices and heat maps"
+        },
+        "cta": {
+            "title": "Ready to start with risk management?",
+            "description": "Get a free consultation and learn how the risk management module can enhance your business resilience",
+            "button": "Get Consultation"
+        }
     }
 }

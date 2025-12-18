@@ -13,6 +13,11 @@ import CTA from './components/CTA.jsx';
 import Footer from './components/Footer.jsx';
 import Request from './pages/Request.jsx';
 import Admin from './pages/Admin.jsx';
+import AssetManagement from './pages/AssetManagement.jsx';
+import AuditCompliance from './pages/AuditCompliance.jsx';
+import TaskManagement from './pages/TaskManagement.jsx';
+import ControlManagement from './pages/ControlManagement.jsx';
+import RiskManagement from './pages/RiskManagement.jsx';
 
 function Layout() {
   const location = useLocation();
@@ -76,6 +81,11 @@ function App() {
       <Route element={<Layout />}>
         <Route index element={<LandingPage />} />
         <Route path="/request" element={<Request />} />
+        <Route path="/modules/asset-management" element={<AssetManagement />} />
+        <Route path="/modules/audit-compliance" element={<AuditCompliance />} />
+        <Route path="/modules/task-management" element={<TaskManagement />} />
+        <Route path="/modules/control-management" element={<ControlManagement />} />
+        <Route path="/modules/risk-management" element={<RiskManagement />} />
       </Route>
       <Route path="/admin" element={<Admin />} />
     </Routes>
