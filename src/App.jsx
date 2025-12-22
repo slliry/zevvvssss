@@ -18,6 +18,9 @@ import AuditCompliance from './pages/AuditCompliance.jsx';
 import TaskManagement from './pages/TaskManagement.jsx';
 import ControlManagement from './pages/ControlManagement.jsx';
 import RiskManagement from './pages/RiskManagement.jsx';
+import OperationalRiskManagement from './pages/OperationalRiskManagement.jsx';
+import VulnerabilityManagement from './pages/VulnerabilityManagement.jsx';
+import IncidentManagement from './pages/IncidentManagement.jsx';
 
 function Layout() {
   const location = useLocation();
@@ -86,6 +89,9 @@ function App() {
         <Route path="/modules/task-management" element={<TaskManagement />} />
         <Route path="/modules/control-management" element={<ControlManagement />} />
         <Route path="/modules/risk-management" element={<RiskManagement />} />
+        <Route path="/modules/operational-risk-management" element={<OperationalRiskManagement />} />
+        <Route path="/modules/vulnerability-management" element={<VulnerabilityManagement />} />
+        <Route path="/modules/incident-management" element={<IncidentManagement />} />
       </Route>
       <Route path="/admin" element={<Admin />} />
     </Routes>

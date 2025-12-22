@@ -11,9 +11,9 @@
     },
     "hero": {
         "badge": "Zeus Platform",
-        "heading1": "Comprehensive GRC",
-        "heading2": "Management Platform",
-        "description": "Asset, risk, audit, and control management in a single automated system.",
+        "heading1": "Unified GRC Management",
+        "heading2": "Platform",
+        "description": "Assets, risks, audits, and controls — seamlessly managed in one automated system.",
         "cta": "Try for Free"
     },
     "modules": {
@@ -22,7 +22,7 @@
         "items": {
             "assetManagement": {
                 "title": "Asset Management",
-                "description": "The foundation of the GRC system - asset management with registry, documents, and automated criticality assessment",
+                "description": "Centralize assets, link them to risks and processes, and automatically assess criticality for smarter decision-making.",
                 "features": {
                     "registry": "Asset registry with owners",
                     "documents": "Documents and attachments",
@@ -32,27 +32,31 @@
             },
             "riskManagement": {
                 "title": "Risk Management",
-                "description": "Automated IT and IS risk assessment"
+                "description": "Identify, assess, and visualize risks in one system, monitor KRIs in real time, and drive effective mitigation with full integration across GRC."
             },
             "auditCompliance": {
                 "title": "Audit & Compliance",
-                "description": "Audit and inspection plan generation"
-            },
-            "incidentVulnerability": {
-                "title": "Incident & Vulnerability",
-                "description": "Security incident and vulnerability management"
-            },
-            "operationalRisks": {
-                "title": "Operational Risks",
-                "description": "Operational risk monitoring and management"
+                "description": "Plan, execute, and monitor audits in one system—manage findings, CAPA, and evidence while staying continuously compliant with internal policies and international standards."
             },
             "taskManagement": {
                 "title": "Task Management",
-                "description": "Automated triggers and monitoring"
+                "description": "Centralize GRC tasks, automate assignments and deadlines, and ensure full accountability across risks, audits, and controls."
             },
             "controlManagement": {
                 "title": "Control Management",
-                "description": "Centralized control management"
+                "description": "Design, implement, and monitor controls in one system to reduce risk and ensure continuous compliance."
+            },
+            "vulnerabilityManagement": {
+                "title": "Vulnerability Management",
+                "description": "Consolidate vulnerability data from scanners and manual sources, prioritize remediation, and track resolution from discovery to closure."
+            },
+            "operationalRiskManagement": {
+                "title": "Operational Risk Management",
+                "description": "Identify and assess operational risks across processes, define mitigation measures, and continuously monitor risk status in one system."
+            },
+            "incidentManagement": {
+                "title": "Incident Management",
+                "description": "Register, classify, and investigate incidents efficiently, identify root causes, and ensure timely corrective actions with full traceability."
             }
         }
     },
@@ -592,6 +596,141 @@
         "cta": {
             "title": "Ready to start with risk management?",
             "description": "Get a free consultation and learn how the risk management module can enhance your business resilience",
+            "button": "Get Consultation"
+        }
+    },
+    "operationalRiskManagement": {
+        "title": "Operational Risk Management",
+        "backToModules": "Back to Modules",
+        "heroDescription": "Identify and assess operational risks in processes, determine mitigation measures, and continuously track risk status in one system.",
+        "beforeAfter": {
+            "title": "Solution Benefits",
+            "subtitle": "How operational risk management enhances business resilience",
+            "before": "Challenges",
+            "solution": "Zeus Solution",
+            "result": "Results"
+        },
+        "problems": {
+            "systematic": "Lack of systematic approach to identifying operational risks",
+            "manual": "Manual assessment of risk probability and impact",
+            "database": "No unified operational risk database",
+            "tracking": "Difficulty tracking risk status",
+            "linkage": "No linkage with processes and controls",
+            "monitoring": "No monitoring of mitigation measure effectiveness"
+        },
+        "solutions": {
+            "assessment": "Assessment of risk probability and impact using unified methods",
+            "collection": "Collection and recording of operational risks across all business processes",
+            "planning": "Planning of controls and risk mitigation measures",
+            "monitoring": "Real-time monitoring and reporting on risk status"
+        },
+        "results": {
+            "proactive": "Proactive operational risk management",
+            "reduction": "Reduced probability of risk events",
+            "response": "Rapid response to process changes",
+            "transparency": "Transparency in risk management at all levels",
+            "integration": "Integration with processes and controls",
+            "efficiency": "Increased operational efficiency"
+        },
+        "cta": {
+            "title": "Ready to start with operational risk management?",
+            "description": "Get a free consultation and learn how the operational risk management module can enhance your business resilience",
+            "button": "Get Consultation"
+        }
+    },
+    "vulnerabilityManagement": {
+        "title": "Vulnerability Management",
+        "backToModules": "Back to Modules",
+        "heroDescription": "Manage vulnerabilities from detection to remediation. Integrate data from scanners, classify, prioritize, and control the remediation process in a unified system.",
+        "beforeAfter": {
+            "title": "Solution Benefits",
+            "subtitle": "How vulnerability management enhances security",
+            "before": "Challenges",
+            "solution": "Zeus Solution",
+            "result": "Results"
+        },
+        "problems": {
+            "manual": "Manual collection of vulnerability data from different sources",
+            "database": "No unified vulnerability database",
+            "prioritization": "Difficulty prioritizing vulnerabilities",
+            "deadlines": "No control over remediation deadlines",
+            "linkage": "No linkage with assets and risks",
+            "reporting": "No reporting on vulnerability status"
+        },
+        "solutions": {
+            "integration": "Integrates vulnerability data from scanners and manual sources",
+            "classification": "Classification, criticality assessment, and prioritization",
+            "assignment": "Assignment of responsible parties and deadline control",
+            "transparency": "Transparent process from detection to closure"
+        },
+        "results": {
+            "proactive": "Proactive vulnerability management",
+            "reduction": "Reduced information security risks",
+            "remediation": "Rapid remediation of critical vulnerabilities",
+            "visibility": "Full visibility of vulnerability status",
+            "integration": "Integration with scanners and assets",
+            "security": "Enhanced security posture"
+        },
+        "cta": {
+            "title": "Ready to start with vulnerability management?",
+            "description": "Get a free consultation and learn how the vulnerability management module can enhance your infrastructure security",
+            "button": "Get Consultation"
+        },
+        "features": {
+            "integration": {
+                "title": "Integrates vulnerability data",
+                "description": "from scanners and manual sources"
+            },
+            "classification": {
+                "title": "Classification and assessment",
+                "description": "of criticality and priorities"
+            },
+            "assignment": {
+                "title": "Assignment of responsible parties",
+                "description": "and deadline control"
+            },
+            "transparency": {
+                "title": "Transparent process",
+                "description": "from detection to closure"
+            }
+        }
+    },
+    "incidentManagement": {
+        "title": "Incident Management",
+        "backToModules": "Back to Modules",
+        "heroDescription": "Register, investigate, and resolve incidents in a unified system. Automate processes, identify root causes, and develop corrective measures to prevent recurrence.",
+        "beforeAfter": {
+            "title": "Solution Benefits",
+            "subtitle": "How incident management enhances business resilience",
+            "before": "Challenges",
+            "solution": "Zeus Solution",
+            "result": "Results"
+        },
+        "problems": {
+            "chaotic": "Chaotic incident registration across different systems",
+            "noProcess": "No unified investigation process",
+            "deadlines": "No control over incident resolution deadlines",
+            "rootCause": "Difficulty identifying root causes",
+            "linkage": "No linkage with risks and controls",
+            "reporting": "No incident reporting"
+        },
+        "solutions": {
+            "registration": "Registration and documentation of incidents of any nature",
+            "rootCause": "Root cause identification and corrective actions",
+            "control": "Execution control and reporting",
+            "automation": "Investigation process automation"
+        },
+        "results": {
+            "structured": "Structured incident management",
+            "reduction": "Reduced incident recurrence",
+            "response": "Rapid response and resolution",
+            "transparency": "Investigation process transparency",
+            "linkage": "Linkage with risks and controls",
+            "improvement": "Continuous process improvement"
+        },
+        "cta": {
+            "title": "Ready to start with incident management?",
+            "description": "Get a free consultation and learn how the incident management module can enhance your business resilience",
             "button": "Get Consultation"
         }
     }

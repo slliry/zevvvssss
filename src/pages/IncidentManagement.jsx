@@ -6,44 +6,40 @@ import {
     ArrowRight,
     XCircle,
     Sparkles,
+    Target,
+    Shield,
     Zap,
     Eye,
     Network,
-    Shield,
-    Target,
-    TrendingUp,
-    AlertTriangle,
-    BarChart3,
+    TrendingUp
 } from 'lucide-react';
 
-export default function RiskManagement() {
+export default function IncidentManagement() {
     const { t } = useTranslation();
 
     const problems = [
-        t('riskManagement.problems.noVisibility'),
-        t('riskManagement.problems.manualAssessment'),
-        t('riskManagement.problems.noIntegration'),
-        t('riskManagement.problems.reactiveApproach'),
-        t('riskManagement.problems.noMonitoring'),
-        t('riskManagement.problems.inconsistentMethodology'),
+        t('incidentManagement.problems.chaotic'),
+        t('incidentManagement.problems.noProcess'),
+        t('incidentManagement.problems.deadlines'),
+        t('incidentManagement.problems.rootCause'),
+        t('incidentManagement.problems.linkage'),
+        t('incidentManagement.problems.reporting')
     ];
 
     const solutions = [
-        t('riskManagement.solutions.riskRegistry'),
-        t('riskManagement.solutions.methodology'),
-        t('riskManagement.solutions.integration'),
-        t('riskManagement.solutions.roleModel'),
-        t('riskManagement.solutions.versioning'),
-        t('riskManagement.solutions.kri'),
+        t('incidentManagement.solutions.registration'),
+        t('incidentManagement.solutions.rootCause'),
+        t('incidentManagement.solutions.control'),
+        t('incidentManagement.solutions.automation')
     ];
 
     const results = [
-        { icon: Eye, text: t('riskManagement.results.transparency') },
-        { icon: Target, text: t('riskManagement.results.decisions') },
-        { icon: TrendingUp, text: t('riskManagement.results.incidents') },
-        { icon: Shield, text: t('riskManagement.results.compliance') },
-        { icon: BarChart3, text: t('riskManagement.results.stability') },
-        { icon: Sparkles, text: t('riskManagement.results.visualization') },
+        { icon: Target, text: t('incidentManagement.results.structured') },
+        { icon: Shield, text: t('incidentManagement.results.reduction') },
+        { icon: Zap, text: t('incidentManagement.results.response') },
+        { icon: Eye, text: t('incidentManagement.results.transparency') },
+        { icon: Network, text: t('incidentManagement.results.linkage') },
+        { icon: TrendingUp, text: t('incidentManagement.results.improvement') }
     ];
 
     return (
@@ -61,13 +57,13 @@ export default function RiskManagement() {
                             to="/#modules"
                             className="mb-8 inline-flex items-center gap-2 text-sm text-[#004aad] transition hover:text-[#0066cc]"
                         >
-                            ← {t('riskManagement.backToModules')}
+                            ← {t('incidentManagement.backToModules')}
                         </Link>
                         <h1 className="mb-6 text-5xl font-bold text-[#1A1A1A] md:text-7xl">
-                            {t('riskManagement.title')}
+                            {t('incidentManagement.title')}
                         </h1>
                         <p className="mx-auto max-w-2xl text-lg leading-relaxed text-gray-700 lg:mx-0">
-                            {t('riskManagement.heroDescription')}
+                            {t('incidentManagement.heroDescription')}
                         </p>
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
@@ -79,7 +75,7 @@ export default function RiskManagement() {
                                 to="/request"
                                 className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#004aad] to-[#0066cc] px-8 py-4 text-lg font-semibold text-white shadow-lg transition-all hover:scale-105 hover:shadow-xl"
                             >
-                                {t('riskManagement.cta.button')}
+                                {t('incidentManagement.cta.button')}
                                 <ArrowRight size={20} />
                             </Link>
                         </motion.div>
@@ -89,15 +85,15 @@ export default function RiskManagement() {
                         initial={{ opacity: 0, x: 50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6, delay: 0.3 }}
-                        className="hidden lg:block"
+                        className="hidden lg:flex lg:justify-center lg:items-center"
                         style={{
                             filter: 'drop-shadow(0 20px 60px rgba(0, 74, 173, 0.3))',
                         }}
                     >
                         <img
-                            src="/RiskManagement.png"
-                            alt="Risk Management Dashboard"
-                            className="h-auto w-full max-w-sm object-contain mx-auto"
+                            src="/incidentmanagement.png"
+                            alt="Incident Management"
+                            className="h-auto w-full max-w-[400px] object-contain"
                         />
                     </motion.div>
                 </div>
@@ -113,10 +109,10 @@ export default function RiskManagement() {
                     className="mb-12 text-center"
                 >
                     <h2 className="mb-4 text-4xl font-bold md:text-5xl">
-                        {t('riskManagement.beforeAfter.title')}
+                        {t('incidentManagement.beforeAfter.title')}
                     </h2>
                     <p className="mx-auto max-w-2xl text-xl text-gray-600">
-                        {t('riskManagement.beforeAfter.subtitle')}
+                        {t('incidentManagement.beforeAfter.subtitle')}
                     </p>
                 </motion.div>
 
@@ -134,7 +130,7 @@ export default function RiskManagement() {
                                 <XCircle size={24} />
                             </div>
                             <h3 className="text-2xl font-bold text-red-900">
-                                {t('riskManagement.beforeAfter.before')}
+                                {t('incidentManagement.beforeAfter.before')}
                             </h3>
                         </div>
                         <ul className="space-y-3">
@@ -167,7 +163,7 @@ export default function RiskManagement() {
                                 <CheckCircle2 size={24} />
                             </div>
                             <h3 className="text-2xl font-bold text-white">
-                                {t('riskManagement.beforeAfter.solution')}
+                                {t('incidentManagement.beforeAfter.solution')}
                             </h3>
                         </div>
                         <ul className="space-y-3">
@@ -200,7 +196,7 @@ export default function RiskManagement() {
                                 <Sparkles size={24} />
                             </div>
                             <h3 className="text-2xl font-bold text-green-900">
-                                {t('riskManagement.beforeAfter.result')}
+                                {t('incidentManagement.beforeAfter.result')}
                             </h3>
                         </div>
                         <ul className="space-y-3">
@@ -253,16 +249,16 @@ export default function RiskManagement() {
 
                         <div className="relative z-10">
                             <h2 className="mb-4 text-3xl font-bold text-white md:text-5xl">
-                                {t('riskManagement.cta.title')}
+                                {t('incidentManagement.cta.title')}
                             </h2>
                             <p className="mb-8 text-lg text-white/90 md:text-xl">
-                                {t('riskManagement.cta.description')}
+                                {t('incidentManagement.cta.description')}
                             </p>
                             <Link
                                 to="/request"
                                 className="group inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-lg font-semibold text-[#004aad] transition-all hover:scale-105 hover:bg-gray-100 hover:shadow-xl"
                             >
-                                {t('riskManagement.cta.button')}
+                                {t('incidentManagement.cta.button')}
                                 <ArrowRight
                                     size={20}
                                     className="transition-transform group-hover:translate-x-1"

@@ -28,7 +28,7 @@ export default function Footer() {
   };
 
   const contactItems = [
-    { icon: Mail, text: 'info@zeusgrc.ru' },
+    { icon: Mail, text: 'assel.ucoklar@gmail.com' },
     { icon: Phone, text: '+7 707 388 66 39' },
     { icon: MapPin, text: 'г.Алматы, проспект Достык, 290' },
   ];
