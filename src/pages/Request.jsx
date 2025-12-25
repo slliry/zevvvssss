@@ -20,10 +20,6 @@ export default function Request() {
       title: t('request.perks.items.demo.title'),
       description: t('request.perks.items.demo.description'),
     },
-    {
-      title: t('request.perks.items.integration.title'),
-      description: t('request.perks.items.integration.description'),
-    },
   ];
 
   useEffect(() => {
@@ -194,7 +190,7 @@ export default function Request() {
             <div className="space-y-5 rounded-2xl border border-white/60 bg-white/70 p-5 text-sm text-gray-700">
               <div className="flex items-center gap-3">
                 <Mail className="text-[#0066FF]" size={18} />
-                support@zeus-grc.com
+                info@zeusgrc.com
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="text-[#0066FF]" size={18} />
@@ -202,7 +198,7 @@ export default function Request() {
               </div>
               <div className="flex items-center gap-3">
                 <Building2 className="text-[#0066FF]" size={18} />
-                г.Алматы, проспект Достык, 290
+                г.Алматы, улица Римского - Корсакова, 23
               </div>
             </div>
           </div>

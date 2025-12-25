@@ -2,6 +2,7 @@
     "header": {
         "menu": {
             "solutions": "Solutions",
+            "consulting": "Consulting",
             "modules": "Modules",
             "benefits": "Benefits",
             "testimonials": "Testimonials",
@@ -188,9 +189,7 @@
                 "title": "Product",
                 "items": {
                     "modules": "Modules",
-                    "integrations": "Integrations",
-                    "pricing": "Pricing",
-                    "documentation": "Documentation"
+                    "integrations": "Integrations"
                 }
             },
             "company": {
@@ -198,17 +197,7 @@
                 "items": {
                     "about": "About",
                     "careers": "Careers",
-                    "blog": "Blog",
-                    "contacts": "Contacts"
-                }
-            },
-            "resources": {
-                "title": "Resources",
-                "items": {
-                    "knowledge": "Knowledge Base",
-                    "webinars": "Webinars",
-                    "cases": "Case Studies",
-                    "support": "Support"
+                    "blog": "Blog"
                 }
             }
         },
@@ -264,15 +253,11 @@
             "items": {
                 "analysis": {
                     "title": "Personal Analysis",
-                    "description": "We'll determine your current maturity level and propose a Zeus GRC implementation roadmap."
+                    "description": "We'll individually configure the system to match your goals, processes, and priorities."
                 },
                 "demo": {
                     "title": "Demo Access",
-                    "description": "Get sandbox access to test key platform scenarios."
-                },
-                "integration": {
-                    "title": "Integration Plan",
-                    "description": "We'll prepare an integration scheme with your systems and launch timeline estimate."
+                    "description": "Quick access to the system — test functionality and key features in real scenarios."
                 }
             }
         },
@@ -374,6 +359,10 @@
             "standardization": {
                 "title": "Assessment Standardization",
                 "description": "Assessment standardization, transparent prioritization, and risk management support."
+            },
+            "riskSupport": {
+                "title": "Risk Management Support",
+                "description": "Comprehensive support for risk management processes with transparent prioritization"
             }
         },
         "benefits": {
@@ -487,6 +476,32 @@
         "title": "Control Management",
         "backToModules": "Back to Modules",
         "heroDescription": "Ensure centralized management of control measures aimed at risk reduction, regulatory compliance, and internal policy adherence. The module allows you to design, implement, assess, and monitor control effectiveness across the entire organization.",
+        "effectiveness": {
+            "title": "Control Effectiveness",
+            "subtitle": "Comprehensive approach to control verification and monitoring",
+            "features": {
+                "monitoring": {
+                    "title": "Verification and Monitoring",
+                    "description": "Control verification and monitoring"
+                },
+                "evidence": {
+                    "title": "Evidence Base",
+                    "description": "Centralized collection of evidence base"
+                },
+                "identification": {
+                    "title": "Problem Identification",
+                    "description": "Rapid identification of ineffective or missing controls"
+                },
+                "recommendations": {
+                    "title": "Recommendations",
+                    "description": "Formation of recommendations and improvement plans"
+                }
+            },
+            "clientResults": {
+                "title": "Client Results",
+                "description": "Minimization of operational risks, reduction of audit effort, provable process reliability, and transparency for management."
+            }
+        },
         "beforeAfter": {
             "title": "Solution Benefits",
             "subtitle": "How effective control management reduces risks",

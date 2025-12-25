@@ -100,6 +100,101 @@ export default function AssetManagement() {
                 </div>
             </section>
 
+            {/* Asset Evaluation Section */}
+            <section className="mx-auto max-w-[1440px] px-6 py-20 lg:px-12 md:py-32">
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6 }}
+                    className="mb-16 text-center"
+                >
+                    <h2 className="mb-4 text-4xl font-bold md:text-5xl">
+                        {t('assetManagement.valuation.title')}
+                    </h2>
+                    <p className="mx-auto max-w-3xl text-xl text-gray-600">
+                        {t('assetManagement.valuation.subtitle')}
+                    </p>
+                </motion.div>
+
+                <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-5">
+                    {/* Card 1 */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5, delay: 0.1 }}
+                        className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
+                    >
+                        <div className="mb-4 text-4xl font-bold text-[#004aad]">1</div>
+                        <h3 className="mb-3 text-base font-bold text-gray-900">{t('assetManagement.valuation.parametersTitle')}</h3>
+                        <p className="text-sm leading-relaxed text-gray-600">
+                            {t('assetManagement.valuation.parameters.regulatory')}, {t('assetManagement.valuation.parameters.legal')}, {t('assetManagement.valuation.parameters.reputational')}, {t('assetManagement.valuation.parameters.operational')}, {t('assetManagement.valuation.parameters.financial')}, {t('assetManagement.valuation.parameters.security')}
+                        </p>
+                    </motion.div>
+
+                    {/* Card 2 */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5, delay: 0.2 }}
+                        className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
+                    >
+                        <div className="mb-4 text-4xl font-bold text-[#004aad]">2</div>
+                        <h3 className="mb-3 text-base font-bold text-gray-900">{t('assetManagement.valuation.calculationTitle')}</h3>
+                        <p className="text-sm leading-relaxed text-gray-600">
+                            {t('assetManagement.valuation.calculation.confidentiality')}, {t('assetManagement.valuation.calculation.integrity')}, {t('assetManagement.valuation.calculation.criticality')}, {t('assetManagement.valuation.calculation.financialLoss')}
+                        </p>
+                    </motion.div>
+
+                    {/* Card 3 */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5, delay: 0.3 }}
+                        className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
+                    >
+                        <div className="mb-4 text-4xl font-bold text-[#004aad]">3</div>
+                        <h3 className="mb-3 text-base font-bold text-gray-900">{t('assetManagement.valuation.customization.title')}</h3>
+                        <p className="text-sm leading-relaxed text-gray-600">
+                            {t('assetManagement.valuation.customization.description')}
+                        </p>
+                    </motion.div>
+
+                    {/* Card 4 */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5, delay: 0.4 }}
+                        className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
+                    >
+                        <div className="mb-4 text-4xl font-bold text-[#004aad]">4</div>
+                        <h3 className="mb-3 text-base font-bold text-gray-900">{t('assetManagement.valuation.standardization.title')}</h3>
+                        <p className="text-sm leading-relaxed text-gray-600">
+                            {t('assetManagement.valuation.standardization.description')}
+                        </p>
+                    </motion.div>
+
+                    {/* Card 5 */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5, delay: 0.5 }}
+                        className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
+                    >
+                        <div className="mb-4 text-4xl font-bold text-[#004aad]">5</div>
+                        <h3 className="mb-3 text-base font-bold text-gray-900">{t('assetManagement.valuation.riskSupport.title')}</h3>
+                        <p className="text-sm leading-relaxed text-gray-600">
+                            {t('assetManagement.valuation.riskSupport.description')}
+                        </p>
+                    </motion.div>
+                </div>
+            </section>
+
             {/* Before/After Section */}
             <section className="mx-auto max-w-[1440px] px-6 py-20 lg:px-12 md:py-32">
                 <motion.div

@@ -19,6 +19,7 @@ export default function Header() {
 
   const menuItems = [
     { label: t('header.menu.solutions'), id: 'solutions' },
+    { label: t('header.menu.consulting'), href: '/request' },
     { label: t('header.menu.modules'), id: 'modules' },
     { label: t('header.menu.benefits'), id: 'benefits' },
     { label: t('header.menu.testimonials'), id: 'testimonials' },
@@ -47,7 +48,7 @@ export default function Header() {
 
   return (
     <header className={`sticky z-50 mx-3 lg:mx-6 transition-all duration-300 ${scrolled ? 'top-2' : 'top-3'}`}>
-      <div className={`relative flex max-w-[1100px] mx-auto items-center justify-between rounded-full border border-white/30 bg-white/50 backdrop-blur-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.04)] transition-all duration-300 ${scrolled ? 'min-h-[2.5rem] px-3 py-1 lg:px-5' : 'min-h-[3rem] px-4 py-1.5 lg:px-6'}`}>
+      <div className={`relative flex max-w-[1280px] mx-auto items-center justify-between rounded-full border border-white/30 bg-white/50 backdrop-blur-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.04)] transition-all duration-300 ${scrolled ? 'min-h-[2.5rem] px-3 py-1 lg:px-5' : 'min-h-[3rem] px-4 py-1.5 lg:px-6'}`}>
         <Link to="/" className="flex items-center" aria-label="Zeus GRC на главную">
           <img
             src="/logozeus.svg"
@@ -59,8 +60,8 @@ export default function Header() {
         <nav className={`hidden items-center md:flex transition-all duration-300 ${scrolled ? 'gap-4' : 'gap-6'}`}>
           {menuItems.map((item) => (
             <Link
-              key={item.id}
-              to={`/#${item.id}`}
+              key={item.id || item.href}
+              to={item.href || `/#${item.id}`}
               className={`text-[#1A1A1A] font-normal transition-all duration-300 hover:text-[#004aad] ${scrolled ? 'text-xs' : 'text-sm'}`}
             >
               {item.label}
@@ -142,8 +143,8 @@ export default function Header() {
         <nav className="flex flex-col gap-4 px-6 py-4">
           {menuItems.map((item) => (
             <Link
-              key={item.id}
-              to={`/#${item.id}`}
+              key={item.id || item.href}
+              to={item.href || `/#${item.id}`}
               className="py-2 text-[#1A1A1A] transition-colors hover:text-[#004aad]"
               onClick={() => setIsMenuOpen(false)}
             >

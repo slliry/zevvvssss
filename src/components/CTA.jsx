@@ -14,7 +14,7 @@ export default function CTA() {
     >
       <div className="mx-auto max-w-[1440px] px-6 lg:px-12">
         {/* Floating Card Container */}
-        <div className="relative mx-auto max-w-5xl">
+        <div className="relative mx-auto max-w-7xl">
           {/* Glow Effect Background */}
           <div className="absolute -inset-1 rounded-[2rem] bg-gradient-to-r from-[#004aad] via-[#0066cc] to-[#004aad] opacity-75 blur-2xl"></div>
 

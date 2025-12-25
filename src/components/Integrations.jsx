@@ -5,17 +5,10 @@ import { useTranslation } from 'react-i18next';
 import useInView from '../hooks/useInView.js';
 
 const integrations = [
-  // Endpoint / Threat Protection
+  { name: 'Jira', logo: '/Jira_Logo.svg', color: 'from-blue-600 to-blue-800' },
   { name: 'Nmap', logo: '/nmap_logo.png', color: 'from-blue-500 to-blue-700' },
-  { name: 'Nessus', logo: '/Nessus-Professional-FullColor-RGB.svg', color: 'from-green-500 to-emerald-600' },
   { name: 'Kaspersky', logo: '/Kaspersky_logo.svg', color: 'from-red-500 to-red-700' },
-  { name: 'CrowdStrike', logo: '/CrowdStrike_logo.svg', color: 'from-red-600 to-orange-600' },
-  { name: 'Trellix', logo: '/Trellix_Logo.svg', color: 'from-blue-600 to-indigo-700' },
-  // Виртуализация и инфраструктура
   { name: 'VMware', logo: '/Vmware-by-broadcom.svg', color: 'from-blue-500 to-cyan-600' },
-  // Identity & Access Management
-  { name: 'Active Directory', logo: '/active-directory-1.svg', color: 'from-blue-700 to-indigo-800' },
-  { name: 'Keycloak', logo: '/Logo_of_Keycloak.svg', color: 'from-indigo-600 to-purple-700' },
 ];
 
 // Triple the array for infinite scroll

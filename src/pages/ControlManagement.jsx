@@ -103,6 +103,137 @@ export default function ControlManagement() {
                 </div>
             </section>
 
+            {/* Control Effectiveness Section */}
+            <section className="bg-gray-50 py-20 md:py-32">
+                <div className="mx-auto max-w-[1440px] px-6 lg:px-12">
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6 }}
+                        className="mb-16 text-center"
+                    >
+                        <h2 className="mb-4 text-4xl font-bold md:text-5xl">
+                            {t('controlManagement.effectiveness.title')}
+                        </h2>
+                        <p className="mx-auto max-w-3xl text-xl text-gray-600">
+                            Комплексный подход к проверке и мониторингу работы контролей
+                        </p>
+                    </motion.div>
+
+                    <div className="grid gap-6 lg:grid-cols-2">
+                        {/* Feature Card 1 */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.5, delay: 0.1 }}
+                            className="group relative overflow-hidden rounded-3xl bg-white p-8 shadow-lg transition-all hover:shadow-2xl"
+                        >
+                            <div className="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-[#004aad]/5 transition-all group-hover:scale-150" />
+                            <div className="relative">
+                                <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-[#004aad] to-[#0066cc] text-white shadow-lg">
+                                    <CheckCircle2 size={28} />
+                                </div>
+                                <h3 className="mb-3 text-xl font-bold text-gray-900">
+                                    Проверка и мониторинг работы контролей
+                                </h3>
+                                <p className="text-gray-600 leading-relaxed">
+                                    Непрерывный мониторинг эффективности контрольных мер с автоматическим выявлением отклонений
+                                </p>
+                            </div>
+                        </motion.div>
+
+                        {/* Feature Card 2 */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.5, delay: 0.2 }}
+                            className="group relative overflow-hidden rounded-3xl bg-white p-8 shadow-lg transition-all hover:shadow-2xl"
+                        >
+                            <div className="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-[#004aad]/5 transition-all group-hover:scale-150" />
+                            <div className="relative">
+                                <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-[#004aad] to-[#0066cc] text-white shadow-lg">
+                                    <FileCheck size={28} />
+                                </div>
+                                <h3 className="mb-3 text-xl font-bold text-gray-900">
+                                    Централизованный сбор доказательной базы
+                                </h3>
+                                <p className="text-gray-600 leading-relaxed">
+                                    Единое хранилище всех доказательств выполнения контролей для упрощения аудита
+                                </p>
+                            </div>
+                        </motion.div>
+
+                        {/* Feature Card 3 */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.5, delay: 0.3 }}
+                            className="group relative overflow-hidden rounded-3xl bg-white p-8 shadow-lg transition-all hover:shadow-2xl"
+                        >
+                            <div className="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-[#004aad]/5 transition-all group-hover:scale-150" />
+                            <div className="relative">
+                                <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-[#004aad] to-[#0066cc] text-white shadow-lg">
+                                    <Target size={28} />
+                                </div>
+                                <h3 className="mb-3 text-xl font-bold text-gray-900">
+                                    Быстрое выявление неэффективных контролей
+                                </h3>
+                                <p className="text-gray-600 leading-relaxed">
+                                    Автоматическое обнаружение пробелов в системе контроля и оперативное реагирование
+                                </p>
+                            </div>
+                        </motion.div>
+
+                        {/* Feature Card 4 */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.5, delay: 0.4 }}
+                            className="group relative overflow-hidden rounded-3xl bg-white p-8 shadow-lg transition-all hover:shadow-2xl"
+                        >
+                            <div className="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-[#004aad]/5 transition-all group-hover:scale-150" />
+                            <div className="relative">
+                                <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-[#004aad] to-[#0066cc] text-white shadow-lg">
+                                    <Sparkles size={28} />
+                                </div>
+                                <h3 className="mb-3 text-xl font-bold text-gray-900">
+                                    Формирование рекомендаций и планов улучшений
+                                </h3>
+                                <p className="text-gray-600 leading-relaxed">
+                                    Интеллектуальные рекомендации по оптимизации контрольной среды организации
+                                </p>
+                            </div>
+                        </motion.div>
+                    </div>
+
+                    {/* Results Banner */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6, delay: 0.5 }}
+                        className="mt-12 relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#004aad] to-[#0066cc] p-10 md:p-12 text-white shadow-2xl"
+                    >
+                        <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-white/10 blur-3xl" />
+                        <div className="absolute -left-20 -bottom-20 h-64 w-64 rounded-full bg-white/10 blur-3xl" />
+                        <div className="relative">
+                            <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-white/20 backdrop-blur-sm">
+                                <CheckSquare size={32} className="text-white" />
+                            </div>
+                            <h3 className="mb-4 text-2xl font-bold md:text-3xl text-white">Результат для клиента</h3>
+                            <p className="text-lg leading-relaxed text-white max-w-4xl">
+                                Минимизация операционных рисков, сокращение трудозатрат на аудит, доказуемая надежность процессов и прозрачность для руководства.
+                            </p>
+                        </div>
+                    </motion.div>
+                </div>
+            </section>
+
             {/* Before/After Section */}
             <section className="mx-auto max-w-[1440px] px-6 py-20 lg:px-12 md:py-32">
                 <motion.div

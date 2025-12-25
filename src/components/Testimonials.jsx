@@ -5,8 +5,7 @@ import useInView from '../hooks/useInView.js';
 
 export default function Testimonials() {
   const { t } = useTranslation();
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [direction, setDirection] = useState('next');
+  const [currentPage, setCurrentPage] = useState(0);
   const [sectionRef, isVisible] = useInView();
 
   const testimonials = [
@@ -33,14 +32,21 @@ export default function Testimonials() {
     },
   ];
 
-  const nextTestimonial = () => {
-    setDirection('next');
-    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+  // Group testimonials into pairs
+  const testimonialsPerPage = 2;
+  const totalPages = Math.ceil(testimonials.length / testimonialsPerPage);
+
+  const getCurrentTestimonials = () => {
+    const start = currentPage * testimonialsPerPage;
+    return testimonials.slice(start, start + testimonialsPerPage);
   };
 
-  const prevTestimonial = () => {
-    setDirection('prev');
-    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  const nextPage = () => {
+    setCurrentPage((prev) => (prev + 1) % totalPages);
+  };
+
+  const prevPage = () => {
+    setCurrentPage((prev) => (prev - 1 + totalPages) % totalPages);
   };
 
   return (
@@ -57,55 +63,62 @@ export default function Testimonials() {
           </p>
         </div>
 
-        <div className="relative mx-auto max-w-4xl">
-          <div
-            key={`${currentIndex}-${direction}`}
-            className={`rounded-3xl bg-gradient-to-br from-[#004aad] to-[#0066cc] p-12 text-white shadow-[0_20px_60px_rgba(0,74,173,0.25)] ${direction === 'next' ? 'testimonial-slide-next' : 'testimonial-slide-prev'
-              }`}
-          >
-            <div className="mb-6 flex gap-1">
-              {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
-                <Star key={i} size={24} fill="currentColor" />
-              ))}
-            </div>
-            <p className="mb-8 text-xl leading-relaxed text-white/90 md:text-2xl">
-              "{testimonials[currentIndex].text}"
-            </p>
-            <div>
-              <div className="mb-1 text-xl">{testimonials[currentIndex].name}</div>
-              <div className="text-white/80">
-                {testimonials[currentIndex].position}, {testimonials[currentIndex].company}
+        <div className="relative mx-auto max-w-6xl">
+          {/* Testimonial Cards Grid */}
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+            {getCurrentTestimonials().map((testimonial, index) => (
+              <div
+                key={`${currentPage}-${index}`}
+                className="rounded-3xl bg-gradient-to-br from-[#004aad] to-[#0066cc] p-8 md:p-10 text-white shadow-[0_20px_60px_rgba(0,74,173,0.25)] transition-all duration-300 hover:shadow-[0_25px_70px_rgba(0,74,173,0.35)]"
+              >
+                <div className="mb-6 flex gap-1">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} size={20} fill="currentColor" />
+                  ))}
+                </div>
+                <p className="mb-8 text-lg leading-relaxed text-white/90">
+                  "{testimonial.text}"
+                </p>
+                <div>
+                  <div className="mb-1 text-lg font-medium">{testimonial.name}</div>
+                  <div className="text-sm text-white/70">
+                    {testimonial.position}, {testimonial.company}
+                  </div>
+                </div>
               </div>
-            </div>
+            ))}
           </div>
 
+          {/* Navigation Controls */}
           <div className="mt-8 flex items-center justify-center gap-6">
             <button
-              onClick={prevTestimonial}
-              className="flex h-16 w-16 items-center justify-center rounded-full bg-white text-black shadow-lg shadow-black/10 transition hover:-translate-y-1 hover:bg-white/90"
+              onClick={prevPage}
+              className="flex h-12 w-12 items-center justify-center rounded-full bg-white text-[#004aad] shadow-lg shadow-black/10 transition hover:-translate-y-1 hover:bg-gray-50"
+              aria-label="Previous testimonials"
             >
-              <ChevronLeft size={36} strokeWidth={1.5} />
+              <ChevronLeft size={24} strokeWidth={2} />
             </button>
-            <div className="flex items-center gap-3">
-              {testimonials.map((_, index) => (
+
+            <div className="flex items-center gap-2">
+              {[...Array(totalPages)].map((_, index) => (
                 <button
                   key={index}
-                  onClick={() => {
-                    setDirection(index > currentIndex ? 'next' : 'prev');
-                    setCurrentIndex(index);
-                  }}
-                  className={`h-2 rounded-full transition-all duration-500 ease-out ${index === currentIndex
-                    ? 'w-12 bg-[#004aad]'
-                    : 'w-2 bg-gray-300/70 hover:bg-gray-400/90'
+                  onClick={() => setCurrentPage(index)}
+                  className={`h-2 rounded-full transition-all duration-300 ${index === currentPage
+                      ? 'w-12 bg-[#004aad]'
+                      : 'w-2 bg-gray-300 hover:bg-gray-400'
                     }`}
+                  aria-label={`Go to page ${index + 1}`}
                 />
               ))}
             </div>
+
             <button
-              onClick={nextTestimonial}
-              className="flex h-16 w-16 items-center justify-center rounded-full bg-white text-black shadow-lg shadow-black/10 transition hover:-translate-y-1 hover:bg-white/90"
+              onClick={nextPage}
+              className="flex h-12 w-12 items-center justify-center rounded-full bg-white text-[#004aad] shadow-lg shadow-black/10 transition hover:-translate-y-1 hover:bg-gray-50"
+              aria-label="Next testimonials"
             >
-              <ChevronRight size={36} strokeWidth={1.5} />
+              <ChevronRight size={24} strokeWidth={2} />
             </button>
           </div>
         </div>
