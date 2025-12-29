@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO.jsx';
 import {
     CheckCircle2,
     ArrowRight,
@@ -48,6 +49,11 @@ export default function ControlManagement() {
 
     return (
         <div className="bg-[#F7FFFE]">
+            <SEO
+                title={t('controlManagement.title') + ' - Zeus GRC'}
+                description={t('controlManagement.heroDescription')}
+                url="/modules/control-management"
+            />
             {/* Hero Section */}
             <section className="relative flex min-h-screen items-center overflow-hidden bg-[#F7FFFE] py-20 md:py-0">
                 <div className="relative mx-auto grid max-w-[1440px] items-center gap-12 px-6 lg:grid-cols-2 lg:gap-16 lg:px-12">
@@ -117,7 +123,7 @@ export default function ControlManagement() {
                             {t('controlManagement.effectiveness.title')}
                         </h2>
                         <p className="mx-auto max-w-3xl text-xl text-gray-600">
-                            Комплексный подход к проверке и мониторингу работы контролей
+                            {t('controlManagement.effectiveness.subtitle')}
                         </p>
                     </motion.div>
 
@@ -136,10 +142,10 @@ export default function ControlManagement() {
                                     <CheckCircle2 size={28} />
                                 </div>
                                 <h3 className="mb-3 text-xl font-bold text-gray-900">
-                                    Проверка и мониторинг работы контролей
+                                    {t('controlManagement.effectiveness.features.monitoring.title')}
                                 </h3>
                                 <p className="text-gray-600 leading-relaxed">
-                                    Непрерывный мониторинг эффективности контрольных мер с автоматическим выявлением отклонений
+                                    {t('controlManagement.effectiveness.features.monitoring.description')}
                                 </p>
                             </div>
                         </motion.div>
@@ -158,10 +164,10 @@ export default function ControlManagement() {
                                     <FileCheck size={28} />
                                 </div>
                                 <h3 className="mb-3 text-xl font-bold text-gray-900">
-                                    Централизованный сбор доказательной базы
+                                    {t('controlManagement.effectiveness.features.evidence.title')}
                                 </h3>
                                 <p className="text-gray-600 leading-relaxed">
-                                    Единое хранилище всех доказательств выполнения контролей для упрощения аудита
+                                    {t('controlManagement.effectiveness.features.evidence.description')}
                                 </p>
                             </div>
                         </motion.div>
@@ -180,10 +186,10 @@ export default function ControlManagement() {
                                     <Target size={28} />
                                 </div>
                                 <h3 className="mb-3 text-xl font-bold text-gray-900">
-                                    Быстрое выявление неэффективных контролей
+                                    {t('controlManagement.effectiveness.features.identification.title')}
                                 </h3>
                                 <p className="text-gray-600 leading-relaxed">
-                                    Автоматическое обнаружение пробелов в системе контроля и оперативное реагирование
+                                    {t('controlManagement.effectiveness.features.identification.description')}
                                 </p>
                             </div>
                         </motion.div>
@@ -202,10 +208,10 @@ export default function ControlManagement() {
                                     <Sparkles size={28} />
                                 </div>
                                 <h3 className="mb-3 text-xl font-bold text-gray-900">
-                                    Формирование рекомендаций и планов улучшений
+                                    {t('controlManagement.effectiveness.features.recommendations.title')}
                                 </h3>
                                 <p className="text-gray-600 leading-relaxed">
-                                    Интеллектуальные рекомендации по оптимизации контрольной среды организации
+                                    {t('controlManagement.effectiveness.features.recommendations.description')}
                                 </p>
                             </div>
                         </motion.div>
@@ -225,9 +231,9 @@ export default function ControlManagement() {
                             <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-white/20 backdrop-blur-sm">
                                 <CheckSquare size={32} className="text-white" />
                             </div>
-                            <h3 className="mb-4 text-2xl font-bold md:text-3xl text-white">Результат для клиента</h3>
+                            <h3 className="mb-4 text-2xl font-bold md:text-3xl text-white">{t('controlManagement.effectiveness.clientResults.title')}</h3>
                             <p className="text-lg leading-relaxed text-white max-w-4xl">
-                                Минимизация операционных рисков, сокращение трудозатрат на аудит, доказуемая надежность процессов и прозрачность для руководства.
+                                {t('controlManagement.effectiveness.clientResults.description')}
                             </p>
                         </div>
                     </motion.div>

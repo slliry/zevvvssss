@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO.jsx';
 import {
     CheckCircle2,
     ArrowRight,
@@ -45,6 +46,11 @@ export default function AssetManagement() {
 
     return (
         <div className="bg-[#F7FFFE]">
+            <SEO
+                title={t('assetManagement.title') + ' - Zeus GRC'}
+                description={t('assetManagement.heroDescription')}
+                url="/modules/asset-management"
+            />
             {/* Hero Section */}
             <section className="relative flex min-h-screen items-center overflow-hidden bg-[#F7FFFE] py-20 md:py-0">
                 <div className="relative mx-auto grid max-w-[1440px] items-center gap-12 px-6 lg:grid-cols-2 lg:gap-16 lg:px-12">

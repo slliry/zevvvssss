@@ -11,6 +11,7 @@ import Testimonials from './components/Testimonials.jsx';
 import Integrations from './components/Integrations.jsx';
 import CTA from './components/CTA.jsx';
 import Footer from './components/Footer.jsx';
+import SEO from './components/SEO.jsx';
 import Request from './pages/Request.jsx';
 import Admin from './pages/Admin.jsx';
 import AssetManagement from './pages/AssetManagement.jsx';
@@ -59,6 +60,7 @@ function SectionDivider() {
 function LandingPage() {
   return (
     <>
+      <SEO url="/" />
       <Hero />
       <SectionDivider />
       <Modules />

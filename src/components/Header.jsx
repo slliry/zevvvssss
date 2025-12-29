@@ -62,7 +62,7 @@ export default function Header() {
             <Link
               key={item.id || item.href}
               to={item.href || `/#${item.id}`}
-              className={`text-[#1A1A1A] font-normal transition-all duration-300 hover:text-[#004aad] ${scrolled ? 'text-xs' : 'text-sm'}`}
+              className={`${item.href === '/request' ? 'text-[#004aad] font-bold' : 'text-[#1A1A1A] font-normal'} transition-all duration-300 hover:text-[#004aad] ${scrolled ? 'text-xs' : 'text-sm'}`}
             >
               {item.label}
             </Link>

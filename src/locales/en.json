@@ -481,20 +481,20 @@
             "subtitle": "Comprehensive approach to control verification and monitoring",
             "features": {
                 "monitoring": {
-                    "title": "Verification and Monitoring",
-                    "description": "Control verification and monitoring"
+                    "title": "Control Verification and Monitoring",
+                    "description": "Continuous monitoring of control measure effectiveness with automatic deviation detection"
                 },
                 "evidence": {
-                    "title": "Evidence Base",
-                    "description": "Centralized collection of evidence base"
+                    "title": "Centralized Evidence Collection",
+                    "description": "Unified repository of all control execution evidence to simplify audits"
                 },
                 "identification": {
-                    "title": "Problem Identification",
-                    "description": "Rapid identification of ineffective or missing controls"
+                    "title": "Rapid Identification of Ineffective Controls",
+                    "description": "Automatic detection of control system gaps and prompt response"
                 },
                 "recommendations": {
-                    "title": "Recommendations",
-                    "description": "Formation of recommendations and improvement plans"
+                    "title": "Recommendations and Improvement Plans",
+                    "description": "Intelligent recommendations for optimizing the organization's control environment"
                 }
             },
             "clientResults": {
