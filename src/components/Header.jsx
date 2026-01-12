@@ -135,8 +135,8 @@ export default function Header() {
 
       {/* Mobile Menu with Animation */}
       <div
-        className={`absolute left-3 right-3 top-full mt-2 overflow-hidden rounded-2xl border border-white/20 bg-white/70 backdrop-blur-lg shadow-[0_8px_32px_0_rgba(0,0,0,0.08)] transition-all duration-300 ease-in-out md:hidden ${isMenuOpen
-          ? 'max-h-96 opacity-100'
+        className={`absolute left-3 right-3 top-full mt-2 overflow-y-auto rounded-2xl border border-white/20 bg-white/70 backdrop-blur-lg shadow-[0_8px_32px_0_rgba(0,0,0,0.08)] transition-all duration-300 ease-in-out md:hidden ${isMenuOpen
+          ? 'max-h-[32rem] opacity-100'
           : 'max-h-0 opacity-0 border-transparent'
           }`}
       >
