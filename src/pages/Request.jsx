@@ -190,7 +190,7 @@ export default function Request() {
             <div className="space-y-5 rounded-2xl border border-white/60 bg-white/70 p-5 text-sm text-gray-700">
               <div className="flex items-center gap-3">
                 <Mail className="text-[#0066FF]" size={18} />
-                info@zeusgrc.com
+                zeus@dmcorp.kz
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="text-[#0066FF]" size={18} />

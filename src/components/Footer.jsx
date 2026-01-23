@@ -19,7 +19,7 @@ export default function Footer() {
   };
 
   const contactItems = [
-    { icon: Mail, text: 'info@zeusgrc.com' },
+    { icon: Mail, text: 'zeus@dmcorp.kz' },
     { icon: Phone, text: '+7 707 388 66 39' },
     { icon: MapPin, text: 'г.Алматы, улица Римского - Корсакова, 23' },
   ];

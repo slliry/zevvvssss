@@ -9,6 +9,11 @@ const integrations = [
   { name: 'Nmap', logo: '/nmap_logo.png', color: 'from-blue-500 to-blue-700' },
   { name: 'Kaspersky', logo: '/Kaspersky_logo.svg', color: 'from-red-500 to-red-700' },
   { name: 'VMware', logo: '/Vmware-by-broadcom.svg', color: 'from-blue-500 to-cyan-600' },
+  { name: 'Active Directory', logo: '/active-directory-1.svg', color: 'from-blue-600 to-indigo-700' },
+  { name: 'CrowdStrike', logo: '/CrowdStrike_logo.svg', color: 'from-red-600 to-orange-700' },
+  { name: 'Keycloak', logo: '/Logo_of_Keycloak.svg', color: 'from-blue-500 to-teal-600' },
+  { name: 'Nessus', logo: '/Nessus-Professional-FullColor-RGB.svg', color: 'from-green-600 to-emerald-700' },
+  { name: 'Trellix', logo: '/Trellix_Logo.svg', color: 'from-red-500 to-pink-600' },
 ];
 
 // Triple the array for infinite scroll
@@ -55,10 +60,6 @@ export default function Integrations() {
 
         {/* Infinite Scrolling Carousel */}
         <div className="relative overflow-hidden py-8">
-          {/* Gradient overlays */}
-          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-32 bg-gradient-to-r from-white to-transparent" />
-          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-32 bg-gradient-to-l from-white to-transparent" />
-
           <motion.div
             drag="x"
             dragConstraints={{ left: -TOTAL_WIDTH, right: 0 }}
