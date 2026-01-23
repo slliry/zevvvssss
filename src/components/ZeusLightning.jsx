@@ -43,7 +43,7 @@ export default function ZeusLightning() {
             <div className="zeus-orb zeus-orb--four" />
 
             {/* Lightning SVG Container */}
-            <svg className="absolute inset-0 h-full w-full" style={{ zIndex: 1 }}>
+            <svg className="absolute inset-0 h-full w-full" viewBox="0 0 1000 1000" preserveAspectRatio="none" style={{ zIndex: 1 }}>
                 <defs>
                     <filter id="glow">
                         <feGaussianBlur stdDeviation="3" result="coloredBlur" />
@@ -60,18 +60,26 @@ export default function ZeusLightning() {
                 </defs>
 
                 {/* Animated Lightning Strikes */}
-                {lightningStrikes.map((strike) => (
-                    <g key={strike.id} className="lightning-strike" style={{ animationDuration: `${strike.duration}s` }}>
-                        <path
-                            d={`M ${strike.x1}% ${strike.y1}% L ${strike.x1 + (strike.x2 - strike.x1) * 0.3}% ${strike.y1 + (strike.y2 - strike.y1) * 0.4}% L ${strike.x1 + (strike.x2 - strike.x1) * 0.5}% ${strike.y1 + (strike.y2 - strike.y1) * 0.5}% L ${strike.x1 + (strike.x2 - strike.x1) * 0.7}% ${strike.y1 + (strike.y2 - strike.y1) * 0.8}% L ${strike.x2}% ${strike.y2}%`}
-                            stroke="url(#lightningGradient)"
-                            strokeWidth="2"
-                            fill="none"
-                            filter="url(#glow)"
-                            strokeLinecap="round"
-                        />
-                    </g>
-                ))}
+                {lightningStrikes.map((strike) => {
+                    // Конвертируем проценты (0-100) в viewBox координаты (0-1000)
+                    const x1 = strike.x1 * 10;
+                    const y1 = strike.y1 * 10;
+                    const x2 = strike.x2 * 10;
+                    const y2 = strike.y2 * 10;
+                    
+                    return (
+                        <g key={strike.id} className="lightning-strike" style={{ animationDuration: `${strike.duration}s` }}>
+                            <path
+                                d={`M ${x1} ${y1} L ${x1 + (x2 - x1) * 0.3} ${y1 + (y2 - y1) * 0.4} L ${x1 + (x2 - x1) * 0.5} ${y1 + (y2 - y1) * 0.5} L ${x1 + (x2 - x1) * 0.7} ${y1 + (y2 - y1) * 0.8} L ${x2} ${y2}`}
+                                stroke="url(#lightningGradient)"
+                                strokeWidth="2"
+                                fill="none"
+                                filter="url(#glow)"
+                                strokeLinecap="round"
+                            />
+                        </g>
+                    );
+                })}
             </svg>
 
             {/* Grid background */}

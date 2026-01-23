@@ -3,7 +3,9 @@ const API_BASE_URL =
   (import.meta.env.DEV ? 'http://localhost:4000' : '');
 
 async function apiRequest(path, { method = 'GET', body, token, signal, query } = {}) {
-  const url = new URL(`${API_BASE_URL}${path}`);
+  // Если API_BASE_URL пустой (production на том же домене), используем window.location.origin
+  const baseUrl = API_BASE_URL || (typeof window !== 'undefined' ? window.location.origin : '');
+  const url = new URL(`${baseUrl}${path}`);
   if (query) {
     Object.entries(query).forEach(([key, value]) => {
       if (value === undefined || value === null || value === '') return;
