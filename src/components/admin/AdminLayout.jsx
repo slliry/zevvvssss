@@ -5,7 +5,7 @@ export default function AdminLayout() {
   const { isAuthenticated } = useAuth();
 
   if (!isAuthenticated) {
-    return <Navigate to="/admin/login" replace />;
+    return <Navigate to="/adzeusmin/login" replace />;
   }
 
   return <Outlet />;
