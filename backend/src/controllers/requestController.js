@@ -31,10 +31,10 @@ const updateStatusSchema = z.object({
   status: statusEnum,
 });
 
-export function submitRequest(req, res, next) {
+export async function submitRequest(req, res, next) {
   try {
     const data = createRequestSchema.parse(req.body);
-    const request = createRequest(data);
+    const request = await createRequest(data);
     return res.status(201).json(request);
   } catch (error) {
     return next(error);

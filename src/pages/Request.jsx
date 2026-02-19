@@ -43,6 +43,15 @@ export default function Request() {
     const form = event.currentTarget;
     const formData = new FormData(form);
     const payload = Object.fromEntries(formData.entries());
+    const email = String(payload.email || '').trim().toLowerCase();
+    const allowedDomains = ['.com', '.kz'];
+    if (!allowedDomains.some((domain) => email.endsWith(domain))) {
+      setStatus({
+        type: 'error',
+        message: 'Email должен оканчиваться на .com или .kz',
+      });
+      return;
+    }
     setLoading(true);
     setStatus({ type: null, message: '' });
 

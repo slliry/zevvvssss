@@ -95,7 +95,7 @@ function App() {
         <Route path="/modules/vulnerability-management" element={<VulnerabilityManagement />} />
         <Route path="/modules/incident-management" element={<IncidentManagement />} />
       </Route>
-      <Route path="/adzeusmin" element={<Admin />} />
+      <Route path="/admin" element={<Admin />} />
     </Routes>
   );
 }

@@ -1,5 +1,6 @@
 export function errorHandler(err, req, res, next) {
-  console.error(err);
+  const message = err?.stack || err?.message || String(err);
+  console.error(message);
 
   if (err.name === 'ZodError') {
     return res.status(400).json({

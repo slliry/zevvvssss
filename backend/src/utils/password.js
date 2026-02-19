@@ -9,7 +9,3 @@ export function hashPassword(password) {
 export function comparePassword(password, hash) {
   return bcrypt.compareSync(password, hash);
 }
-
-export function isPasswordHashed(password) {
-  return typeof password === 'string' && password.startsWith('$2');
-}

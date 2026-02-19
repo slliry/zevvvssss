@@ -1,6 +1,44 @@
+import nodemailer from 'nodemailer';
 import db from '../db/index.js';
+import env from '../config/env.js';
 
-export function createRequest(data) {
+async function sendRequestNotification(request) {
+  if (!env.smtpHost || !env.smtpUser || !env.smtpPass || !env.smtpFrom) {
+    return;
+  }
+
+  const transporter = nodemailer.createTransport({
+    host: env.smtpHost,
+    port: env.smtpPort,
+    secure: env.smtpSecure,
+    auth: {
+      user: env.smtpUser,
+      pass: env.smtpPass,
+    },
+  });
+
+  const subject = `Новая заявка от ${request.name}`;
+  const lines = [
+    `Имя: ${request.name}`,
+    `Компания: ${request.company}`,
+    `Email: ${request.email}`,
+    `Телефон: ${request.phone || '-'}`,
+    `Должность: ${request.role || '-'}`,
+    `Сообщение: ${request.message || '-'}`,
+    `ID заявки: ${request.id}`,
+    `Создано: ${request.created_at}`,
+  ];
+
+  await transporter.sendMail({
+    from: env.smtpFrom,
+    to: env.requestNotificationEmail,
+    replyTo: request.email,
+    subject,
+    text: lines.join('\n'),
+  });
+}
+
+export async function createRequest(data) {
   const now = new Date().toISOString();
   const stmt = db.prepare(`
     INSERT INTO requests (name, company, email, phone, role, message, status, created_at, updated_at)
@@ -16,14 +54,16 @@ export function createRequest(data) {
     now,
     now
   );
-
-  return {
+  const request = {
     id: result.lastInsertRowid,
     ...data,
     status: 'new',
     created_at: now,
     updated_at: now,
   };
+
+  await sendRequestNotification(request);
+  return request;
 }
 
 export function buildFilters({ status, search, from, to }) {
