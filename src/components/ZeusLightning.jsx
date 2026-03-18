@@ -43,7 +43,12 @@ export default function ZeusLightning() {
             <div className="zeus-orb zeus-orb--four" />
 
             {/* Lightning SVG Container */}
-            <svg className="absolute inset-0 h-full w-full" style={{ zIndex: 1 }}>
+            <svg
+                className="absolute inset-0 h-full w-full"
+                style={{ zIndex: 1 }}
+                viewBox="0 0 100 100"
+                preserveAspectRatio="none"
+            >
                 <defs>
                     <filter id="glow">
                         <feGaussianBlur stdDeviation="3" result="coloredBlur" />
@@ -63,7 +68,7 @@ export default function ZeusLightning() {
                 {lightningStrikes.map((strike) => (
                     <g key={strike.id} className="lightning-strike" style={{ animationDuration: `${strike.duration}s` }}>
                         <path
-                            d={`M ${strike.x1}% ${strike.y1}% L ${strike.x1 + (strike.x2 - strike.x1) * 0.3}% ${strike.y1 + (strike.y2 - strike.y1) * 0.4}% L ${strike.x1 + (strike.x2 - strike.x1) * 0.5}% ${strike.y1 + (strike.y2 - strike.y1) * 0.5}% L ${strike.x1 + (strike.x2 - strike.x1) * 0.7}% ${strike.y1 + (strike.y2 - strike.y1) * 0.8}% L ${strike.x2}% ${strike.y2}%`}
+                            d={`M ${strike.x1} ${strike.y1} L ${strike.x1 + (strike.x2 - strike.x1) * 0.3} ${strike.y1 + (strike.y2 - strike.y1) * 0.4} L ${strike.x1 + (strike.x2 - strike.x1) * 0.5} ${strike.y1 + (strike.y2 - strike.y1) * 0.5} L ${strike.x1 + (strike.x2 - strike.x1) * 0.7} ${strike.y1 + (strike.y2 - strike.y1) * 0.8} L ${strike.x2} ${strike.y2}`}
                             stroke="url(#lightningGradient)"
                             strokeWidth="2"
                             fill="none"
