@@ -19,13 +19,14 @@ export default function ChatAssistant() {
   const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const [activeAction, setActiveAction] = useState('overview');
+  const [hasInteracted, setHasInteracted] = useState(false);
   const [selectedModule, setSelectedModule] = useState(null);
   const [showContactForm, setShowContactForm] = useState(false);
   const [isTyping, setIsTyping] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [status, setStatus] = useState({ type: null, message: '' });
 
-  const quickActions = ['overview', 'module', 'demo', 'operator'];
+  const quickActions = ['module', 'demo', 'operator'];
 
   const moduleDetails = useMemo(
     () =>
@@ -73,6 +74,7 @@ export default function ChatAssistant() {
   };
 
   const handleAction = (action) => {
+    setHasInteracted(true);
     setActiveAction(action);
     setSelectedModule(null);
     setStatus({ type: null, message: '' });
@@ -82,6 +84,7 @@ export default function ChatAssistant() {
   };
 
   const handleModuleClick = (moduleKey) => {
+    setHasInteracted(true);
     setSelectedModule(moduleKey);
     setShowContactForm(false);
     animateAssistantResponse();
@@ -117,7 +120,7 @@ export default function ChatAssistant() {
   return (
     <div className="fixed bottom-5 right-5 z-[80]">
       {isOpen ? (
-        <div className="w-[92vw] max-w-[380px] overflow-hidden rounded-3xl border border-white/70 bg-white shadow-[0_30px_80px_rgba(0,74,173,0.25)] backdrop-blur-xl">
+        <div className="flex h-[78vh] w-[92vw] max-h-[680px] max-w-[380px] flex-col overflow-hidden rounded-3xl border border-white/70 bg-white shadow-[0_30px_80px_rgba(0,74,173,0.25)] backdrop-blur-xl">
           <div className="flex items-center justify-between bg-gradient-to-r from-[#004aad] to-[#0066cc] px-4 py-3 text-white">
             <div>
               <p className="text-sm font-semibold text-white">{t('assistant.title')}</p>
@@ -133,31 +136,41 @@ export default function ChatAssistant() {
             </button>
           </div>
 
-          <div className="space-y-3 bg-[radial-gradient(circle_at_top_right,#ecf5ff,#f8fcff_58%)] px-4 py-4">
+          <div className="flex-1 space-y-3 overflow-y-auto bg-[radial-gradient(circle_at_top_right,#ecf5ff,#f8fcff_58%)] px-4 py-4">
             <div className="space-y-2 rounded-2xl border border-[#d6e7ff] bg-white/80 p-3">
               <div className="flex justify-start">
                 <div className="max-w-[90%] rounded-2xl rounded-tl-md bg-white px-3 py-2 text-sm text-[#1A1A1A] shadow-sm">
                   {t('assistant.welcome')}
                 </div>
               </div>
-              <div className="flex justify-end">
-                <div className="max-w-[90%] rounded-2xl rounded-tr-md bg-[#004aad] px-3 py-2 text-sm text-white shadow-sm">
-                  {t(`assistant.actions.${activeAction}`)}
-                </div>
-              </div>
-              <div className="flex justify-start">
-                {isTyping ? (
-                  <div className="inline-flex items-center gap-1 rounded-2xl rounded-tl-md bg-white px-3 py-2 text-sm text-[#6b7b95] shadow-sm">
-                    <span className="h-1.5 w-1.5 animate-bounce rounded-full bg-[#9cb3d9]" />
-                    <span className="h-1.5 w-1.5 animate-bounce rounded-full bg-[#9cb3d9] [animation-delay:120ms]" />
-                    <span className="h-1.5 w-1.5 animate-bounce rounded-full bg-[#9cb3d9] [animation-delay:240ms]" />
+              {hasInteracted ? (
+                <>
+                  <div className="flex justify-end">
+                    <div className="max-w-[90%] rounded-2xl rounded-tr-md bg-[#004aad] px-3 py-2 text-sm text-white shadow-sm">
+                      {t(`assistant.actions.${activeAction}`)}
+                    </div>
                   </div>
-                ) : (
+                  <div className="flex justify-start">
+                    {isTyping ? (
+                      <div className="inline-flex items-center gap-1 rounded-2xl rounded-tl-md bg-white px-3 py-2 text-sm text-[#6b7b95] shadow-sm">
+                        <span className="h-1.5 w-1.5 animate-bounce rounded-full bg-[#9cb3d9]" />
+                        <span className="h-1.5 w-1.5 animate-bounce rounded-full bg-[#9cb3d9] [animation-delay:120ms]" />
+                        <span className="h-1.5 w-1.5 animate-bounce rounded-full bg-[#9cb3d9] [animation-delay:240ms]" />
+                      </div>
+                    ) : (
+                      <div className="max-w-[90%] rounded-2xl rounded-tl-md bg-white px-3 py-2 text-sm leading-relaxed text-[#1A1A1A] shadow-sm">
+                        {responseText}
+                      </div>
+                    )}
+                  </div>
+                </>
+              ) : (
+                <div className="flex justify-start">
                   <div className="max-w-[90%] rounded-2xl rounded-tl-md bg-white px-3 py-2 text-sm leading-relaxed text-[#1A1A1A] shadow-sm">
                     {responseText}
                   </div>
-                )}
-              </div>
+                </div>
+              )}
             </div>
 
             <div className="grid grid-cols-2 gap-2">
