@@ -61,6 +61,40 @@
             }
         }
     },
+    "assistant": {
+        "title": "Zeus Assistant",
+        "subtitle": "I can explain modules and help you submit a request",
+        "open": "Open assistant",
+        "close": "Close assistant",
+        "welcome": "Hi! How can I help? Choose one of the options below.",
+        "moduleLabel": "Modules",
+        "openForm": "Open form",
+        "actions": {
+            "overview": "About the platform",
+            "module": "About a specific module",
+            "demo": "Book a demo",
+            "operator": "Talk to an operator",
+            "shareContacts": "Share contacts"
+        },
+        "responses": {
+            "overview": "Zeus GRC is a unified platform for managing assets, risks, audits, controls, and tasks. It helps automate processes and improve compliance.",
+            "modulePrompt": "Choose a module below, and I will briefly explain it.",
+            "moduleInfo": "The {{module}} module helps solve key tasks in this area. If you want, we can prepare a personalized demo for your process.",
+            "demo": "Great! Leave your contacts below or open the request form, and we will schedule a demo time.",
+            "operator": "Sure. Leave your contacts and our specialist will get back to you during working hours."
+        },
+        "contact": {
+            "title": "Leave your contacts",
+            "name": "Name",
+            "email": "Email",
+            "phone": "Phone",
+            "message": "Comment / request",
+            "send": "Send",
+            "sending": "Sending...",
+            "success": "Thank you! We received your request and will contact you soon.",
+            "error": "Failed to send request. Please try again later."
+        }
+    },
     "tasks": {
         "title": "What We Solve",
         "subtitle": "Key challenges that Zeus GRC helps address",

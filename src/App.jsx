@@ -11,6 +11,7 @@ import Testimonials from './components/Testimonials.jsx';
 import Integrations from './components/Integrations.jsx';
 import CTA from './components/CTA.jsx';
 import Footer from './components/Footer.jsx';
+import ChatAssistant from './components/ChatAssistant.jsx';
 import SEO from './components/SEO.jsx';
 import Request from './pages/Request.jsx';
 import Admin from './pages/Admin.jsx';
@@ -49,6 +50,7 @@ function Layout() {
         <Outlet />
       </main>
       <Footer />
+      <ChatAssistant />
     </div>
   );
 }
