@@ -17,6 +17,15 @@
         "description": "Assets, risks, audits, and controls — seamlessly managed in one automated system.",
         "cta": "Try for Free"
     },
+    "video": {
+        "title": "See Zeus GRC in action",
+        "subtitle": "A short walkthrough of how the platform automates GRC workflows and helps teams make faster decisions.",
+        "play": "Play video",
+        "ctaPrimary": "Request demo",
+        "ctaSecondary": "View modules",
+        "fallback": "Your browser does not support video playback.",
+        "download": "Download video"
+    },
     "modules": {
         "title": "Platform Modules",
         "subtitle": "All the essential tools for effective GRC management in one system",

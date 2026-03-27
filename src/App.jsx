@@ -3,6 +3,7 @@ import { Outlet, Route, Routes, useLocation } from 'react-router-dom';
 import Header from './components/Header.jsx';
 import FloatingParticles from './components/FloatingParticles.jsx';
 import Hero from './components/Hero.jsx';
+import ProductVideo from './components/ProductVideo.jsx';
 import Modules from './components/Modules.jsx';
 import Tasks from './components/Tasks.jsx';
 import Benefits from './components/Benefits.jsx';
@@ -64,6 +65,8 @@ function LandingPage() {
     <>
       <SEO url="/" />
       <Hero />
+      <SectionDivider />
+      <ProductVideo />
       <SectionDivider />
       <Modules />
       <SectionDivider />
