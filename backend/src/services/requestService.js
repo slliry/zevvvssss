@@ -10,6 +10,7 @@ function formatNotificationDate(value) {
   return new Intl.DateTimeFormat('ru-RU', {
     dateStyle: 'medium',
     timeStyle: 'short',
+    timeZone: 'Asia/Almaty',
   }).format(date);
 }
 
