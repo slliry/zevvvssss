@@ -2,6 +2,17 @@ import nodemailer from 'nodemailer';
 import db from '../db/index.js';
 import env from '../config/env.js';
 
+function formatNotificationDate(value) {
+  if (!value) return '-';
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return String(value);
+
+  return new Intl.DateTimeFormat('ru-RU', {
+    dateStyle: 'medium',
+    timeStyle: 'short',
+  }).format(date);
+}
+
 async function sendRequestNotification(request) {
   if (!env.smtpHost || !env.smtpUser || !env.smtpPass || !env.smtpFrom) {
     return;
@@ -18,6 +29,7 @@ async function sendRequestNotification(request) {
   });
 
   const subject = `Новая заявка от ${request.name}`;
+  const createdAt = formatNotificationDate(request.created_at);
   const lines = [
     `Имя: ${request.name}`,
     `Компания: ${request.company}`,
@@ -26,7 +38,7 @@ async function sendRequestNotification(request) {
     `Должность: ${request.role || '-'}`,
     `Сообщение: ${request.message || '-'}`,
     `ID заявки: ${request.id}`,
-    `Создано: ${request.created_at}`,
+    `Создано: ${createdAt}`,
   ];
 
   await transporter.sendMail({
@@ -36,6 +48,52 @@ async function sendRequestNotification(request) {
     subject,
     text: lines.join('\n'),
   });
+}
+
+function escapeTelegram(text) {
+  return String(text).replace(/[\\_*\[\]()~`>#+\-=|{}.!]/g, '\\$&');
+}
+
+async function sendTelegramRequestNotification(request) {
+  if (!env.telegramBotToken || !env.telegramChatId) {
+    return;
+  }
+
+  const tokenTail = env.telegramBotToken.slice(-8);
+  const chatIdRaw = JSON.stringify(env.telegramChatId);
+  const createdAt = formatNotificationDate(request.created_at);
+
+  const lines = [
+    '🆕 *Новая заявка с сайта*',
+    `*Имя:* ${escapeTelegram(request.name)}`,
+    `*Компания:* ${escapeTelegram(request.company)}`,
+    `*Email:* ${escapeTelegram(request.email)}`,
+    `*Телефон:* ${escapeTelegram(request.phone || '-')}`,
+    `*Должность:* ${escapeTelegram(request.role || '-')}`,
+    `*Сообщение:* ${escapeTelegram(request.message || '-')}`,
+    `*ID:* ${escapeTelegram(request.id)}`,
+    `*Создано:* ${escapeTelegram(createdAt)}`,
+  ];
+
+  const response = await fetch(`https://api.telegram.org/bot${env.telegramBotToken}/sendMessage`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      chat_id: env.telegramChatId,
+      text: lines.join('\n'),
+      parse_mode: 'MarkdownV2',
+      disable_web_page_preview: true,
+    }),
+  });
+
+  const payload = await response.json();
+  if (!response.ok || !payload?.ok) {
+    throw new Error(
+      `Telegram notification failed: status=${response.status}, description=${payload?.description || 'unknown error'}, chat_id=${chatIdRaw}, token_tail=${tokenTail}`
+    );
+  }
 }
 
 export async function createRequest(data) {
@@ -62,7 +120,17 @@ export async function createRequest(data) {
     updated_at: now,
   };
 
-  await sendRequestNotification(request);
+  const results = await Promise.allSettled([
+    sendRequestNotification(request),
+    sendTelegramRequestNotification(request),
+  ]);
+
+  results.forEach((result) => {
+    if (result.status === 'rejected') {
+      console.error('Request notification failed:', result.reason);
+    }
+  });
+
   return request;
 }
 

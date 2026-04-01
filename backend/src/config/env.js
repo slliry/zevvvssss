@@ -8,6 +8,11 @@ const __dirname = path.dirname(__filename);
 const rootDir = path.resolve(__dirname, '../../');
 loadEnv({ path: path.resolve(rootDir, '.env') });
 
+function normalizeEnvValue(value) {
+  if (value === undefined || value === null) return '';
+  return String(value).trim().replace(/^['\"]|['\"]$/g, '');
+}
+
 const env = {
   port: Number(process.env.PORT) || 4000,
   databasePath: path.resolve(rootDir, process.env.DATABASE_PATH || './data/app.db'),
@@ -20,6 +25,8 @@ const env = {
   smtpFrom: process.env.SMTP_FROM || '',
   smtpSecure: process.env.SMTP_SECURE === 'true',
   requestNotificationEmail: process.env.REQUEST_NOTIFICATION_EMAIL || 'zeus@dmcorp.kz',
+  telegramBotToken: normalizeEnvValue(process.env.TELEGRAM_BOT_TOKEN),
+  telegramChatId: normalizeEnvValue(process.env.TELEGRAM_CHAT_ID),
 };
 
 export default env;

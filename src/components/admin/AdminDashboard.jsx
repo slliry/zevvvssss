@@ -70,6 +70,10 @@ export default function AdminDashboard() {
         setTotal(data.total);
       } catch (err) {
         if (err.name !== 'AbortError') {
+          if (err.message === 'Invalid token' || err.message === 'Missing token' || err.message === 'Unauthorized') {
+            logout();
+            return;
+          }
           setError(err.message);
         }
       } finally {
@@ -101,6 +105,10 @@ export default function AdminDashboard() {
       });
       setRequests((prev) => prev.map((item) => (item.id === id ? updated : item)));
     } catch (err) {
+      if (err.message === 'Invalid token' || err.message === 'Missing token' || err.message === 'Unauthorized') {
+        logout();
+        return;
+      }
       setError(err.message);
     }
   };
