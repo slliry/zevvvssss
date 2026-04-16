@@ -7,7 +7,8 @@ import { useTranslation } from 'react-i18next';
 const languages = [
   { code: 'ru', label: 'RU' },
   { code: 'en', label: 'EN' },
-  { code: 'kk', label: 'KK' }
+  { code: 'kk', label: 'KK' },
+  { code: 'uz', label: 'UZ' }
 ];
 
 export default function Header() {
@@ -51,9 +52,9 @@ export default function Header() {
       <div className={`relative flex max-w-[1280px] mx-auto items-center justify-between rounded-full border border-white/30 bg-white/50 backdrop-blur-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.04)] transition-all duration-300 ${scrolled ? 'min-h-[2.5rem] px-3 py-1 lg:px-5' : 'min-h-[3rem] px-4 py-1.5 lg:px-6'}`}>
         <Link to="/" className="flex items-center" aria-label="Zeus GRC на главную">
           <img
-            src="/logozeus.svg"
+            src="/Curve.svg"
             alt="Zeus GRC"
-            className={`w-auto transition-all duration-300 ${scrolled ? 'h-8 sm:h-9 lg:h-10 lg:max-w-[160px]' : 'h-10 sm:h-12 lg:h-14 lg:max-w-[200px]'} hover:drop-shadow-[0_6px_30px_rgba(0,102,255,0.35)]`}
+            className={`w-auto transition-all duration-300 ${scrolled ? 'h-5 sm:h-6 lg:h-7 lg:max-w-[128px]' : 'h-7 sm:h-9 lg:h-11 lg:max-w-[164px]'} hover:drop-shadow-[0_6px_30px_rgba(0,102,255,0.35)]`}
           />
         </Link>
 

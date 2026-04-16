@@ -4,11 +4,13 @@ import { initReactI18next } from 'react-i18next';
 import ru from './locales/ru.json';
 import en from './locales/en.json';
 import kk from './locales/kk.json';
+import uz from './locales/uz.json';
 
 const resources = {
     ru: { translation: ru },
     en: { translation: en },
     kk: { translation: kk },
+    uz: { translation: uz },
 };
 
 // Function to detect browser language
@@ -20,7 +22,7 @@ const detectBrowserLanguage = () => {
     const langCode = browserLang.split('-')[0].toLowerCase();
 
     // Check if the detected language is supported
-    const supportedLanguages = ['ru', 'en', 'kk'];
+    const supportedLanguages = ['ru', 'en', 'kk', 'uz'];
 
     return supportedLanguages.includes(langCode) ? langCode : 'ru';
 };
