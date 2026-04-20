@@ -5,12 +5,16 @@ import ru from './locales/ru.json';
 import en from './locales/en.json';
 import kk from './locales/kk.json';
 import uz from './locales/uz.json';
+import ky from './locales/ky.json';
+import tr from './locales/tr.json';
 
 const resources = {
     ru: { translation: ru },
     en: { translation: en },
     kk: { translation: kk },
     uz: { translation: uz },
+    ky: { translation: ky },
+    tr: { translation: tr },
 };
 
 // Function to detect browser language
@@ -22,7 +26,7 @@ const detectBrowserLanguage = () => {
     const langCode = browserLang.split('-')[0].toLowerCase();
 
     // Check if the detected language is supported
-    const supportedLanguages = ['ru', 'en', 'kk', 'uz'];
+    const supportedLanguages = ['ru', 'en', 'kk', 'uz', 'ky', 'tr'];
 
     return supportedLanguages.includes(langCode) ? langCode : 'ru';
 };

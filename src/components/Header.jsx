@@ -8,7 +8,9 @@ const languages = [
   { code: 'ru', label: 'RU' },
   { code: 'en', label: 'EN' },
   { code: 'kk', label: 'KK' },
-  { code: 'uz', label: 'UZ' }
+  { code: 'uz', label: 'UZ' },
+  { code: 'ky', label: 'KY' },
+  { code: 'tr', label: 'TR' }
 ];
 
 export default function Header() {
