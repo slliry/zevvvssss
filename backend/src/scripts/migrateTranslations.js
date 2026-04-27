@@ -6,7 +6,7 @@ import translationDbService from '../services/translationDbService.js';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const LOCALES_PATH = path.resolve(__dirname, '../../../src/locales');
+const LOCALES_PATH = path.resolve(__dirname, '../../locales');
 const LANGUAGES = ['ru', 'en', 'kk', 'uz', 'ky', 'tr'];
 
 async function migrateTranslations() {
