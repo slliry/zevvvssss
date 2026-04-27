@@ -14,6 +14,12 @@ import CTA from './components/CTA.jsx';
 import Footer from './components/Footer.jsx';
 import ChatAssistant from './components/ChatAssistant.jsx';
 import SEO from './components/SEO.jsx';
+import TranslationEditor from './components/TranslationEditor.jsx';
+import TranslationEditorToggle from './components/TranslationEditorToggle.jsx';
+import LanguageFallbackNotification from './components/LanguageFallbackNotification.jsx';
+import TranslationClickHandler from './components/TranslationClickHandler.jsx';
+import BackToTop from './components/BackToTop.jsx';
+import ReadingProgress from './components/ReadingProgress.jsx';
 import Request from './pages/Request.jsx';
 import Admin from './pages/Admin.jsx';
 import AssetManagement from './pages/AssetManagement.jsx';
@@ -45,6 +51,7 @@ function Layout() {
 
   return (
     <div className="min-h-screen bg-[#F7FFFE] text-[#1A1A1A]">
+      <ReadingProgress />
       <Header />
       <main className="relative -mt-20">
         <FloatingParticles />
@@ -52,6 +59,11 @@ function Layout() {
       </main>
       <Footer />
       <ChatAssistant />
+      <BackToTop />
+      <LanguageFallbackNotification />
+      <TranslationEditor />
+      <TranslationEditorToggle />
+      <TranslationClickHandler />
     </div>
   );
 }

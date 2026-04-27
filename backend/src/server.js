@@ -7,6 +7,7 @@ import { fileURLToPath } from 'node:url';
 import env from './config/env.js';
 import authRoutes from './routes/authRoutes.js';
 import requestRoutes from './routes/requestRoutes.js';
+import translationRoutes from './routes/translationRoutes.js';
 import { errorHandler } from './middleware/errorHandler.js';
 
 const app = express();
@@ -53,6 +54,7 @@ app.get('/api/health', (req, res) => {
 
 app.use('/api/auth', authRoutes);
 app.use('/api/requests', requestRoutes);
+app.use('/api/translations', translationRoutes);
 
 if (hasClientBundle) {
   app.use(express.static(clientDistPath));

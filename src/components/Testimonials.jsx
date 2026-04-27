@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { ChevronLeft, ChevronRight, Star } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import useInView from '../hooks/useInView.js';
+import EditableTranslation from './EditableTranslation';
 
 export default function Testimonials() {
   const { t } = useTranslation();
@@ -57,9 +58,9 @@ export default function Testimonials() {
     >
       <div className="mx-auto max-w-[1440px] px-6 lg:px-12">
         <div className="mb-16 text-center">
-          <h2 className="mb-4 text-4xl md:text-5xl">{t('testimonials.title')}</h2>
-          <p className="mx-auto max-w-2xl text-xl text-gray-600">
-            {t('testimonials.subtitle')}
+          <h2 className="mb-4 text-4xl md:text-5xl"><EditableTranslation translationKey="testimonials.title">{t('testimonials.title')}</EditableTranslation></h2>
+          <p className="mx-auto max-w-2xl text-xl text-gray-700">
+            <EditableTranslation translationKey="testimonials.subtitle">{t('testimonials.subtitle')}</EditableTranslation>
           </p>
         </div>
 

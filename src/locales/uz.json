@@ -11,11 +11,12 @@
     "cta": "Demo so'rash"
   },
   "hero": {
-    "badge": "Zeus Platform",
-    "heading1": "Yagona GRC boshqaruv",
-    "heading2": "platformasi",
-    "description": "Aktivlar, risklar, audit va nazoratlar — barchasi bitta avtomatlashtirilgan tizimda boshqariladi.",
-    "cta": "Bepul sinab ko'rish"
+    "badge": "GRC platformasi",
+    "heading1": "Xavf va muvofiqlikni boshqarish",
+    "heading2": "bitta platformada",
+    "description": "Zeus GRC — xavflarni boshqarish, talablarga muvofiqlik va korporativ boshqaruv jarayonlarini avtomatlashtirishning kompleks yechimi.",
+    "cta": "Maslahat so'rash",
+    "watchDemo": "Demo ko'rish"
   },
   "video": {
     "title": "Zeus GRC ishlashini ko'ring",
@@ -28,7 +29,8 @@
   },
   "modules": {
     "title": "Platforma modullari",
-    "subtitle": "Samarali GRC boshqaruvi uchun zarur barcha vositalar bitta tizimda",
+    "subtitle": "Bir tizimda samarali GRC boshqaruvi uchun barcha kerakli vositalar",
+    "learnMore": "Batafsil",
     "items": {
       "assetManagement": {
         "title": "Aktivlar boshqaruvi",

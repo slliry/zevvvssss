@@ -21,7 +21,7 @@ export default function Metrics() {
                     transition={{ duration: 0.6, ease: 'easeOut' }}
                 >
                     <h2 className="mb-4 text-4xl md:text-5xl">{t('metrics.title')}</h2>
-                    <p className="mx-auto max-w-2xl text-xl text-gray-600">
+                    <p className="mx-auto max-w-2xl text-xl text-gray-700">
                         {t('metrics.subtitle')}
                     </p>
                 </motion.div>
@@ -127,7 +127,7 @@ export default function Metrics() {
                             </div>
                         </div>
                         <div className="mb-3 text-2xl font-semibold text-[#004aad]">{t('metrics.items.maturityGrowth.improvement')}</div>
-                        <p className="text-gray-600">{t('metrics.items.maturityGrowth.description')}</p>
+                        <p className="text-gray-700">{t('metrics.items.maturityGrowth.description')}</p>
                     </motion.div>
                 </div>
 
@@ -138,7 +138,7 @@ export default function Metrics() {
                     transition={{ duration: 0.5, delay: 0.3, ease: 'easeOut' }}
                     className="mt-12 rounded-2xl bg-gradient-to-r from-[#004aad]/5 to-[#0066cc]/5 p-6 text-center"
                 >
-                    <p className="text-sm text-gray-600">
+                    <p className="text-sm text-gray-700">
                         {t('metrics.disclaimer')}
                     </p>
                 </motion.div>

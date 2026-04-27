@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { Shield, AlertTriangle, FileCheck, ListTodo, CheckSquare, Bug, Activity, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import EditableTranslation from './EditableTranslation';
 
 export default function Modules() {
   const { t } = useTranslation();
@@ -75,9 +76,9 @@ export default function Modules() {
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.6, ease: 'easeOut' }}
         >
-          <h2 className="mb-4 text-4xl md:text-5xl">{t('modules.title')}</h2>
-          <p className="mx-auto max-w-2xl text-xl text-gray-600">
-            {t('modules.subtitle')}
+          <h2 className="mb-4 text-4xl md:text-5xl"><EditableTranslation translationKey="modules.title">{t('modules.title')}</EditableTranslation></h2>
+          <p className="mx-auto max-w-2xl text-xl text-gray-700">
+            <EditableTranslation translationKey="modules.subtitle">{t('modules.subtitle')}</EditableTranslation>
           </p>
         </motion.div>
 
@@ -119,14 +120,14 @@ export default function Modules() {
                       <Shield size={40} className="text-white" />
                     </motion.div>
 
-                    <h3 className="mb-3 text-2xl lg:text-3xl font-bold text-white">{modules[0].title}</h3>
-                    <p className="text-sm lg:text-base leading-relaxed text-white/90">{modules[0].description}</p>
+                    <h3 className="mb-3 text-2xl lg:text-3xl font-bold text-white"><EditableTranslation translationKey="modules.items.assetManagement.title">{modules[0].title}</EditableTranslation></h3>
+                    <p className="text-sm lg:text-base leading-relaxed text-white/90"><EditableTranslation translationKey="modules.items.assetManagement.description">{modules[0].description}</EditableTranslation></p>
 
                     <motion.div
                       className="inline-flex items-center gap-2 text-base font-semibold text-white mt-6"
                       whileHover={{ x: 5 }}
                     >
-                      Узнать больше
+                      <EditableTranslation translationKey="modules.learnMore">{t('modules.learnMore')}</EditableTranslation>
                       <motion.span animate={{ x: [0, 5, 0] }} transition={{ duration: 1.5, repeat: Infinity }}>→</motion.span>
                     </motion.div>
                   </div>
@@ -160,11 +161,11 @@ export default function Modules() {
                       <AlertTriangle size={40} />
                     </motion.div>
 
-                    <h3 className="mb-3 text-2xl lg:text-3xl font-bold text-gray-900">{modules[1].title}</h3>
-                    <p className="text-sm lg:text-base leading-relaxed text-gray-600">{modules[1].description}</p>
+                    <h3 className="mb-3 text-2xl lg:text-3xl font-bold text-gray-900"><EditableTranslation translationKey="modules.items.riskManagement.title">{modules[1].title}</EditableTranslation></h3>
+                    <p className="text-sm lg:text-base leading-relaxed text-gray-700"><EditableTranslation translationKey="modules.items.riskManagement.description">{modules[1].description}</EditableTranslation></p>
 
                     <motion.div className="inline-flex items-center gap-2 text-base font-semibold text-[#004aad] mt-6" whileHover={{ x: 5 }}>
-                      Подробнее
+                      <EditableTranslation translationKey="modules.learnMore">{t('modules.learnMore')}</EditableTranslation>
                       <motion.span animate={{ x: [0, 5, 0] }} transition={{ duration: 1.5, repeat: Infinity }}>→</motion.span>
                     </motion.div>
                   </div>
@@ -211,10 +212,10 @@ export default function Modules() {
                         </motion.div>
 
                         <h3 className="mb-3 text-xl lg:text-2xl font-bold text-gray-900">{module.title}</h3>
-                        <p className="mb-4 text-sm lg:text-base leading-relaxed text-gray-600 flex-grow">{module.description}</p>
+                        <p className="mb-4 text-sm lg:text-base leading-relaxed text-gray-700 flex-grow">{module.description}</p>
 
                         <motion.div className="inline-flex items-center gap-2 text-sm lg:text-base font-semibold text-[#004aad]" whileHover={{ x: 5 }}>
-                          Подробнее
+                          <EditableTranslation translationKey="modules.learnMore">{t('modules.learnMore')}</EditableTranslation>
                           <motion.span animate={{ x: [0, 5, 0] }} transition={{ duration: 1.5, repeat: Infinity }}>→</motion.span>
                         </motion.div>
                       </div>

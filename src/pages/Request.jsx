@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { ArrowRight, Mail, Phone, Building2 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import EditableTranslation from '../components/EditableTranslation';
 import { apiRequest } from '../lib/apiClient.js';
 
 const COOLDOWN_SECONDS = 15;
@@ -81,13 +82,13 @@ export default function Request() {
       <div className="mx-auto max-w-[1200px] px-6 lg:px-12">
         <div className="mb-10 text-center">
           <p className="mb-4 inline-flex items-center rounded-full border border-[#0066FF]/20 px-4 py-1 text-sm font-semibold uppercase tracking-widest text-[#0066FF]">
-            {t('request.badge')}
+            <EditableTranslation translationKey="request.badge">{t('request.badge')}</EditableTranslation>
           </p>
           <h1 className="mb-4 text-4xl font-normal text-[#1A1A1A] md:text-5xl">
-            {t('request.title')}
+            <EditableTranslation translationKey="request.title">{t('request.title')}</EditableTranslation>
           </h1>
           <p className="text-lg text-gray-600 md:text-xl">
-            {t('request.subtitle')}
+            <EditableTranslation translationKey="request.subtitle">{t('request.subtitle')}</EditableTranslation>
           </p>
         </div>
 
@@ -96,68 +97,68 @@ export default function Request() {
             onSubmit={handleSubmit}
             className="rounded-3xl bg-white p-8 shadow-[0_35px_80px_rgba(0,102,255,0.08)]"
           >
-            <h2 className="mb-6 text-2xl font-normal text-[#1A1A1A]">{t('request.form.title')}</h2>
+            <h2 className="mb-6 text-2xl font-normal text-[#1A1A1A]"><EditableTranslation translationKey="request.form.title">{t('request.form.title')}</EditableTranslation></h2>
             <div className="grid gap-5 md:grid-cols-2">
               <label className="flex flex-col gap-2 text-sm font-medium text-gray-700">
-                {t('request.form.fields.name.label')}
+                <EditableTranslation translationKey="request.form.fields.name.label">{t('request.form.fields.name.label')}</EditableTranslation>
                 <input
                   required
                   type="text"
                   name="name"
                   className="rounded-2xl border border-gray-200 px-4 py-3 text-base text-[#1A1A1A] outline-none transition focus:border-[#0066FF] focus:ring-2 focus:ring-[#0066FF]/30"
-                  placeholder={t('request.form.fields.name.placeholder')}
+                  placeholder=<EditableTranslation translationKey="request.form.fields.name.placeholder">{t('request.form.fields.name.placeholder')}</EditableTranslation>
                 />
               </label>
               <label className="flex flex-col gap-2 text-sm font-medium text-gray-700">
-                {t('request.form.fields.company.label')}
+                <EditableTranslation translationKey="request.form.fields.company.label">{t('request.form.fields.company.label')}</EditableTranslation>
                 <input
                   required
                   type="text"
                   name="company"
                   className="rounded-2xl border border-gray-200 px-4 py-3 text-base text-[#1A1A1A] outline-none transition focus:border-[#0066FF] focus:ring-2 focus:ring-[#0066FF]/30"
-                  placeholder={t('request.form.fields.company.placeholder')}
+                  placeholder=<EditableTranslation translationKey="request.form.fields.company.placeholder">{t('request.form.fields.company.placeholder')}</EditableTranslation>
                 />
               </label>
               <label className="flex flex-col gap-2 text-sm font-medium text-gray-700">
-                {t('request.form.fields.email.label')}
+                <EditableTranslation translationKey="request.form.fields.email.label">{t('request.form.fields.email.label')}</EditableTranslation>
                 <input
                   required
                   type="email"
                   name="email"
                   className="rounded-2xl border border-gray-200 px-4 py-3 text-base text-[#1A1A1A] outline-none transition focus:border-[#0066FF] focus:ring-2 focus:ring-[#0066FF]/30"
-                  placeholder={t('request.form.fields.email.placeholder')}
+                  placeholder=<EditableTranslation translationKey="request.form.fields.email.placeholder">{t('request.form.fields.email.placeholder')}</EditableTranslation>
                 />
               </label>
               <label className="flex flex-col gap-2 text-sm font-medium text-gray-700">
-                {t('request.form.fields.phone.label')}
+                <EditableTranslation translationKey="request.form.fields.phone.label">{t('request.form.fields.phone.label')}</EditableTranslation>
                 <input
                   type="tel"
                   name="phone"
                   className="rounded-2xl border border-gray-200 px-4 py-3 text-base text-[#1A1A1A] outline-none transition focus:border-[#0066FF] focus:ring-2 focus:ring-[#0066FF]/30"
-                  placeholder={t('request.form.fields.phone.placeholder')}
+                  placeholder=<EditableTranslation translationKey="request.form.fields.phone.placeholder">{t('request.form.fields.phone.placeholder')}</EditableTranslation>
                 />
               </label>
               <label className="flex flex-col gap-2 text-sm font-medium text-gray-700 md:col-span-2">
-                {t('request.form.fields.role.label')}
+                <EditableTranslation translationKey="request.form.fields.role.label">{t('request.form.fields.role.label')}</EditableTranslation>
                 <select
                   name="role"
                   className="rounded-2xl border border-gray-200 px-4 py-3 text-base text-[#1A1A1A] outline-none transition focus:border-[#0066FF] focus:ring-2 focus:ring-[#0066FF]/30"
                 >
-                  <option value="ciso">{t('request.form.fields.role.options.ciso')}</option>
-                  <option value="risk">{t('request.form.fields.role.options.risk')}</option>
-                  <option value="compliance">{t('request.form.fields.role.options.compliance')}</option>
-                  <option value="it">{t('request.form.fields.role.options.it')}</option>
-                  <option value="other">{t('request.form.fields.role.options.other')}</option>
+                  <option value="ciso"><EditableTranslation translationKey="request.form.fields.role.options.ciso">{t('request.form.fields.role.options.ciso')}</EditableTranslation></option>
+                  <option value="risk"><EditableTranslation translationKey="request.form.fields.role.options.risk">{t('request.form.fields.role.options.risk')}</EditableTranslation></option>
+                  <option value="compliance"><EditableTranslation translationKey="request.form.fields.role.options.compliance">{t('request.form.fields.role.options.compliance')}</EditableTranslation></option>
+                  <option value="it"><EditableTranslation translationKey="request.form.fields.role.options.it">{t('request.form.fields.role.options.it')}</EditableTranslation></option>
+                  <option value="other"><EditableTranslation translationKey="request.form.fields.role.options.other">{t('request.form.fields.role.options.other')}</EditableTranslation></option>
                 </select>
               </label>
               <label className="flex flex-col gap-2 text-sm font-medium text-gray-700 md:col-span-2">
-                {t('request.form.fields.message.label')}
+                <EditableTranslation translationKey="request.form.fields.message.label">{t('request.form.fields.message.label')}</EditableTranslation>
                 <textarea
                   name="message"
                   rows={4}
                   maxLength={700}
                   className="rounded-2xl border border-gray-200 px-4 py-3 text-base text-[#1A1A1A] outline-none transition focus:border-[#0066FF] focus:ring-2 focus:ring-[#0066FF]/30 resize-none"
-                  placeholder={t('request.form.fields.message.placeholder')}
+                  placeholder=<EditableTranslation translationKey="request.form.fields.message.placeholder">{t('request.form.fields.message.placeholder')}</EditableTranslation>
                 />
               </label>
             </div>
@@ -182,9 +183,9 @@ export default function Request() {
 
           <div className="rounded-3xl border border-white/40 bg-gradient-to-br from-[#E8F2F6] to-white p-8">
             <div className="mb-8">
-              <h3 className="mb-3 text-2xl font-normal text-[#1A1A1A]">{t('request.perks.title')}</h3>
+              <h3 className="mb-3 text-2xl font-normal text-[#1A1A1A]"><EditableTranslation translationKey="request.perks.title">{t('request.perks.title')}</EditableTranslation></h3>
               <p className="text-gray-600">
-                {t('request.perks.subtitle')}
+                <EditableTranslation translationKey="request.perks.subtitle">{t('request.perks.subtitle')}</EditableTranslation>
               </p>
             </div>
             <ul className="mb-8 space-y-4">
@@ -221,7 +222,7 @@ export default function Request() {
               ✓
             </div>
             <div>
-              <p className="text-base font-semibold text-emerald-800">{t('request.messages.successTitle')}</p>
+              <p className="text-base font-semibold text-emerald-800"><EditableTranslation translationKey="request.messages.successTitle">{t('request.messages.successTitle')}</EditableTranslation></p>
               <p>{status.message}</p>
             </div>
             <button

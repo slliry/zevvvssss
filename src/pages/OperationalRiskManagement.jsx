@@ -1,5 +1,6 @@
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import EditableTranslation from '../components/EditableTranslation';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO.jsx';
 import {
@@ -91,10 +92,10 @@ export default function OperationalRiskManagement() {
                             to="/#modules"
                             className="mb-8 inline-flex items-center gap-2 text-sm text-[#004aad] transition hover:text-[#0066cc]"
                         >
-                            ← {t('operationalRiskManagement.backToModules')}
+                            ← <EditableTranslation translationKey="operationalRiskManagement.backToModules">{t('operationalRiskManagement.backToModules')}</EditableTranslation>
                         </Link>
                         <h1 className="mb-6 text-5xl font-bold text-[#1A1A1A] md:text-7xl">
-                            {t('operationalRiskManagement.title')}
+                            <EditableTranslation translationKey="operationalRiskManagement.title">{t('operationalRiskManagement.title')}</EditableTranslation>
                         </h1>
                         <p className="mx-auto max-w-2xl text-lg leading-relaxed text-gray-700 lg:mx-0">
                             {t('operationalRiskManagement.heroDescription')}
@@ -109,7 +110,7 @@ export default function OperationalRiskManagement() {
                                 to="/request"
                                 className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#004aad] to-[#0066cc] px-8 py-4 text-lg font-semibold text-white shadow-lg transition-all hover:scale-105 hover:shadow-xl"
                             >
-                                {t('operationalRiskManagement.cta.button')}
+                                <EditableTranslation translationKey="operationalRiskManagement.cta.button">{t('operationalRiskManagement.cta.button')}</EditableTranslation>
                                 <ArrowRight size={20} />
                             </Link>
                         </motion.div>
@@ -251,10 +252,10 @@ export default function OperationalRiskManagement() {
                     className="mb-12 text-center"
                 >
                     <h2 className="mb-4 text-4xl font-bold md:text-5xl">
-                        {t('operationalRiskManagement.beforeAfter.title')}
+                        <EditableTranslation translationKey="operationalRiskManagement.beforeAfter.title">{t('operationalRiskManagement.beforeAfter.title')}</EditableTranslation>
                     </h2>
                     <p className="mx-auto max-w-2xl text-xl text-gray-600">
-                        {t('operationalRiskManagement.beforeAfter.subtitle')}
+                        <EditableTranslation translationKey="operationalRiskManagement.beforeAfter.subtitle">{t('operationalRiskManagement.beforeAfter.subtitle')}</EditableTranslation>
                     </p>
                 </motion.div>
 
@@ -272,7 +273,7 @@ export default function OperationalRiskManagement() {
                                 <XCircle size={24} />
                             </div>
                             <h3 className="text-2xl font-bold text-red-900">
-                                {t('operationalRiskManagement.beforeAfter.before')}
+                                <EditableTranslation translationKey="operationalRiskManagement.beforeAfter.before">{t('operationalRiskManagement.beforeAfter.before')}</EditableTranslation>
                             </h3>
                         </div>
                         <ul className="space-y-3">
@@ -305,7 +306,7 @@ export default function OperationalRiskManagement() {
                                 <CheckCircle2 size={24} />
                             </div>
                             <h3 className="text-2xl font-bold text-white">
-                                {t('operationalRiskManagement.beforeAfter.solution')}
+                                <EditableTranslation translationKey="operationalRiskManagement.beforeAfter.solution">{t('operationalRiskManagement.beforeAfter.solution')}</EditableTranslation>
                             </h3>
                         </div>
                         <ul className="space-y-3">
@@ -338,7 +339,7 @@ export default function OperationalRiskManagement() {
                                 <Sparkles size={24} />
                             </div>
                             <h3 className="text-2xl font-bold text-green-900">
-                                {t('operationalRiskManagement.beforeAfter.result')}
+                                <EditableTranslation translationKey="operationalRiskManagement.beforeAfter.result">{t('operationalRiskManagement.beforeAfter.result')}</EditableTranslation>
                             </h3>
                         </div>
                         <ul className="space-y-3">
@@ -391,10 +392,10 @@ export default function OperationalRiskManagement() {
 
                         <div className="relative z-10">
                             <h2 className="mb-4 text-3xl font-bold text-white md:text-5xl">
-                                {t('operationalRiskManagement.cta.title')}
+                                <EditableTranslation translationKey="operationalRiskManagement.cta.title">{t('operationalRiskManagement.cta.title')}</EditableTranslation>
                             </h2>
                             <p className="mb-8 text-lg text-white/90 md:text-xl">
-                                {t('operationalRiskManagement.cta.description')}
+                                <EditableTranslation translationKey="operationalRiskManagement.cta.description">{t('operationalRiskManagement.cta.description')}</EditableTranslation>
                             </p>
                             <Link
                                 to="/request"

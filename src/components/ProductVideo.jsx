@@ -25,8 +25,8 @@ export default function ProductVideo() {
     <section className="py-20 md:py-28" id="product-video">
       <div className="mx-auto max-w-[1440px] px-6 lg:px-12">
         <div className="mb-10 text-center">
-          <h2 className="mb-4 text-4xl md:text-5xl">{t('video.title')}</h2>
-          <p className="mx-auto max-w-3xl text-lg text-gray-600 md:text-xl">{t('video.subtitle')}</p>
+          <h2 className="mb-4 text-4xl md:text-5xl text-[#004aad]">{t('video.title')}</h2>
+          <p className="mx-auto max-w-3xl text-lg text-gray-700 md:text-xl">{t('video.subtitle')}</p>
         </div>
 
         <div className="relative overflow-hidden rounded-3xl border border-[#DCE9FA] bg-white p-3 shadow-[0_22px_60px_rgba(0,74,173,0.16)] md:p-4">

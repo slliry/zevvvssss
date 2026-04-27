@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { Menu, X, Globe } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { useTranslation } from 'react-i18next';
+import EditableTranslation from './EditableTranslation';
+import { useTranslationEditor } from '../context/TranslationEditorContext';
 
 const languages = [
   { code: 'ru', label: 'RU' },
@@ -17,8 +19,13 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
+  const [logoClickCount, setLogoClickCount] = useState(0);
+  const [showSecretLogin, setShowSecretLogin] = useState(false);
+  const [scrollDirection, setScrollDirection] = useState('up');
+  const [lastScrollY, setLastScrollY] = useState(0);
   const { currentLanguage, changeLanguage } = useLanguage();
   const { t } = useTranslation();
+  const { openLoginModal } = useTranslationEditor();
 
   const menuItems = [
     { label: t('header.menu.solutions'), id: 'solutions' },
@@ -31,12 +38,25 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
+      const currentScrollY = window.scrollY;
+      
+      // Определяем направление скролла
+      if (currentScrollY > lastScrollY && currentScrollY > 50) {
+        // Скролл вниз - уменьшаем хедер
+        setScrollDirection('down');
+        setScrolled(true);
+      } else if (currentScrollY < lastScrollY) {
+        // Скролл вверх - увеличиваем хедер
+        setScrollDirection('up');
+        setScrolled(currentScrollY > 50);
+      }
+      
+      setLastScrollY(currentScrollY);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [lastScrollY]);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -49,25 +69,52 @@ export default function Header() {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [isLangMenuOpen]);
 
+  // Сброс счетчика кликов через 3 секунды
+  useEffect(() => {
+    if (logoClickCount > 0 && logoClickCount < 5) {
+      const timer = setTimeout(() => {
+        setLogoClickCount(0);
+      }, 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [logoClickCount]);
+
+  const handleLogoClick = (e) => {
+    const newCount = logoClickCount + 1;
+    setLogoClickCount(newCount);
+    
+    if (newCount === 5) {
+      e.preventDefault(); // Блокируем переход только при 5-м клике
+      setLogoClickCount(0);
+      // Открываем модальное окно входа
+      if (openLoginModal) {
+        openLoginModal();
+      }
+    }
+    // Иначе разрешаем обычный переход на главную
+  };
+
   return (
-    <header className={`sticky z-50 mx-3 lg:mx-6 transition-all duration-300 ${scrolled ? 'top-2' : 'top-3'}`}>
-      <div className={`relative flex max-w-[1280px] mx-auto items-center justify-between rounded-full border border-white/30 bg-white/50 backdrop-blur-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.04)] transition-all duration-300 ${scrolled ? 'min-h-[2.5rem] px-3 py-1 lg:px-5' : 'min-h-[3rem] px-4 py-1.5 lg:px-6'}`}>
-        <Link to="/" className="flex items-center" aria-label="Zeus GRC на главную">
+    <header className={`sticky z-50 mx-3 lg:mx-6 transition-all duration-300 ${scrollDirection === 'down' && scrolled ? 'top-2' : 'top-3'}`}>
+      <div className={`relative flex max-w-[1280px] mx-auto items-center justify-between rounded-full border border-white/30 bg-white/50 backdrop-blur-xl shadow-[0_4px_24px_0_rgba(0,0,0,0.04)] transition-all duration-300 ${scrollDirection === 'down' && scrolled ? 'min-h-[2.5rem] px-3 py-1 lg:px-5' : 'min-h-[3rem] px-4 py-1.5 lg:px-6'}`}>
+        <Link to="/" className="flex items-center" aria-label="Zeus GRC на главную" onClick={handleLogoClick}>
           <img
             src="/Curve.svg"
             alt="Zeus GRC"
-            className={`w-auto transition-all duration-300 ${scrolled ? 'h-5 sm:h-6 lg:h-7 lg:max-w-[128px]' : 'h-7 sm:h-9 lg:h-11 lg:max-w-[164px]'} hover:drop-shadow-[0_6px_30px_rgba(0,102,255,0.35)]`}
+            className={`w-auto transition-all duration-300 ${scrollDirection === 'down' && scrolled ? 'h-5 sm:h-6 lg:h-7 lg:max-w-[128px]' : 'h-7 sm:h-9 lg:h-11 lg:max-w-[164px]'} hover:drop-shadow-[0_6px_30px_rgba(0,102,255,0.35)]`}
           />
         </Link>
 
-        <nav className={`hidden items-center md:flex transition-all duration-300 ${scrolled ? 'gap-4' : 'gap-6'}`}>
+        <nav className={`hidden items-center md:flex transition-all duration-300 ${scrollDirection === 'down' && scrolled ? 'gap-4' : 'gap-6'}`}>
           {menuItems.map((item) => (
             <Link
               key={item.id || item.href}
               to={item.href || `/#${item.id}`}
-              className={`${item.href === '/request' ? 'text-[#004aad] font-bold' : 'text-[#1A1A1A] font-normal'} transition-all duration-300 hover:text-[#004aad] ${scrolled ? 'text-xs' : 'text-sm'}`}
+              className={`${item.href === '/request' ? 'text-[#004aad] font-bold' : 'text-[#1A1A1A] font-normal'} transition-all duration-300 hover:text-[#004aad] ${scrollDirection === 'down' && scrolled ? 'text-xs' : 'text-sm'}`}
             >
-              {item.label}
+              <EditableTranslation translationKey={`header.menu.${item.id || 'consulting'}`}>
+                {item.label}
+              </EditableTranslation>
             </Link>
           ))}
         </nav>
@@ -77,11 +124,11 @@ export default function Header() {
           <div className="relative language-switcher">
             <button
               onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
-              className={`flex items-center gap-1 bg-transparent text-[#666] transition-all duration-300 hover:text-[#004aad] ${scrolled ? 'text-xs' : 'text-sm'}`}
+              className={`flex items-center gap-1 bg-transparent text-[#666] transition-all duration-300 hover:text-[#004aad] ${scrollDirection === 'down' && scrolled ? 'text-xs' : 'text-sm'}`}
               aria-label="Change language"
               style={{ background: 'none', border: 'none' }}
             >
-              <Globe className={scrolled ? 'h-3.5 w-3.5' : 'h-4 w-4'} />
+              <Globe className={scrollDirection === 'down' && scrolled ? 'h-3.5 w-3.5' : 'h-4 w-4'} />
               <span className="font-normal">{currentLanguage.toUpperCase()}</span>
             </button>
 
@@ -109,9 +156,11 @@ export default function Header() {
 
           <Link
             to="/request"
-            className={`rounded-full bg-[#004aad] font-normal text-white transition-all hover:bg-[#003580] hover:shadow-lg ${scrolled ? 'px-4 py-1.5 text-xs' : 'px-5 py-2 text-sm'}`}
+            className={`rounded-full bg-[#004aad] font-normal text-white transition-all hover:bg-[#003580] hover:shadow-lg ${scrollDirection === 'down' && scrolled ? 'px-4 py-1.5 text-xs' : 'px-5 py-2 text-sm'}`}
           >
-            {t('header.cta')}
+            <EditableTranslation translationKey="header.cta">
+              {t('header.cta')}
+            </EditableTranslation>
           </Link>
         </div>
 
@@ -151,7 +200,9 @@ export default function Header() {
               className="py-2 text-[#1A1A1A] transition-colors hover:text-[#004aad]"
               onClick={() => setIsMenuOpen(false)}
             >
-              {item.label}
+              <EditableTranslation translationKey={`header.menu.${item.id || 'consulting'}`}>
+                {item.label}
+              </EditableTranslation>
             </Link>
           ))}
 
@@ -185,7 +236,9 @@ export default function Header() {
             className="mt-4 rounded-full bg-[#004aad] px-6 py-3 text-center text-white transition-all hover:bg-[#003580] hover:shadow-lg"
             onClick={() => setIsMenuOpen(false)}
           >
-            {t('header.cta')}
+            <EditableTranslation translationKey="header.cta">
+              {t('header.cta')}
+            </EditableTranslation>
           </Link>
         </nav>
       </div>

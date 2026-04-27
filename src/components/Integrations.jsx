@@ -53,7 +53,7 @@ export default function Integrations() {
           transition={{ duration: 0.6, ease: 'easeOut' }}
         >
           <h2 className="mb-4 text-4xl md:text-5xl">{t('integrations.title')}</h2>
-          <p className="mx-auto max-w-2xl text-xl text-gray-600">
+          <p className="mx-auto max-w-2xl text-xl text-gray-700">
             {t('integrations.subtitle')}
           </p>
         </motion.div>

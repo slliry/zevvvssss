@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
+import EditableTranslation from './EditableTranslation';
 
 export default function Tasks() {
   const { t } = useTranslation();
@@ -57,9 +58,9 @@ export default function Tasks() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="mb-4 text-4xl md:text-5xl">{t('tasks.title')}</h2>
-          <p className="mx-auto max-w-2xl text-xl text-gray-600">
-            {t('tasks.subtitle')}
+          <h2 className="mb-4 text-4xl md:text-5xl"><EditableTranslation translationKey="tasks.title">{t('tasks.title')}</EditableTranslation></h2>
+          <p className="mx-auto max-w-2xl text-xl text-gray-700">
+            <EditableTranslation translationKey="tasks.subtitle">{t('tasks.subtitle')}</EditableTranslation>
           </p>
         </motion.div>
 
@@ -90,7 +91,7 @@ export default function Tasks() {
                     <div className={`flex-1 ${isEven ? 'lg:text-right' : 'lg:text-left'}`}>
                       <div className="bg-white rounded-2xl p-4 lg:p-5 shadow-lg hover:shadow-xl transition-shadow duration-300">
                         <h3 className="mb-2 text-lg lg:text-xl font-bold text-gray-900">{task.title}</h3>
-                        <ul className={`space-y-2 text-sm lg:text-base text-gray-600 ${isEven ? 'lg:text-right' : 'lg:text-left'}`}>
+                        <ul className={`space-y-2 text-sm lg:text-base text-gray-700 ${isEven ? 'lg:text-right' : 'lg:text-left'}`}>
                           {task.description.split('\n').map((line, i) => (
                             <li key={i} className="leading-relaxed">• {line.trim()}</li>
                           ))}

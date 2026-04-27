@@ -33,6 +33,37 @@ db.exec(`
     created_at TEXT NOT NULL,
     updated_at TEXT NOT NULL
   );
+
+  CREATE TABLE IF NOT EXISTS translation_cache (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    source_text TEXT NOT NULL,
+    source_lang TEXT NOT NULL,
+    target_lang TEXT NOT NULL,
+    translated_text TEXT NOT NULL,
+    context TEXT,
+    created_at TEXT NOT NULL,
+    used_count INTEGER DEFAULT 1,
+    last_used_at TEXT NOT NULL,
+    UNIQUE(source_text, source_lang, target_lang, context)
+  );
+
+  CREATE INDEX IF NOT EXISTS idx_translation_lookup 
+    ON translation_cache(source_text, source_lang, target_lang);
+
+  CREATE TABLE IF NOT EXISTS translations (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    key TEXT NOT NULL,
+    lang TEXT NOT NULL,
+    value TEXT NOT NULL,
+    created_at TEXT NOT NULL,
+    updated_at TEXT NOT NULL,
+    updated_by TEXT,
+    UNIQUE(key, lang)
+  );
+
+  CREATE INDEX IF NOT EXISTS idx_translations_key ON translations(key);
+  CREATE INDEX IF NOT EXISTS idx_translations_lang ON translations(lang);
+  CREATE INDEX IF NOT EXISTS idx_translations_lookup ON translations(key, lang);
 `);
 
 export default db;

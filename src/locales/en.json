@@ -11,11 +11,12 @@
         "cta": "Request Demo"
     },
     "hero": {
-        "badge": "Zeus Platform",
-        "heading1": "Unified GRC Management",
-        "heading2": "Platform",
-        "description": "Assets, risks, audits, and controls — seamlessly managed in one automated system.",
-        "cta": "Try for Free"
+        "badge": "GRC Platform",
+        "heading1": "Risk and Compliance Management",
+        "heading2": "in One Platform",
+        "description": "Zeus GRC is a comprehensive solution for automating risk management, compliance, and corporate governance processes.",
+        "cta": "Request Consultation",
+        "watchDemo": "Watch Demo"
     },
     "video": {
         "title": "See Zeus GRC in action",
@@ -28,7 +29,8 @@
     },
     "modules": {
         "title": "Platform Modules",
-        "subtitle": "All the essential tools for effective GRC management in one system",
+        "subtitle": "All the necessary tools for effective GRC management in one system",
+        "learnMore": "Learn more",
         "items": {
             "assetManagement": {
                 "title": "Asset Management",

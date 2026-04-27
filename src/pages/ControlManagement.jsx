@@ -1,5 +1,6 @@
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import EditableTranslation from '../components/EditableTranslation';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO.jsx';
 import {
@@ -67,10 +68,10 @@ export default function ControlManagement() {
                             to="/#modules"
                             className="mb-8 inline-flex items-center gap-2 text-sm text-[#004aad] transition hover:text-[#0066cc]"
                         >
-                            ← {t('controlManagement.backToModules')}
+                            ← <EditableTranslation translationKey="controlManagement.backToModules">{t('controlManagement.backToModules')}</EditableTranslation>
                         </Link>
                         <h1 className="mb-6 text-5xl font-bold text-[#1A1A1A] md:text-7xl">
-                            {t('controlManagement.title')}
+                            <EditableTranslation translationKey="controlManagement.title">{t('controlManagement.title')}</EditableTranslation>
                         </h1>
                         <p className="mx-auto max-w-2xl text-lg leading-relaxed text-gray-700 lg:mx-0">
                             {t('controlManagement.heroDescription')}
@@ -85,7 +86,7 @@ export default function ControlManagement() {
                                 to="/request"
                                 className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#004aad] to-[#0066cc] px-8 py-4 text-lg font-semibold text-white shadow-lg transition-all hover:scale-105 hover:shadow-xl"
                             >
-                                {t('controlManagement.cta.button')}
+                                <EditableTranslation translationKey="controlManagement.cta.button">{t('controlManagement.cta.button')}</EditableTranslation>
                                 <ArrowRight size={20} />
                             </Link>
                         </motion.div>
@@ -120,10 +121,10 @@ export default function ControlManagement() {
                         className="mb-16 text-center"
                     >
                         <h2 className="mb-4 text-4xl font-bold md:text-5xl">
-                            {t('controlManagement.effectiveness.title')}
+                            <EditableTranslation translationKey="controlManagement.effectiveness.title">{t('controlManagement.effectiveness.title')}</EditableTranslation>
                         </h2>
                         <p className="mx-auto max-w-3xl text-xl text-gray-600">
-                            {t('controlManagement.effectiveness.subtitle')}
+                            <EditableTranslation translationKey="controlManagement.effectiveness.subtitle">{t('controlManagement.effectiveness.subtitle')}</EditableTranslation>
                         </p>
                     </motion.div>
 
@@ -142,10 +143,10 @@ export default function ControlManagement() {
                                     <CheckCircle2 size={28} />
                                 </div>
                                 <h3 className="mb-3 text-xl font-bold text-gray-900">
-                                    {t('controlManagement.effectiveness.features.monitoring.title')}
+                                    <EditableTranslation translationKey="controlManagement.effectiveness.features.monitoring.title">{t('controlManagement.effectiveness.features.monitoring.title')}</EditableTranslation>
                                 </h3>
                                 <p className="text-gray-600 leading-relaxed">
-                                    {t('controlManagement.effectiveness.features.monitoring.description')}
+                                    <EditableTranslation translationKey="controlManagement.effectiveness.features.monitoring.description">{t('controlManagement.effectiveness.features.monitoring.description')}</EditableTranslation>
                                 </p>
                             </div>
                         </motion.div>
@@ -164,10 +165,10 @@ export default function ControlManagement() {
                                     <FileCheck size={28} />
                                 </div>
                                 <h3 className="mb-3 text-xl font-bold text-gray-900">
-                                    {t('controlManagement.effectiveness.features.evidence.title')}
+                                    <EditableTranslation translationKey="controlManagement.effectiveness.features.evidence.title">{t('controlManagement.effectiveness.features.evidence.title')}</EditableTranslation>
                                 </h3>
                                 <p className="text-gray-600 leading-relaxed">
-                                    {t('controlManagement.effectiveness.features.evidence.description')}
+                                    <EditableTranslation translationKey="controlManagement.effectiveness.features.evidence.description">{t('controlManagement.effectiveness.features.evidence.description')}</EditableTranslation>
                                 </p>
                             </div>
                         </motion.div>
@@ -186,10 +187,10 @@ export default function ControlManagement() {
                                     <Target size={28} />
                                 </div>
                                 <h3 className="mb-3 text-xl font-bold text-gray-900">
-                                    {t('controlManagement.effectiveness.features.identification.title')}
+                                    <EditableTranslation translationKey="controlManagement.effectiveness.features.identification.title">{t('controlManagement.effectiveness.features.identification.title')}</EditableTranslation>
                                 </h3>
                                 <p className="text-gray-600 leading-relaxed">
-                                    {t('controlManagement.effectiveness.features.identification.description')}
+                                    <EditableTranslation translationKey="controlManagement.effectiveness.features.identification.description">{t('controlManagement.effectiveness.features.identification.description')}</EditableTranslation>
                                 </p>
                             </div>
                         </motion.div>
@@ -208,10 +209,10 @@ export default function ControlManagement() {
                                     <Sparkles size={28} />
                                 </div>
                                 <h3 className="mb-3 text-xl font-bold text-gray-900">
-                                    {t('controlManagement.effectiveness.features.recommendations.title')}
+                                    <EditableTranslation translationKey="controlManagement.effectiveness.features.recommendations.title">{t('controlManagement.effectiveness.features.recommendations.title')}</EditableTranslation>
                                 </h3>
                                 <p className="text-gray-600 leading-relaxed">
-                                    {t('controlManagement.effectiveness.features.recommendations.description')}
+                                    <EditableTranslation translationKey="controlManagement.effectiveness.features.recommendations.description">{t('controlManagement.effectiveness.features.recommendations.description')}</EditableTranslation>
                                 </p>
                             </div>
                         </motion.div>
@@ -231,9 +232,9 @@ export default function ControlManagement() {
                             <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-white/20 backdrop-blur-sm">
                                 <CheckSquare size={32} className="text-white" />
                             </div>
-                            <h3 className="mb-4 text-2xl font-bold md:text-3xl text-white">{t('controlManagement.effectiveness.clientResults.title')}</h3>
+                            <h3 className="mb-4 text-2xl font-bold md:text-3xl text-white"><EditableTranslation translationKey="controlManagement.effectiveness.clientResults.title">{t('controlManagement.effectiveness.clientResults.title')}</EditableTranslation></h3>
                             <p className="text-lg leading-relaxed text-white max-w-4xl">
-                                {t('controlManagement.effectiveness.clientResults.description')}
+                                <EditableTranslation translationKey="controlManagement.effectiveness.clientResults.description">{t('controlManagement.effectiveness.clientResults.description')}</EditableTranslation>
                             </p>
                         </div>
                     </motion.div>
@@ -250,10 +251,10 @@ export default function ControlManagement() {
                     className="mb-12 text-center"
                 >
                     <h2 className="mb-4 text-4xl font-bold md:text-5xl">
-                        {t('controlManagement.beforeAfter.title')}
+                        <EditableTranslation translationKey="controlManagement.beforeAfter.title">{t('controlManagement.beforeAfter.title')}</EditableTranslation>
                     </h2>
                     <p className="mx-auto max-w-2xl text-xl text-gray-600">
-                        {t('controlManagement.beforeAfter.subtitle')}
+                        <EditableTranslation translationKey="controlManagement.beforeAfter.subtitle">{t('controlManagement.beforeAfter.subtitle')}</EditableTranslation>
                     </p>
                 </motion.div>
 
@@ -271,7 +272,7 @@ export default function ControlManagement() {
                                 <XCircle size={24} />
                             </div>
                             <h3 className="text-2xl font-bold text-red-900">
-                                {t('controlManagement.beforeAfter.before')}
+                                <EditableTranslation translationKey="controlManagement.beforeAfter.before">{t('controlManagement.beforeAfter.before')}</EditableTranslation>
                             </h3>
                         </div>
                         <ul className="space-y-3">
@@ -304,7 +305,7 @@ export default function ControlManagement() {
                                 <CheckCircle2 size={24} />
                             </div>
                             <h3 className="text-2xl font-bold text-white">
-                                {t('controlManagement.beforeAfter.solution')}
+                                <EditableTranslation translationKey="controlManagement.beforeAfter.solution">{t('controlManagement.beforeAfter.solution')}</EditableTranslation>
                             </h3>
                         </div>
                         <ul className="space-y-3">
@@ -337,7 +338,7 @@ export default function ControlManagement() {
                                 <Sparkles size={24} />
                             </div>
                             <h3 className="text-2xl font-bold text-green-900">
-                                {t('controlManagement.beforeAfter.result')}
+                                <EditableTranslation translationKey="controlManagement.beforeAfter.result">{t('controlManagement.beforeAfter.result')}</EditableTranslation>
                             </h3>
                         </div>
                         <ul className="space-y-3">
@@ -390,10 +391,10 @@ export default function ControlManagement() {
 
                         <div className="relative z-10">
                             <h2 className="mb-4 text-3xl font-bold text-white md:text-5xl">
-                                {t('controlManagement.cta.title')}
+                                <EditableTranslation translationKey="controlManagement.cta.title">{t('controlManagement.cta.title')}</EditableTranslation>
                             </h2>
                             <p className="mb-8 text-lg text-white/90 md:text-xl">
-                                {t('controlManagement.cta.description')}
+                                <EditableTranslation translationKey="controlManagement.cta.description">{t('controlManagement.cta.description')}</EditableTranslation>
                             </p>
                             <Link
                                 to="/request"

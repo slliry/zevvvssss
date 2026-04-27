@@ -1,6 +1,7 @@
 import { Mail, Phone, MapPin } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import useInView from '../hooks/useInView.js';
+import EditableTranslation from './EditableTranslation';
 
 export default function Footer() {
   const { t } = useTranslation();
@@ -38,7 +39,7 @@ export default function Footer() {
 
             </div>
             <p className="mb-6 text-gray-400 leading-relaxed">
-              {t('footer.description')}
+              <EditableTranslation translationKey="footer.description">{t('footer.description')}</EditableTranslation>
             </p>
             <div className="space-y-3 text-gray-400">
               {contactItems.map(({ icon: Icon, text }) => (
@@ -56,13 +57,13 @@ export default function Footer() {
 
         <div className="border-t border-white/10 pt-8">
           <div className="flex flex-col items-center justify-between gap-4 text-sm text-gray-400 md:flex-row">
-            <p>{t('footer.copyright')}</p>
+            <p><EditableTranslation translationKey="footer.copyright">{t('footer.copyright')}</EditableTranslation></p>
             <div className="flex gap-6">
               <a href="#" className="text-white transition-colors hover:text-white">
-                {t('footer.privacy')}
+                <EditableTranslation translationKey="footer.privacy">{t('footer.privacy')}</EditableTranslation>
               </a>
               <a href="#" className="text-white transition-colors hover:text-white">
-                {t('footer.terms')}
+                <EditableTranslation translationKey="footer.terms">{t('footer.terms')}</EditableTranslation>
               </a>
             </div>
           </div>

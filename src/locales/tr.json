@@ -11,11 +11,12 @@
     "cta": "Demo Talep Et"
   },
   "hero": {
-    "badge": "Zeus Platform",
-    "heading1": "Birleşik GRC Yönetim",
-    "heading2": "Platformu",
-    "description": "Varlıklar, riskler, denetimler ve kontroller — tek bir otomatik sistemde sorunsuz yönetilir.",
-    "cta": "Ücretsiz Dene"
+    "badge": "GRC Platformu",
+    "heading1": "Risk ve Uyumluluk Yönetimi",
+    "heading2": "tek platformda",
+    "description": "Zeus GRC, risk yönetimi, uyumluluk ve kurumsal yönetim süreçlerini otomatikleştirmek için kapsamlı bir çözümdür.",
+    "cta": "Danışmanlık İste",
+    "watchDemo": "Demo İzle"
   },
   "video": {
     "title": "Zeus GRC'yi çalışırken görün",
@@ -28,7 +29,8 @@
   },
   "modules": {
     "title": "Platform Modülleri",
-    "subtitle": "Etkili GRC yönetimi için gerekli tüm araçlar tek sistemde",
+    "subtitle": "Tek bir sistemde etkili GRC yönetimi için gerekli tüm araçlar",
+    "learnMore": "Daha fazla",
     "items": {
       "assetManagement": {
         "title": "Varlık Yönetimi",

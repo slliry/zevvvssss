@@ -1,5 +1,6 @@
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import EditableTranslation from '../components/EditableTranslation';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO.jsx';
 import {
@@ -67,10 +68,10 @@ export default function AuditCompliance() {
                             to="/#modules"
                             className="mb-8 inline-flex items-center gap-2 text-sm text-[#004aad] transition hover:text-[#0066cc]"
                         >
-                            ← {t('auditCompliance.backToModules')}
+                            ← <EditableTranslation translationKey="auditCompliance.backToModules">{t('auditCompliance.backToModules')}</EditableTranslation>
                         </Link>
                         <h1 className="mb-6 text-5xl font-bold text-[#1A1A1A] md:text-7xl">
-                            {t('auditCompliance.title')}
+                            <EditableTranslation translationKey="auditCompliance.title">{t('auditCompliance.title')}</EditableTranslation>
                         </h1>
                         <p className="mx-auto max-w-2xl text-lg leading-relaxed text-gray-700 lg:mx-0">
                             {t('auditCompliance.heroDescription')}
@@ -85,7 +86,7 @@ export default function AuditCompliance() {
                                 to="/request"
                                 className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#004aad] to-[#0066cc] px-8 py-4 text-lg font-semibold text-white shadow-lg transition-all hover:scale-105 hover:shadow-xl"
                             >
-                                {t('auditCompliance.cta.button')}
+                                <EditableTranslation translationKey="auditCompliance.cta.button">{t('auditCompliance.cta.button')}</EditableTranslation>
                                 <ArrowRight size={20} />
                             </Link>
                         </motion.div>
@@ -119,10 +120,10 @@ export default function AuditCompliance() {
                     className="mb-12 text-center"
                 >
                     <h2 className="mb-4 text-4xl font-bold md:text-5xl">
-                        {t('auditCompliance.beforeAfter.title')}
+                        <EditableTranslation translationKey="auditCompliance.beforeAfter.title">{t('auditCompliance.beforeAfter.title')}</EditableTranslation>
                     </h2>
                     <p className="mx-auto max-w-2xl text-xl text-gray-600">
-                        {t('auditCompliance.beforeAfter.subtitle')}
+                        <EditableTranslation translationKey="auditCompliance.beforeAfter.subtitle">{t('auditCompliance.beforeAfter.subtitle')}</EditableTranslation>
                     </p>
                 </motion.div>
 
@@ -140,7 +141,7 @@ export default function AuditCompliance() {
                                 <XCircle size={24} />
                             </div>
                             <h3 className="text-2xl font-bold text-red-900">
-                                {t('auditCompliance.beforeAfter.before')}
+                                <EditableTranslation translationKey="auditCompliance.beforeAfter.before">{t('auditCompliance.beforeAfter.before')}</EditableTranslation>
                             </h3>
                         </div>
                         <ul className="space-y-3">
@@ -173,7 +174,7 @@ export default function AuditCompliance() {
                                 <CheckCircle2 size={24} />
                             </div>
                             <h3 className="text-2xl font-bold text-white">
-                                {t('auditCompliance.beforeAfter.solution')}
+                                <EditableTranslation translationKey="auditCompliance.beforeAfter.solution">{t('auditCompliance.beforeAfter.solution')}</EditableTranslation>
                             </h3>
                         </div>
                         <ul className="space-y-3">
@@ -206,7 +207,7 @@ export default function AuditCompliance() {
                                 <Sparkles size={24} />
                             </div>
                             <h3 className="text-2xl font-bold text-green-900">
-                                {t('auditCompliance.beforeAfter.result')}
+                                <EditableTranslation translationKey="auditCompliance.beforeAfter.result">{t('auditCompliance.beforeAfter.result')}</EditableTranslation>
                             </h3>
                         </div>
                         <ul className="space-y-3">
@@ -259,10 +260,10 @@ export default function AuditCompliance() {
 
                         <div className="relative z-10">
                             <h2 className="mb-4 text-3xl font-bold text-white md:text-5xl">
-                                {t('auditCompliance.cta.title')}
+                                <EditableTranslation translationKey="auditCompliance.cta.title">{t('auditCompliance.cta.title')}</EditableTranslation>
                             </h2>
                             <p className="mb-8 text-lg text-white/90 md:text-xl">
-                                {t('auditCompliance.cta.description')}
+                                <EditableTranslation translationKey="auditCompliance.cta.description">{t('auditCompliance.cta.description')}</EditableTranslation>
                             </p>
                             <Link
                                 to="/request"

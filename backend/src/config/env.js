@@ -27,6 +27,8 @@ const env = {
   requestNotificationEmail: process.env.REQUEST_NOTIFICATION_EMAIL || 'zeus@dmcorp.kz',
   telegramBotToken: normalizeEnvValue(process.env.TELEGRAM_BOT_TOKEN),
   telegramChatId: normalizeEnvValue(process.env.TELEGRAM_CHAT_ID),
+  openaiApiKey: process.env.OPENAI_API_KEY || '',
+  translationAdminKey: process.env.TRANSLATION_ADMIN_KEY || 'admin-secret-key',
 };
 
 export default env;

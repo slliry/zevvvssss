@@ -1,6 +1,7 @@
 import { Zap, Lock, Users } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import useInView from '../hooks/useInView.js';
+import EditableTranslation from './EditableTranslation';
 
 export default function Benefits() {
   const { t } = useTranslation();
@@ -35,9 +36,9 @@ export default function Benefits() {
     >
       <div className="mx-auto max-w-[1440px] px-6 lg:px-12">
         <div className="mb-16 text-center">
-          <h2 className="mb-4 text-4xl md:text-5xl">{t('benefits.title')}</h2>
-          <p className="mx-auto max-w-2xl text-xl text-gray-600">
-            {t('benefits.subtitle')}
+          <h2 className="mb-4 text-4xl md:text-5xl"><EditableTranslation translationKey="benefits.title">{t('benefits.title')}</EditableTranslation></h2>
+          <p className="mx-auto max-w-2xl text-xl text-gray-700">
+            <EditableTranslation translationKey="benefits.subtitle">{t('benefits.subtitle')}</EditableTranslation>
           </p>
         </div>
 
@@ -45,17 +46,17 @@ export default function Benefits() {
           {benefits.map(({ icon: Icon, title, description, stats }, index) => (
             <article
               key={title}
-              className="rounded-3xl border border-gray-200 bg-white p-8 text-center transition-all duration-500 hover:-translate-y-1 hover:border-[#004aad] hover:shadow-xl"
+              className="group rounded-3xl border border-gray-200 bg-white p-8 text-center transition-all duration-500 hover:-translate-y-1 hover:border-[#004aad] hover:shadow-[0_20px_60px_rgba(0,74,173,0.2)]"
               style={{ transitionDelay: `${index * 80}ms` }}
             >
-              <div className="mb-6 inline-flex h-20 w-20 items-center justify-center rounded-3xl bg-gradient-to-br from-[#004aad] to-[#0066cc]">
-                <Icon className="text-white" size={36} />
+              <div className="mb-6 inline-flex h-20 w-20 items-center justify-center rounded-3xl bg-gradient-to-br from-[#004aad] to-[#0066cc] transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
+                <Icon className="text-white transition-transform duration-500 group-hover:scale-110" size={36} />
               </div>
               <div className="mb-4 bg-gradient-to-r from-[#004aad] to-[#0066cc] bg-clip-text text-4xl text-transparent">
-                {stats}
+                <EditableTranslation translationKey={`benefits.items.${index === 0 ? 'costReduction' : index === 1 ? 'auditEfficiency' : 'coverage'}.stats`}>{stats}</EditableTranslation>
               </div>
-              <h3 className="mb-3 text-2xl">{title}</h3>
-              <p className="text-gray-600 leading-relaxed">{description}</p>
+              <h3 className="mb-3 text-2xl"><EditableTranslation translationKey={`benefits.items.${index === 0 ? 'costReduction' : index === 1 ? 'auditEfficiency' : 'coverage'}.title`}>{title}</EditableTranslation></h3>
+              <p className="text-gray-700 leading-relaxed"><EditableTranslation translationKey={`benefits.items.${index === 0 ? 'costReduction' : index === 1 ? 'auditEfficiency' : 'coverage'}.description`}>{description}</EditableTranslation></p>
             </article>
           ))}
         </div>

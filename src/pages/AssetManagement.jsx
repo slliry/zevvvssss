@@ -1,5 +1,6 @@
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import EditableTranslation from '../components/EditableTranslation';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO.jsx';
 import {
@@ -64,10 +65,10 @@ export default function AssetManagement() {
                             to="/#modules"
                             className="mb-8 inline-flex items-center gap-2 text-sm text-[#004aad] transition hover:text-[#0066cc]"
                         >
-                            ← {t('assetManagement.backToModules')}
+                            ← <EditableTranslation translationKey="assetManagement.backToModules">{t('assetManagement.backToModules')}</EditableTranslation>
                         </Link>
                         <h1 className="mb-6 text-5xl font-bold text-[#1A1A1A] md:text-7xl">
-                            {t('assetManagement.title')}
+                            <EditableTranslation translationKey="assetManagement.title">{t('assetManagement.title')}</EditableTranslation>
                         </h1>
                         <p className="mx-auto max-w-2xl text-lg leading-relaxed text-gray-700 lg:mx-0">
                             {t('assetManagement.heroDescription')}
@@ -82,7 +83,7 @@ export default function AssetManagement() {
                                 to="/request"
                                 className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#004aad] to-[#0066cc] px-8 py-4 text-lg font-semibold text-white shadow-lg transition-all hover:scale-105 hover:shadow-xl"
                             >
-                                {t('assetManagement.cta.button')}
+                                <EditableTranslation translationKey="assetManagement.cta.button">{t('assetManagement.cta.button')}</EditableTranslation>
                                 <ArrowRight size={20} />
                             </Link>
                         </motion.div>
@@ -116,10 +117,10 @@ export default function AssetManagement() {
                     className="mb-16 text-center"
                 >
                     <h2 className="mb-4 text-4xl font-bold md:text-5xl">
-                        {t('assetManagement.valuation.title')}
+                        <EditableTranslation translationKey="assetManagement.valuation.title">{t('assetManagement.valuation.title')}</EditableTranslation>
                     </h2>
                     <p className="mx-auto max-w-3xl text-xl text-gray-600">
-                        {t('assetManagement.valuation.subtitle')}
+                        <EditableTranslation translationKey="assetManagement.valuation.subtitle">{t('assetManagement.valuation.subtitle')}</EditableTranslation>
                     </p>
                 </motion.div>
 
@@ -133,9 +134,9 @@ export default function AssetManagement() {
                         className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
                     >
                         <div className="mb-4 text-4xl font-bold text-[#004aad]">1</div>
-                        <h3 className="mb-3 text-base font-bold text-gray-900">{t('assetManagement.valuation.parametersTitle')}</h3>
+                        <h3 className="mb-3 text-base font-bold text-gray-900"><EditableTranslation translationKey="assetManagement.valuation.parametersTitle">{t('assetManagement.valuation.parametersTitle')}</EditableTranslation></h3>
                         <p className="text-sm leading-relaxed text-gray-600">
-                            {t('assetManagement.valuation.parameters.regulatory')}, {t('assetManagement.valuation.parameters.legal')}, {t('assetManagement.valuation.parameters.reputational')}, {t('assetManagement.valuation.parameters.operational')}, {t('assetManagement.valuation.parameters.financial')}, {t('assetManagement.valuation.parameters.security')}
+                            <EditableTranslation translationKey="assetManagement.valuation.parameters.regulatory">{t('assetManagement.valuation.parameters.regulatory')}</EditableTranslation>, <EditableTranslation translationKey="assetManagement.valuation.parameters.legal">{t('assetManagement.valuation.parameters.legal')}</EditableTranslation>, <EditableTranslation translationKey="assetManagement.valuation.parameters.reputational">{t('assetManagement.valuation.parameters.reputational')}</EditableTranslation>, <EditableTranslation translationKey="assetManagement.valuation.parameters.operational">{t('assetManagement.valuation.parameters.operational')}</EditableTranslation>, <EditableTranslation translationKey="assetManagement.valuation.parameters.financial">{t('assetManagement.valuation.parameters.financial')}</EditableTranslation>, <EditableTranslation translationKey="assetManagement.valuation.parameters.security">{t('assetManagement.valuation.parameters.security')}</EditableTranslation>
                         </p>
                     </motion.div>
 
@@ -148,9 +149,9 @@ export default function AssetManagement() {
                         className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
                     >
                         <div className="mb-4 text-4xl font-bold text-[#004aad]">2</div>
-                        <h3 className="mb-3 text-base font-bold text-gray-900">{t('assetManagement.valuation.calculationTitle')}</h3>
+                        <h3 className="mb-3 text-base font-bold text-gray-900"><EditableTranslation translationKey="assetManagement.valuation.calculationTitle">{t('assetManagement.valuation.calculationTitle')}</EditableTranslation></h3>
                         <p className="text-sm leading-relaxed text-gray-600">
-                            {t('assetManagement.valuation.calculation.confidentiality')}, {t('assetManagement.valuation.calculation.integrity')}, {t('assetManagement.valuation.calculation.criticality')}, {t('assetManagement.valuation.calculation.financialLoss')}
+                            <EditableTranslation translationKey="assetManagement.valuation.calculation.confidentiality">{t('assetManagement.valuation.calculation.confidentiality')}</EditableTranslation>, <EditableTranslation translationKey="assetManagement.valuation.calculation.integrity">{t('assetManagement.valuation.calculation.integrity')}</EditableTranslation>, <EditableTranslation translationKey="assetManagement.valuation.calculation.criticality">{t('assetManagement.valuation.calculation.criticality')}</EditableTranslation>, <EditableTranslation translationKey="assetManagement.valuation.calculation.financialLoss">{t('assetManagement.valuation.calculation.financialLoss')}</EditableTranslation>
                         </p>
                     </motion.div>
 
@@ -163,9 +164,9 @@ export default function AssetManagement() {
                         className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
                     >
                         <div className="mb-4 text-4xl font-bold text-[#004aad]">3</div>
-                        <h3 className="mb-3 text-base font-bold text-gray-900">{t('assetManagement.valuation.customization.title')}</h3>
+                        <h3 className="mb-3 text-base font-bold text-gray-900"><EditableTranslation translationKey="assetManagement.valuation.customization.title">{t('assetManagement.valuation.customization.title')}</EditableTranslation></h3>
                         <p className="text-sm leading-relaxed text-gray-600">
-                            {t('assetManagement.valuation.customization.description')}
+                            <EditableTranslation translationKey="assetManagement.valuation.customization.description">{t('assetManagement.valuation.customization.description')}</EditableTranslation>
                         </p>
                     </motion.div>
 
@@ -178,9 +179,9 @@ export default function AssetManagement() {
                         className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
                     >
                         <div className="mb-4 text-4xl font-bold text-[#004aad]">4</div>
-                        <h3 className="mb-3 text-base font-bold text-gray-900">{t('assetManagement.valuation.standardization.title')}</h3>
+                        <h3 className="mb-3 text-base font-bold text-gray-900"><EditableTranslation translationKey="assetManagement.valuation.standardization.title">{t('assetManagement.valuation.standardization.title')}</EditableTranslation></h3>
                         <p className="text-sm leading-relaxed text-gray-600">
-                            {t('assetManagement.valuation.standardization.description')}
+                            <EditableTranslation translationKey="assetManagement.valuation.standardization.description">{t('assetManagement.valuation.standardization.description')}</EditableTranslation>
                         </p>
                     </motion.div>
 
@@ -193,9 +194,9 @@ export default function AssetManagement() {
                         className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
                     >
                         <div className="mb-4 text-4xl font-bold text-[#004aad]">5</div>
-                        <h3 className="mb-3 text-base font-bold text-gray-900">{t('assetManagement.valuation.riskSupport.title')}</h3>
+                        <h3 className="mb-3 text-base font-bold text-gray-900"><EditableTranslation translationKey="assetManagement.valuation.riskSupport.title">{t('assetManagement.valuation.riskSupport.title')}</EditableTranslation></h3>
                         <p className="text-sm leading-relaxed text-gray-600">
-                            {t('assetManagement.valuation.riskSupport.description')}
+                            <EditableTranslation translationKey="assetManagement.valuation.riskSupport.description">{t('assetManagement.valuation.riskSupport.description')}</EditableTranslation>
                         </p>
                     </motion.div>
                 </div>
@@ -211,10 +212,10 @@ export default function AssetManagement() {
                     className="mb-12 text-center"
                 >
                     <h2 className="mb-4 text-4xl font-bold md:text-5xl">
-                        {t('assetManagement.beforeAfter.title')}
+                        <EditableTranslation translationKey="assetManagement.beforeAfter.title">{t('assetManagement.beforeAfter.title')}</EditableTranslation>
                     </h2>
                     <p className="mx-auto max-w-2xl text-xl text-gray-600">
-                        {t('assetManagement.beforeAfter.subtitle')}
+                        <EditableTranslation translationKey="assetManagement.beforeAfter.subtitle">{t('assetManagement.beforeAfter.subtitle')}</EditableTranslation>
                     </p>
                 </motion.div>
 
@@ -232,7 +233,7 @@ export default function AssetManagement() {
                                 <XCircle size={24} />
                             </div>
                             <h3 className="text-2xl font-bold text-red-900">
-                                {t('assetManagement.beforeAfter.before')}
+                                <EditableTranslation translationKey="assetManagement.beforeAfter.before">{t('assetManagement.beforeAfter.before')}</EditableTranslation>
                             </h3>
                         </div>
                         <ul className="space-y-3">
@@ -265,7 +266,7 @@ export default function AssetManagement() {
                                 <CheckCircle2 size={24} />
                             </div>
                             <h3 className="text-2xl font-bold text-white">
-                                {t('assetManagement.beforeAfter.solution')}
+                                <EditableTranslation translationKey="assetManagement.beforeAfter.solution">{t('assetManagement.beforeAfter.solution')}</EditableTranslation>
                             </h3>
                         </div>
                         <ul className="space-y-3">
@@ -298,7 +299,7 @@ export default function AssetManagement() {
                                 <Sparkles size={24} />
                             </div>
                             <h3 className="text-2xl font-bold text-green-900">
-                                {t('assetManagement.beforeAfter.result')}
+                                <EditableTranslation translationKey="assetManagement.beforeAfter.result">{t('assetManagement.beforeAfter.result')}</EditableTranslation>
                             </h3>
                         </div>
                         <ul className="space-y-3">
@@ -351,10 +352,10 @@ export default function AssetManagement() {
 
                         <div className="relative z-10">
                             <h2 className="mb-4 text-3xl font-bold text-white md:text-5xl">
-                                {t('assetManagement.cta.title')}
+                                <EditableTranslation translationKey="assetManagement.cta.title">{t('assetManagement.cta.title')}</EditableTranslation>
                             </h2>
                             <p className="mb-8 text-lg text-white/90 md:text-xl">
-                                {t('assetManagement.cta.description')}
+                                <EditableTranslation translationKey="assetManagement.cta.description">{t('assetManagement.cta.description')}</EditableTranslation>
                             </p>
                             <Link
                                 to="/request"
