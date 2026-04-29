@@ -7,6 +7,10 @@ import App from './App.jsx';
 import { AuthProvider } from './context/AuthContext.jsx';
 import { LanguageProvider } from './context/LanguageContext.jsx';
 import { TranslationEditorProvider } from './context/TranslationEditorContext.jsx';
+import { initAnalytics } from './utils/analytics.js';
+
+// Инициализируем аналитику
+initAnalytics();
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

@@ -22,7 +22,7 @@ const SUPPORTED_LANGUAGES = {
   tr: 'Turkish',
 };
 
-const LOCALES_PATH = path.resolve(__dirname, '../../../src/locales');
+const LOCALES_PATH = path.resolve(__dirname, '../../locales');
 
 class TranslationService {
   async generateTranslation(text, targetLang, context = '', sourceLang = 'auto') {

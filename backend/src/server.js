@@ -8,7 +8,9 @@ import env from './config/env.js';
 import authRoutes from './routes/authRoutes.js';
 import requestRoutes from './routes/requestRoutes.js';
 import translationRoutes from './routes/translationRoutes.js';
+import analyticsRoutes from './routes/analyticsRoutes.js';
 import { errorHandler } from './middleware/errorHandler.js';
+import './jobs/analyticsJob.js';
 
 const app = express();
 const __filename = fileURLToPath(import.meta.url);
@@ -55,6 +57,7 @@ app.get('/api/health', (req, res) => {
 app.use('/api/auth', authRoutes);
 app.use('/api/requests', requestRoutes);
 app.use('/api/translations', translationRoutes);
+app.use('/api/analytics', analyticsRoutes);
 
 if (hasClientBundle) {
   app.use(express.static(clientDistPath));

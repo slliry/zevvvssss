@@ -1,6 +1,7 @@
 import nodemailer from 'nodemailer';
 import db from '../db/index.js';
 import env from '../config/env.js';
+import telegramService from './telegramService.js';
 
 function formatNotificationDate(value) {
   if (!value) return '-';
@@ -51,50 +52,8 @@ async function sendRequestNotification(request) {
   });
 }
 
-function escapeTelegram(text) {
-  return String(text).replace(/[\\_*\[\]()~`>#+\-=|{}.!]/g, '\\$&');
-}
-
 async function sendTelegramRequestNotification(request) {
-  if (!env.telegramBotToken || !env.telegramChatId) {
-    return;
-  }
-
-  const tokenTail = env.telegramBotToken.slice(-8);
-  const chatIdRaw = JSON.stringify(env.telegramChatId);
-  const createdAt = formatNotificationDate(request.created_at);
-
-  const lines = [
-    '🆕 *Новая заявка с сайта*',
-    `*Имя:* ${escapeTelegram(request.name)}`,
-    `*Компания:* ${escapeTelegram(request.company)}`,
-    `*Email:* ${escapeTelegram(request.email)}`,
-    `*Телефон:* ${escapeTelegram(request.phone || '-')}`,
-    `*Должность:* ${escapeTelegram(request.role || '-')}`,
-    `*Сообщение:* ${escapeTelegram(request.message || '-')}`,
-    `*ID:* ${escapeTelegram(request.id)}`,
-    `*Создано:* ${escapeTelegram(createdAt)}`,
-  ];
-
-  const response = await fetch(`https://api.telegram.org/bot${env.telegramBotToken}/sendMessage`, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      chat_id: env.telegramChatId,
-      text: lines.join('\n'),
-      parse_mode: 'MarkdownV2',
-      disable_web_page_preview: true,
-    }),
-  });
-
-  const payload = await response.json();
-  if (!response.ok || !payload?.ok) {
-    throw new Error(
-      `Telegram notification failed: status=${response.status}, description=${payload?.description || 'unknown error'}, chat_id=${chatIdRaw}, token_tail=${tokenTail}`
-    );
-  }
+  return telegramService.sendRequestNotification(request);
 }
 
 export async function createRequest(data) {

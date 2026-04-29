@@ -64,6 +64,27 @@ db.exec(`
   CREATE INDEX IF NOT EXISTS idx_translations_key ON translations(key);
   CREATE INDEX IF NOT EXISTS idx_translations_lang ON translations(lang);
   CREATE INDEX IF NOT EXISTS idx_translations_lookup ON translations(key, lang);
+
+  CREATE TABLE IF NOT EXISTS analytics (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    ip TEXT NOT NULL,
+    country TEXT,
+    region TEXT,
+    city TEXT,
+    page_path TEXT NOT NULL,
+    referrer TEXT,
+    user_agent TEXT,
+    language TEXT,
+    screen_width INTEGER,
+    screen_height INTEGER,
+    visited_at TEXT NOT NULL,
+    session_id TEXT
+  );
+
+  CREATE INDEX IF NOT EXISTS idx_analytics_visited_at ON analytics(visited_at);
+  CREATE INDEX IF NOT EXISTS idx_analytics_country ON analytics(country);
+  CREATE INDEX IF NOT EXISTS idx_analytics_page_path ON analytics(page_path);
+  CREATE INDEX IF NOT EXISTS idx_analytics_session ON analytics(session_id);
 `);
 
 export default db;
