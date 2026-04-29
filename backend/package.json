@@ -8,7 +8,8 @@
     "start": "node src/server.js",
     "seed:admin": "node src/scripts/createAdmin.js",
     "migrate:translations": "node src/scripts/migrateTranslations.js",
-    "send:analytics": "node src/scripts/sendAnalytics.js"
+    "send:analytics": "node src/scripts/sendAnalytics.js",
+    "check:analytics": "node src/scripts/checkAnalytics.js"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
