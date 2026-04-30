@@ -7,10 +7,17 @@ const router = express.Router();
 // Трекинг посещения
 router.post('/track', (req, res) => {
   try {
-    const ip = req.ip || req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+    // Получаем реальный IP (важно для Docker/Nginx)
+    let ip = req.headers['x-real-ip'] || 
+             req.headers['x-forwarded-for']?.split(',')[0]?.trim() || 
+             req.ip || 
+             req.connection.remoteAddress;
+    
+    // Убираем IPv6 префикс и localhost
+    ip = ip.replace('::ffff:', '').replace('::1', '127.0.0.1');
     
     const data = {
-      ip: ip.replace('::ffff:', ''), // Убираем IPv6 префикс
+      ip,
       pagePath: req.body.pagePath,
       referrer: req.body.referrer,
       userAgent: req.headers['user-agent'],
@@ -21,6 +28,7 @@ router.post('/track', (req, res) => {
     };
 
     const result = analyticsService.trackVisit(data);
+    console.log('📊 Tracked visit from IP:', ip, '→', result.geo);
     res.json(result);
   } catch (error) {
     console.error('Error tracking visit:', error);

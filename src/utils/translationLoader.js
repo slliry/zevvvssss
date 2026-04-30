@@ -1,4 +1,5 @@
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:4000';
+// В продакшене используем относительный путь, в dev - localhost
+const API_URL = import.meta.env.VITE_API_URL || (import.meta.env.MODE === 'production' ? '' : 'http://localhost:4000');
 
 // Загрузка переводов из БД через API
 export async function loadTranslationsFromDB(lang) {
