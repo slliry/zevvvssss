@@ -1,12 +1,20 @@
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import { Play } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 export default function ProductVideo() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const videoRef = useRef(null);
   const [isStarted, setIsStarted] = useState(false);
   const [playbackError, setPlaybackError] = useState(false);
+  const [videoUrl, setVideoUrl] = useState('');
+
+  // Получаем URL видео для текущего языка
+  useEffect(() => {
+    const apiUrl = import.meta.env.VITE_API_URL || (import.meta.env.MODE === 'production' ? '' : 'http://localhost:4000');
+    const currentLang = i18n.language || 'ru';
+    setVideoUrl(`${apiUrl}/api/videos/${currentLang}`);
+  }, [i18n.language]);
 
   const startPlayback = async () => {
     setIsStarted(true);
@@ -39,9 +47,9 @@ export default function ProductVideo() {
               playsInline
               poster="/RiskManagement.png"
               onError={() => setPlaybackError(true)}
+              key={videoUrl}
             >
-              <source src="/1207.mp4" type="video/mp4" />
-              <source src="/1207.mov" type="video/quicktime" />
+              {videoUrl && <source src={videoUrl} type="video/mp4" />}
               {t('video.fallback')}
             </video>
 
@@ -61,9 +69,11 @@ export default function ProductVideo() {
             {playbackError ? (
               <div className="absolute inset-x-4 bottom-4 rounded-xl bg-white/95 px-4 py-3 text-sm text-[#1A1A1A] shadow-xl">
                 <p className="mb-2">{t('video.fallback')}</p>
-                <a href="/1207.mov" className="font-semibold text-[#004aad] hover:underline" download>
-                  {t('video.download')}
-                </a>
+                {videoUrl && (
+                  <a href={videoUrl} className="font-semibold text-[#004aad] hover:underline" download>
+                    {t('video.download')}
+                  </a>
+                )}
               </div>
             ) : null}
           </div>

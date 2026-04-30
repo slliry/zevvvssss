@@ -9,6 +9,7 @@ import authRoutes from './routes/authRoutes.js';
 import requestRoutes from './routes/requestRoutes.js';
 import translationRoutes from './routes/translationRoutes.js';
 import analyticsRoutes from './routes/analyticsRoutes.js';
+import videoRoutes from './routes/videoRoutes.js';
 import { errorHandler } from './middleware/errorHandler.js';
 import './jobs/analyticsJob.js';
 
@@ -58,6 +59,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/requests', requestRoutes);
 app.use('/api/translations', translationRoutes);
 app.use('/api/analytics', analyticsRoutes);
+app.use('/api/videos', videoRoutes);
 
 if (hasClientBundle) {
   app.use(express.static(clientDistPath));
