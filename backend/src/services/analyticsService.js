@@ -128,11 +128,87 @@ class AnalyticsService {
   }
 
   getRecentVisits(limit = 20) {
-    return db.prepare(`
-      SELECT * FROM analytics 
-      ORDER BY visited_at DESC 
+    const stmt = db.prepare(`
+      SELECT * FROM analytics
+      ORDER BY visited_at DESC
       LIMIT ?
-    `).all(limit);
+    `);
+
+    return stmt.all(limit);
+  }
+
+  getDeviceStats(days = 7) {
+    const since = new Date(Date.now() - days * 24 * 60 * 60 * 1000).toISOString();
+
+    // Парсим User Agent для определения браузера и ОС
+    const visits = db.prepare(`
+      SELECT user_agent FROM analytics
+      WHERE visited_at >= ?
+      AND user_agent IS NOT NULL
+    `).all(since);
+
+    const browsers = {};
+    const os = {};
+
+    visits.forEach(visit => {
+      const ua = visit.user_agent;
+      
+      // Определяем браузер
+      let browser = 'Other';
+      if (ua.includes('Chrome') && !ua.includes('Edg')) browser = 'Chrome';
+      else if (ua.includes('Firefox')) browser = 'Firefox';
+      else if (ua.includes('Safari') && !ua.includes('Chrome')) browser = 'Safari';
+      else if (ua.includes('Edg')) browser = 'Edge';
+      else if (ua.includes('Opera') || ua.includes('OPR')) browser = 'Opera';
+
+      browsers[browser] = (browsers[browser] || 0) + 1;
+
+      // Определяем ОС
+      let osName = 'Other';
+      if (ua.includes('Windows')) osName = 'Windows';
+      else if (ua.includes('Mac OS')) osName = 'macOS';
+      else if (ua.includes('Linux')) osName = 'Linux';
+      else if (ua.includes('Android')) osName = 'Android';
+      else if (ua.includes('iOS') || ua.includes('iPhone') || ua.includes('iPad')) osName = 'iOS';
+
+      os[osName] = (os[osName] || 0) + 1;
+    });
+
+    return {
+      browsers: Object.entries(browsers)
+        .map(([browser, count]) => ({ browser, count }))
+        .sort((a, b) => b.count - a.count),
+      os: Object.entries(os)
+        .map(([os, count]) => ({ os, count }))
+        .sort((a, b) => b.count - a.count)
+    };
+  }
+
+  getLiveVisitors() {
+    // Последние 5 минут
+    const fiveMinutesAgo = new Date(Date.now() - 5 * 60 * 1000).toISOString();
+
+    const visitors = db.prepare(`
+      SELECT DISTINCT session_id, country, city, page_path, visited_at
+      FROM analytics
+      WHERE visited_at >= ?
+      ORDER BY visited_at DESC
+    `).all(fiveMinutesAgo);
+
+    return {
+      count: visitors.length,
+      visitors: visitors.slice(0, 10)
+    };
+  }
+
+  getRecentRequests(limit = 5) {
+    const stmt = db.prepare(`
+      SELECT * FROM requests
+      ORDER BY created_at DESC
+      LIMIT ?
+    `);
+
+    return stmt.all(limit);
   }
 }
 

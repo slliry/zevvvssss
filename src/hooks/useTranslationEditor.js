@@ -1,6 +1,7 @@
 import { useState, useCallback } from 'react';
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:4000';
+// В продакшене используем относительный путь, в dev - localhost
+const API_URL = import.meta.env.VITE_API_URL || (import.meta.env.MODE === 'production' ? '' : 'http://localhost:4000');
 
 export function useTranslationEditor(adminKey) {
   const [isLoading, setIsLoading] = useState(false);
