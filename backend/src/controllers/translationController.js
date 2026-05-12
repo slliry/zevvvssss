@@ -58,6 +58,8 @@ export async function updateTranslation(req, res, next) {
   try {
     const { lang, key, value } = req.body;
 
+    console.log('📝 Update translation request:', { lang, key, value: value?.substring(0, 50) });
+
     if (!lang || !key || value === undefined) {
       return res.status(400).json({
         error: 'Bad Request',
@@ -71,6 +73,8 @@ export async function updateTranslation(req, res, next) {
       value
     );
 
+    console.log('✅ Translation updated successfully:', { lang, key });
+
     res.json({
       success: true,
       message: 'Translation updated successfully',
@@ -79,6 +83,7 @@ export async function updateTranslation(req, res, next) {
       value,
     });
   } catch (error) {
+    console.error('❌ Error updating translation:', error);
     next(error);
   }
 }
