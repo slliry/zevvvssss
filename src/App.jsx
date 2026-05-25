@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, lazy, Suspense } from 'react';
 import { Outlet, Route, Routes, useLocation } from 'react-router-dom';
 import Header from './components/Header.jsx';
 import FloatingParticles from './components/FloatingParticles.jsx';
@@ -20,16 +20,20 @@ import LanguageFallbackNotification from './components/LanguageFallbackNotificat
 import TranslationClickHandler from './components/TranslationClickHandler.jsx';
 import BackToTop from './components/BackToTop.jsx';
 import ReadingProgress from './components/ReadingProgress.jsx';
-import Request from './pages/Request.jsx';
-import Admin from './pages/Admin.jsx';
-import AssetManagement from './pages/AssetManagement.jsx';
-import AuditCompliance from './pages/AuditCompliance.jsx';
-import TaskManagement from './pages/TaskManagement.jsx';
-import ControlManagement from './pages/ControlManagement.jsx';
-import RiskManagement from './pages/RiskManagement.jsx';
-import OperationalRiskManagement from './pages/OperationalRiskManagement.jsx';
-import VulnerabilityManagement from './pages/VulnerabilityManagement.jsx';
-import IncidentManagement from './pages/IncidentManagement.jsx';
+
+const Request = lazy(() => import('./pages/Request.jsx'));
+const Admin = lazy(() => import('./pages/Admin.jsx'));
+const AssetManagement = lazy(() => import('./pages/AssetManagement.jsx'));
+const AuditCompliance = lazy(() => import('./pages/AuditCompliance.jsx'));
+const TaskManagement = lazy(() => import('./pages/TaskManagement.jsx'));
+const ControlManagement = lazy(() => import('./pages/ControlManagement.jsx'));
+const RiskManagement = lazy(() => import('./pages/RiskManagement.jsx'));
+const OperationalRiskManagement = lazy(() => import('./pages/OperationalRiskManagement.jsx'));
+const VulnerabilityManagement = lazy(() => import('./pages/VulnerabilityManagement.jsx'));
+const IncidentManagement = lazy(() => import('./pages/IncidentManagement.jsx'));
+const Consulting = lazy(() => import('./pages/Consulting.jsx'));
+const BusinessConsulting = lazy(() => import('./pages/BusinessConsulting.jsx'));
+const IsMaturityCase = lazy(() => import('./pages/IsMaturityCase.jsx'));
 
 function Layout() {
   const location = useLocation();
@@ -99,21 +103,26 @@ function LandingPage() {
 
 function App() {
   return (
-    <Routes>
-      <Route element={<Layout />}>
-        <Route index element={<LandingPage />} />
-        <Route path="/request" element={<Request />} />
-        <Route path="/modules/asset-management" element={<AssetManagement />} />
-        <Route path="/modules/audit-compliance" element={<AuditCompliance />} />
-        <Route path="/modules/task-management" element={<TaskManagement />} />
-        <Route path="/modules/control-management" element={<ControlManagement />} />
-        <Route path="/modules/risk-management" element={<RiskManagement />} />
-        <Route path="/modules/operational-risk-management" element={<OperationalRiskManagement />} />
-        <Route path="/modules/vulnerability-management" element={<VulnerabilityManagement />} />
-        <Route path="/modules/incident-management" element={<IncidentManagement />} />
-      </Route>
-      <Route path="/admin" element={<Admin />} />
-    </Routes>
+    <Suspense fallback={<div className="min-h-screen bg-[#F7FFFE]" />}>
+      <Routes>
+        <Route element={<Layout />}>
+          <Route index element={<LandingPage />} />
+          <Route path="/request" element={<Request />} />
+          <Route path="/modules/asset-management" element={<AssetManagement />} />
+          <Route path="/modules/audit-compliance" element={<AuditCompliance />} />
+          <Route path="/modules/task-management" element={<TaskManagement />} />
+          <Route path="/modules/control-management" element={<ControlManagement />} />
+          <Route path="/modules/risk-management" element={<RiskManagement />} />
+          <Route path="/modules/operational-risk-management" element={<OperationalRiskManagement />} />
+          <Route path="/modules/vulnerability-management" element={<VulnerabilityManagement />} />
+          <Route path="/modules/incident-management" element={<IncidentManagement />} />
+          <Route path="/consulting" element={<Consulting />} />
+          <Route path="/consulting/business" element={<BusinessConsulting />} />
+          <Route path="/consulting/cases/is-maturity" element={<IsMaturityCase />} />
+        </Route>
+        <Route path="/admin" element={<Admin />} />
+      </Routes>
+    </Suspense>
   );
 }
 

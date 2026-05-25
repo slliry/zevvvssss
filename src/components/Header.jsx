@@ -29,7 +29,7 @@ export default function Header() {
 
   const menuItems = [
     { label: t('header.menu.solutions'), id: 'solutions' },
-    { label: t('header.menu.consulting'), href: '/request' },
+    { label: t('header.menu.consulting'), href: '/consulting' },
     { label: t('header.menu.modules'), id: 'modules' },
     { label: t('header.menu.benefits'), id: 'benefits' },
     { label: t('header.menu.testimonials'), id: 'testimonials' },
@@ -110,7 +110,7 @@ export default function Header() {
             <Link
               key={item.id || item.href}
               to={item.href || `/#${item.id}`}
-              className={`${item.href === '/request' ? 'text-[#004aad] font-bold' : 'text-[#1A1A1A] font-normal'} transition-all duration-300 hover:text-[#004aad] ${scrollDirection === 'down' && scrolled ? 'text-xs' : 'text-sm'}`}
+              className={`${item.href === '/consulting' ? 'text-[#004aad] font-bold' : 'text-[#1A1A1A] font-normal'} transition-all duration-300 hover:text-[#004aad] ${scrollDirection === 'down' && scrolled ? 'text-xs' : 'text-sm'}`}
             >
               <EditableTranslation translationKey={`header.menu.${item.id || 'consulting'}`}>
                 {item.label}

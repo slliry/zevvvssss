@@ -40,31 +40,18 @@ const detectBrowserLanguage = () => {
     const langCode = browserLang.split('-')[0].toLowerCase();
     const fullLangCode = browserLang.toLowerCase();
 
-    console.log(`🌍 Browser language detected: ${browserLang} (${langCode})`);
-
     // Direct match
     if (supportedLanguages.includes(langCode)) {
-        console.log(`✅ Language supported: ${langCode}`);
         return langCode;
     }
 
     // Smart fallback based on language groups
-    let fallbackLang = 'en'; // Default fallback
+    let fallbackLang = 'en';
 
     if (languageGroups.cyrillic.includes(langCode)) {
         fallbackLang = 'ru';
-        console.log(`🔄 Cyrillic language detected, fallback to Russian`);
     } else if (languageGroups.turkic.includes(langCode)) {
         fallbackLang = 'tr';
-        console.log(`🔄 Turkic language detected, fallback to Turkish`);
-    } else if (languageGroups.asian.includes(langCode)) {
-        fallbackLang = 'en';
-        console.log(`🔄 Asian language detected, fallback to English`);
-    } else if (languageGroups.arabic.includes(langCode)) {
-        fallbackLang = 'en';
-        console.log(`🔄 Arabic language detected, fallback to English`);
-    } else {
-        console.log(`🔄 Language not supported, fallback to English`);
     }
 
     // Check for regional variants (e.g., 'en-US', 'ru-RU')
@@ -102,38 +89,23 @@ i18n
 // Асинхронная загрузка переводов из БД
 const loadTranslationsFromDatabase = async () => {
     const supportedLanguages = ['ru', 'en', 'kk', 'uz', 'ky', 'tr'];
-    
-    for (const lang of supportedLanguages) {
-        try {
-            // Проверяем кэш
-            let translations = getCachedTranslations(lang);
-            
-            if (!translations) {
-                // Загружаем из БД
-                console.log(`📥 Loading ${lang} translations from database...`);
-                translations = await loadTranslationsFromDB(lang);
-                
-                if (translations && Object.keys(translations).length > 0) {
-                    // Кэшируем на 1 час
-                    cacheTranslations(lang, translations);
-                    console.log(`✅ Loaded ${lang} translations from database`);
-                } else {
-                    // Используем fallback
-                    translations = fallbackResources[lang].translation;
-                    console.log(`⚠️  Using fallback translations for ${lang}`);
-                }
-            } else {
-                console.log(`💾 Using cached ${lang} translations`);
-            }
 
-            // Добавляем переводы в i18n
+    await Promise.all(supportedLanguages.map(async (lang) => {
+        try {
+            let translations = getCachedTranslations(lang);
+            if (!translations) {
+                translations = await loadTranslationsFromDB(lang);
+                if (translations && Object.keys(translations).length > 0) {
+                    cacheTranslations(lang, translations);
+                } else {
+                    translations = fallbackResources[lang].translation;
+                }
+            }
             i18n.addResourceBundle(lang, 'translation', translations, true, true);
-        } catch (error) {
-            console.error(`Error loading ${lang} translations:`, error);
-            // Используем fallback при ошибке
+        } catch {
             i18n.addResourceBundle(lang, 'translation', fallbackResources[lang].translation, true, true);
         }
-    }
+    }));
 };
 
 // Загружаем переводы при старте приложения

@@ -52,23 +52,23 @@ export default function OperationalRiskManagement() {
     const features = [
         {
             icon: Megaphone,
-            title: 'Оценка вероятности и влияния',
-            description: 'Позволяет оценивать их вероятность и влияние с использованием единых методов.'
+            title: t('operationalRiskManagement.solutions.assessment'),
+            description: t('operationalRiskManagement.solutions.assessment')
         },
         {
             icon: Heart,
-            title: 'Сбор и фиксация рисков',
-            description: 'Системно собирает и фиксирует операционные риски во всех процессах.'
+            title: t('operationalRiskManagement.solutions.collection'),
+            description: t('operationalRiskManagement.solutions.collection')
         },
         {
             icon: Search,
-            title: 'Планирование контролей и мер',
-            description: 'Формирует планы по контролям и мерам снижения рисков.'
+            title: t('operationalRiskManagement.solutions.planning'),
+            description: t('operationalRiskManagement.solutions.planning')
         },
         {
             icon: MonitorCheck,
-            title: 'Мониторинг и отчетность',
-            description: 'Обеспечивает постоянный мониторинг, обновление статуса и отчетность.'
+            title: t('operationalRiskManagement.solutions.monitoring'),
+            description: t('operationalRiskManagement.solutions.monitoring')
         }
     ];
 

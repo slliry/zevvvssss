@@ -1,797 +1,960 @@
 {
-  "header": {
-    "menu": {
-      "solutions": "Yechimlar",
-      "consulting": "Konsalting",
-      "modules": "Modullar",
-      "benefits": "Afzalliklar",
-      "testimonials": "Mijozlar fikri",
-      "contacts": "Aloqa"
+    "header": {
+        "menu": {
+            "solutions": "Yechimlar",
+            "consulting": "Konsalting",
+            "modules": "Modullar",
+            "benefits": "Afzalliklar",
+            "testimonials": "Mijozlar fikri",
+            "contacts": "Aloqa"
+        },
+        "cta": "Demo so'rash"
     },
-    "cta": "Demo so'rash"
-  },
-  "hero": {
-    "badge": "GRC platformasi",
-    "heading1": "Xavf va muvofiqlikni boshqarish",
-    "heading2": "bitta platformada",
-    "description": "Zeus GRC — xavflarni boshqarish, talablarga muvofiqlik va korporativ boshqaruv jarayonlarini avtomatlashtirishning kompleks yechimi.",
-    "cta": "Maslahat so'rash",
-    "watchDemo": "Demo ko'rish"
-  },
-  "video": {
-    "title": "Zeus GRC ishlashini ko'ring",
-    "subtitle": "Platforma GRC jarayonlarini qanday avtomatlashtirishi va jamoaga tezroq qaror qabul qilishda qanday yordam berishini qisqacha ko'rsatma.",
-    "play": "Videoni ishga tushirish",
-    "ctaPrimary": "Demo so'rash",
-    "ctaSecondary": "Modullarni ko'rish",
-    "fallback": "Brauzeringiz videoni qo'llab-quvvatlamaydi.",
-    "download": "Videoni yuklab olish"
-  },
-  "modules": {
-    "title": "Platforma modullari",
-    "subtitle": "Bir tizimda samarali GRC boshqaruvi uchun barcha kerakli vositalar",
-    "learnMore": "Batafsil",
-    "items": {
-      "assetManagement": {
-        "title": "Aktivlar boshqaruvi",
-        "description": "Aktivlarni markazlashtiring, ularni risklar va jarayonlar bilan bog'lang hamda aqlli qarorlar uchun muhimlik darajasini avtomatik baholang.",
-        "features": {
-          "registry": "Egalari bilan aktivlar reyestri",
-          "documents": "Hujjatlar va ilovalar",
-          "connections": "Risklar va jarayonlar bilan bog'lanish",
-          "assessment": "Avtomatik baholash"
-        }
-      },
-      "riskManagement": {
-        "title": "Risklar boshqaruvi",
-        "description": "Risklarni bitta tizimda aniqlang, baholang va vizuallashtiring, KRIni real vaqtda kuzating va GRC bo'ylab to'liq integratsiya bilan samarali kamaytirishni ta'minlang."
-      },
-      "auditCompliance": {
-        "title": "Audit va muvofiqlik",
-        "description": "Auditlarni bitta tizimda rejalashtiring, o'tkazing va kuzating — topilmalar, CAPA va dalillarni boshqaring hamda ichki siyosatlar va xalqaro standartlarga doimiy muvofiqlikni saqlang."
-      },
-      "taskManagement": {
-        "title": "Vazifalar boshqaruvi",
-        "description": "GRC vazifalarini markazlashtiring, tayinlash va muddatlarni avtomatlashtiring, risklar, auditlar va nazoratlar bo'yicha to'liq javobgarlikni ta'minlang."
-      },
-      "controlManagement": {
-        "title": "Nazoratlar boshqaruvi",
-        "description": "Riskni kamaytirish va doimiy muvofiqlikni ta'minlash uchun nazoratlarni bitta tizimda loyihalang, joriy qiling va kuzating."
-      },
-      "vulnerabilityManagement": {
-        "title": "Zaifliklar boshqaruvi",
-        "description": "Skanerlar va qo'lda kiritilgan manbalardan zaiflik ma'lumotlarini birlashtiring, bartaraf etishni ustuvorlang va aniqlashdan yopishgacha bo'lgan jarayonni kuzating."
-      },
-      "operationalRiskManagement": {
-        "title": "Operatsion risklar",
-        "description": "Jarayonlardagi operatsion risklarni aniqlang va baholang, kamaytirish choralarini belgilang hamda risk holatini bitta tizimda uzluksiz kuzating."
-      },
-      "incidentManagement": {
-        "title": "Insidentlar boshqaruvi",
-        "description": "Insidentlarni samarali ro'yxatga oling, tasniflang va tekshiring, ildiz sabablarni aniqlang hamda to'liq kuzatuv bilan o'z vaqtida tuzatish choralarini ta'minlang."
-      }
-    }
-  },
-  "assistant": {
-    "title": "Zeus yordamchisi",
-    "subtitle": "Modullarni tushuntiraman va so'rov yuborishga yordam beraman",
-    "open": "Yordamchini ochish",
-    "close": "Yordamchini yopish",
-    "welcome": "Salom! Qanday yordam beray? Quyidan variantni tanlang.",
-    "moduleLabel": "Modullar",
-    "openForm": "Formani ochish",
-    "actions": {
-      "overview": "Platforma haqida",
-      "module": "Muayyan modul haqida",
-      "demo": "Demoga yozilish",
-      "operator": "Operator bilan bog'lanish",
-      "shareContacts": "Kontakt qoldirish"
+    "hero": {
+        "badge": "GRC platformasi",
+        "heading1": "Xavf va muvofiqlikni boshqarish",
+        "heading2": "bitta platformada",
+        "description": "Zeus GRC — xavflarni boshqarish, talablarga muvofiqlik va korporativ boshqaruv jarayonlarini avtomatlashtirishning kompleks yechimi.",
+        "cta": "Maslahat so'rash",
+        "watchDemo": "Demo ko'rish"
     },
-    "responses": {
-      "overview": "Zeus GRC — aktivlar, risklar, auditlar, nazoratlar va vazifalarni boshqarish uchun yagona platforma. U jarayonlarni avtomatlashtirish va muvofiqlikni yaxshilashga yordam beradi.",
-      "modulePrompt": "Quyidan modulni tanlang, men uni qisqacha tushuntiraman.",
-      "moduleInfo": "{{module}} moduli ushbu yo'nalishdagi asosiy vazifalarni hal qilishga yordam beradi. Istasangiz, jarayoningiz uchun moslashtirilgan demo tayyorlaymiz.",
-      "demo": "Ajoyib! Quyida kontaktingizni qoldiring yoki so'rov formasini oching, demo vaqtini kelishamiz.",
-      "operator": "Albatta. Kontaktingizni qoldiring, mutaxassisimiz ish vaqtida siz bilan bog'lanadi."
+    "video": {
+        "title": "Zeus GRC ishlashini ko'ring",
+        "subtitle": "Platforma GRC jarayonlarini qanday avtomatlashtirishi va jamoaga tezroq qaror qabul qilishda qanday yordam berishini qisqacha ko'rsatma.",
+        "play": "Videoni ishga tushirish",
+        "ctaPrimary": "Demo so'rash",
+        "ctaSecondary": "Modullarni ko'rish",
+        "fallback": "Brauzeringiz videoni qo'llab-quvvatlamaydi.",
+        "download": "Videoni yuklab olish"
     },
-    "contact": {
-      "title": "Kontaktlarni qoldirish",
-      "name": "Ism",
-      "email": "Email",
-      "phone": "Telefon",
-      "message": "Izoh / so'rov",
-      "send": "Yuborish",
-      "sending": "Yuborilmoqda...",
-      "success": "Rahmat! So'rovingizni oldik, tez orada bog'lanamiz.",
-      "error": "So'rov yuborilmadi. Iltimos, keyinroq qayta urinib ko'ring."
-    }
-  },
-  "tasks": {
-    "title": "Nimani hal qilamiz",
-    "subtitle": "Zeus GRC hal qilishga yordam beradigan asosiy vazifalar",
-    "items": {
-      "001": {
-        "title": "Aktivlar boshqaruvi",
-        "description": "Tashkilotning moddiy va nomoddiy aktivlarini avtomatlashtirilgan hisobga olish"
-      },
-      "002": {
-        "title": "Risklar boshqaruvi",
-        "description": "IT va axborot xavfsizligi risklarini avtomatik yaratish, miqdoriy va sifat baholash"
-      },
-      "003": {
-        "title": "Integratsiya va hamkorlik",
-        "description": "Uchinchi tomon axborot tizimlari bilan integratsiya qilish imkoniyati"
-      },
-      "004": {
-        "title": "Nazorat samaradorligini baholash",
-        "description": "Joriy etilgan nazoratlar samaradorligini muntazam baholash"
-      },
-      "005": {
-        "title": "Auditni avtomatlashtirish",
-        "description": "Hisobot va rejani avtomatik shakllantirish, audit jarayonini avtomatlashtirish"
-      },
-      "006": {
-        "title": "Nazorat va monitoring",
-        "description": "Tadbirlar bajarilishini nazorat qilish va vazifalar monitoringini avtomatlashtirish"
-      },
-      "007": {
-        "title": "Hujjat aylanishi va kelishuv",
-        "description": "Kelishuv varag'ini avtomatik yaratish, hujjatlar repozitoriylari"
-      },
-      "008": {
-        "title": "Jarayonlarni avtomatlashtirish",
-        "description": "Jarayon kritikligini baholash va rutin operatsiyalarni avtomatlashtirish"
-      }
-    }
-  },
-  "benefits": {
-    "title": "Nega Zeus GRC",
-    "subtitle": "Bizni raqobatchilardan ajratib turadigan afzalliklar",
-    "items": {
-      "costReduction": {
-        "title": "Muvofiqlik xarajatini kamaytirish",
-        "description": "Avtomatlashtirish orqali me'yoriy talablarga rioya qilish va jarimalar bo'yicha tejamkorlik",
-        "stats": "25-30%"
-      },
-      "auditEfficiency": {
-        "title": "Audit samaradorligi",
-        "description": "Ma'lumot tayyorlash vaqtini kamaytirish va audit jarayonini tezlashtirish",
-        "stats": "45-90%"
-      },
-      "coverage": {
-        "title": "Asosiy nuqtalar qamrovi",
-        "description": "Auditga tayyorgarlikda asosiy nazorat nuqtalari ulushini oshirish",
-        "stats": "90%"
-      }
-    }
-  },
-  "metrics": {
-    "title": "O'lchab bo'ladigan natijalar",
-    "subtitle": "Zeus GRC joriy etishdan olingan real ko'rsatkichlar",
-    "items": {
-      "costReduction": {
-        "title": "Xarajatlarni kamaytirish",
-        "before": "ZEUSdan oldin",
-        "after": "ZEUSdan keyin",
-        "improvement": "↓ 25-30%",
-        "description": "Tashqi jarimalar va sanksiyalar 35% gacha kamayadi (Forrester)"
-      },
-      "auditEfficiency": {
-        "title": "Audit samaradorligi",
-        "timeSaving": "Vaqt tejalishi",
-        "coverage": "Qamrov",
-        "resolution": "Nomuvofiqlikni bartaraf etish"
-      },
-      "maturityGrowth": {
-        "title": "Xavfsizlik yetukligi o'sishi",
-        "before": "Joriy etishdan oldin",
-        "after": "Joriy etishdan keyin",
-        "improvement": "↑ 3-4 darajagacha",
-        "description": "12-18 oy ichida 3-4 yetuklik darajasiga erishish"
-      }
-    },
-    "disclaimer": "*Ma'lumotlar 12-18 oy davomida turli ko'lamdagi tashkilotlarda Zeus GRC joriy etish natijalariga asoslangan"
-  },
-  "testimonials": {
-    "title": "Mijozlar fikri",
-    "subtitle": "Zeus GRCdan foydalanayotgan kompaniyalar biz haqimizda nima deydi",
-    "items": {
-      "1": {
-        "name": "Alexander Petrov",
-        "position": "Axborot xavfsizligi direktori",
-        "company": "FinTechBank",
-        "text": "Zeus GRC bizga risk boshqaruvini markazlashtirish va regulyator hisobotlarini sezilarli tezlashtirish imkonini berdi. Integratsiya atigi 10 kun oldi."
-      },
-      "2": {
-        "name": "Maria Sokolova",
-        "position": "Muvofiqlik bo'limi rahbari",
-        "company": "RosTelecom",
-        "text": "Qulay interfeys va kuchli analitika. Endi real vaqtda risklarning to'liq manzarasini ko'ramiz va tez qaror qabul qila olamiz."
-      },
-      "3": {
-        "name": "Dmitry Ivanov",
-        "position": "CIO",
-        "company": "Energoprom",
-        "text": "Yirik kompaniyalar uchun a'lo yechim. Masshtablanuvchanlik va jarayonlarimizga mos sozlash — aynan keraklisi."
-      }
-    }
-  },
-  "integrations": {
-    "title": "Integratsiyalar",
-    "subtitle": "Mavjud tizimlaringiz bilan oson integratsiya",
-    "notFound": "Kerakli integratsiyani topmadingizmi?",
-    "cta": "Maxsus integratsiyani muhokama qilish"
-  },
-  "cta": {
-    "title": "Boshlashga tayyormisiz?",
-    "description": "Bepul konsultatsiya oling va Zeus GRC kompaniyangizdagi risk boshqaruvini qanday o'zgartirishini bilib oling",
-    "button": "Konsultatsiya olish"
-  },
-  "footer": {
-    "description": "Risk boshqaruvi, muvofiqlik va biznes uzluksizligi uchun kompleks platforma.",
-    "columns": {
-      "product": {
-        "title": "Mahsulot",
+    "modules": {
+        "title": "Platforma modullari",
+        "subtitle": "Bir tizimda samarali GRC boshqaruvi uchun barcha kerakli vositalar",
+        "learnMore": "Batafsil",
         "items": {
-          "modules": "Modullar",
-          "integrations": "Integratsiyalar"
+            "assetManagement": {
+                "title": "Aktivlar boshqaruvi",
+                "description": "Aktivlarni markazlashtiring, ularni risklar va jarayonlar bilan bog'lang hamda aqlli qarorlar uchun muhimlik darajasini avtomatik baholang.",
+                "features": {
+                    "registry": "Egalari bilan aktivlar reyestri",
+                    "documents": "Hujjatlar va ilovalar",
+                    "connections": "Risklar va jarayonlar bilan bog'lanish",
+                    "assessment": "Avtomatik baholash"
+                }
+            },
+            "riskManagement": {
+                "title": "Risklar boshqaruvi",
+                "description": "Risklarni bitta tizimda aniqlang, baholang va vizuallashtiring, KRIni real vaqtda kuzating va GRC bo'ylab to'liq integratsiya bilan samarali kamaytirishni ta'minlang."
+            },
+            "auditCompliance": {
+                "title": "Audit va muvofiqlik",
+                "description": "Auditlarni bitta tizimda rejalashtiring, o'tkazing va kuzating — topilmalar, CAPA va dalillarni boshqaring hamda ichki siyosatlar va xalqaro standartlarga doimiy muvofiqlikni saqlang."
+            },
+            "taskManagement": {
+                "title": "Vazifalar boshqaruvi",
+                "description": "GRC vazifalarini markazlashtiring, tayinlash va muddatlarni avtomatlashtiring, risklar, auditlar va nazoratlar bo'yicha to'liq javobgarlikni ta'minlang."
+            },
+            "controlManagement": {
+                "title": "Nazoratlar boshqaruvi",
+                "description": "Riskni kamaytirish va doimiy muvofiqlikni ta'minlash uchun nazoratlarni bitta tizimda loyihalang, joriy qiling va kuzating."
+            },
+            "vulnerabilityManagement": {
+                "title": "Zaifliklar boshqaruvi",
+                "description": "Skanerlar va qo'lda kiritilgan manbalardan zaiflik ma'lumotlarini birlashtiring, bartaraf etishni ustuvorlang va aniqlashdan yopishgacha bo'lgan jarayonni kuzating."
+            },
+            "operationalRiskManagement": {
+                "title": "Operatsion risklar",
+                "description": "Jarayonlardagi operatsion risklarni aniqlang va baholang, kamaytirish choralarini belgilang hamda risk holatini bitta tizimda uzluksiz kuzating."
+            },
+            "incidentManagement": {
+                "title": "Insidentlar boshqaruvi",
+                "description": "Insidentlarni samarali ro'yxatga oling, tasniflang va tekshiring, ildiz sabablarni aniqlang hamda to'liq kuzatuv bilan o'z vaqtida tuzatish choralarini ta'minlang."
+            }
         }
-      },
-      "company": {
-        "title": "Kompaniya",
+    },
+    "assistant": {
+        "title": "Zeus yordamchisi",
+        "subtitle": "Modullarni tushuntiraman va so'rov yuborishga yordam beraman",
+        "open": "Yordamchini ochish",
+        "close": "Yordamchini yopish",
+        "welcome": "Salom! Qanday yordam beray? Quyidan variantni tanlang.",
+        "moduleLabel": "Modullar",
+        "openForm": "Formani ochish",
+        "actions": {
+            "overview": "Platforma haqida",
+            "module": "Muayyan modul haqida",
+            "demo": "Demoga yozilish",
+            "operator": "Operator bilan bog'lanish",
+            "shareContacts": "Kontakt qoldirish"
+        },
+        "responses": {
+            "overview": "Zeus GRC — aktivlar, risklar, auditlar, nazoratlar va vazifalarni boshqarish uchun yagona platforma. U jarayonlarni avtomatlashtirish va muvofiqlikni yaxshilashga yordam beradi.",
+            "modulePrompt": "Quyidan modulni tanlang, men uni qisqacha tushuntiraman.",
+            "moduleInfo": "{{module}} moduli ushbu yo'nalishdagi asosiy vazifalarni hal qilishga yordam beradi. Istasangiz, jarayoningiz uchun moslashtirilgan demo tayyorlaymiz.",
+            "demo": "Ajoyib! Quyida kontaktingizni qoldiring yoki so'rov formasini oching, demo vaqtini kelishamiz.",
+            "operator": "Albatta. Kontaktingizni qoldiring, mutaxassisimiz ish vaqtida siz bilan bog'lanadi."
+        },
+        "contact": {
+            "title": "Kontaktlarni qoldirish",
+            "name": "Ism",
+            "email": "Email",
+            "phone": "Telefon",
+            "message": "Izoh / so'rov",
+            "send": "Yuborish",
+            "sending": "Yuborilmoqda...",
+            "success": "Rahmat! So'rovingizni oldik, tez orada bog'lanamiz.",
+            "error": "So'rov yuborilmadi. Iltimos, keyinroq qayta urinib ko'ring."
+        }
+    },
+    "tasks": {
+        "title": "Nimani hal qilamiz",
+        "subtitle": "Zeus GRC hal qilishga yordam beradigan asosiy vazifalar",
         "items": {
-          "about": "Biz haqimizda",
-          "careers": "Karyera",
-          "blog": "Blog"
+            "001": {
+                "title": "Aktivlar boshqaruvi",
+                "description": "Tashkilotning moddiy va nomoddiy aktivlarini avtomatlashtirilgan hisobga olish"
+            },
+            "002": {
+                "title": "Risklar boshqaruvi",
+                "description": "IT va axborot xavfsizligi risklarini avtomatik yaratish, miqdoriy va sifat baholash"
+            },
+            "003": {
+                "title": "Integratsiya va hamkorlik",
+                "description": "Uchinchi tomon axborot tizimlari bilan integratsiya qilish imkoniyati"
+            },
+            "004": {
+                "title": "Nazorat samaradorligini baholash",
+                "description": "Joriy etilgan nazoratlar samaradorligini muntazam baholash"
+            },
+            "005": {
+                "title": "Auditni avtomatlashtirish",
+                "description": "Hisobot va rejani avtomatik shakllantirish, audit jarayonini avtomatlashtirish"
+            },
+            "006": {
+                "title": "Nazorat va monitoring",
+                "description": "Tadbirlar bajarilishini nazorat qilish va vazifalar monitoringini avtomatlashtirish"
+            },
+            "007": {
+                "title": "Hujjat aylanishi va kelishuv",
+                "description": "Kelishuv varag'ini avtomatik yaratish, hujjatlar repozitoriylari"
+            },
+            "008": {
+                "title": "Jarayonlarni avtomatlashtirish",
+                "description": "Jarayon kritikligini baholash va rutin operatsiyalarni avtomatlashtirish"
+            }
         }
-      }
-    },
-    "copyright": "© 2025 Zeus GRC. Barcha huquqlar himoyalangan.",
-    "privacy": "Maxfiylik siyosati",
-    "terms": "Foydalanish shartlari"
-  },
-  "request": {
-    "badge": "So'rov",
-    "title": "Formani to'ldiring, biz konsultatsiya tayyorlaymiz",
-    "subtitle": "Vazifalaringiz haqida ayting — Zeus jamoasi eng maqbul joriy etish ssenariysini taklif qiladi.",
-    "form": {
-      "title": "Kompaniya ma'lumotlari",
-      "fields": {
-        "name": {
-          "label": "F.I.Sh.",
-          "placeholder": "John Smith"
-        },
-        "company": {
-          "label": "Kompaniya",
-          "placeholder": "Zeus Group"
-        },
-        "email": {
-          "label": "Email",
-          "placeholder": "you@company.com"
-        },
-        "phone": {
-          "label": "Telefon",
-          "placeholder": "+1 (555) 123-4567"
-        },
-        "role": {
-          "label": "Lavozim",
-          "options": {
-            "ciso": "CISO / Xavfsizlik rahbari",
-            "risk": "Risk menejeri",
-            "compliance": "Muvofiqlik mutaxassisi",
-            "it": "IT direktori",
-            "other": "Boshqa lavozim"
-          }
-        },
-        "message": {
-          "label": "Vazifalar yoki kontekst",
-          "placeholder": "Qaysi jarayonlarni avtomatlashtirmoqchisiz? Qaysi me'yorlar muhim?..."
-        }
-      },
-      "submit": "So'rov yuborish",
-      "submitting": "Yuborilmoqda…",
-      "cooldown": "Bajarildi! {{seconds}}s dan keyin qayta urinib ko'ring"
-    },
-    "perks": {
-      "title": "Nimani olasiz",
-      "subtitle": "Forma yuborilgach, uchrashuv belgilaymiz, mos ssenariyni tanlaymiz va kompaniya ichki asoslash uchun materiallar taqdim etamiz.",
-      "items": {
-        "analysis": {
-          "title": "Shaxsiy tahlil",
-          "description": "Tizimni maqsadlaringiz, jarayonlaringiz va ustuvorliklaringizga moslab sozlaymiz."
-        },
-        "demo": {
-          "title": "Demo kirish",
-          "description": "Tizimga tez kirish — real ssenariylarda funksiyalarni sinab ko'ring."
-        }
-      }
-    },
-    "messages": {
-      "success": "Rahmat! Bir ish kuni ichida siz bilan bog'lanamiz.",
-      "successTitle": "So'rov yuborildi",
-      "error": "Xatolik yuz berdi, iltimos keyinroq qayta urinib ko'ring.",
-      "cooldownError": "So'rovingiz allaqachon qabul qilingan. Iltimos, qayta yuborishdan oldin {{seconds}}s kuting."
-    }
-  },
-  "assetManagement": {
-    "title": "Aktivlar boshqaruvi",
-    "subtitle": "GRC tizimining asosi — reyestr, hujjatlar va avtomatik kritik baholash bilan aktivlarni boshqarish",
-    "backToModules": "Modullarga qaytish",
-    "badge": "GRC moduli",
-    "heroDescription": "Kompaniyaning barcha aktivlari uchun yagona bazani yarating, ularning kritikligi va qiymatini avtomatik baholang. Hujjatlarni saqlang, egalarni kuzating, aktivlarni risklar va nazoratlar bilan bog'lang. Axborot xavfsizligi bo'yicha asosli qarorlar uchun dolzarb analitika va dashboardlar oling.",
-    "beforeAfter": {
-      "title": "Yechim afzalliklari",
-      "subtitle": "Nega tizimli aktiv boshqaruvi muhim",
-      "before": "Muammolar",
-      "solution": "Zeus yechimi",
-      "result": "Natijalar"
-    },
-    "problems": {
-      "scattered": "Yagona aktiv reyestri yo'q",
-      "noDependencies": "Aktiv kritikligini baholab bo'lmaydi",
-      "noModel": "Hujjatlar qo'lda yuritiladi",
-      "noOwners": "Aktiv egalari noaniq",
-      "differentSystems": "Risk va nazoratlar bilan bog'lanish yo'q",
-      "noTracking": "Analitika va hisobot murakkab"
-    },
-    "solutions": {
-      "centralized": "Kompaniyaning barcha aktivlari uchun yagona reyestr",
-      "linkedRisks": "Kritiklikni avtomatik baholash",
-      "autoLinks": "Hujjat va ilovalarni saqlash",
-      "digitalModel": "Ega va bo'limlar bilan bog'lash",
-      "integrations": "Risklar va nazoratlar bilan integratsiya",
-      "autoUpdate": "Real vaqtda dashboard va analitika"
-    },
-    "results": {
-      "fullPicture": "Aktivlar ustidan to'liq nazorat",
-      "linkedProcesses": "Boshqaruv shaffofligi",
-      "digitalModel": "Risklar bo'yicha asosli qarorlar",
-      "timeSaving": "Ma'muriy ishda vaqt tejalishi",
-      "transparency": "Regulyator talablarga muvofiqlik",
-      "riskBasis": "Kiberxavfsizlikni kuchaytirish"
-    },
-    "features": {
-      "title": "Asosiy funksiyalar",
-      "subtitle": "Samarali aktiv boshqaruvi uchun to'liq vositalar to'plami",
-      "registry": {
-        "title": "Aktivlar reyestri",
-        "description": "Egalar, bo'limlar va turlar bilan bog'langan yagona aktivlar bazasini yaratish va yuritish."
-      },
-      "documents": {
-        "title": "Hujjatlar va ilovalar",
-        "description": "Shartnoma, yo'riqnoma va baholash kabi tasdiqlovchi hujjatlarni saqlash."
-      },
-      "dashboard": {
-        "title": "Dashboard va analitika",
-        "description": "Aktiv holati, kritiklik, qiymat va egalar bo'yicha asosiy ma'lumotlarni ko'rsatish."
-      },
-      "connections": {
-        "title": "Risk va jarayonlar bilan bog'lanish",
-        "description": "Aktivlarni risklar, nazoratlar, vazifalar va auditlar bilan bog'lash."
-      },
-      "integration": {
-        "title": "GRC modullari bilan integratsiya",
-        "description": "Aktivlarni risk, audit, nazorat va vazifa kartalarida ko'rsatish."
-      },
-      "assessment": {
-        "title": "Aktivlarni avtomatik baholash",
-        "description": "Resurslarni boshqarishni optimallashtirish uchun tahlil, tasniflash, kritiklikni baholash va ustuvorlashtirish."
-      }
-    },
-    "valuation": {
-      "title": "Aktiv qiymatini baholash",
-      "subtitle": "Moslashuvchan baholash shablonlari orqali aktiv qiymatini aniqlash",
-      "parametersTitle": "Hisobga olinadigan parametrlar",
-      "parameters": {
-        "regulatory": "Regulyator",
-        "legal": "Huquqiy",
-        "reputational": "Reputatsion",
-        "operational": "Operatsion",
-        "financial": "Moliyaviy",
-        "security": "Mehnat va shaxsiy"
-      },
-      "calculationTitle": "Avtomatik hisoblash",
-      "calculation": {
-        "confidentiality": "Maxfiylik",
-        "integrity": "Yaxlitlik",
-        "criticality": "Kritiklik",
-        "financialLoss": "Ehtimoliy moliyaviy yo'qotishlar"
-      },
-      "customization": {
-        "title": "Moslashuvchan sozlash",
-        "description": "Metodika va mezonlarni kompaniya siyosatlariga moslab sozlash."
-      },
-      "standardization": {
-        "title": "Baholashni standartlashtirish",
-        "description": "Baholashni standartlashtirish, shaffof ustuvorlik va risk boshqaruvini qo'llab-quvvatlash."
-      },
-      "riskSupport": {
-        "title": "Risk boshqaruvini qo'llab-quvvatlash",
-        "description": "Shaffof ustuvorlik bilan risk boshqaruvi jarayonlarini kompleks qo'llab-quvvatlash."
-      }
     },
     "benefits": {
-      "title": "Afzalliklar",
-      "transparency": {
-        "title": "Shaffoflik va nazorat",
-        "description": "GRC majburiyatlari bajarilishi bo'yicha shaffoflik va nazorat."
-      },
-      "taskReduction": {
-        "title": "Kechikkan vazifalarni kamaytirish",
-        "description": "Kechikkan yoki unutilgan vazifalar sonini kamaytirish."
-      },
-      "centralization": {
-        "title": "Javobgarlikni markazlashtirish",
-        "description": "Javobgarlikni markazlashtirish va intizomni oshirish."
-      },
-      "compliance": {
-        "title": "Regulyator dalillar",
-        "description": "Regulyator talablariga muvofiqlik bo'yicha dalillarni taqdim etish."
-      }
-    },
-    "cta": {
-      "title": "Aktivlar boshqaruvini boshlashga tayyormisiz?",
-      "description": "Bepul konsultatsiya oling va aktivlar moduli GRC tizimingizni qanday o'zgartirishini bilib oling",
-      "button": "Konsultatsiya olish"
-    }
-  },
-  "auditCompliance": {
-    "title": "Audit va muvofiqlik",
-    "backToModules": "Modullarga qaytish",
-    "heroDescription": "Audit va muvofiqlik jarayonlarini yagona platformada avtomatlashtiring. Audit rejalari tuzing, checklistlar bilan tekshiruv o'tkazing, nomuvofiqliklarni qayd eting va tuzatish choralarini boshqaring.",
-    "beforeAfter": {
-      "title": "Yechim afzalliklari",
-      "subtitle": "Audit avtomatlashtirish samaradorlikni qanday oshiradi",
-      "before": "Muammolar",
-      "solution": "Zeus yechimi",
-      "result": "Natijalar"
-    },
-    "problems": {
-      "manual": "Audit va tekshiruvlar qo'lda boshqariladi",
-      "scattered": "Hujjatlar va dalillar tarqoq",
-      "noTracking": "CAPA bajarilishi nazorati yo'q",
-      "timeConsuming": "Tayyorgarlik uchun ko'p vaqt ketadi",
-      "noEvidence": "Dalillarni yig'ish qiyin",
-      "riskMissed": "Muhim nomuvofiqlikni o'tkazib yuborish xavfi"
-    },
-    "solutions": {
-      "planning": "Audit rejasini yaratish va tasdiqlash",
-      "checklists": "Checklist va dalillar bilan audit o'tkazish",
-      "capa": "Nomuvofiqlikni qayd etish va CAPA boshqaruvi",
-      "monitoring": "Muvofiqlik monitoringi va avtomatik bildirishnomalar",
-      "integration": "Aktiv, risk va nazorat modullari bilan integratsiya",
-      "automation": "Hisobot va analitikani avtomatik yaratish"
-    },
-    "results": {
-      "efficiency": "Audit xarajatlarini kamaytirish",
-      "transparency": "Shaffoflik va regulyator ishonchini oshirish",
-      "compliance": "Buzilishlarni tez aniqlash va bartaraf etish",
-      "quality": "Dalillarni markazlashtirilgan boshqarish",
-      "centralized": "Ichki siyosat va standartlarga muvofiqlik",
-      "standards": "Xalqaro standartlarga muvofiqlik"
-    },
-    "cta": {
-      "title": "Audit va muvofiqlikni boshlashga tayyormisiz?",
-      "description": "Bepul konsultatsiya oling va audit moduli tekshiruv jarayonlaringizni qanday optimallashtirishini bilib oling",
-      "button": "Konsultatsiya olish"
-    }
-  },
-  "taskManagement": {
-    "title": "Vazifalar boshqaruvi",
-    "backToModules": "Modullarga qaytish",
-    "heroDescription": "Tashkilotdagi barcha vazifalarni yagona tizimda markazlashtirib boshqaring. Risk, audit va nazoratlardan vazifa yarating, mas'ullarni belgilang va muddatni kuzating.",
-    "beforeAfter": {
-      "title": "Yechim afzalliklari",
-      "subtitle": "Markazlashgan vazifa boshqaruvi samaradorlikni qanday oshiradi",
-      "before": "Muammolar",
-      "solution": "Zeus yechimi",
-      "result": "Natijalar"
-    },
-    "problems": {
-      "scattered": "Vazifalar turli tizimlarga tarqalgan",
-      "noTracking": "Yagona bajarilish nazorati yo'q",
-      "missedDeadlines": "Muddatlar o'tib ketadi",
-      "noAccountability": "Mas'ullar va ijrochilar noaniq",
-      "manualReminders": "Eslatmalar qo'lda yuboriladi",
-      "noIntegration": "Vazifa risk/nazorat bilan bog'lanmagan"
-    },
-    "solutions": {
-      "creation": "Risk, audit va nazoratlardan vazifa yaratish",
-      "assignment": "Mas'ul va ijrochilarni tayinlash",
-      "comments": "Vazifalarga izoh va ilovalar qo'shish",
-      "deadlines": "Muddatni avtomatik eslatmalar bilan boshqarish",
-      "dashboard": "Dashboard va vazifa holatlari",
-      "integration": "Boshqa GRC modullari bilan integratsiya"
-    },
-    "results": {
-      "centralized": "Barcha tashkiliy aktivlar ustidan markazlashgan nazorat",
-      "security": "Muhim resurslar xavfsizligi va boshqaruvchanligini oshirish",
-      "risks": "Yo'qotish yoki ruxsatsiz kirish xavfini kamaytirish",
-      "compliance": "ISO va regulyator talablariga muvofiqlikni qo'llab-quvvatlash",
-      "transparency": "Vazifa boshqaruvida shaffoflik va javobgarlik",
-      "efficiency": "Jamoa samaradorligini oshirish"
-    },
-    "cta": {
-      "title": "Vazifalar boshqaruvini boshlashga tayyormisiz?",
-      "description": "Bepul konsultatsiya oling va vazifalar moduli jamoa samaradorligini qanday oshirishini bilib oling",
-      "button": "Konsultatsiya olish"
-    }
-  },
-  "controlManagement": {
-    "title": "Nazoratlar boshqaruvi",
-    "backToModules": "Modullarga qaytish",
-    "heroDescription": "Riskni kamaytirish, regulyator talablarga rioya qilish va ichki siyosatga moslik uchun nazorat choralarini markazlashgan holda boshqaring.",
-    "effectiveness": {
-      "title": "Nazorat samaradorligi",
-      "subtitle": "Nazoratni tekshirish va monitoring qilishning kompleks yondashuvi",
-      "features": {
-        "monitoring": {
-          "title": "Nazoratni tekshirish va monitoring",
-          "description": "Og'ishlarni avtomatik aniqlash bilan nazorat samaradorligini uzluksiz kuzatish"
-        },
-        "evidence": {
-          "title": "Dalillarni markazlashtirilgan yig'ish",
-          "description": "Auditni soddalashtirish uchun barcha dalillar uchun yagona repozitoriy"
-        },
-        "identification": {
-          "title": "Samarasiz nazoratlarni tez aniqlash",
-          "description": "Nazorat tizimidagi bo'shliqlarni avtomatik aniqlash va tezkor javob"
-        },
-        "recommendations": {
-          "title": "Tavsiyalar va yaxshilash rejasi",
-          "description": "Tashkilot nazorat muhitini optimallashtirish bo'yicha aqlli tavsiyalar"
+        "title": "Nega Zeus GRC",
+        "subtitle": "Bizni raqobatchilardan ajratib turadigan afzalliklar",
+        "items": {
+            "costReduction": {
+                "title": "Muvofiqlik xarajatini kamaytirish",
+                "description": "Avtomatlashtirish orqali me'yoriy talablarga rioya qilish va jarimalar bo'yicha tejamkorlik",
+                "stats": "25-30%"
+            },
+            "auditEfficiency": {
+                "title": "Audit samaradorligi",
+                "description": "Ma'lumot tayyorlash vaqtini kamaytirish va audit jarayonini tezlashtirish",
+                "stats": "45-90%"
+            },
+            "coverage": {
+                "title": "Asosiy nuqtalar qamrovi",
+                "description": "Auditga tayyorgarlikda asosiy nazorat nuqtalari ulushini oshirish",
+                "stats": "90%"
+            }
         }
-      },
-      "clientResults": {
-        "title": "Mijoz natijalari",
-        "description": "Operatsion risklarni kamaytirish, auditga ketadigan mehnatni qisqartirish, ishonchli jarayonlar va boshqaruv uchun shaffoflik."
-      }
     },
-    "beforeAfter": {
-      "title": "Yechim afzalliklari",
-      "subtitle": "Samarali nazorat boshqaruvi risklarni qanday kamaytiradi",
-      "before": "Muammolar",
-      "solution": "Zeus yechimi",
-      "result": "Natijalar"
+    "metrics": {
+        "title": "O'lchab bo'ladigan natijalar",
+        "subtitle": "Zeus GRC joriy etishdan olingan real ko'rsatkichlar",
+        "items": {
+            "costReduction": {
+                "title": "Xarajatlarni kamaytirish",
+                "before": "ZEUSdan oldin",
+                "after": "ZEUSdan keyin",
+                "improvement": "↓ 25-30%",
+                "description": "Tashqi jarimalar va sanksiyalar 35% gacha kamayadi (Forrester)"
+            },
+            "auditEfficiency": {
+                "title": "Audit samaradorligi",
+                "timeSaving": "Vaqt tejalishi",
+                "coverage": "Qamrov",
+                "resolution": "Nomuvofiqlikni bartaraf etish"
+            },
+            "maturityGrowth": {
+                "title": "Xavfsizlik yetukligi o'sishi",
+                "before": "Joriy etishdan oldin",
+                "after": "Joriy etishdan keyin",
+                "improvement": "↑ 3-4 darajagacha",
+                "description": "12-18 oy ichida 3-4 yetuklik darajasiga erishish"
+            }
+        },
+        "disclaimer": "*Ma'lumotlar 12-18 oy davomida turli ko'lamdagi tashkilotlarda Zeus GRC joriy etish natijalariga asoslangan"
     },
-    "problems": {
-      "scattered": "Yagona yondashuvsiz tarqoq nazoratlar",
-      "noEffectiveness": "Nazorat samaradorligi baholanmaydi",
-      "manualTesting": "Nazorat tekshiruvi qo'lda",
-      "noEvidence": "Dalillarni yig'ish qiyin",
-      "noRiskLink": "Nazoratlar risklar bilan bog'lanmagan",
-      "inefficient": "Samarasiz yoki yo'q nazoratlar"
+    "testimonials": {
+        "title": "Mijozlar fikri",
+        "subtitle": "Zeus GRCdan foydalanayotgan kompaniyalar biz haqimizda nima deydi",
+        "items": {
+            "1": {
+                "name": "Alexander Petrov",
+                "position": "Axborot xavfsizligi direktori",
+                "company": "FinTechBank",
+                "text": "Zeus GRC bizga risk boshqaruvini markazlashtirish va regulyator hisobotlarini sezilarli tezlashtirish imkonini berdi. Integratsiya atigi 10 kun oldi."
+            },
+            "2": {
+                "name": "Maria Sokolova",
+                "position": "Muvofiqlik bo'limi rahbari",
+                "company": "RosTelecom",
+                "text": "Qulay interfeys va kuchli analitika. Endi real vaqtda risklarning to'liq manzarasini ko'ramiz va tez qaror qabul qila olamiz."
+            },
+            "3": {
+                "name": "Dmitry Ivanov",
+                "position": "CIO",
+                "company": "Energoprom",
+                "text": "Yirik kompaniyalar uchun a'lo yechim. Masshtablanuvchanlik va jarayonlarimizga mos sozlash — aynan keraklisi."
+            }
+        }
     },
-    "solutions": {
-      "catalog": "Tavsif va tasnif bilan nazorat katalogi",
-      "effectiveness": "Nazorat samaradorligini baholash",
-      "riskLinks": "Risk va aktivlar bilan bog'lanish",
-      "auditControl": "Audit nazorati va ish monitoringi",
-      "planning": "Tekshiruvlarni rejalash va bajarish",
-      "evidence": "Dalillarni markazlashtirilgan yig'ish"
-    },
-    "results": {
-      "operationalRisk": "Operatsion va regulyator riskni kamaytirish",
-      "efficiency": "Nazorat tizimi samaradorligi va shaffofligini oshirish",
-      "audit": "Istalgan payt auditga tayyorlik",
-      "compliance": "Muvofiqlik va ichki nazorat madaniyatini qo'llab-quvvatlash",
-      "centralized": "Dalillarni markazlashtirilgan yig'ish",
-      "improvements": "Tavsiyalar va yaxshilash rejalarini shakllantirish"
+    "integrations": {
+        "title": "Integratsiyalar",
+        "subtitle": "Mavjud tizimlaringiz bilan oson integratsiya",
+        "notFound": "Kerakli integratsiyani topmadingizmi?",
+        "cta": "Maxsus integratsiyani muhokama qilish"
     },
     "cta": {
-      "title": "Nazoratlar boshqaruvini boshlashga tayyormisiz?",
-      "description": "Bepul konsultatsiya oling va nazoratlar moduli tashkilot risklarini qanday kamaytirishini bilib oling",
-      "button": "Konsultatsiya olish"
-    }
-  },
-  "riskManagement": {
-    "title": "Risklar boshqaruvi",
-    "backToModules": "Modullarga qaytish",
-    "heroDescription": "Tashkilotning barcha darajalarida kompleks risk boshqaruvi. Modul strategik va operatsion risklar, zaifliklar hamda insident boshqaruvini yagona tizimda birlashtiradi.",
-    "subModules": {
-      "title": "Modul tarkibi",
-      "subtitle": "Risklar boshqaruvi kompleks boshqaruv uchun uchta asosiy submodulni o'z ichiga oladi",
-      "operational": {
+        "title": "Boshlashga tayyormisiz?",
+        "description": "Bepul konsultatsiya oling va Zeus GRC kompaniyangizdagi risk boshqaruvini qanday o'zgartirishini bilib oling",
+        "button": "Konsultatsiya olish"
+    },
+    "footer": {
+        "description": "Risk boshqaruvi, muvofiqlik va biznes uzluksizligi uchun kompleks platforma.",
+        "columns": {
+            "product": {
+                "title": "Mahsulot",
+                "items": {
+                    "modules": "Modullar",
+                    "integrations": "Integratsiyalar"
+                }
+            },
+            "company": {
+                "title": "Kompaniya",
+                "items": {
+                    "about": "Biz haqimizda",
+                    "careers": "Karyera",
+                    "blog": "Blog"
+                }
+            }
+        },
+        "copyright": "© 2025 Zeus GRC. Barcha huquqlar himoyalangan.",
+        "privacy": "Maxfiylik siyosati",
+        "terms": "Foydalanish shartlari"
+    },
+    "request": {
+        "badge": "So'rov",
+        "title": "Formani to'ldiring, biz konsultatsiya tayyorlaymiz",
+        "subtitle": "Vazifalaringiz haqida ayting — Zeus jamoasi eng maqbul joriy etish ssenariysini taklif qiladi.",
+        "form": {
+            "title": "Kompaniya ma'lumotlari",
+            "fields": {
+                "name": {
+                    "label": "F.I.Sh.",
+                    "placeholder": "John Smith"
+                },
+                "company": {
+                    "label": "Kompaniya",
+                    "placeholder": "Zeus Group"
+                },
+                "email": {
+                    "label": "Email",
+                    "placeholder": "you@company.com"
+                },
+                "phone": {
+                    "label": "Telefon",
+                    "placeholder": "+1 (555) 123-4567"
+                },
+                "role": {
+                    "label": "Lavozim",
+                    "options": {
+                        "ciso": "CISO / Xavfsizlik rahbari",
+                        "risk": "Risk menejeri",
+                        "compliance": "Muvofiqlik mutaxassisi",
+                        "it": "IT direktori",
+                        "other": "Boshqa lavozim"
+                    }
+                },
+                "message": {
+                    "label": "Vazifalar yoki kontekst",
+                    "placeholder": "Qaysi jarayonlarni avtomatlashtirmoqchisiz? Qaysi me'yorlar muhim?..."
+                }
+            },
+            "submit": "So'rov yuborish",
+            "submitting": "Yuborilmoqda…",
+            "cooldown": "Bajarildi! {{seconds}}s dan keyin qayta urinib ko'ring"
+        },
+        "perks": {
+            "title": "Nimani olasiz",
+            "subtitle": "Forma yuborilgach, uchrashuv belgilaymiz, mos ssenariyni tanlaymiz va kompaniya ichki asoslash uchun materiallar taqdim etamiz.",
+            "items": {
+                "analysis": {
+                    "title": "Shaxsiy tahlil",
+                    "description": "Tizimni maqsadlaringiz, jarayonlaringiz va ustuvorliklaringizga moslab sozlaymiz."
+                },
+                "demo": {
+                    "title": "Demo kirish",
+                    "description": "Tizimga tez kirish — real ssenariylarda funksiyalarni sinab ko'ring."
+                }
+            }
+        },
+        "messages": {
+            "success": "Rahmat! Bir ish kuni ichida siz bilan bog'lanamiz.",
+            "successTitle": "So'rov yuborildi",
+            "error": "Xatolik yuz berdi, iltimos keyinroq qayta urinib ko'ring.",
+            "cooldownError": "So'rovingiz allaqachon qabul qilingan. Iltimos, qayta yuborishdan oldin {{seconds}}s kuting."
+        }
+    },
+    "assetManagement": {
+        "title": "Aktivlar boshqaruvi",
+        "subtitle": "GRC tizimining asosi — reyestr, hujjatlar va avtomatik kritik baholash bilan aktivlarni boshqarish",
+        "backToModules": "Modullarga qaytish",
+        "badge": "GRC moduli",
+        "heroDescription": "Kompaniyaning barcha aktivlari uchun yagona bazani yarating, ularning kritikligi va qiymatini avtomatik baholang. Hujjatlarni saqlang, egalarni kuzating, aktivlarni risklar va nazoratlar bilan bog'lang. Axborot xavfsizligi bo'yicha asosli qarorlar uchun dolzarb analitika va dashboardlar oling.",
+        "beforeAfter": {
+            "title": "Yechim afzalliklari",
+            "subtitle": "Nega tizimli aktiv boshqaruvi muhim",
+            "before": "Muammolar",
+            "solution": "Zeus yechimi",
+            "result": "Natijalar"
+        },
+        "problems": {
+            "scattered": "Yagona aktiv reyestri yo'q",
+            "noDependencies": "Aktiv kritikligini baholab bo'lmaydi",
+            "noModel": "Hujjatlar qo'lda yuritiladi",
+            "noOwners": "Aktiv egalari noaniq",
+            "differentSystems": "Risk va nazoratlar bilan bog'lanish yo'q",
+            "noTracking": "Analitika va hisobot murakkab"
+        },
+        "solutions": {
+            "centralized": "Kompaniyaning barcha aktivlari uchun yagona reyestr",
+            "linkedRisks": "Kritiklikni avtomatik baholash",
+            "autoLinks": "Hujjat va ilovalarni saqlash",
+            "digitalModel": "Ega va bo'limlar bilan bog'lash",
+            "integrations": "Risklar va nazoratlar bilan integratsiya",
+            "autoUpdate": "Real vaqtda dashboard va analitika"
+        },
+        "results": {
+            "fullPicture": "Aktivlar ustidan to'liq nazorat",
+            "linkedProcesses": "Boshqaruv shaffofligi",
+            "digitalModel": "Risklar bo'yicha asosli qarorlar",
+            "timeSaving": "Ma'muriy ishda vaqt tejalishi",
+            "transparency": "Regulyator talablarga muvofiqlik",
+            "riskBasis": "Kiberxavfsizlikni kuchaytirish"
+        },
+        "features": {
+            "title": "Asosiy funksiyalar",
+            "subtitle": "Samarali aktiv boshqaruvi uchun to'liq vositalar to'plami",
+            "registry": {
+                "title": "Aktivlar reyestri",
+                "description": "Egalar, bo'limlar va turlar bilan bog'langan yagona aktivlar bazasini yaratish va yuritish."
+            },
+            "documents": {
+                "title": "Hujjatlar va ilovalar",
+                "description": "Shartnoma, yo'riqnoma va baholash kabi tasdiqlovchi hujjatlarni saqlash."
+            },
+            "dashboard": {
+                "title": "Dashboard va analitika",
+                "description": "Aktiv holati, kritiklik, qiymat va egalar bo'yicha asosiy ma'lumotlarni ko'rsatish."
+            },
+            "connections": {
+                "title": "Risk va jarayonlar bilan bog'lanish",
+                "description": "Aktivlarni risklar, nazoratlar, vazifalar va auditlar bilan bog'lash."
+            },
+            "integration": {
+                "title": "GRC modullari bilan integratsiya",
+                "description": "Aktivlarni risk, audit, nazorat va vazifa kartalarida ko'rsatish."
+            },
+            "assessment": {
+                "title": "Aktivlarni avtomatik baholash",
+                "description": "Resurslarni boshqarishni optimallashtirish uchun tahlil, tasniflash, kritiklikni baholash va ustuvorlashtirish."
+            }
+        },
+        "valuation": {
+            "title": "Aktiv qiymatini baholash",
+            "subtitle": "Moslashuvchan baholash shablonlari orqali aktiv qiymatini aniqlash",
+            "parametersTitle": "Hisobga olinadigan parametrlar",
+            "parameters": {
+                "regulatory": "Regulyator",
+                "legal": "Huquqiy",
+                "reputational": "Reputatsion",
+                "operational": "Operatsion",
+                "financial": "Moliyaviy",
+                "security": "Mehnat va shaxsiy"
+            },
+            "calculationTitle": "Avtomatik hisoblash",
+            "calculation": {
+                "confidentiality": "Maxfiylik",
+                "integrity": "Yaxlitlik",
+                "criticality": "Kritiklik",
+                "financialLoss": "Ehtimoliy moliyaviy yo'qotishlar"
+            },
+            "customization": {
+                "title": "Moslashuvchan sozlash",
+                "description": "Metodika va mezonlarni kompaniya siyosatlariga moslab sozlash."
+            },
+            "standardization": {
+                "title": "Baholashni standartlashtirish",
+                "description": "Baholashni standartlashtirish, shaffof ustuvorlik va risk boshqaruvini qo'llab-quvvatlash."
+            },
+            "riskSupport": {
+                "title": "Risk boshqaruvini qo'llab-quvvatlash",
+                "description": "Shaffof ustuvorlik bilan risk boshqaruvi jarayonlarini kompleks qo'llab-quvvatlash."
+            }
+        },
+        "benefits": {
+            "title": "Afzalliklar",
+            "transparency": {
+                "title": "Shaffoflik va nazorat",
+                "description": "GRC majburiyatlari bajarilishi bo'yicha shaffoflik va nazorat."
+            },
+            "taskReduction": {
+                "title": "Kechikkan vazifalarni kamaytirish",
+                "description": "Kechikkan yoki unutilgan vazifalar sonini kamaytirish."
+            },
+            "centralization": {
+                "title": "Javobgarlikni markazlashtirish",
+                "description": "Javobgarlikni markazlashtirish va intizomni oshirish."
+            },
+            "compliance": {
+                "title": "Regulyator dalillar",
+                "description": "Regulyator talablariga muvofiqlik bo'yicha dalillarni taqdim etish."
+            }
+        },
+        "cta": {
+            "title": "Aktivlar boshqaruvini boshlashga tayyormisiz?",
+            "description": "Bepul konsultatsiya oling va aktivlar moduli GRC tizimingizni qanday o'zgartirishini bilib oling",
+            "button": "Konsultatsiya olish"
+        }
+    },
+    "auditCompliance": {
+        "title": "Audit va muvofiqlik",
+        "backToModules": "Modullarga qaytish",
+        "heroDescription": "Audit va muvofiqlik jarayonlarini yagona platformada avtomatlashtiring. Audit rejalari tuzing, checklistlar bilan tekshiruv o'tkazing, nomuvofiqliklarni qayd eting va tuzatish choralarini boshqaring.",
+        "beforeAfter": {
+            "title": "Yechim afzalliklari",
+            "subtitle": "Audit avtomatlashtirish samaradorlikni qanday oshiradi",
+            "before": "Muammolar",
+            "solution": "Zeus yechimi",
+            "result": "Natijalar"
+        },
+        "problems": {
+            "manual": "Audit va tekshiruvlar qo'lda boshqariladi",
+            "scattered": "Hujjatlar va dalillar tarqoq",
+            "noTracking": "CAPA bajarilishi nazorati yo'q",
+            "timeConsuming": "Tayyorgarlik uchun ko'p vaqt ketadi",
+            "noEvidence": "Dalillarni yig'ish qiyin",
+            "riskMissed": "Muhim nomuvofiqlikni o'tkazib yuborish xavfi"
+        },
+        "solutions": {
+            "planning": "Audit rejasini yaratish va tasdiqlash",
+            "checklists": "Checklist va dalillar bilan audit o'tkazish",
+            "capa": "Nomuvofiqlikni qayd etish va CAPA boshqaruvi",
+            "monitoring": "Muvofiqlik monitoringi va avtomatik bildirishnomalar",
+            "integration": "Aktiv, risk va nazorat modullari bilan integratsiya",
+            "automation": "Hisobot va analitikani avtomatik yaratish"
+        },
+        "results": {
+            "efficiency": "Audit xarajatlarini kamaytirish",
+            "transparency": "Shaffoflik va regulyator ishonchini oshirish",
+            "compliance": "Buzilishlarni tez aniqlash va bartaraf etish",
+            "quality": "Dalillarni markazlashtirilgan boshqarish",
+            "centralized": "Ichki siyosat va standartlarga muvofiqlik",
+            "standards": "Xalqaro standartlarga muvofiqlik"
+        },
+        "cta": {
+            "title": "Audit va muvofiqlikni boshlashga tayyormisiz?",
+            "description": "Bepul konsultatsiya oling va audit moduli tekshiruv jarayonlaringizni qanday optimallashtirishini bilib oling",
+            "button": "Konsultatsiya olish"
+        }
+    },
+    "taskManagement": {
+        "title": "Vazifalar boshqaruvi",
+        "backToModules": "Modullarga qaytish",
+        "heroDescription": "Tashkilotdagi barcha vazifalarni yagona tizimda markazlashtirib boshqaring. Risk, audit va nazoratlardan vazifa yarating, mas'ullarni belgilang va muddatni kuzating.",
+        "beforeAfter": {
+            "title": "Yechim afzalliklari",
+            "subtitle": "Markazlashgan vazifa boshqaruvi samaradorlikni qanday oshiradi",
+            "before": "Muammolar",
+            "solution": "Zeus yechimi",
+            "result": "Natijalar"
+        },
+        "problems": {
+            "scattered": "Vazifalar turli tizimlarga tarqalgan",
+            "noTracking": "Yagona bajarilish nazorati yo'q",
+            "missedDeadlines": "Muddatlar o'tib ketadi",
+            "noAccountability": "Mas'ullar va ijrochilar noaniq",
+            "manualReminders": "Eslatmalar qo'lda yuboriladi",
+            "noIntegration": "Vazifa risk/nazorat bilan bog'lanmagan"
+        },
+        "solutions": {
+            "creation": "Risk, audit va nazoratlardan vazifa yaratish",
+            "assignment": "Mas'ul va ijrochilarni tayinlash",
+            "comments": "Vazifalarga izoh va ilovalar qo'shish",
+            "deadlines": "Muddatni avtomatik eslatmalar bilan boshqarish",
+            "dashboard": "Dashboard va vazifa holatlari",
+            "integration": "Boshqa GRC modullari bilan integratsiya"
+        },
+        "results": {
+            "centralized": "Barcha tashkiliy aktivlar ustidan markazlashgan nazorat",
+            "security": "Muhim resurslar xavfsizligi va boshqaruvchanligini oshirish",
+            "risks": "Yo'qotish yoki ruxsatsiz kirish xavfini kamaytirish",
+            "compliance": "ISO va regulyator talablariga muvofiqlikni qo'llab-quvvatlash",
+            "transparency": "Vazifa boshqaruvida shaffoflik va javobgarlik",
+            "efficiency": "Jamoa samaradorligini oshirish"
+        },
+        "cta": {
+            "title": "Vazifalar boshqaruvini boshlashga tayyormisiz?",
+            "description": "Bepul konsultatsiya oling va vazifalar moduli jamoa samaradorligini qanday oshirishini bilib oling",
+            "button": "Konsultatsiya olish"
+        }
+    },
+    "controlManagement": {
+        "title": "Nazoratlar boshqaruvi",
+        "backToModules": "Modullarga qaytish",
+        "heroDescription": "Riskni kamaytirish, regulyator talablarga rioya qilish va ichki siyosatga moslik uchun nazorat choralarini markazlashgan holda boshqaring.",
+        "effectiveness": {
+            "title": "Nazorat samaradorligi",
+            "subtitle": "Nazoratni tekshirish va monitoring qilishning kompleks yondashuvi",
+            "features": {
+                "monitoring": {
+                    "title": "Nazoratni tekshirish va monitoring",
+                    "description": "Og'ishlarni avtomatik aniqlash bilan nazorat samaradorligini uzluksiz kuzatish"
+                },
+                "evidence": {
+                    "title": "Dalillarni markazlashtirilgan yig'ish",
+                    "description": "Auditni soddalashtirish uchun barcha dalillar uchun yagona repozitoriy"
+                },
+                "identification": {
+                    "title": "Samarasiz nazoratlarni tez aniqlash",
+                    "description": "Nazorat tizimidagi bo'shliqlarni avtomatik aniqlash va tezkor javob"
+                },
+                "recommendations": {
+                    "title": "Tavsiyalar va yaxshilash rejasi",
+                    "description": "Tashkilot nazorat muhitini optimallashtirish bo'yicha aqlli tavsiyalar"
+                }
+            },
+            "clientResults": {
+                "title": "Mijoz natijalari",
+                "description": "Operatsion risklarni kamaytirish, auditga ketadigan mehnatni qisqartirish, ishonchli jarayonlar va boshqaruv uchun shaffoflik."
+            }
+        },
+        "beforeAfter": {
+            "title": "Yechim afzalliklari",
+            "subtitle": "Samarali nazorat boshqaruvi risklarni qanday kamaytiradi",
+            "before": "Muammolar",
+            "solution": "Zeus yechimi",
+            "result": "Natijalar"
+        },
+        "problems": {
+            "scattered": "Yagona yondashuvsiz tarqoq nazoratlar",
+            "noEffectiveness": "Nazorat samaradorligi baholanmaydi",
+            "manualTesting": "Nazorat tekshiruvi qo'lda",
+            "noEvidence": "Dalillarni yig'ish qiyin",
+            "noRiskLink": "Nazoratlar risklar bilan bog'lanmagan",
+            "inefficient": "Samarasiz yoki yo'q nazoratlar"
+        },
+        "solutions": {
+            "catalog": "Tavsif va tasnif bilan nazorat katalogi",
+            "effectiveness": "Nazorat samaradorligini baholash",
+            "riskLinks": "Risk va aktivlar bilan bog'lanish",
+            "auditControl": "Audit nazorati va ish monitoringi",
+            "planning": "Tekshiruvlarni rejalash va bajarish",
+            "evidence": "Dalillarni markazlashtirilgan yig'ish"
+        },
+        "results": {
+            "operationalRisk": "Operatsion va regulyator riskni kamaytirish",
+            "efficiency": "Nazorat tizimi samaradorligi va shaffofligini oshirish",
+            "audit": "Istalgan payt auditga tayyorlik",
+            "compliance": "Muvofiqlik va ichki nazorat madaniyatini qo'llab-quvvatlash",
+            "centralized": "Dalillarni markazlashtirilgan yig'ish",
+            "improvements": "Tavsiyalar va yaxshilash rejalarini shakllantirish"
+        },
+        "cta": {
+            "title": "Nazoratlar boshqaruvini boshlashga tayyormisiz?",
+            "description": "Bepul konsultatsiya oling va nazoratlar moduli tashkilot risklarini qanday kamaytirishini bilib oling",
+            "button": "Konsultatsiya olish"
+        }
+    },
+    "riskManagement": {
+        "title": "Risklar boshqaruvi",
+        "backToModules": "Modullarga qaytish",
+        "heroDescription": "Tashkilotning barcha darajalarida kompleks risk boshqaruvi. Modul strategik va operatsion risklar, zaifliklar hamda insident boshqaruvini yagona tizimda birlashtiradi.",
+        "subModules": {
+            "title": "Modul tarkibi",
+            "subtitle": "Risklar boshqaruvi kompleks boshqaruv uchun uchta asosiy submodulni o'z ichiga oladi",
+            "operational": {
+                "title": "Operatsion risklar boshqaruvi",
+                "description": "Barcha biznes jarayonlaridagi operatsion risklarni boshqarish",
+                "features": {
+                    "assessment": "Ehtimollik va ta'sirni baholash",
+                    "collection": "Risklarni yig'ish va qayd etish",
+                    "controls": "Nazorat va kamaytirish choralarini rejalash",
+                    "monitoring": "Monitoring va hisobot"
+                }
+            },
+            "vulnerability": {
+                "title": "Zaifliklar boshqaruvi",
+                "description": "Zaifliklarni aniqlashdan bartaraf etishgacha boshqarish",
+                "features": {
+                    "integration": "Skanerlardan zaiflik ma'lumotlarini integratsiya qiladi",
+                    "classification": "Tasniflash, kritiklikni baholash va ustuvorlashtirish",
+                    "assignment": "Mas'ullarni tayinlash va muddat nazorati",
+                    "transparency": "Aniqlashdan yopishgacha shaffof qayta ishlash"
+                }
+            },
+            "incident": {
+                "title": "Insidentlar boshqaruvi",
+                "description": "Har qanday turdagi insidentlarni tez ro'yxatga olish va boshqarish",
+                "features": {
+                    "registration": "Insidentlarni ro'yxatga olish va hujjatlashtirish",
+                    "rootCause": "Ildiz sababni aniqlash va tuzatish choralari",
+                    "control": "Bajarilishni nazorat qilish va hisobot",
+                    "automation": "Tekshiruv jarayonini avtomatlashtirish"
+                }
+            }
+        },
+        "beforeAfter": {
+            "title": "Yechim afzalliklari",
+            "subtitle": "Risk boshqaruvi biznes barqarorligini qanday oshiradi",
+            "before": "Muammolar",
+            "solution": "Zeus yechimi",
+            "result": "Natija"
+        },
+        "problems": {
+            "noVisibility": "Risk boshqaruvida shaffoflik yetishmasligi",
+            "manualAssessment": "Riskni qo'lda baholash va tasniflash",
+            "noIntegration": "Audit, aktivlar va muvofiqlik bilan integratsiya yo'q",
+            "reactiveApproach": "Risk boshqaruviga reaktiv yondashuv",
+            "noMonitoring": "Asosiy indikatorlar monitoringi yo'q",
+            "inconsistentMethodology": "Risk baholash metodologiyasi bir xil emas"
+        },
+        "solutions": {
+            "riskRegistry": "Riskni aniqlash, tasniflash va reyestr yaratish",
+            "methodology": "Risk baholash metodologiyasini sozlash",
+            "integration": "Audit, aktivlar va muvofiqlik bilan integratsiya",
+            "roleModel": "Rolga asoslangan kirish modelini qo'llab-quvvatlash",
+            "versioning": "Ma'lumotlarni versiyalash va o'zgarish tarixini saqlash",
+            "kri": "Asosiy risk indikatorlari (KRI) monitoringi va bildirishnoma sozlash"
+        },
+        "results": {
+            "transparency": "Barcha darajalarda risk boshqaruvi shaffofligi",
+            "decisions": "Analitika asosida ma'lumotga tayangan qarorlar",
+            "incidents": "Insident yuz berish ehtimolini kamaytirish",
+            "compliance": "Standart va regulyator talablarga muvofiqlik",
+            "stability": "Jarayonlar barqarorligi va boshqaruvchanligini oshirish",
+            "visualization": "Matritsa va issiqlik xaritalari orqali risk vizualizatsiyasi"
+        },
+        "cta": {
+            "title": "Risklar boshqaruvini boshlashga tayyormisiz?",
+            "description": "Bepul konsultatsiya oling va risk moduli biznes barqarorligingizni qanday oshirishini bilib oling",
+            "button": "Konsultatsiya olish"
+        }
+    },
+    "operationalRiskManagement": {
         "title": "Operatsion risklar boshqaruvi",
-        "description": "Barcha biznes jarayonlaridagi operatsion risklarni boshqarish",
-        "features": {
-          "assessment": "Ehtimollik va ta'sirni baholash",
-          "collection": "Risklarni yig'ish va qayd etish",
-          "controls": "Nazorat va kamaytirish choralarini rejalash",
-          "monitoring": "Monitoring va hisobot"
+        "backToModules": "Modullarga qaytish",
+        "heroDescription": "Jarayonlardagi operatsion risklarni aniqlang va baholang, kamaytirish choralarini belgilang hamda risk holatini bitta tizimda uzluksiz kuzating.",
+        "beforeAfter": {
+            "title": "Yechim afzalliklari",
+            "subtitle": "Operatsion risk boshqaruvi biznes barqarorligini qanday oshiradi",
+            "before": "Muammolar",
+            "solution": "Zeus yechimi",
+            "result": "Natijalar"
+        },
+        "problems": {
+            "systematic": "Operatsion risklarni aniqlashda tizimli yondashuv yo'q",
+            "manual": "Risk ehtimoli va ta'sirini qo'lda baholash",
+            "database": "Yagona operatsion risk bazasi yo'q",
+            "tracking": "Risk holatini kuzatish qiyin",
+            "linkage": "Jarayon va nazoratlar bilan bog'lanish yo'q",
+            "monitoring": "Kamaytirish chorasi samaradorligi monitoringi yo'q"
+        },
+        "solutions": {
+            "assessment": "Yagona metodika asosida ehtimol va ta'sirni baholash",
+            "collection": "Barcha biznes jarayonlarida operatsion risklarni yig'ish va qayd etish",
+            "planning": "Nazorat va riskni kamaytirish choralarini rejalashtirish",
+            "monitoring": "Risk holatini real vaqtda monitoring qilish va hisobot"
+        },
+        "results": {
+            "proactive": "Operatsion risklarni proaktiv boshqarish",
+            "reduction": "Risk hodisalari ehtimolini kamaytirish",
+            "response": "Jarayon o'zgarishlariga tezkor javob",
+            "transparency": "Barcha darajalarda risk boshqaruvi shaffofligi",
+            "integration": "Jarayonlar va nazoratlar bilan integratsiya",
+            "efficiency": "Operatsion samaradorlikni oshirish"
+        },
+        "cta": {
+            "title": "Operatsion risk boshqaruvini boshlashga tayyormisiz?",
+            "description": "Bepul konsultatsiya oling va operatsion risk moduli biznes barqarorligingizni qanday oshirishini bilib oling",
+            "button": "Konsultatsiya olish"
         }
-      },
-      "vulnerability": {
+    },
+    "vulnerabilityManagement": {
         "title": "Zaifliklar boshqaruvi",
-        "description": "Zaifliklarni aniqlashdan bartaraf etishgacha boshqarish",
+        "backToModules": "Modullarga qaytish",
+        "heroDescription": "Zaifliklarni aniqlashdan bartaraf etishgacha boshqaring. Skanerlardan ma'lumotni birlashtiring, tasniflang, ustuvorlang va bartaraf etish jarayonini yagona tizimda nazorat qiling.",
+        "beforeAfter": {
+            "title": "Yechim afzalliklari",
+            "subtitle": "Zaiflik boshqaruvi xavfsizlikni qanday kuchaytiradi",
+            "before": "Muammolar",
+            "solution": "Zeus yechimi",
+            "result": "Natijalar"
+        },
+        "problems": {
+            "manual": "Turli manbalardan zaiflik ma'lumotlarini qo'lda yig'ish",
+            "database": "Yagona zaiflik bazasi yo'q",
+            "prioritization": "Zaifliklarni ustuvorlashtirish qiyin",
+            "deadlines": "Bartaraf etish muddatlari nazorati yo'q",
+            "linkage": "Aktivlar va risklar bilan bog'lanish yo'q",
+            "reporting": "Zaiflik holati bo'yicha hisobot yo'q"
+        },
+        "solutions": {
+            "integration": "Skaner va qo'lda manbalardan zaiflik ma'lumotlarini integratsiya qilish",
+            "classification": "Tasniflash, kritiklikni baholash va ustuvorlashtirish",
+            "assignment": "Mas'ullarni tayinlash va muddat nazorati",
+            "transparency": "Aniqlashdan yopishgacha shaffof jarayon"
+        },
+        "results": {
+            "proactive": "Zaifliklarni proaktiv boshqarish",
+            "reduction": "Axborot xavfsizligi risklarini kamaytirish",
+            "remediation": "Muhim zaifliklarni tez bartaraf etish",
+            "visibility": "Zaiflik holati bo'yicha to'liq ko'rinish",
+            "integration": "Skanerlar va aktivlar bilan integratsiya",
+            "security": "Xavfsizlik holatini kuchaytirish"
+        },
+        "cta": {
+            "title": "Zaifliklar boshqaruvini boshlashga tayyormisiz?",
+            "description": "Bepul konsultatsiya oling va zaifliklar moduli infratuzilma xavfsizligini qanday oshirishini bilib oling",
+            "button": "Konsultatsiya olish"
+        },
         "features": {
-          "integration": "Skanerlardan zaiflik ma'lumotlarini integratsiya qiladi",
-          "classification": "Tasniflash, kritiklikni baholash va ustuvorlashtirish",
-          "assignment": "Mas'ullarni tayinlash va muddat nazorati",
-          "transparency": "Aniqlashdan yopishgacha shaffof qayta ishlash"
+            "integration": {
+                "title": "Zaiflik ma'lumotlarini integratsiya",
+                "description": "skanerlar va qo'lda manbalardan"
+            },
+            "classification": {
+                "title": "Tasniflash va baholash",
+                "description": "kritiklik va ustuvorlik bo'yicha"
+            },
+            "assignment": {
+                "title": "Mas'ullarni tayinlash",
+                "description": "va muddat nazorati"
+            },
+            "transparency": {
+                "title": "Shaffof jarayon",
+                "description": "aniqlashdan yopishgacha"
+            }
         }
-      },
-      "incident": {
+    },
+    "incidentManagement": {
         "title": "Insidentlar boshqaruvi",
-        "description": "Har qanday turdagi insidentlarni tez ro'yxatga olish va boshqarish",
-        "features": {
-          "registration": "Insidentlarni ro'yxatga olish va hujjatlashtirish",
-          "rootCause": "Ildiz sababni aniqlash va tuzatish choralari",
-          "control": "Bajarilishni nazorat qilish va hisobot",
-          "automation": "Tekshiruv jarayonini avtomatlashtirish"
+        "backToModules": "Modullarga qaytish",
+        "heroDescription": "Insidentlarni yagona tizimda ro'yxatga oling, tekshiring va bartaraf eting. Jarayonlarni avtomatlashtiring, ildiz sabablarni aniqlang va qaytalanishni oldini olish choralarini ishlab chiqing.",
+        "beforeAfter": {
+            "title": "Yechim afzalliklari",
+            "subtitle": "Insident boshqaruvi biznes barqarorligini qanday oshiradi",
+            "before": "Muammolar",
+            "solution": "Zeus yechimi",
+            "result": "Natijalar"
+        },
+        "problems": {
+            "chaotic": "Insidentlar turli tizimlarda tartibsiz ro'yxatga olinadi",
+            "noProcess": "Yagona tekshiruv jarayoni yo'q",
+            "deadlines": "Insidentni bartaraf etish muddati nazorati yo'q",
+            "rootCause": "Ildiz sababni aniqlash qiyin",
+            "linkage": "Risk va nazoratlar bilan bog'lanish yo'q",
+            "reporting": "Insidentlar bo'yicha hisobot yo'q"
+        },
+        "solutions": {
+            "registration": "Har qanday turdagi insidentlarni ro'yxatga olish va hujjatlashtirish",
+            "rootCause": "Ildiz sababni aniqlash va tuzatish choralari",
+            "control": "Bajarilishni nazorat qilish va hisobot",
+            "automation": "Tekshiruv jarayonini avtomatlashtirish"
+        },
+        "results": {
+            "structured": "Insidentlarni tizimli boshqarish",
+            "reduction": "Qayta insidentlar sonini kamaytirish",
+            "response": "Tezkor javob va bartaraf etish",
+            "transparency": "Tekshiruv jarayoni shaffofligi",
+            "linkage": "Risk va nazoratlar bilan bog'lanish",
+            "improvement": "Jarayonlarni uzluksiz yaxshilash"
+        },
+        "cta": {
+            "title": "Insident boshqaruvini boshlashga tayyormisiz?",
+            "description": "Bepul konsultatsiya oling va insidentlar moduli biznes barqarorligingizni qanday oshirishini bilib oling",
+            "button": "Konsultatsiya olish"
         }
-      }
     },
-    "beforeAfter": {
-      "title": "Yechim afzalliklari",
-      "subtitle": "Risk boshqaruvi biznes barqarorligini qanday oshiradi",
-      "before": "Muammolar",
-      "solution": "Zeus yechimi",
-      "result": "Natija"
+    "consulting": {
+        "title": "Konsalting xizmatlari",
+        "heroLine1": "Konsalting",
+        "heroLine2": "Xizmatlari",
+        "subtitle": "Biznesingizni ekspert maslahat orqali o'zgartirish",
+        "learnMore": "Batafsil",
+        "about": {
+            "title": "Moslashuvchan ekspert maslahat",
+            "subtitle": "Biznesingiz uchun keng qamrovli maslahat yechimlari",
+            "description": "Bizning ekspertlar jamoasi sizning biznesingizning noyob ehtiyojlariga moslashtirilgan moslashuvchan maslahat xizmatlarini taqdim etadi.",
+            "point1": "Har bir mijozga individual yondashuv",
+            "point2": "Tajribali sertifikatlangan ekspertlar jamoasi",
+            "point3": "O'lchanadigan natijalar va shaffof hisobotlar"
+        },
+        "benefits": {
+            "title": "Afzalliklar",
+            "subtitle": "Samarali maslahat berish uchun zarur bo'lgan hamma narsa",
+            "items": {
+                "expertise": {
+                    "title": "Ekspert tajriba",
+                    "description": "Ko'p yillik tajribaga ega sertifikatlangan mutaxassislar jamoasi"
+                },
+                "resultFocused": {
+                    "title": "Natijaga yo'naltirilgan",
+                    "description": "O'lchanadigan biznes natijalariga erishishga yo'naltirilgan"
+                },
+                "dataSecurity": {
+                    "title": "Ma'lumotlar xavfsizligi",
+                    "description": "Maxfiylik va axborotni himoya qilishga qat'iy rioya etish"
+                },
+                "transparency": {
+                    "title": "Shaffof hisobotlar",
+                    "description": "Har bosqichda batafsil analitika va hisobotlar"
+                }
+            }
+        },
+        "services": {
+            "title": "Xizmatlar katalogi",
+            "items": {
+                "businessConsulting": {
+                    "title": "Biznes Konsalting",
+                    "description": "Biznes jarayonlarni keng qamrovli tahlil qilish va samaradorlikni oshirish."
+                },
+                "projectManagement": {
+                    "title": "Loyihalarni Boshqarish",
+                    "description": "Zamonaviy metodologiyalar bilan professional loyiha boshqaruv."
+                },
+                "bizProcessMethodology": {
+                    "title": "Biznes Jarayon Metodologiyasi",
+                    "description": "Asosiy biznes jarayonlarni optimallashtirish uchun metodologiyalar."
+                },
+                "isAudit": {
+                    "title": "AT Jarayonlarini Audit",
+                    "description": "Axborot xavfsizligini keng qamrovli audit o'tkazish."
+                },
+                "isRiskManagement": {
+                    "title": "AT Risklarini Boshqarish",
+                    "description": "Standartlarga muvofiq AT risklarini aniqlash, baholash va boshqarish."
+                },
+                "isArchitecture": {
+                    "title": "AT Arxitekturasi",
+                    "description": "Korxonaning keng qamrovli AT arxitekturasini loyihalash."
+                },
+                "vulnAssessment": {
+                    "title": "Zaifliklarni Baholash",
+                    "description": "Zaifliklarni texnik baholash va bartaraf etish rejalarini ishlab chiqish."
+                }
+            }
+        },
+        "renew": {
+            "title": "Mijozlarning 96% hamkorlikni davom ettiradi",
+            "description": "Zeus GRC mijozlarining 96%dan ortig'i ROI olib, obunani yangilashni tanlaydi"
+        },
+        "cases": {
+            "finance": {
+                "title": "Moliya guruhi — risk boshqaruv modulini joriy etish",
+                "description": "Keng tarmoqli sho'ba kompaniyalari tuzilmasiga ega yirik moliya guruhi risklarning yagona rasmiga ega emas edi. Har bir bo'linma Excel-da o'z reestrlarini yuritdi.\n\nBiz markazlashtirilgan reestr, avtomatik eskalatsiya va C-level boshqaruv paneli bilan GRC risk boshqaruv modulini joriy etdik. Ishga tushirilgandan so'ng risklar bo'yicha hisobotlarni to'plash vaqti 3 haftadan 2 kunga qisqardi."
+            },
+            "it": {
+                "title": "IT-kompaniya — ichki audit",
+                "description": "Kompaniya xalqaro kengayishga tayyorlanayotgan edi, investorlar mavjud bo'lmagan tasdiqlangan nazorat tizimini talab qildi. Avtomatik dalillar bazasi bilan GRC mahsuloti asosida ichki audit tizimini qurdik. Kompaniya birorta kritik izohsiz due diligence jarayonidan o'tdi va raundni muddatida yopdi."
+            },
+            "isMaturity": {
+                "title": "Turli tashkilotlar uchun axborot xavfsizligi yetukligini baholashning yagona modeli",
+                "description": "AX bo'yicha turli tarmoq talablariga ega tashkilotlarni keng qamrovli auditiga yondashuv amalga oshirildi. Moslashuvchan tekshiruv ro'yxatlari va yagona skoring tizimi orqali guruh darajasida natijalarni qiyosiy baholash ta'minlandi."
+            }
+        },
+        "testimonials": {
+            "title": "Mijozlar nima deydi",
+            "items": {
+                "first": {
+                    "name": "Aleksandr Test",
+                    "role": "CTO, TechCorp",
+                    "text": "Konsalting jamoasi bilan ishlash risk boshqaruviga bo'lgan yondashuvimizni butunlay o'zgartirdi."
+                },
+                "second": {
+                    "name": "Mariya Ivanova",
+                    "role": "CISO, FinanceGroup",
+                    "text": "AT auditi tufayli kritik zaifliklarni o'z vaqtida aniqladik. Tavsiya etamiz."
+                }
+            }
+        },
+        "cta": {
+            "title": "Boshlashga tayyormisiz?",
+            "description": "Bizning jamoamiz bilan bepul konsultatsiya oling. Zeus GRC kompaniyangizning muvaffaqiyatga yo'l xaritasini tuzishga yordam beradi.",
+            "button": "Ishni boshlash"
+        },
+        "whyChooseUs": "NIMA UCHUN MIJOZLAR BIZNI TANLAYDI",
+        "viewCaseStudy": "KEYISNI KO'RISH"
     },
-    "problems": {
-      "noVisibility": "Risk boshqaruvida shaffoflik yetishmasligi",
-      "manualAssessment": "Riskni qo'lda baholash va tasniflash",
-      "noIntegration": "Audit, aktivlar va muvofiqlik bilan integratsiya yo'q",
-      "reactiveApproach": "Risk boshqaruviga reaktiv yondashuv",
-      "noMonitoring": "Asosiy indikatorlar monitoringi yo'q",
-      "inconsistentMethodology": "Risk baholash metodologiyasi bir xil emas"
+    "common": {
+        "more": "Batafsil"
     },
-    "solutions": {
-      "riskRegistry": "Riskni aniqlash, tasniflash va reyestr yaratish",
-      "methodology": "Risk baholash metodologiyasini sozlash",
-      "integration": "Audit, aktivlar va muvofiqlik bilan integratsiya",
-      "roleModel": "Rolga asoslangan kirish modelini qo'llab-quvvatlash",
-      "versioning": "Ma'lumotlarni versiyalash va o'zgarish tarixini saqlash",
-      "kri": "Asosiy risk indikatorlari (KRI) monitoringi va bildirishnoma sozlash"
+    "businessConsulting": {
+        "badge": "Risklardagi Konsalting",
+        "title": "Biznes-konsalting",
+        "subtitle": "Haqiqiy rasmni ko'rishga, to'siqlarni bartaraf etishga va ma'lumotlarga asoslangan aniq rivojlanish strategiyasini qurishga yordam beramiz.",
+        "ctaMain": "Maslahat olish",
+        "ctaBack": "Barcha xizmatlar",
+        "desc1": "Biznes-konsalting — bu biznes-model, jarayonlar va kompaniyaning hozirgi operatsion tuzilmasini kompleks tahlil qilish.",
+        "desc2": "Tahlil asosida rivojlanishning aniq manzarasi shakllanadi: asosiy o'sish nuqtalari, ustuvor yo'nalishlar aniqlanadi.",
+        "valueTitle": "Qiymat",
+        "offerTitle": "Biz taklif qilamiz:",
+        "value": [
+            "Biznesning haqiqiy rasmini buzilishlarsiz ko'rishga yordam beradi",
+            "Boshqaruv va strategik qarorlar qabul qilishni soddalashtiradi",
+            "O'sish nuqtalarini va yashirin cheklovlarni aniqlaydi",
+            "Biznes-jarayonlar va kompaniya tuzilmasining samaradorligini oshiradi",
+            "Kengaytirishda xatolik xavflarini kamaytiradi",
+            "Rivojlanish va optimallashtirish uchun aniq harakat rejasini beradi"
+        ],
+        "offer": [
+            "Biznes-model va joriy strategiyani tahlil qilish",
+            "Asosiy biznes-jarayonlarni diagnostika qilish",
+            "Operatsion samaradorlikni baholash",
+            "To'siqlar va o'sish cheklovlarini aniqlash",
+            "Tashkiliy tuzilma va rollarni tahlil qilish",
+            "O'sish nuqtalari va ustuvor yo'nalishlarni aniqlash",
+            "Jarayonlarni yaxshilash bo'yicha tavsiyalar shakllantirish",
+            "Amaliy o'zgarishlar yo'l xaritasini ishlab chiqish"
+        ]
     },
-    "results": {
-      "transparency": "Barcha darajalarda risk boshqaruvi shaffofligi",
-      "decisions": "Analitika asosida ma'lumotga tayangan qarorlar",
-      "incidents": "Insident yuz berish ehtimolini kamaytirish",
-      "compliance": "Standart va regulyator talablarga muvofiqlik",
-      "stability": "Jarayonlar barqarorligi va boshqaruvchanligini oshirish",
-      "visualization": "Matritsa va issiqlik xaritalari orqali risk vizualizatsiyasi"
-    },
-    "cta": {
-      "title": "Risklar boshqaruvini boshlashga tayyormisiz?",
-      "description": "Bepul konsultatsiya oling va risk moduli biznes barqarorligingizni qanday oshirishini bilib oling",
-      "button": "Konsultatsiya olish"
+    "isMaturityCase": {
+        "badge": "Keys",
+        "title": "Tashkilotlar guruhida axborot xavfsizligi yetukligini baholashning yagona yondashuvi",
+        "subtitle": "Turli tarmoq AX talablari bo'lgan tashkilotlarni kompleks auditlash yondashuvi joriy etildi.",
+        "problemTitle": "Muammo tavsifi",
+        "problemText": "Qiyinchilik — turli tarmoq va funksional xususiyatlarga ega tashkilotlar guruhini kompleks auditlashda edi.",
+        "solutionTitle": "Amalga oshirilgan yechim",
+        "solutionItems": [
+            "Audit talablarini kompaniya va tarmoq xususiyatiga moslash mexanizmlari joriy etildi",
+            "Moslashuvchan nazorat ro'yxatlari asosida javoblarni avtomatlashtirilgan shakllantirish amalga oshirildi",
+            "Audit natijalarini miqdoriy baholash uchun skoring tizimi sozlandi",
+            "Jarayonlarni avtomatlashtirish hisobiga audit o'tkazish vaqti qisqartirildi",
+            "Standartlashtirilgan baholash uchun AX yetuklik modeli joriy etildi",
+            "Tarmoq xususiyatini saqlab baholash natijalarining yagona bo'lishi ta'minlandi",
+            "Turli bo'limlar o'rtasidagi audit ma'lumotlarining aniqligi oshirildi",
+            "Turli tashkilot turlari uchun metodologiyaning masshtablanishi ta'minlandi"
+        ],
+        "resultsTitle": "Erishilgan natijalar",
+        "resultsLeft": "O'ndan ortiq tashkilot moslashtirilgan nazorat ro'yxatlaridan foydalanib baholandan o'tdi.",
+        "resultsRight": "Barcha natijalar yagona AX yetuklik modeliga konsolidatsiya qilindi."
     }
-  },
-  "operationalRiskManagement": {
-    "title": "Operatsion risklar boshqaruvi",
-    "backToModules": "Modullarga qaytish",
-    "heroDescription": "Jarayonlardagi operatsion risklarni aniqlang va baholang, kamaytirish choralarini belgilang hamda risk holatini bitta tizimda uzluksiz kuzating.",
-    "beforeAfter": {
-      "title": "Yechim afzalliklari",
-      "subtitle": "Operatsion risk boshqaruvi biznes barqarorligini qanday oshiradi",
-      "before": "Muammolar",
-      "solution": "Zeus yechimi",
-      "result": "Natijalar"
-    },
-    "problems": {
-      "systematic": "Operatsion risklarni aniqlashda tizimli yondashuv yo'q",
-      "manual": "Risk ehtimoli va ta'sirini qo'lda baholash",
-      "database": "Yagona operatsion risk bazasi yo'q",
-      "tracking": "Risk holatini kuzatish qiyin",
-      "linkage": "Jarayon va nazoratlar bilan bog'lanish yo'q",
-      "monitoring": "Kamaytirish chorasi samaradorligi monitoringi yo'q"
-    },
-    "solutions": {
-      "assessment": "Yagona metodika asosida ehtimol va ta'sirni baholash",
-      "collection": "Barcha biznes jarayonlarida operatsion risklarni yig'ish va qayd etish",
-      "planning": "Nazorat va riskni kamaytirish choralarini rejalashtirish",
-      "monitoring": "Risk holatini real vaqtda monitoring qilish va hisobot"
-    },
-    "results": {
-      "proactive": "Operatsion risklarni proaktiv boshqarish",
-      "reduction": "Risk hodisalari ehtimolini kamaytirish",
-      "response": "Jarayon o'zgarishlariga tezkor javob",
-      "transparency": "Barcha darajalarda risk boshqaruvi shaffofligi",
-      "integration": "Jarayonlar va nazoratlar bilan integratsiya",
-      "efficiency": "Operatsion samaradorlikni oshirish"
-    },
-    "cta": {
-      "title": "Operatsion risk boshqaruvini boshlashga tayyormisiz?",
-      "description": "Bepul konsultatsiya oling va operatsion risk moduli biznes barqarorligingizni qanday oshirishini bilib oling",
-      "button": "Konsultatsiya olish"
-    }
-  },
-  "vulnerabilityManagement": {
-    "title": "Zaifliklar boshqaruvi",
-    "backToModules": "Modullarga qaytish",
-    "heroDescription": "Zaifliklarni aniqlashdan bartaraf etishgacha boshqaring. Skanerlardan ma'lumotni birlashtiring, tasniflang, ustuvorlang va bartaraf etish jarayonini yagona tizimda nazorat qiling.",
-    "beforeAfter": {
-      "title": "Yechim afzalliklari",
-      "subtitle": "Zaiflik boshqaruvi xavfsizlikni qanday kuchaytiradi",
-      "before": "Muammolar",
-      "solution": "Zeus yechimi",
-      "result": "Natijalar"
-    },
-    "problems": {
-      "manual": "Turli manbalardan zaiflik ma'lumotlarini qo'lda yig'ish",
-      "database": "Yagona zaiflik bazasi yo'q",
-      "prioritization": "Zaifliklarni ustuvorlashtirish qiyin",
-      "deadlines": "Bartaraf etish muddatlari nazorati yo'q",
-      "linkage": "Aktivlar va risklar bilan bog'lanish yo'q",
-      "reporting": "Zaiflik holati bo'yicha hisobot yo'q"
-    },
-    "solutions": {
-      "integration": "Skaner va qo'lda manbalardan zaiflik ma'lumotlarini integratsiya qilish",
-      "classification": "Tasniflash, kritiklikni baholash va ustuvorlashtirish",
-      "assignment": "Mas'ullarni tayinlash va muddat nazorati",
-      "transparency": "Aniqlashdan yopishgacha shaffof jarayon"
-    },
-    "results": {
-      "proactive": "Zaifliklarni proaktiv boshqarish",
-      "reduction": "Axborot xavfsizligi risklarini kamaytirish",
-      "remediation": "Muhim zaifliklarni tez bartaraf etish",
-      "visibility": "Zaiflik holati bo'yicha to'liq ko'rinish",
-      "integration": "Skanerlar va aktivlar bilan integratsiya",
-      "security": "Xavfsizlik holatini kuchaytirish"
-    },
-    "cta": {
-      "title": "Zaifliklar boshqaruvini boshlashga tayyormisiz?",
-      "description": "Bepul konsultatsiya oling va zaifliklar moduli infratuzilma xavfsizligini qanday oshirishini bilib oling",
-      "button": "Konsultatsiya olish"
-    },
-    "features": {
-      "integration": {
-        "title": "Zaiflik ma'lumotlarini integratsiya",
-        "description": "skanerlar va qo'lda manbalardan"
-      },
-      "classification": {
-        "title": "Tasniflash va baholash",
-        "description": "kritiklik va ustuvorlik bo'yicha"
-      },
-      "assignment": {
-        "title": "Mas'ullarni tayinlash",
-        "description": "va muddat nazorati"
-      },
-      "transparency": {
-        "title": "Shaffof jarayon",
-        "description": "aniqlashdan yopishgacha"
-      }
-    }
-  },
-  "incidentManagement": {
-    "title": "Insidentlar boshqaruvi",
-    "backToModules": "Modullarga qaytish",
-    "heroDescription": "Insidentlarni yagona tizimda ro'yxatga oling, tekshiring va bartaraf eting. Jarayonlarni avtomatlashtiring, ildiz sabablarni aniqlang va qaytalanishni oldini olish choralarini ishlab chiqing.",
-    "beforeAfter": {
-      "title": "Yechim afzalliklari",
-      "subtitle": "Insident boshqaruvi biznes barqarorligini qanday oshiradi",
-      "before": "Muammolar",
-      "solution": "Zeus yechimi",
-      "result": "Natijalar"
-    },
-    "problems": {
-      "chaotic": "Insidentlar turli tizimlarda tartibsiz ro'yxatga olinadi",
-      "noProcess": "Yagona tekshiruv jarayoni yo'q",
-      "deadlines": "Insidentni bartaraf etish muddati nazorati yo'q",
-      "rootCause": "Ildiz sababni aniqlash qiyin",
-      "linkage": "Risk va nazoratlar bilan bog'lanish yo'q",
-      "reporting": "Insidentlar bo'yicha hisobot yo'q"
-    },
-    "solutions": {
-      "registration": "Har qanday turdagi insidentlarni ro'yxatga olish va hujjatlashtirish",
-      "rootCause": "Ildiz sababni aniqlash va tuzatish choralari",
-      "control": "Bajarilishni nazorat qilish va hisobot",
-      "automation": "Tekshiruv jarayonini avtomatlashtirish"
-    },
-    "results": {
-      "structured": "Insidentlarni tizimli boshqarish",
-      "reduction": "Qayta insidentlar sonini kamaytirish",
-      "response": "Tezkor javob va bartaraf etish",
-      "transparency": "Tekshiruv jarayoni shaffofligi",
-      "linkage": "Risk va nazoratlar bilan bog'lanish",
-      "improvement": "Jarayonlarni uzluksiz yaxshilash"
-    },
-    "cta": {
-      "title": "Insident boshqaruvini boshlashga tayyormisiz?",
-      "description": "Bepul konsultatsiya oling va insidentlar moduli biznes barqarorligingizni qanday oshirishini bilib oling",
-      "button": "Konsultatsiya olish"
-    }
-  }
 }

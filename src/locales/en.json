@@ -793,5 +793,168 @@
             "description": "Get a free consultation and learn how the incident management module can enhance your business resilience",
             "button": "Get Consultation"
         }
+    },
+    "consulting": {
+        "title": "Consulting Services",
+        "heroLine1": "Consulting",
+        "heroLine2": "Services",
+        "subtitle": "Transform your business through expert consulting",
+        "learnMore": "More",
+        "about": {
+            "title": "Flexible Expert Consulting",
+            "subtitle": "Comprehensive consulting solutions for your business",
+            "description": "Our team of experts provides flexible consulting services tailored to the unique needs of your business. We combine deep expertise with a practical approach to achieve measurable results.",
+            "point1": "Individual approach for each client",
+            "point2": "Experienced team of certified experts",
+            "point3": "Measurable results and transparent reporting"
+        },
+        "benefits": {
+            "title": "Benefits",
+            "subtitle": "Everything you need for effective consulting",
+            "items": {
+                "expertise": {
+                    "title": "Expert Experience",
+                    "description": "A team of certified specialists with years of experience"
+                },
+                "resultFocused": {
+                    "title": "Result-Oriented",
+                    "description": "Focus on achieving measurable business outcomes"
+                },
+                "dataSecurity": {
+                    "title": "Data Security",
+                    "description": "Strict compliance with confidentiality and information protection"
+                },
+                "transparency": {
+                    "title": "Transparent Reporting",
+                    "description": "Detailed analytics and reporting at every stage"
+                }
+            }
+        },
+        "services": {
+            "title": "Service Catalog",
+            "items": {
+                "businessConsulting": {
+                    "title": "Business Consulting",
+                    "description": "We analyze your business model, processes and growth points. We help make informed decisions, build structure and move toward goals with a clear action plan."
+                },
+                "projectManagement": {
+                    "title": "Project Management",
+                    "description": "Professional project management using modern methodologies and best practices to deliver results on time and within budget."
+                },
+                "bizProcessMethodology": {
+                    "title": "Business Process Methodology",
+                    "description": "Development and implementation of methodologies to optimize key business processes and increase operational efficiency."
+                },
+                "isAudit": {
+                    "title": "IS Process Audit",
+                    "description": "Comprehensive information security audit with detailed reporting and actionable recommendations for remediation."
+                },
+                "isRiskManagement": {
+                    "title": "IS Risk Management",
+                    "description": "Identification, assessment and management of information security risks in accordance with international standards."
+                },
+                "isArchitecture": {
+                    "title": "IS Architecture",
+                    "description": "Design and implementation of a comprehensive enterprise information security architecture."
+                },
+                "vulnAssessment": {
+                    "title": "Vulnerability Assessment",
+                    "description": "Technical vulnerability assessments and development of remediation plans to reduce exposure."
+                }
+            }
+        },
+        "renew": {
+            "title": "96% of Customers Renew with CONSULTING",
+            "description": "Check out our case studies to see real life examples of how security teams use Zeus GRC to reduce risk."
+        },
+        "cases": {
+            "finance": {
+                "title": "Financial Group — Risk Management Module Implementation",
+                "description": "A large financial group with a sprawling subsidiary structure had no unified view of risks. Each division maintained its own Excel registers, data was not consolidated, and top management made decisions based on outdated information.\n\nWe implemented a GRC risk management module with a centralized register, automatic escalation and a C-level dashboard. After launch, the time to collect risk reports dropped from 3 weeks to 2 days, and the number of incidents reaching a critical stage without response decreased by 74%."
+            },
+            "it": {
+                "title": "IT Company — Internal Audit",
+                "description": "The company was preparing for international expansion; investors required a verified control system that did not exist. We built an internal audit system on the GRC product with automatic evidence collection. The company passed due diligence without a single critical finding and closed the round on schedule."
+            },
+            "isMaturity": {
+                "title": "Unified IS Maturity Assessment Model for Diverse Organizations",
+                "description": "A comprehensive audit approach was implemented for organizations with different industry-specific IS requirements. Through adaptive checklists and a unified scoring system, comparable maturity assessments and unified group-level analytics were ensured."
+            }
+        },
+        "testimonials": {
+            "title": "What Clients Say",
+            "items": {
+                "first": {
+                    "name": "Alexander Test",
+                    "role": "CTO, TechCorp",
+                    "text": "Working with the consulting team completely changed our approach to risk management. Professionalism at the highest level."
+                },
+                "second": {
+                    "name": "Maria Ivanova",
+                    "role": "CISO, FinanceGroup",
+                    "text": "Thanks to the IS audit, we identified critical vulnerabilities and remediated them in time. Highly recommend."
+                }
+            }
+        },
+        "cta": {
+            "title": "Ready to Start?",
+            "description": "Get a free consultation with our team. Zeus GRC will help you build a roadmap to success.",
+            "button": "Get Consultation"
+        },
+        "whyChooseUs": "WHY CUSTOMERS CHOOSE US",
+        "viewCaseStudy": "VIEW CASE STUDY"
+    },
+    "common": {
+        "more": "More"
+    },
+    "businessConsulting": {
+        "badge": "Consulting In Risks",
+        "title": "Business Consulting",
+        "subtitle": "We help you see the real picture, remove bottlenecks and build a clear development strategy based on data, not assumptions.",
+        "ctaMain": "Get a Consultation",
+        "ctaBack": "All Services",
+        "desc1": "Business consulting is a comprehensive analysis of the business model, processes and the current operational structure of the company. We assess how the business is structured now and where constraints arise that hinder growth or efficiency.",
+        "desc2": "Based on the analysis, a clear development picture is formed: key growth points, priority directions and potential improvements are identified. This allows building a more sustainable and manageable business model focused on results.",
+        "valueTitle": "Value",
+        "offerTitle": "We Offer:",
+        "value": [
+            "Helps see the real business picture without distortions and assumptions",
+            "Simplifies management and strategic decision-making",
+            "Identifies growth points and hidden constraints",
+            "Increases efficiency of business processes and company structure",
+            "Reduces risks of errors during scaling and changes",
+            "Provides a clear action plan for development and optimization"
+        ],
+        "offer": [
+            "Analysis of business model and current strategy",
+            "Diagnostics of key business processes",
+            "Assessment of operational efficiency",
+            "Identification of bottlenecks and growth constraints",
+            "Analysis of organizational structure and roles",
+            "Identification of growth points and priority development directions",
+            "Formation of recommendations for process improvement",
+            "Development of a practical roadmap for changes"
+        ]
+    },
+    "isMaturityCase": {
+        "badge": "Case Study",
+        "title": "Unified Approach to Information Security Maturity Assessment in a Heterogeneous Group of Organizations",
+        "subtitle": "A comprehensive audit approach was implemented for organizations with different industry-specific IS requirements. Through adaptive checklists and a unified scoring system, comparable maturity assessments and unified group-level analytics were achieved.",
+        "problemTitle": "Problem Description",
+        "problemText": "The challenge was to conduct a comprehensive audit of a group of organizations with different industry and functional specifics. Differing information security requirements in each company made it difficult to apply a single assessment methodology, while maintaining comparability of results and correctness of ratings between group members.",
+        "solutionTitle": "Implemented Solution",
+        "solutionItems": [
+            "Customization mechanisms for audit requirements adapted to company and industry specifics were implemented",
+            "Automated response generation based on adaptive checklists was realized",
+            "A scoring system for quantitative evaluation of audit results was configured",
+            "Audit time was reduced through process automation",
+            "An IS maturity model for standardized assessment was introduced",
+            "Unification of assessment results while preserving industry specifics was ensured",
+            "Accuracy and comparability of audit data across divisions was improved",
+            "Scalability of the methodology for different types of organizations was ensured"
+        ],
+        "resultsTitle": "Achieved Results",
+        "resultsLeft": "More than ten organizations from various industries were assessed using adapted checklists tailored to their applicable requirements and activity specifics. This ensured audit relevance for each company without losing the systemic approach.",
+        "resultsRight": "All results were consolidated into a unified IS maturity model, ensuring data comparability between organizations. The final information is presented in unified dashboards and analytical reports for convenient comparison and decision-making."
     }
 }

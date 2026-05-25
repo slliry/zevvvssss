@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 // В продакшене используем относительный путь, в dev - localhost
 const API_URL = import.meta.env.VITE_API_URL || (import.meta.env.MODE === 'production' ? '' : 'http://localhost:4000');
@@ -7,18 +7,24 @@ export function useTranslationEditor(adminKey) {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  const headers = {
-    'Content-Type': 'application/json',
-    'x-admin-key': adminKey,
-  };
+  // Используем ref чтобы всегда иметь актуальный ключ в замыканиях
+  const adminKeyRef = useRef(adminKey);
+  useEffect(() => {
+    adminKeyRef.current = adminKey;
+  }, [adminKey]);
 
-  const generateTranslation = useCallback(async (text, targetLang, context = '') => {
+  const getHeaders = () => ({
+    'Content-Type': 'application/json',
+    'x-admin-key': adminKeyRef.current,
+  });
+
+  const generateTranslation = async (text, targetLang, context = '') => {
     setIsLoading(true);
     setError(null);
     try {
       const response = await fetch(`${API_URL}/api/translations/generate`, {
         method: 'POST',
-        headers,
+        headers: getHeaders(),
         body: JSON.stringify({ text, targetLang, context }),
       });
 
@@ -34,15 +40,15 @@ export function useTranslationEditor(adminKey) {
     } finally {
       setIsLoading(false);
     }
-  }, [adminKey]);
+  };
 
-  const generateAllTranslations = useCallback(async (text, sourceLang = 'ru', context = '') => {
+  const generateAllTranslations = async (text, sourceLang = 'ru', context = '') => {
     setIsLoading(true);
     setError(null);
     try {
       const response = await fetch(`${API_URL}/api/translations/generate-all`, {
         method: 'POST',
-        headers,
+        headers: getHeaders(),
         body: JSON.stringify({ text, sourceLang, context }),
       });
 
@@ -58,23 +64,27 @@ export function useTranslationEditor(adminKey) {
     } finally {
       setIsLoading(false);
     }
-  }, [adminKey]);
+  };
 
-  const updateTranslation = useCallback(async (lang, key, value) => {
+  const updateTranslation = async (lang, key, value) => {
     setIsLoading(true);
     setError(null);
     try {
-      const response = await fetch(`${API_URL}/api/translations/update`, {
+      const url = `${API_URL}/api/translations/update`;
+      const payload = { lang, key, value };
+
+      const response = await fetch(url, {
         method: 'PUT',
-        headers,
-        body: JSON.stringify({ lang, key, value }),
+        headers: getHeaders(),
+        body: JSON.stringify(payload),
       });
 
+      const data = await response.json();
+
       if (!response.ok) {
-        throw new Error('Failed to update translation');
+        throw new Error(data?.message || `HTTP ${response.status}`);
       }
 
-      const data = await response.json();
       return data;
     } catch (err) {
       setError(err.message);
@@ -82,15 +92,15 @@ export function useTranslationEditor(adminKey) {
     } finally {
       setIsLoading(false);
     }
-  }, [adminKey]);
+  };
 
-  const autoTranslateKey = useCallback(async (key, sourceText, sourceLang = 'ru') => {
+  const autoTranslateKey = async (key, sourceText, sourceLang = 'ru') => {
     setIsLoading(true);
     setError(null);
     try {
       const response = await fetch(`${API_URL}/api/translations/auto-translate`, {
         method: 'POST',
-        headers,
+        headers: getHeaders(),
         body: JSON.stringify({ key, sourceText, sourceLang }),
       });
 
@@ -106,7 +116,7 @@ export function useTranslationEditor(adminKey) {
     } finally {
       setIsLoading(false);
     }
-  }, [adminKey]);
+  };
 
   return {
     generateTranslation,
