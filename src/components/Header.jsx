@@ -29,7 +29,7 @@ export default function Header() {
 
   const menuItems = [
     { label: t('header.menu.solutions'), id: 'solutions' },
-    { label: t('header.menu.consulting'), href: '/consulting' },
+    { label: t('header.menu.consulting'), href: '/consulting', disabled: true },
     { label: t('header.menu.modules'), id: 'modules' },
     { label: t('header.menu.benefits'), id: 'benefits' },
     { label: t('header.menu.testimonials'), id: 'testimonials' },
@@ -106,17 +106,29 @@ export default function Header() {
         </Link>
 
         <nav className={`hidden items-center md:flex transition-all duration-300 ${scrollDirection === 'down' && scrolled ? 'gap-4' : 'gap-6'}`}>
-          {menuItems.map((item) => (
-            <Link
-              key={item.id || item.href}
-              to={item.href || `/#${item.id}`}
-              className={`${item.href === '/consulting' ? 'text-[#004aad] font-bold' : 'text-[#1A1A1A] font-normal'} transition-all duration-300 hover:text-[#004aad] ${scrollDirection === 'down' && scrolled ? 'text-xs' : 'text-sm'}`}
-            >
-              <EditableTranslation translationKey={`header.menu.${item.id || 'consulting'}`}>
-                {item.label}
-              </EditableTranslation>
-            </Link>
-          ))}
+          {menuItems.map((item) =>
+            item.disabled ? (
+              <span
+                key={item.id || item.href}
+                className={`text-[#999] font-normal cursor-not-allowed select-none transition-all duration-300 ${scrollDirection === 'down' && scrolled ? 'text-xs' : 'text-sm'}`}
+                title="Скоро"
+              >
+                <EditableTranslation translationKey={`header.menu.${item.id || 'consulting'}`}>
+                  {item.label}
+                </EditableTranslation>
+              </span>
+            ) : (
+              <Link
+                key={item.id || item.href}
+                to={item.href || `/#${item.id}`}
+                className={`text-[#1A1A1A] font-normal transition-all duration-300 hover:text-[#004aad] ${scrollDirection === 'down' && scrolled ? 'text-xs' : 'text-sm'}`}
+              >
+                <EditableTranslation translationKey={`header.menu.${item.id || 'consulting'}`}>
+                  {item.label}
+                </EditableTranslation>
+              </Link>
+            )
+          )}
         </nav>
 
         <div className="hidden md:flex items-center gap-3">
@@ -193,18 +205,30 @@ export default function Header() {
           }`}
       >
         <nav className="flex flex-col gap-4 px-6 py-4">
-          {menuItems.map((item) => (
-            <Link
-              key={item.id || item.href}
-              to={item.href || `/#${item.id}`}
-              className="py-2 text-[#1A1A1A] transition-colors hover:text-[#004aad]"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              <EditableTranslation translationKey={`header.menu.${item.id || 'consulting'}`}>
-                {item.label}
-              </EditableTranslation>
-            </Link>
-          ))}
+          {menuItems.map((item) =>
+            item.disabled ? (
+              <span
+                key={item.id || item.href}
+                className="py-2 text-[#999] cursor-not-allowed select-none"
+                title="Скоро"
+              >
+                <EditableTranslation translationKey={`header.menu.${item.id || 'consulting'}`}>
+                  {item.label}
+                </EditableTranslation>
+              </span>
+            ) : (
+              <Link
+                key={item.id || item.href}
+                to={item.href || `/#${item.id}`}
+                className="py-2 text-[#1A1A1A] transition-colors hover:text-[#004aad]"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <EditableTranslation translationKey={`header.menu.${item.id || 'consulting'}`}>
+                  {item.label}
+                </EditableTranslation>
+              </Link>
+            )
+          )}
 
           {/* Language Switcher - Mobile */}
           <div className="mt-3">
