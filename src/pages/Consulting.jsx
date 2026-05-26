@@ -179,7 +179,7 @@ export default function Consulting() {
 
             {/* ── Services Catalog ── */}
             <section className="py-20 md:py-28 bg-[#F7FFFE]">
-                <div className="mx-auto max-w-[1900px] px-6 lg:px-10">
+                <div className="mx-auto max-w-[1400px] px-4 lg:px-10">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -193,7 +193,7 @@ export default function Consulting() {
                     </motion.div>
 
                     {/* Row 1 — 4 cards */}
-                    <div className="mb-6 grid gap-6" style={{ gridTemplateColumns: 'repeat(4, 430px)', justifyContent: 'center' }}>
+                    <div className="mb-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
                         {services.slice(0, 4).map((s, i) => (
                             <motion.div
                                 key={s.key}
@@ -202,25 +202,25 @@ export default function Consulting() {
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.5, delay: i * 0.08 }}
                                 className="relative flex flex-col overflow-hidden rounded-3xl bg-white"
-                                style={{ width: '430px', height: '490px', border: '1px solid #E5E7EB' }}
+                                style={{ minHeight: '380px', border: '1px solid #E5E7EB' }}
                             >
                                 {/* blue top bar centered */}
-                                <div className="absolute left-1/2 top-0 -translate-x-1/2" style={{ width: 163, height: 8, background: '#015CC1' }} />
-                                <div className="flex flex-1 flex-col px-9 pt-10 pb-8">
+                                <div className="absolute left-1/2 top-0 -translate-x-1/2" style={{ width: 120, height: 6, background: '#015CC1' }} />
+                                <div className="flex flex-1 flex-col px-7 pt-9 pb-7">
                                     <h3
-                                        className="mb-5 text-center text-black"
-                                        style={{ fontSize: '32px', fontFamily: 'Inter, sans-serif', fontWeight: 600, textTransform: 'capitalize', lineHeight: '1.3', overflowWrap: 'break-word' }}
+                                        className="mb-4 text-center text-black"
+                                        style={{ fontSize: '24px', fontFamily: 'Inter, sans-serif', fontWeight: 600, textTransform: 'capitalize', lineHeight: '1.3', overflowWrap: 'break-word' }}
                                     >
                                         {t(`consulting.services.items.${s.key}.title`)}
                                     </h3>
-                                    <p className="flex-1 text-center text-black" style={{ fontSize: '14px', lineHeight: '27px', fontFamily: 'Inter, sans-serif', fontWeight: 400 }}>
+                                    <p className="flex-1 text-center text-black" style={{ fontSize: '13px', lineHeight: '24px', fontFamily: 'Inter, sans-serif', fontWeight: 400 }}>
                                         {t(`consulting.services.items.${s.key}.description`)}
                                     </p>
-                                    <div className="mt-6 flex justify-center">
+                                    <div className="mt-5 flex justify-center">
                                         <Link
                                             to={s.route}
-                                            className="inline-flex items-center gap-2 rounded-full bg-[#004AAD] px-6 py-3 text-white transition-all hover:bg-[#003580]"
-                                            style={{ fontSize: '16px', fontFamily: 'Space Grotesk, sans-serif', fontWeight: 500 }}
+                                            className="inline-flex items-center gap-2 rounded-full bg-[#004AAD] px-5 py-2.5 text-white transition-all hover:bg-[#003580]"
+                                            style={{ fontSize: '14px', fontFamily: 'Space Grotesk, sans-serif', fontWeight: 500 }}
                                         >
                                             {t('common.more')} <ArrowRight size={16} />
                                         </Link>
@@ -231,7 +231,7 @@ export default function Consulting() {
                     </div>
 
                     {/* Row 2 — 3 cards centered */}
-                    <div className="grid gap-6" style={{ gridTemplateColumns: 'repeat(3, 430px)', justifyContent: 'center' }}>
+                    <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
                         {services.slice(4).map((s, i) => {
                             const isLast = i === services.slice(4).length - 1;
                             return (
@@ -243,8 +243,7 @@ export default function Consulting() {
                                     transition={{ duration: 0.5, delay: i * 0.08 }}
                                     className="relative flex flex-col overflow-hidden rounded-3xl"
                                     style={{
-                                        width: '430px',
-                                        height: '490px',
+                                        minHeight: '380px',
                                         background: isLast ? '#004AAD' : 'white',
                                         border: '1px solid #E5E7EB',
                                     }}
@@ -252,13 +251,13 @@ export default function Consulting() {
                                     {/* blue top bar centered */}
                                     <div
                                         className="absolute left-1/2 top-0 -translate-x-1/2"
-                                        style={{ width: 163, height: 8, background: isLast ? 'white' : '#015CC1' }}
+                                        style={{ width: 120, height: 6, background: isLast ? 'white' : '#015CC1' }}
                                     />
-                                    <div className="flex flex-1 flex-col px-9 pt-10 pb-8">
+                                    <div className="flex flex-1 flex-col px-7 pt-9 pb-7">
                                         <h3
-                                            className="mb-5 text-center"
+                                            className="mb-4 text-center"
                                             style={{
-                                                fontSize: '32px',
+                                                fontSize: '24px',
                                                 fontFamily: 'Inter, sans-serif',
                                                 fontWeight: 600,
                                                 textTransform: 'capitalize',
@@ -272,8 +271,8 @@ export default function Consulting() {
                                         <p
                                             className="flex-1 text-center"
                                             style={{
-                                                fontSize: '14px',
-                                                lineHeight: '27px',
+                                                fontSize: '13px',
+                                                lineHeight: '24px',
                                                 fontFamily: 'Inter, sans-serif',
                                                 fontWeight: 400,
                                                 color: isLast ? 'white' : 'black',
