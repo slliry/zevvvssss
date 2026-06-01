@@ -34,6 +34,14 @@ const IncidentManagement = lazy(() => import('./pages/IncidentManagement.jsx'));
 const Consulting = lazy(() => import('./pages/Consulting.jsx'));
 const BusinessConsulting = lazy(() => import('./pages/BusinessConsulting.jsx'));
 const IsMaturityCase = lazy(() => import('./pages/IsMaturityCase.jsx'));
+const ProjectManagement = lazy(() => import('./pages/ProjectManagement.jsx'));
+const BizProcessMethodology = lazy(() => import('./pages/BizProcessMethodology.jsx'));
+const IsAudit = lazy(() => import('./pages/IsAudit.jsx'));
+const IsRiskManagementConsulting = lazy(() => import('./pages/IsRiskManagementConsulting.jsx'));
+const IsArchitecture = lazy(() => import('./pages/IsArchitecture.jsx'));
+const VulnAssessmentConsulting = lazy(() => import('./pages/VulnAssessmentConsulting.jsx'));
+const FinanceRiskCase = lazy(() => import('./pages/FinanceRiskCase.jsx'));
+const ITAuditCase = lazy(() => import('./pages/ITAuditCase.jsx'));
 
 function Layout() {
   const location = useLocation();
@@ -119,6 +127,14 @@ function App() {
           <Route path="/consulting" element={<Consulting />} />
           <Route path="/consulting/business" element={<BusinessConsulting />} />
           <Route path="/consulting/cases/is-maturity" element={<IsMaturityCase />} />
+          <Route path="/consulting/project-management" element={<ProjectManagement />} />
+          <Route path="/consulting/biz-process-methodology" element={<BizProcessMethodology />} />
+          <Route path="/consulting/is-audit" element={<IsAudit />} />
+          <Route path="/consulting/is-risk-management" element={<IsRiskManagementConsulting />} />
+          <Route path="/consulting/is-architecture" element={<IsArchitecture />} />
+          <Route path="/consulting/vuln-assessment" element={<VulnAssessmentConsulting />} />
+          <Route path="/consulting/cases/finance-risk" element={<FinanceRiskCase />} />
+          <Route path="/consulting/cases/it-audit" element={<ITAuditCase />} />
         </Route>
         <Route path="/admin" element={<Admin />} />
       </Routes>

@@ -956,5 +956,235 @@
         "resultsTitle": "Achieved Results",
         "resultsLeft": "More than ten organizations from various industries were assessed using adapted checklists tailored to their applicable requirements and activity specifics. This ensured audit relevance for each company without losing the systemic approach.",
         "resultsRight": "All results were consolidated into a unified IS maturity model, ensuring data comparability between organizations. The final information is presented in unified dashboards and analytical reports for convenient comparison and decision-making."
+    },
+    "projectManagement": {
+        "badge": "Project Management",
+        "title": "IS/IT Project and Risk Management",
+        "subtitle": "We help build transparent IS and IT project management, reduce failure risks, and ensure control of deadlines, resources, and critical processes.",
+        "ctaMain": "Get Consultation",
+        "ctaBack": "All Services",
+        "desc1": "IS/IT project and risk management is a systematic approach to coordinating technology initiatives, information security tasks, and corporate risk management processes. We analyze the current state of projects, identify vulnerable points, and help build an effective management model.",
+        "desc2": "Based on the analysis, a clear control structure is formed: key risks, areas of responsibility, priorities, and monitoring mechanisms are defined. This improves project predictability, reduces the likelihood of incidents, and ensures sustainable development of IT and IS directions.",
+        "valueTitle": "Value",
+        "offerTitle": "We offer:",
+        "value": [
+            "Ensures transparency of IS/IT projects and task execution control",
+            "Helps timely identify and reduce project and operational risks",
+            "Simplifies coordination of teams, processes, and responsible persons",
+            "Improves resource and timeline management efficiency",
+            "Reduces likelihood of downtime, errors, and critical incidents",
+            "Forms a clear system for decision-making and change control"
+        ],
+        "offer": [
+            "Analysis of current IS/IT projects and management processes",
+            "Assessment of risks affecting deadlines, resources, and security",
+            "Formation of project management structure and responsibility zones",
+            "Development of monitoring, control, and reporting processes",
+            "Identification of critical dependencies and bottlenecks",
+            "Preparation of recommendations for risk reduction and resilience improvement",
+            "Development of a roadmap for process development and optimization",
+            "Support for implementing changes and execution control"
+        ]
+    },
+    "bizProcessMethodology": {
+        "badge": "Process Methodology",
+        "title": "Business Process and Risk Methodology",
+        "subtitle": "We help build a clear and manageable business process system considering risks, dependencies, and operational efficiency.",
+        "ctaMain": "Get Consultation",
+        "ctaBack": "All Services",
+        "desc1": "Business process and risk methodology is a comprehensive approach to describing, analyzing, and optimizing company processes considering potential threats, constraints, and operational risks. We assess how processes are structured today, where efficiency losses occur, and what factors affect business stability.",
+        "desc2": "Based on the analysis, a unified process management methodology is formed: roles, areas of responsibility, control points, and risk management mechanisms are defined. This improves process transparency, reduces errors, and ensures stable company operations.",
+        "valueTitle": "Value",
+        "offerTitle": "We offer:",
+        "value": [
+            "Improves transparency and manageability of business processes",
+            "Helps identify risks and critical points at early stages",
+            "Simplifies interaction between departments and teams",
+            "Reduces operational losses and probability of errors",
+            "Forms a unified approach to process and change management",
+            "Improves company resilience during growth and scaling"
+        ],
+        "offer": [
+            "Analysis of existing business processes and organizational structure",
+            "Identification of risks, bottlenecks, and inefficient process stages",
+            "Formation of process description and management methodology",
+            "Development of process maps, roles, and areas of responsibility",
+            "Definition of control points and monitoring mechanisms",
+            "Development of optimization and risk reduction recommendations",
+            "Preparation of regulations, standards, and methodological materials",
+            "Support for implementing process approach and changes"
+        ]
+    },
+    "isAudit": {
+        "badge": "IS Audit",
+        "title": "IS Process Audit in Risks",
+        "subtitle": "We help assess the current state of information security processes, identify weaknesses, and build a more effective and resilient IS management system.",
+        "ctaMain": "Get Consultation",
+        "ctaBack": "All Services",
+        "desc1": "IS process audit is a comprehensive assessment of existing processes, procedures, and information security mechanisms of a company. We analyze how well processes comply with business requirements, internal regulations, standards, and real threats.",
+        "desc2": "During the audit, vulnerabilities, organizational and process risks, control deficiencies, and potential incident zones are identified. Based on the results, recommendations are formed for optimizing processes, improving protection levels, and managing information security effectively.",
+        "valueTitle": "Value",
+        "offerTitle": "We offer:",
+        "value": [
+            "Provides an objective picture of IS process status",
+            "Identifies weaknesses, risks, and control deficiencies",
+            "Improves maturity level of information security processes",
+            "Reduces likelihood of incidents and operational errors",
+            "Helps ensure compliance with requirements and standards",
+            "Forms the foundation for further IS system development"
+        ],
+        "offer": [
+            "Analysis of current information security processes and practices",
+            "Assessment of control mechanism and risk management effectiveness",
+            "Identification of vulnerable zones, gaps, and non-conformities",
+            "Review of incident response and access management processes",
+            "Analysis of departmental interaction within IS processes",
+            "Preparation of optimization and process maturity improvement recommendations",
+            "Development of improvement plan and priority development directions",
+            "Support for implementing corrective measures"
+        ]
+    },
+    "isRiskManagement": {
+        "badge": "IS Risk Management",
+        "title": "Information Security Risk Management",
+        "subtitle": "We help build a systematic approach to identifying, assessing, and reducing information security risks for stable and secure business operations.",
+        "ctaMain": "Get Consultation",
+        "ctaBack": "All Services",
+        "desc1": "IS risk management is the process of identifying, analyzing, and controlling threats that can affect information assets, business processes, and company resilience. We assess existing risks, protection levels, and the effectiveness of existing control measures.",
+        "desc2": "Based on the analysis, a transparent risk management system is formed: critical assets, probable threats, impact levels, and risk processing priorities are defined. This enables informed decision-making, reduces incident likelihood, and improves the company's information security level.",
+        "valueTitle": "Value",
+        "offerTitle": "We offer:",
+        "value": [
+            "Helps timely identify and control IS risks",
+            "Improves company resilience to internal and external threats",
+            "Reduces likelihood of incidents and financial losses",
+            "Forms a transparent approach to IS decision-making",
+            "Improves efficiency of control and monitoring processes",
+            "Helps ensure compliance with requirements and standards"
+        ],
+        "offer": [
+            "Identification and analysis of information security risks",
+            "Assessment of threat probability and potential business impact",
+            "Identification of critical assets and high-risk zones",
+            "Formation of risk register and prioritization system",
+            "Analysis of existing control measures and their effectiveness",
+            "Development of risk reduction and treatment recommendations",
+            "Preparation of IS risk management methodology and processes",
+            "Support for implementing and monitoring the risk management system"
+        ]
+    },
+    "isArchitecture": {
+        "badge": "IS Architecture",
+        "title": "Information Security Architecture",
+        "subtitle": "We help build an effective information security architecture that protects systems, data, and business processes of the company.",
+        "ctaMain": "Get Consultation",
+        "ctaBack": "All Services",
+        "desc1": "Information security architecture is a comprehensive approach to building a protection structure for IT infrastructure, applications, data, and company processes. We analyze the current architecture, identify vulnerable zones, excessive or insufficient protection mechanisms, and assess system resilience to threats.",
+        "desc2": "Based on the analysis, a target IS architecture is formed: protection principles, control mechanisms, security system interactions, and risk management approaches are defined. This provides a higher protection level, reduces incident likelihood, and creates a stable foundation for IT and business development.",
+        "valueTitle": "Value",
+        "offerTitle": "We offer:",
+        "value": [
+            "Improves protection level of information systems and data",
+            "Helps build a holistic and manageable security approach",
+            "Reduces risks of vulnerabilities, incidents, and configuration errors",
+            "Ensures effective interaction of protection tools and IT systems",
+            "Improves infrastructure resilience to internal and external threats",
+            "Forms the foundation for scaling and secure company development"
+        ],
+        "offer": [
+            "Analysis of current IS architecture and IT infrastructure",
+            "Assessment of vulnerable zones, risks, and existing protection mechanisms",
+            "Formation of target information security architecture",
+            "Development of segmentation, access control, and data protection principles",
+            "Definition of protection tool requirements and their integration",
+            "Preparation of security level improvement and resilience recommendations",
+            "Development of architectural diagrams, standards, and IS management approaches",
+            "Support for implementing and developing security architecture"
+        ]
+    },
+    "vulnAssessment": {
+        "badge": "Vulnerability Assessment",
+        "title": "Vulnerability Assessment",
+        "subtitle": "We help identify vulnerabilities in IT infrastructure, systems, and company services for timely reduction of information security risks.",
+        "ctaMain": "Get Consultation",
+        "ctaBack": "All Services",
+        "desc1": "Vulnerability assessment is the process of analyzing information systems, network infrastructure, and digital assets of a company to identify weaknesses and potential security threats. We assess the protection level, determine the criticality of discovered vulnerabilities, and analyze possible business impact.",
+        "desc2": "Based on the results, a prioritized risk picture and vulnerability remediation recommendations are formed. This improves infrastructure protection level, reduces cyberincident likelihood, and ensures more resilient IT environment operations.",
+        "valueTitle": "Value",
+        "offerTitle": "We offer:",
+        "value": [
+            "Enables timely identification of vulnerabilities and weaknesses",
+            "Reduces likelihood of cyberattacks and security incidents",
+            "Improves IT infrastructure and service protection level",
+            "Helps prioritize remediation of critical risks",
+            "Improves efficiency of security monitoring and control processes",
+            "Forms the foundation for further IS system development"
+        ],
+        "offer": [
+            "Analysis of IT infrastructure, systems, and network services",
+            "Identification of technical vulnerabilities and potential threats",
+            "Assessment of vulnerability criticality and possible business impact",
+            "Formation of vulnerability register and risk prioritization",
+            "Preparation of remediation and risk reduction recommendations",
+            "Analysis of existing protection measure effectiveness",
+            "Preparation of reporting and analytics on assessment results",
+            "Support for the process of eliminating identified vulnerabilities"
+        ]
+    },
+    "financeRiskCase": {
+        "badge": "Case Study",
+        "title": "Financial Group — Risk Management Module Implementation",
+        "subtitle": "For a large financial group with a branched structure of subsidiaries, a project was implemented to centralize risk management processes with a unified space for consolidation, automated control, and improved management transparency.",
+        "problemTitle": "Problem Description",
+        "problemText": "The challenge was the absence of a unified risk management approach within the group of companies. Each division maintained its own risk registers in Excel, leading to data duplication, outdated information, and low process transparency. Reporting consolidation was performed manually and took significant time, while management made decisions based on outdated or incomplete data. There were no unified monitoring, escalation, and critical risk control mechanisms between subsidiaries.",
+        "solutionTitle": "Implemented Solution",
+        "solutionItems": [
+            "A centralized GRC risk management module was implemented for the entire group",
+            "A unified risk register with a standardized data structure was configured",
+            "Automatic escalation mechanisms for critical risks and incidents were implemented",
+            "Analytical dashboards and reporting for C-level and risk committees were configured",
+            "Data consolidation process between divisions was automated",
+            "A monitoring system for statuses, deadlines, and responsible persons was implemented",
+            "Integration of risk management processes between subsidiaries was ensured",
+            "Transparency and manageability of risk management processes were improved"
+        ],
+        "resultsTitle": "Achieved Results",
+        "resultsItems": [
+            "Consolidated risk reporting preparation time reduced from 3 weeks to 2 days",
+            "Critical incidents without timely response reduced by 74%",
+            "Risk transparency and information relevance for management improved",
+            "Interaction process between subsidiaries simplified",
+            "Unified risk management approach at the group level ensured",
+            "Team workload reduced through process and reporting automation",
+            "Management decision-making speed based on current data improved"
+        ]
+    },
+    "itAuditCase": {
+        "badge": "Case Study",
+        "title": "IT Company — Internal Audit System Implementation",
+        "subtitle": "For an IT company preparing for international expansion and investment attraction, an internal audit and control system was built on a GRC platform.",
+        "problemTitle": "Problem Description",
+        "problemText": "The company was preparing for international scaling and an investment round, but internal control and audit processes were absent as a unified system. The evidence base was collected manually, documents were stored separately, and control processes depended on individual employees. Investors and external auditors required a confirmed internal control system, process transparency, and the ability to quickly provide current data. The absence of a centralized approach created risks of due diligence delays and negatively affected the company's readiness for investment review.",
+        "solutionTitle": "Implemented Solution",
+        "solutionItems": [
+            "An internal audit system was implemented on a GRC platform",
+            "Centralized collection and storage of the evidence base was configured",
+            "Audit review processes and task execution control were automated",
+            "Mechanisms for recording remarks, statuses, and corrective actions were implemented",
+            "Roles, areas of responsibility, and approval processes were configured",
+            "Audit data transparency and information relevance control were ensured",
+            "Unified templates and reporting for internal and external reviews were prepared",
+            "Due diligence readiness monitoring tools were implemented"
+        ],
+        "resultsTitle": "Achieved Results",
+        "resultsItems": [
+            "The company successfully passed due diligence without a single critical remark",
+            "The investment round was closed within the planned timeframe",
+            "Document and evidence base preparation time was significantly reduced",
+            "Internal control and audit process transparency was improved",
+            "Dependence on manual processes and individual employees was reduced",
+            "Company readiness for international requirements and reviews was ensured",
+            "A scalable internal control system for further company growth was created"
+        ]
     }
 }

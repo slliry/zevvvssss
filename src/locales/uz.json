@@ -956,5 +956,235 @@
         "resultsTitle": "Erishilgan natijalar",
         "resultsLeft": "O'ndan ortiq tashkilot moslashtirilgan nazorat ro'yxatlaridan foydalanib baholandan o'tdi.",
         "resultsRight": "Barcha natijalar yagona AX yetuklik modeliga konsolidatsiya qilindi."
+    },
+    "projectManagement": {
+        "badge": "Loyihalarni boshqarish",
+        "title": "AT/AX loyihalari va risklarini boshqarish",
+        "subtitle": "AT va AX loyihalarini shaffof boshqarishni, muvaffaqiyatsizlik riskini kamaytirishni va muddatlar, resurslar va muhim jarayonlar ustidan nazoratni ta'minlashga yordam beramiz.",
+        "ctaMain": "Konsultatsiya olish",
+        "ctaBack": "Barcha xizmatlar",
+        "desc1": "AT/AX loyihalari va risklarini boshqarish — kompaniyaning texnologik tashabbuslari, axborot xavfsizligi vazifalari va risk boshqaruvi jarayonlarini muvofiqlashtirish uchun tizimli yondashuv. Loyihalarning joriy holatini tahlil qilamiz, zaif tomonlarni aniqlaymiz va samarali boshqaruv modelini qurishga yordam beramiz.",
+        "desc2": "Tahlil asosida nazoratning tushunarli tuzilmasi shakllanadi: asosiy risklar, javobgarlik sohalari, ustuvorliklar va monitoring mexanizmlari aniqlanadi. Bu loyihalarning bashorat qilinuvchanligini oshirishga, hodisalar ehtimolini kamaytirishga va AT va AX yo'nalishlari barqaror rivojlanishini ta'minlashga imkon beradi.",
+        "valueTitle": "Qiymat",
+        "offerTitle": "Biz taklif qilamiz:",
+        "value": [
+            "AT/AX loyihalarining shaffofligi va vazifalar bajarilishi ustidan nazoratni ta'minlaydi",
+            "Loyiha va operatsion risklarni o'z vaqtida aniqlash va kamaytirishga yordam beradi",
+            "Jamoalar, jarayonlar va mas'ul shaxslar muvofiqligini osonlashtiradi",
+            "Resurslar va muddatlarni boshqarish samaradorligini oshiradi",
+            "Turg'unlik, xatolar va muhim hodisalar ehtimolini kamaytiradi",
+            "Qaror qabul qilish va o'zgarishlar ustidan nazoratning aniq tizimini shakllantiradi"
+        ],
+        "offer": [
+            "AT/AX loyihalari va boshqaruv jarayonlarining joriy holatini tahlil qilish",
+            "Muddatlar, resurslar va xavfsizlikka ta'sir qiluvchi risklarni baholash",
+            "Loyihalarni boshqarish tuzilmasi va javobgarlik sohalarini shakllantirish",
+            "Monitoring, nazorat va hisobot jarayonlarini ishlab chiqish",
+            "Muhim bog'liqliklar va toraygan joylarni aniqlash",
+            "Risklarni kamaytirish bo'yicha tavsiyalar tayyorlash",
+            "Jarayonlarni rivojlantirish yo'l xaritasini ishlab chiqish",
+            "O'zgarishlarni joriy etishni qo'llab-quvvatlash va bajarilishini nazorat qilish"
+        ]
+    },
+    "bizProcessMethodology": {
+        "badge": "Jarayonlar metodologiyasi",
+        "title": "Biznes-jarayonlar va risklar metodologiyasi",
+        "subtitle": "Risklarni, bog'liqliklarni va kompaniya faoliyati samaradorligini hisobga olgan holda tushunarli va boshqariladigan biznes-jarayonlar tizimini qurishga yordam beramiz.",
+        "ctaMain": "Konsultatsiya olish",
+        "ctaBack": "Barcha xizmatlar",
+        "desc1": "Biznes-jarayonlar va risklar metodologiyasi — potentsial tahdidlar, cheklovlar va operatsion risklarni hisobga olgan holda kompaniya jarayonlarini tavsiflash, tahlil qilish va optimallashtirish uchun kompleks yondashuv. Jarayonlar bugun qanday qurilganligini, samaradorlik yo'qotishlari qaerda paydo bo'lishini va biznes barqarorligiga qanday omillar ta'sir qilishini baholaymiz.",
+        "desc2": "Tahlil asosida jarayonlarni boshqarishning yagona metodologiyasi shakllanadi: rollar, javobgarlik sohalari, nazorat nuqtalari va risk boshqaruvi mexanizmlari aniqlanadi.",
+        "valueTitle": "Qiymat",
+        "offerTitle": "Biz taklif qilamiz:",
+        "value": [
+            "Biznes-jarayonlarning shaffofligi va boshqarilishini oshiradi",
+            "Risklarni va muhim nuqtalarni erta bosqichda aniqlashga yordam beradi",
+            "Bo'limlar va jamoalar o'rtasidagi hamkorlikni osonlashtiradi",
+            "Operatsion yo'qotishlar va xatolar ehtimolini kamaytiradi",
+            "Jarayonlarni va o'zgarishlarni boshqarishning yagona yondashuvini shakllantiradi",
+            "O'sish va kengayish davomida kompaniya barqarorligini oshiradi"
+        ],
+        "offer": [
+            "Mavjud biznes-jarayonlar va tashkiliy tuzilmani tahlil qilish",
+            "Risklarni, toraygan joylarni va samarasiz jarayon bosqichlarini aniqlash",
+            "Jarayonlarni tavsiflash va boshqarish metodologiyasini shakllantirish",
+            "Jarayonlar xaritalarini, rollar va javobgarlik sohalarini ishlab chiqish",
+            "Nazorat nuqtalari va monitoring mexanizmlarini aniqlash",
+            "Optimallashtirish bo'yicha tavsiyalar ishlab chiqish",
+            "Reglamentlar, standartlar va uslubiy materiallar tayyorlash",
+            "Jarayon yondashuvini joriy etishni qo'llab-quvvatlash"
+        ]
+    },
+    "isAudit": {
+        "badge": "AX auditi",
+        "title": "Risklardagi AX jarayonlarini auditi",
+        "subtitle": "Axborot xavfsizligi jarayonlarining joriy holatini baholashga, zaif tomonlarni aniqlashga va AX boshqaruvining samarali tizimini qurishga yordam beramiz.",
+        "ctaMain": "Konsultatsiya olish",
+        "ctaBack": "Barcha xizmatlar",
+        "desc1": "AX jarayonlarini auditi — kompaniyaning axborot xavfsizligining amaldagi jarayonlari, protseduralar va mexanizmlarini kompleks baholash. Jarayonlarning biznes talablariga, ichki reglamentlarga, standartlarga va real tahdidlarga qanchalik mos kelishini tahlil qilamiz.",
+        "desc2": "Audit davomida zaifliklar, tashkiliy va jarayon risklari, nazorat kamchiliklari va potentsial hodisalar sohalari aniqlanadi. Natijalar asosida jarayonlarni optimallashtirish bo'yicha tavsiyalar shakllanadi.",
+        "valueTitle": "Qiymat",
+        "offerTitle": "Biz taklif qilamiz:",
+        "value": [
+            "AX jarayonlari holatining ob'ektiv rasmini olishga imkon beradi",
+            "Zaif tomonlarni, risklarni va nazorat kamchiliklarini aniqlaydi",
+            "Axborot xavfsizligi jarayonlari yetuklik darajasini oshiradi",
+            "Hodisalar va operatsion xatolar ehtimolini kamaytiradi",
+            "Talablar va standartlarga muvofiqlikni ta'minlashga yordam beradi",
+            "AX tizimini yanada rivojlantirishga asos yaratadi"
+        ],
+        "offer": [
+            "Axborot xavfsizligining joriy jarayonlari va amaliyotlarini tahlil qilish",
+            "Nazorat mexanizmlari va risk boshqaruvi samaradorligini baholash",
+            "Zaif sohalar, kamchiliklar va nomuvofiqliklarni aniqlash",
+            "Hodisalarga munosabat va kirishni boshqarish jarayonlarini tekshirish",
+            "AX jarayonlari doirasidagi bo'limlararo o'zaro ta'sirni tahlil qilish",
+            "Optimallashtirish bo'yicha tavsiyalar tayyorlash",
+            "Yaxshilash rejasi va ustuvor rivojlanish yo'nalishlarini ishlab chiqish",
+            "Tuzatuvchi chora-tadbirlarni joriy etishni qo'llab-quvvatlash"
+        ]
+    },
+    "isRiskManagement": {
+        "badge": "AX risklarini boshqarish",
+        "title": "Axborot xavfsizligi risklarini boshqarish",
+        "subtitle": "Biznesning barqaror va xavfsiz ishlashi uchun AX risklarini aniqlash, baholash va kamaytirish uchun tizimli yondashuvni qurishga yordam beramiz.",
+        "ctaMain": "Konsultatsiya olish",
+        "ctaBack": "Barcha xizmatlar",
+        "desc1": "AX risklarini boshqarish — axborot aktivlariga, biznes-jarayonlarga va kompaniya barqarorligiga ta'sir qila oladigan tahdidlarni aniqlash, tahlil qilish va nazorat qilish jarayoni. Mavjud risklarni, himoya darajasini va nazorat choralarining samaradorligini baholaymiz.",
+        "desc2": "Tahlil asosida risklarni boshqarishning shaffof tizimi shakllanadi: muhim aktivlar, ehtimoliy tahdidlar, ta'sir darajalari va risklarni qayta ishlash ustuvorliklari aniqlanadi.",
+        "valueTitle": "Qiymat",
+        "offerTitle": "Biz taklif qilamiz:",
+        "value": [
+            "AX risklarini o'z vaqtida aniqlash va nazorat qilishga yordam beradi",
+            "Kompaniyaning ichki va tashqi tahdidlarga chidamliligini oshiradi",
+            "Hodisalar va moliyaviy yo'qotishlar ehtimolini kamaytiradi",
+            "AX sohasida qaror qabul qilishga shaffof yondashuv shakllantiradi",
+            "Nazorat va monitoring jarayonlari samaradorligini oshiradi",
+            "Talablar va standartlarga muvofiqlikni ta'minlashga yordam beradi"
+        ],
+        "offer": [
+            "Axborot xavfsizligi risklarini aniqlash va tahlil qilish",
+            "Tahdid ehtimoli va biznesga potentsial ta'sirni baholash",
+            "Muhim aktivlar va yuqori risk sohalarini aniqlash",
+            "Risklar reestri va ustuvorlashtirish tizimini shakllantirish",
+            "Mavjud nazorat choralari va ularning samaradorligini tahlil qilish",
+            "Risklarni kamaytirish bo'yicha tavsiyalar ishlab chiqish",
+            "AX risklarini boshqarish metodologiyasini tayyorlash",
+            "Risk boshqaruvi tizimini joriy etishni qo'llab-quvvatlash"
+        ]
+    },
+    "isArchitecture": {
+        "badge": "AX arxitekturasi",
+        "title": "Axborot xavfsizligi arxitekturasi",
+        "subtitle": "Kompaniyaning tizimlarini, ma'lumotlarini va biznes-jarayonlarini himoya qilishni ta'minlaydigan samarali AX arxitekturasini qurishga yordam beramiz.",
+        "ctaMain": "Konsultatsiya olish",
+        "ctaBack": "Barcha xizmatlar",
+        "desc1": "Axborot xavfsizligi arxitekturasi — kompaniyaning AT infratuzilmasi, ilovalar, ma'lumotlar va jarayonlarini himoya tuzilmasini qurish uchun kompleks yondashuv. Joriy arxitekturani tahlil qilamiz, zaif sohalarni aniqlaymiz va tizimning tahdidlarga chidamlilik darajasini baholaymiz.",
+        "desc2": "Tahlil asosida maqsadli AX arxitekturasi shakllanadi: himoya tamoyillari, nazorat mexanizmlari, xavfsizlik tizimlari o'zaro ta'siri va risk boshqaruvi yondashuvlari aniqlanadi.",
+        "valueTitle": "Qiymat",
+        "offerTitle": "Biz taklif qilamiz:",
+        "value": [
+            "Axborot tizimlari va ma'lumotlar himoya darajasini oshiradi",
+            "Xavfsizlikka yaxlit va boshqariladigan yondashuvni qurishga yordam beradi",
+            "Zaifliklar, hodisalar va konfiguratsiya xatolari riskini kamaytiradi",
+            "Himoya vositalari va AT tizimlari samarali o'zaro ta'sirini ta'minlaydi",
+            "Infratuzilmaning ichki va tashqi tahdidlarga chidamliligini oshiradi",
+            "Kompaniyani kengaytirish va xavfsiz rivojlantirishga asos yaratadi"
+        ],
+        "offer": [
+            "Joriy AX arxitekturasi va AT infratuzilmasini tahlil qilish",
+            "Zaif sohalar, risklar va mavjud himoya mexanizmlarini baholash",
+            "Maqsadli axborot xavfsizligi arxitekturasini shakllantirish",
+            "Segmentatsiya, kirishni nazorat qilish va ma'lumotlarni himoya qilish tamoyillarini ishlab chiqish",
+            "Himoya vositalariga qo'yiladigan talablarni aniqlash",
+            "Xavfsizlik darajasini oshirish bo'yicha tavsiyalar tayyorlash",
+            "Arxitektura sxemalari va standartlarni ishlab chiqish",
+            "Xavfsizlik arxitekturasini joriy etishni qo'llab-quvvatlash"
+        ]
+    },
+    "vulnAssessment": {
+        "badge": "Zaifliklarni baholash",
+        "title": "Zaifliklarni baholash",
+        "subtitle": "AX risklarini o'z vaqtida kamaytirish uchun kompaniyaning AT infratuzilmasi, tizimlar va xizmatlaridagi zaifliklarni aniqlashga yordam beramiz.",
+        "ctaMain": "Konsultatsiya olish",
+        "ctaBack": "Barcha xizmatlar",
+        "desc1": "Zaifliklarni baholash — zaif tomonlar va potentsial xavfsizlik tahdidlarini aniqlash maqsadida kompaniyaning axborot tizimlari, tarmoq infratuzilmasi va raqamli aktivlarini tahlil qilish jarayoni. Himoya darajasini baholaymiz va biznesga mumkin bo'lgan ta'sirni tahlil qilamiz.",
+        "desc2": "Natijalar asosida risklarning ustuvor manzarasi va zaifliklarni bartaraf etish bo'yicha tavsiyalar shakllanadi. Bu infratuzilma himoya darajasini oshirishga va kiberhujumlar ehtimolini kamaytirishga imkon beradi.",
+        "valueTitle": "Qiymat",
+        "offerTitle": "Biz taklif qilamiz:",
+        "value": [
+            "Zaifliklarni va zaif tomonlarni o'z vaqtida aniqlashga imkon beradi",
+            "Kiberhujumlar va xavfsizlik hodisalari ehtimolini kamaytiradi",
+            "AT infratuzilmasi va xizmatlar himoya darajasini oshiradi",
+            "Muhim risklarni bartaraf etish ustuvorliklarini aniqlashga yordam beradi",
+            "Xavfsizlikni monitoring va nazorat qilish jarayonlari samaradorligini oshiradi",
+            "AX tizimini yanada rivojlantirishga asos yaratadi"
+        ],
+        "offer": [
+            "AT infratuzilmasi, tizimlar va tarmoq xizmatlarini tahlil qilish",
+            "Texnik zaifliklar va potentsial tahdidlarni aniqlash",
+            "Zaifliklarning kritikligini va biznesga mumkin bo'lgan ta'sirini baholash",
+            "Zaifliklar reestri va risklarni ustuvorlashtirish",
+            "Risklarni bartaraf etish bo'yicha tavsiyalar tayyorlash",
+            "Mavjud himoya choralarining samaradorligini tahlil qilish",
+            "Baholash natijalari bo'yicha hisobot tayyorlash",
+            "Aniqlangan zaifliklarni bartaraf etish jarayonini qo'llab-quvvatlash"
+        ]
+    },
+    "financeRiskCase": {
+        "badge": "Keys",
+        "title": "Moliya guruhi — risk boshqaruvi modulini joriy etish",
+        "subtitle": "Ko'p tarmoqli tuzilmaga ega yirik moliya guruhi uchun risk boshqaruvi jarayonlarini markazlashtirish loyihasi amalga oshirildi.",
+        "problemTitle": "Muammoning tavsifi",
+        "problemText": "Qiyinchilik kompaniyalar guruhida risk boshqaruvining yagona yondashuvi yo'qligida edi. Har bir bo'lim Excel'da o'z risklar reestrlarini yuritdi, bu ma'lumotlarning takrorlanishiga, axborot dolzarbligining yo'qolishiga va jarayonlar shaffofligining pasayishiga olib keldi. Hisobotni konsolidatsiya qilish qo'lda amalga oshirildi va katta vaqt oldi, rahbariyat esa eskirgan ma'lumotlar asosida qaror qabul qildi.",
+        "solutionTitle": "Amalga oshirilgan yechim",
+        "solutionItems": [
+            "Butun kompaniyalar guruhi uchun markazlashtirilgan GRC risk boshqaruvi moduli joriy etildi",
+            "Unifikatsiyalangan ma'lumotlar tuzilmasi bilan yagona risklar reestri sozlandi",
+            "Muhim risklar va hodisalarni avtomatik ogohlantirish mexanizmlari amalga oshirildi",
+            "C-level va risk qo'mitalari uchun analitik dashboardlar va hisobot sozlandi",
+            "Bo'limlar o'rtasida ma'lumotlarni konsolidatsiya qilish jarayoni avtomatlashtirildi",
+            "Statuslar, muddatlar va mas'ul shaxslarni monitoring qilish tizimi amalga oshirildi",
+            "Sho'ba kompaniyalar o'rtasida risk boshqaruvi jarayonlari integratsiyasi ta'minlandi",
+            "Risk-menejment jarayonlari shaffofligi va boshqarilishi oshirildi"
+        ],
+        "resultsTitle": "Erishilgan natijalar",
+        "resultsItems": [
+            "Risklar bo'yicha konsolidatsiyalangan hisobot tayyorlash vaqti 3 haftadan 2 kunga qisqardi",
+            "O'z vaqtida munosabat bildirilmagan muhim hodisalar soni 74% ga kamaydi",
+            "Risklarning shaffofligi va rahbariyat uchun axborot dolzarbligi oshirildi",
+            "Sho'ba tashkilotlar o'rtasidagi o'zaro ta'sir jarayoni soddalashtiridi",
+            "Butun guruh darajasida risk boshqaruvining yagona yondashuvi ta'minlandi",
+            "Jarayonlarni avtomatlashtirishlar hisobiga jamoalar yuklamasi kamaydi",
+            "Dolzarb ma'lumotlar asosida boshqaruv qarorlarini qabul qilish tezligi oshdi"
+        ]
+    },
+    "itAuditCase": {
+        "badge": "Keys",
+        "title": "IT-kompaniya — ichki audit tizimini joriy etish",
+        "subtitle": "Xalqaro bozorga chiqish va investitsiya jalb qilishga tayyorlanayotgan IT-kompaniya uchun GRC platformasi asosida ichki audit va nazorat tizimi qurildi.",
+        "problemTitle": "Muammoning tavsifi",
+        "problemText": "Kompaniya xalqaro kengayish va investitsiya raundiga tayyorgarlik bosqichida edi, lekin ichki nazorat va audit jarayonlari yagona tizim sifatida mavjud emas edi. Dalillar bazasi qo'lda yig'ildi, hujjatlar tarqoq saqlandi. Investorlar va tashqi auditorlar tasdiqlangan ichki nazorat tizimini, jarayonlar shaffofligini va dolzarb ma'lumotlarni tezda taqdim etish imkoniyatini talab qildi.",
+        "solutionTitle": "Amalga oshirilgan yechim",
+        "solutionItems": [
+            "GRC platformasi asosida ichki audit tizimi joriy etildi",
+            "Dalillar bazasini markazlashtirilgan yig'ish va saqlash sozlandi",
+            "Audit tekshiruvlari va vazifalar bajarilishini nazorat qilish jarayonlari avtomatlashtirildi",
+            "Mulohazalarni, statuslarni va tuzatuvchi harakatlarni qayd etish mexanizmlari amalga oshirildi",
+            "Rollar, javobgarlik sohalari va kelishuv jarayonlari sozlandi",
+            "Audit ma'lumotlari shaffofligi va axborot dolzarbligini nazorat qilish ta'minlandi",
+            "Ichki va tashqi tekshiruvlar uchun unifikatsiyalangan shablonlar va hisobot tayyorlandi",
+            "Due diligence ga tayyorgarlikni monitoring qilish vositalari amalga oshirildi"
+        ],
+        "resultsTitle": "Erishilgan natijalar",
+        "resultsItems": [
+            "Kompaniya birorta kritik izohsiz due diligence'dan muvaffaqiyatli o'tdi",
+            "Investitsiya raundi rejalashtirilgan muddatlarda yopildi",
+            "Hujjatlar va dalillar bazasini tayyorlash vaqti sezilarli qisqardi",
+            "Ichki nazorat va audit jarayonlari shaffofligi oshirildi",
+            "Qo'lda amalga oshiriladigan jarayonlarga va alohida xodimlarga bog'liqlik kamaydi",
+            "Xalqaro talablar va tekshiruvlarga kompaniyaning tayyor ekanligi ta'minlandi",
+            "Kompaniyaning keyingi o'sishi uchun kengaytirilishi mumkin bo'lgan ichki nazorat tizimi yaratildi"
+        ]
     }
 }

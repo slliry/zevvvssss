@@ -23,12 +23,12 @@ export default function Consulting() {
 
     const services = [
         { icon: BarChart3,  key: 'businessConsulting',    route: '/consulting/business'     },
-        { icon: Settings,   key: 'projectManagement',     route: '/request'                 },
-        { icon: FileText,   key: 'bizProcessMethodology', route: '/request'                 },
-        { icon: Shield,     key: 'isAudit',               route: '/request'                 },
-        { icon: Target,     key: 'isRiskManagement',      route: '/request'                 },
-        { icon: Layers,     key: 'isArchitecture',        route: '/request'                 },
-        { icon: TrendingUp, key: 'vulnAssessment',        route: '/request'                 },
+        { icon: Settings,   key: 'projectManagement',     route: '/consulting/project-management'       },
+        { icon: FileText,   key: 'bizProcessMethodology', route: '/consulting/biz-process-methodology'  },
+        { icon: Shield,     key: 'isAudit',               route: '/consulting/is-audit'                 },
+        { icon: Target,     key: 'isRiskManagement',      route: '/consulting/is-risk-management'       },
+        { icon: Layers,     key: 'isArchitecture',        route: '/consulting/is-architecture'          },
+        { icon: TrendingUp, key: 'vulnAssessment',        route: '/consulting/vuln-assessment'          },
     ];
 
     const benefits = [
@@ -39,9 +39,9 @@ export default function Consulting() {
     ];
 
     const cases = [
-        { key: 'finance'    },
-        { key: 'it'         },
-        { key: 'isMaturity' },
+        { key: 'finance',    route: '/consulting/cases/finance-risk'  },
+        { key: 'it',         route: '/consulting/cases/it-audit'      },
+        { key: 'isMaturity', route: '/consulting/cases/is-maturity'   },
     ];
 
     return (
@@ -350,7 +350,7 @@ export default function Consulting() {
                                     ))}
                                 </div>
                                 <Link
-                                    to="/request"
+                                    to={cases[0].route}
                                     className="inline-flex items-center gap-2 text-white transition-all hover:gap-3"
                                     style={{ fontSize: '13px', fontWeight: 600, letterSpacing: '1.2px', textTransform: 'uppercase' }}
                                 >
@@ -384,7 +384,7 @@ export default function Consulting() {
                                         {t(`consulting.cases.${c.key}.description`)}
                                     </p>
                                     <Link
-                                        to={c.key === 'isMaturity' ? '/consulting/cases/is-maturity' : '/request'}
+                                        to={c.route}
                                         className="inline-flex items-center gap-2 text-[#0E1630] transition-all hover:gap-3"
                                         style={{ fontSize: '13px', fontWeight: 600, letterSpacing: '1.2px', textTransform: 'uppercase' }}
                                     >

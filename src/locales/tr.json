@@ -956,5 +956,235 @@
         "resultsTitle": "Elde Edilen Sonuçlar",
         "resultsLeft": "Ondan fazla kuruluş, uygulanabilir gereksinimleri ve faaliyet özelliklerini dikkate alarak oluşturulan uyarlanmış kontrol listeleri kullanılarak değerlendirildi.",
         "resultsRight": "Tüm sonuçlar, kuruluşlar arasında veri karşılaştırılabilirliğini sağlayan birleşik bir BG olgunluk modeline konsolide edildi."
+    },
+    "projectManagement": {
+        "badge": "Proje Yönetimi",
+        "title": "BG/BT Proje ve Risk Yönetimi",
+        "subtitle": "BG ve BT projelerinde şeffaf yönetim kurmaya, başarısızlık risklerini azaltmaya ve süre, kaynak ve kritik süreçler üzerinde kontrol sağlamaya yardımcı oluyoruz.",
+        "ctaMain": "Danışmanlık Al",
+        "ctaBack": "Tüm Hizmetler",
+        "desc1": "BG/BT proje ve risk yönetimi, şirketin teknoloji girişimlerini, bilgi güvenliği görevlerini ve risk yönetimi süreçlerini koordine etmeye yönelik sistematik bir yaklaşımdır. Projelerin mevcut durumunu analiz ediyoruz, zayıf noktaları tespit ediyoruz ve etkili bir yönetim modeli oluşturmaya yardımcı oluyoruz.",
+        "desc2": "Analiz temelinde net bir kontrol yapısı oluşturulur: temel riskler, sorumluluk alanları, öncelikler ve izleme mekanizmaları belirlenir. Bu, projelerin öngörülebilirliğini artırmaya, olay olasılığını azaltmaya ve BT ile BG yönlerinin sürdürülebilir gelişimini sağlamaya imkân tanır.",
+        "valueTitle": "Değer",
+        "offerTitle": "Sunduklarımız:",
+        "value": [
+            "BG/BT projelerinin şeffaflığını ve görev takibini sağlar",
+            "Proje ve operasyonel riskleri zamanında tespit etmeye ve azaltmaya yardımcı olur",
+            "Ekipler, süreçler ve sorumlu kişiler arasındaki koordinasyonu kolaylaştırır",
+            "Kaynak ve süre yönetimi etkinliğini artırır",
+            "Kesinti, hata ve kritik olay olasılığını azaltır",
+            "Karar alma ve değişiklik kontrolü için net bir sistem oluşturur"
+        ],
+        "offer": [
+            "BG/BT projeleri ve yönetim süreçlerinin mevcut durumunu analiz etmek",
+            "Süre, kaynak ve güvenliği etkileyen riskleri değerlendirmek",
+            "Proje yönetimi yapısı ve sorumluluk alanlarını oluşturmak",
+            "İzleme, kontrol ve raporlama süreçleri geliştirmek",
+            "Kritik bağımlılıkları ve darboğazları tespit etmek",
+            "Risk azaltma ve dayanıklılık artırma önerileri hazırlamak",
+            "Süreç geliştirme yol haritası oluşturmak",
+            "Değişikliklerin uygulanmasını desteklemek ve icraatı kontrol etmek"
+        ]
+    },
+    "bizProcessMethodology": {
+        "badge": "Süreç Metodolojisi",
+        "title": "İş Süreci ve Risk Metodolojisi",
+        "subtitle": "Riskleri, bağımlılıkları ve şirket verimliliğini göz önünde bulundurarak anlaşılır ve yönetilebilir bir iş süreci sistemi kurmaya yardımcı oluyoruz.",
+        "ctaMain": "Danışmanlık Al",
+        "ctaBack": "Tüm Hizmetler",
+        "desc1": "İş süreci ve risk metodolojisi, potansiyel tehditleri, kısıtlamaları ve operasyonel riskleri göz önünde bulundurarak şirket süreçlerini tanımlamaya, analiz etmeye ve optimize etmeye yönelik kapsamlı bir yaklaşımdır. Süreçlerin bugün nasıl yapılandırıldığını, verimlilik kayıplarının nerede oluştuğunu ve iş istikrarını hangi faktörlerin etkilediğini değerlendiriyoruz.",
+        "desc2": "Analiz temelinde süreç yönetiminin tek tip metodolojisi oluşturulur: roller, sorumluluk alanları, kontrol noktaları ve risk yönetimi mekanizmaları belirlenir.",
+        "valueTitle": "Değer",
+        "offerTitle": "Sunduklarımız:",
+        "value": [
+            "İş süreçlerinin şeffaflığını ve yönetilebilirliğini artırır",
+            "Riskleri ve kritik noktaları erken aşamada tespit etmeye yardımcı olur",
+            "Bölümler ve ekipler arasındaki etkileşimi kolaylaştırır",
+            "Operasyonel kayıpları ve hata olasılığını azaltır",
+            "Süreç ve değişiklik yönetimi için tek tip yaklaşım oluşturur",
+            "Büyüme ve ölçeklendirme sürecinde şirket dayanıklılığını artırır"
+        ],
+        "offer": [
+            "Mevcut iş süreçleri ve organizasyon yapısını analiz etmek",
+            "Riskleri, darboğazları ve verimsiz süreç aşamalarını tespit etmek",
+            "Süreç tanımlama ve yönetim metodolojisi oluşturmak",
+            "Süreç haritaları, roller ve sorumluluk alanlarını geliştirmek",
+            "Kontrol noktaları ve izleme mekanizmalarını belirlemek",
+            "Optimizasyon ve risk azaltma önerileri geliştirmek",
+            "Yönetmelikler, standartlar ve metodolojik materyaller hazırlamak",
+            "Süreç yaklaşımının uygulanmasını desteklemek"
+        ]
+    },
+    "isAudit": {
+        "badge": "BG Denetimi",
+        "title": "Risklerdeki BG Süreçleri Denetimi",
+        "subtitle": "Bilgi güvenliği süreçlerinin mevcut durumunu değerlendirmeye, zayıf noktaları tespit etmeye ve daha etkin bir BG yönetim sistemi kurmaya yardımcı oluyoruz.",
+        "ctaMain": "Danışmanlık Al",
+        "ctaBack": "Tüm Hizmetler",
+        "desc1": "BG süreçleri denetimi, şirketin bilgi güvenliğine ilişkin mevcut süreçlerinin, prosedürlerinin ve mekanizmalarının kapsamlı değerlendirmesidir. Süreçlerin iş gereksinimlerine, iç yönetmeliklere, standartlara ve gerçek tehditlere ne ölçüde uyduğunu analiz ediyoruz.",
+        "desc2": "Denetim sürecinde zayıflıklar, organizasyonel ve süreç riskleri, kontrol eksiklikleri ve potansiyel olay alanları tespit edilir. Sonuçlar temelinde süreçleri optimize etme, koruma düzeyini artırma ve bilgi güvenliğini etkin yönetmeye dair öneriler oluşturulur.",
+        "valueTitle": "Değer",
+        "offerTitle": "Sunduklarımız:",
+        "value": [
+            "BG süreçlerinin durumuna ilişkin nesnel bir tablo elde etmeye imkân tanır",
+            "Zayıf noktaları, riskleri ve kontrol eksikliklerini tespit eder",
+            "Bilgi güvenliği süreçlerinin olgunluk düzeyini artırır",
+            "Olay ve operasyonel hata olasılığını azaltır",
+            "Gereklilikler ve standartlara uyumu sağlamaya yardımcı olur",
+            "BG sisteminin daha da geliştirilmesi için temel oluşturur"
+        ],
+        "offer": [
+            "Bilgi güvenliğinin mevcut süreç ve uygulamalarını analiz etmek",
+            "Kontrol mekanizmaları ve risk yönetimi etkinliğini değerlendirmek",
+            "Zayıf alanları, boşlukları ve uyumsuzlukları tespit etmek",
+            "Olay müdahalesi ve erişim yönetimi süreçlerini incelemek",
+            "BG süreçleri kapsamında bölümlerarası etkileşimi analiz etmek",
+            "Optimizasyon ve süreç olgunluğu artırma önerileri hazırlamak",
+            "İyileştirme planı ve öncelikli gelişim yönleri geliştirmek",
+            "Düzeltici önlemlerin uygulanmasını desteklemek"
+        ]
+    },
+    "isRiskManagement": {
+        "badge": "BG Risk Yönetimi",
+        "title": "Bilgi Güvenliği Risk Yönetimi",
+        "subtitle": "İşletmenin istikrarlı ve güvenli çalışması için BG risklerini belirleme, değerlendirme ve azaltmaya yönelik sistematik bir yaklaşım kurmaya yardımcı oluyoruz.",
+        "ctaMain": "Danışmanlık Al",
+        "ctaBack": "Tüm Hizmetler",
+        "desc1": "BG risk yönetimi, bilgi varlıklarını, iş süreçlerini ve şirket dayanıklılığını etkileyebilecek tehditleri belirleme, analiz etme ve kontrol altında tutma sürecidir. Mevcut riskleri, koruma düzeyini ve kontrol önlemlerinin etkinliğini değerlendiriyoruz.",
+        "desc2": "Analiz temelinde şeffaf bir risk yönetimi sistemi oluşturulur: kritik varlıklar, olası tehditler, etki düzeyleri ve risk işleme öncelikleri belirlenir. Bu, bilinçli kararlar almaya, olay olasılığını azaltmaya ve şirketin BG düzeyini artırmaya imkân tanır.",
+        "valueTitle": "Değer",
+        "offerTitle": "Sunduklarımız:",
+        "value": [
+            "BG risklerini zamanında tespit etmeye ve kontrol etmeye yardımcı olur",
+            "Şirketin iç ve dış tehditlere karşı dayanıklılığını artırır",
+            "Olay ve mali kayıp olasılığını azaltır",
+            "BG alanında karar almak için şeffaf bir yaklaşım oluşturur",
+            "Kontrol ve izleme süreçlerinin etkinliğini artırır",
+            "Gereklilikler ve standartlara uyumu sağlamaya yardımcı olur"
+        ],
+        "offer": [
+            "Bilgi güvenliği risklerini belirleme ve analiz etmek",
+            "Tehdit olasılığını ve iş üzerindeki potansiyel etkiyi değerlendirmek",
+            "Kritik varlıkları ve yüksek risk alanlarını tespit etmek",
+            "Risk sicili ve önceliklendirme sistemi oluşturmak",
+            "Mevcut kontrol önlemlerini ve etkinliğini analiz etmek",
+            "Risk azaltma önerileri geliştirmek",
+            "BG risk yönetimi metodolojisi hazırlamak",
+            "Risk yönetimi sisteminin uygulanmasını desteklemek"
+        ]
+    },
+    "isArchitecture": {
+        "badge": "BG Mimarisi",
+        "title": "Bilgi Güvenliği Mimarisi",
+        "subtitle": "Şirketin sistemlerini, verilerini ve iş süreçlerini korumayı sağlayan etkin bir bilgi güvenliği mimarisi kurmaya yardımcı oluyoruz.",
+        "ctaMain": "Danışmanlık Al",
+        "ctaBack": "Tüm Hizmetler",
+        "desc1": "Bilgi güvenliği mimarisi, şirketin BT altyapısını, uygulamaları, verileri ve süreçleri için koruma yapısı oluşturmaya yönelik kapsamlı bir yaklaşımdır. Mevcut mimariyi analiz ediyoruz, zayıf alanları, fazla veya yetersiz koruma mekanizmalarını tespit ediyoruz ve sistemin tehditlere karşı dayanıklılık düzeyini değerlendiriyoruz.",
+        "desc2": "Analiz temelinde hedef BG mimarisi oluşturulur: koruma ilkeleri, kontrol mekanizmaları, güvenlik sistemlerinin etkileşimi ve risk yönetimi yaklaşımları belirlenir. Bu, daha yüksek bir koruma düzeyi sağlamaya, olay olasılığını azaltmaya ve BT ile işletmenin gelişimi için sağlam bir temel oluşturmaya imkân tanır.",
+        "valueTitle": "Değer",
+        "offerTitle": "Sunduklarımız:",
+        "value": [
+            "Bilgi sistemleri ve verilerin koruma düzeyini artırır",
+            "Güvenliğe bütünsel ve yönetilebilir bir yaklaşım kurmaya yardımcı olur",
+            "Güvenlik açıkları, olaylar ve yapılandırma hatası risklerini azaltır",
+            "Koruma araçları ve BT sistemlerinin etkin etkileşimini sağlar",
+            "Altyapının iç ve dış tehditlere karşı dayanıklılığını artırır",
+            "Şirketin ölçeklenmesi ve güvenli gelişimi için temel oluşturur"
+        ],
+        "offer": [
+            "Mevcut BG mimarisini ve BT altyapısını analiz etmek",
+            "Zayıf alanları, riskleri ve mevcut koruma mekanizmalarını değerlendirmek",
+            "Hedef bilgi güvenliği mimarisi oluşturmak",
+            "Segmentasyon, erişim kontrolü ve veri koruma ilkelerini geliştirmek",
+            "Koruma araçlarına ilişkin gereksinimleri belirlemek",
+            "Güvenlik düzeyi artırma önerileri hazırlamak",
+            "Mimari şemalar, standartlar ve BG yönetim yaklaşımları geliştirmek",
+            "Güvenlik mimarisinin uygulanmasını desteklemek"
+        ]
+    },
+    "vulnAssessment": {
+        "badge": "Güvenlik Açığı Değerlendirmesi",
+        "title": "Güvenlik Açığı Değerlendirmesi",
+        "subtitle": "BG risklerini zamanında azaltmak için şirketin BT altyapısı, sistemler ve hizmetlerindeki güvenlik açıklarını tespit etmeye yardımcı oluyoruz.",
+        "ctaMain": "Danışmanlık Al",
+        "ctaBack": "Tüm Hizmetler",
+        "desc1": "Güvenlik açığı değerlendirmesi, zayıf noktaları ve potansiyel güvenlik tehditlerini belirlemek amacıyla şirketin bilgi sistemlerini, ağ altyapısını ve dijital varlıklarını analiz etme sürecidir. Koruma düzeyini değerlendiriyor, tespit edilen güvenlik açıklarının kritikliğini belirliyor ve iş üzerindeki olası etkiyi analiz ediyoruz.",
+        "desc2": "Sonuçlar temelinde önceliklendirilmiş risk tablosu ve güvenlik açıklarını giderme önerileri oluşturulur. Bu, altyapının koruma düzeyini artırmaya ve siber olay olasılığını azaltmaya imkân tanır.",
+        "valueTitle": "Değer",
+        "offerTitle": "Sunduklarımız:",
+        "value": [
+            "Güvenlik açıklarını ve zayıf noktaları zamanında tespit etmeye imkân tanır",
+            "Siber saldırılar ve güvenlik olayı olasılığını azaltır",
+            "BT altyapısı ve hizmetlerin koruma düzeyini artırır",
+            "Kritik risklerin giderilmesi için öncelikleri belirlemeye yardımcı olur",
+            "Güvenlik izleme ve kontrol süreçlerinin etkinliğini artırır",
+            "BG sisteminin daha da geliştirilmesi için temel oluşturur"
+        ],
+        "offer": [
+            "BT altyapısı, sistemler ve ağ hizmetlerini analiz etmek",
+            "Teknik güvenlik açıklarını ve potansiyel tehditleri tespit etmek",
+            "Güvenlik açıklarının kritikliğini ve iş üzerindeki etkisini değerlendirmek",
+            "Güvenlik açığı sicili oluşturmak ve riskleri önceliklendirmek",
+            "Risk giderme önerileri hazırlamak",
+            "Mevcut koruma önlemlerinin etkinliğini analiz etmek",
+            "Değerlendirme sonuçlarına ilişkin raporlama hazırlamak",
+            "Tespit edilen güvenlik açıklarının giderilmesini desteklemek"
+        ]
+    },
+    "financeRiskCase": {
+        "badge": "Vaka Çalışması",
+        "title": "Finans Grubu — Risk Yönetimi Modülü Uygulaması",
+        "subtitle": "Çok sayıda bağlı şirketle geniş yapıya sahip büyük bir finans grubu için risk yönetimi süreçlerini merkezileştirme projesi hayata geçirildi.",
+        "problemTitle": "Sorunun Açıklaması",
+        "problemText": "Zorluk, şirketler grubu içinde risk yönetimine yönelik ortak bir yaklaşımın bulunmamasından kaynaklanıyordu. Her birim kendi risk kayıtlarını Excel'de tutuyordu; bu durum veri tekrarına, bilgi güncelliğinin yitirilmesine ve süreçlerde şeffaflık eksikliğine yol açıyordu. Raporların konsolidasyonu elle yapılıyor ve önemli ölçüde zaman alıyordu; yönetim ise güncel olmayan ya da eksik verilere dayanarak karar veriyordu.",
+        "solutionTitle": "Uygulanan Çözüm",
+        "solutionItems": [
+            "Tüm şirketler grubu için merkezi GRC risk yönetimi modülü devreye alındı",
+            "Standart veri yapısıyla tek tip risk sicili oluşturuldu",
+            "Kritik riskler ve olaylar için otomatik eskalasyon mekanizmaları uygulandı",
+            "C-level ve risk komiteleri için analitik gösterge paneli ve raporlar kuruldu",
+            "Birimler arası veri konsolidasyonu otomatikleştirildi",
+            "Durum, süre ve sorumluların izlenmesine yönelik sistem hayata geçirildi",
+            "Bağlı şirketler arasında risk yönetimi süreçlerinin entegrasyonu sağlandı",
+            "Risk yönetimi süreçlerinin şeffaflığı ve yönetilebilirliği artırıldı"
+        ],
+        "resultsTitle": "Elde Edilen Sonuçlar",
+        "resultsItems": [
+            "Konsolide risk raporunun hazırlanma süresi 3 haftadan 2 güne indi",
+            "Zamanında müdahale edilemeyen kritik olayların sayısı %74 azaldı",
+            "Riskler konusunda şeffaflık ve yönetim için bilginin güncelliği artırıldı",
+            "Bağlı kuruluşlar arasındaki etkileşim süreci basitleştirildi",
+            "Grup genelinde risk yönetiminde tek tip yaklaşım sağlandı",
+            "Süreçlerin otomasyonu sayesinde ekiplerin iş yükü azaldı",
+            "Güncel verilere dayalı yönetim kararı alma hızı arttı"
+        ]
+    },
+    "itAuditCase": {
+        "badge": "Vaka Çalışması",
+        "title": "BT Şirketi — İç Denetim Sistemi Uygulaması",
+        "subtitle": "Uluslararası genişleme ve yatırım çekmeye hazırlanan bir BT şirketi için GRC platformu temelinde iç denetim ve kontrol sistemi kuruldu.",
+        "problemTitle": "Sorunun Açıklaması",
+        "problemText": "Şirket, uluslararası ölçeklendirme ve yatırım turuna hazırlık aşamasındaydı; ancak iç kontrol ve denetim süreçleri entegre bir sistem olarak mevcut değildi. Kanıt tabanı elle toplanıyor, belgeler dağınık biçimde saklanıyor ve kontrol süreçleri bireysel çalışanlara bağlıydı. Yatırımcılar ve dış denetçiler, onaylanmış bir iç kontrol sistemi, süreç şeffaflığı ve güncel verilerin hızla sunulması imkânı talep ediyordu.",
+        "solutionTitle": "Uygulanan Çözüm",
+        "solutionItems": [
+            "GRC platformu temelinde iç denetim sistemi devreye alındı",
+            "Kanıt tabanının merkezi toplanması ve saklanması kuruldu",
+            "Denetim süreci ve görev takibi otomatikleştirildi",
+            "Bulguları, durumları ve düzeltici eylemleri kayıt altına alma mekanizmaları uygulandı",
+            "Roller, sorumluluk alanları ve onay süreçleri tanımlandı",
+            "Denetim verilerinin şeffaflığı ve bilgi güncelliği kontrolü sağlandı",
+            "İç ve dış denetimler için standartlaştırılmış şablonlar ve raporlar hazırlandı",
+            "Due diligence hazırlığını izleme araçları hayata geçirildi"
+        ],
+        "resultsTitle": "Elde Edilen Sonuçlar",
+        "resultsItems": [
+            "Şirket, tek bir kritik bulgu olmaksızın due diligence sürecini başarıyla tamamladı",
+            "Yatırım turu planlanan süre içinde kapatıldı",
+            "Belge ve kanıt tabanı hazırlama süresi önemli ölçüde kısaldı",
+            "İç kontrol ve denetim süreçlerinin şeffaflığı artırıldı",
+            "Manuel süreçlere ve bireysel çalışanlara bağımlılık azaldı",
+            "Uluslararası gereklilikler ve denetimlere şirketin hazırlığı sağlandı",
+            "Şirketin ilerleyen büyümesi için ölçeklenebilir iç kontrol sistemi oluşturuldu"
+        ]
     }
 }
