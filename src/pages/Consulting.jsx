@@ -244,14 +244,14 @@ export default function Consulting() {
                                     className="relative flex flex-col overflow-hidden rounded-3xl"
                                     style={{
                                         minHeight: '380px',
-                                        background: isLast ? '#004AAD' : 'white',
+                                        background: 'white',
                                         border: '1px solid #E5E7EB',
                                     }}
                                 >
                                     {/* blue top bar centered */}
                                     <div
                                         className="absolute left-1/2 top-0 -translate-x-1/2"
-                                        style={{ width: 120, height: 6, background: isLast ? 'white' : '#015CC1' }}
+                                        style={{ width: 120, height: 6, background: '#015CC1' }}
                                     />
                                     <div className="flex flex-1 flex-col px-7 pt-9 pb-7">
                                         <h3
@@ -262,7 +262,7 @@ export default function Consulting() {
                                                 fontWeight: 600,
                                                 textTransform: 'capitalize',
                                                 lineHeight: '1.3',
-                                                color: isLast ? 'white' : 'black',
+                                                color: 'black',
                                                 overflowWrap: 'break-word',
                                             }}
                                         >
@@ -275,7 +275,7 @@ export default function Consulting() {
                                                 lineHeight: '24px',
                                                 fontFamily: 'Inter, sans-serif',
                                                 fontWeight: 400,
-                                                color: isLast ? 'white' : 'black',
+                                                color: 'black',
                                             }}
                                         >
                                             {t(`consulting.services.items.${s.key}.description`)}
@@ -283,13 +283,13 @@ export default function Consulting() {
                                         <div className="mt-6 flex justify-center">
                                             <Link
                                                 to={s.route}
-                                                className="inline-flex items-center gap-2 rounded-full px-6 py-3 transition-all"
+                                                className="inline-flex items-center gap-2 rounded-full px-6 py-3 transition-all hover:bg-[#003580]"
                                                 style={{
                                                     fontSize: '16px',
                                                     fontFamily: 'Space Grotesk, sans-serif',
                                                     fontWeight: 500,
-                                                    background: isLast ? 'white' : '#004AAD',
-                                                    color: isLast ? '#004AAD' : 'white',
+                                                    background: '#004AAD',
+                                                    color: 'white',
                                                 }}
                                             >
                                                 {t('common.more')} <ArrowRight size={16} />

@@ -121,7 +121,7 @@ export default function GlobalTranslationPanel({ adminKey, onClose, onLogout, se
       for (const lang of LANGUAGES) {
         const value = editValues[lang.code];
         if (value) {
-          await updateTranslation(lang.code, key, value);
+          await updateTranslation(key, lang.code, value);
         }
       }
       

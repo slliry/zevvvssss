@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
+import { useMemo, memo } from 'react';
 
-export default function SEO({
+function SEO({
     title,
     description,
     keywords,
@@ -42,11 +43,11 @@ export default function SEO({
         tr: 'GRC, risk yönetimi, uyum, denetim, varlık yönetimi, bilgi güvenliği, ISMS, ISO 27001, zafiyet yönetimi, operasyonel riskler'
     };
 
-    const pageTitle = title || defaultTitle[currentLang];
-    const pageDescription = description || defaultDescription[currentLang];
-    const pageKeywords = keywords || defaultKeywords[currentLang];
+    const pageTitle = useMemo(() => title || defaultTitle[currentLang], [title, currentLang]);
+    const pageDescription = useMemo(() => description || defaultDescription[currentLang], [description, currentLang]);
+    const pageKeywords = useMemo(() => keywords || defaultKeywords[currentLang], [keywords, currentLang]);
 
-    const organizationSchema = {
+    const organizationSchema = useMemo(() => ({
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
         "name": "Zeus GRC",
@@ -70,7 +71,7 @@ export default function SEO({
             "name": "Zeus GRC",
             "url": siteUrl
         }
-    };
+    }), [pageDescription, fullImage, siteUrl]);
 
     // React 19 native metadata support - just return the tags directly
     return (
@@ -108,3 +109,5 @@ export default function SEO({
         </>
     );
 }
+
+export default memo(SEO);

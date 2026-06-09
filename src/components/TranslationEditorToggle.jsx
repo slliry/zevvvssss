@@ -5,20 +5,12 @@ import { Edit3, X, LogOut, Key } from 'lucide-react';
 export default function TranslationEditorToggle() {
   const { isEditorMode, adminKey, enableEditorMode, disableEditorMode, logout, showLoginModal, closeLoginModal } = useTranslationEditor();
   const [keyInput, setKeyInput] = useState('');
-  const [loginError, setLoginError] = useState('');
-  const [isLoggingIn, setIsLoggingIn] = useState(false);
 
-  const handleLogin = async (e) => {
+  const handleLogin = (e) => {
     e.preventDefault();
-    if (!keyInput.trim()) return;
-    setLoginError('');
-    setIsLoggingIn(true);
-    const result = await enableEditorMode(keyInput.trim());
-    setIsLoggingIn(false);
-    if (result?.success) {
+    if (keyInput.trim()) {
+      enableEditorMode(keyInput.trim());
       setKeyInput('');
-    } else {
-      setLoginError(result?.error || 'Неверный ключ');
     }
   };
 
@@ -65,15 +57,11 @@ export default function TranslationEditorToggle() {
               />
             </div>
 
-            {loginError && (
-              <p className="text-sm text-red-600 text-center">{loginError}</p>
-            )}
             <button
               type="submit"
-              disabled={isLoggingIn}
-              className="w-full px-4 py-3 bg-[#004aad] text-white rounded-lg hover:bg-[#003580] transition-colors font-medium disabled:opacity-60"
+              className="w-full px-4 py-3 bg-[#004aad] text-white rounded-lg hover:bg-[#003580] transition-colors font-medium"
             >
-              {isLoggingIn ? 'Проверка...' : 'Войти'}
+              Войти
             </button>
           </form>
         </div>

@@ -1,226 +1,433 @@
 {
-    "header": {
-        "menu": {
-            "solutions": "Çözümler",
-            "consulting": "Danışmanlık",
-            "modules": "Modüller",
-            "benefits": "Avantajlar",
-            "testimonials": "Yorumlar",
-            "contacts": "İletişim"
-        },
-        "cta": "Demo Talep Et"
+  "header": {
+    "menu": {
+      "solutions": "Çözümler",
+      "consulting": "Danışmanlık",
+      "modules": "Modüller",
+      "benefits": "Avantajlar",
+      "testimonials": "Yorumlar",
+      "contacts": "İletişim"
     },
-    "hero": {
-        "badge": "GRC Platformu",
-        "heading1": "Risk ve Uyumluluk Yönetimi",
-        "heading2": "tek platformda",
-        "description": "Zeus GRC, risk yönetimi, uyumluluk ve kurumsal yönetim süreçlerini otomatikleştirmek için kapsamlı bir çözümdür.",
-        "cta": "Danışmanlık İste",
-        "watchDemo": "Demo İzle"
+    "cta": "Demo Talep Et"
+  },
+  "hero": {
+    "badge": "GRC Platformu",
+    "heading1": "Risk ve Uyumluluk Yönetimi",
+    "heading2": "tek platformda",
+    "description": "Zeus GRC, risk yönetimi, uyumluluk ve kurumsal yönetim süreçlerini otomatikleştirmek için kapsamlı bir çözümdür.",
+    "cta": "Danışmanlık İste",
+    "watchDemo": "Demo İzle"
+  },
+  "video": {
+    "title": "Zeus GRC'yi çalışırken görün",
+    "subtitle": "Platformun GRC süreçlerini nasıl otomatikleştirdiğini ve ekiplerin daha hızlı karar vermesine nasıl yardımcı olduğunu gösteren kısa bir tanıtım.",
+    "play": "Videoyu oynat",
+    "ctaPrimary": "Demo talep et",
+    "ctaSecondary": "Modülleri görüntüle",
+    "fallback": "Tarayıcınız video oynatmayı desteklemiyor.",
+    "download": "Videoyu indir"
+  },
+  "modules": {
+    "title": "Platform Modülleri",
+    "subtitle": "Tek bir sistemde etkili GRC yönetimi için gerekli tüm araçlar",
+    "learnMore": "Daha fazla",
+    "items": {
+      "assetManagement": {
+        "title": "Varlık Yönetimi",
+        "description": "Varlıkları merkezileştirin, riskler ve süreçlerle ilişkilendirin, daha akıllı kararlar için kritiklik düzeyini otomatik değerlendirin.",
+        "features": {
+          "registry": "Sahipleriyle varlık envanteri",
+          "documents": "Belgeler ve ekler",
+          "connections": "Riskler ve süreçlerle bağlantılar",
+          "assessment": "Otomatik değerlendirme"
+        }
+      },
+      "riskManagement": {
+        "title": "Risk Yönetimi",
+        "description": "Riskleri tek sistemde belirleyin, değerlendirin ve görselleştirin; KRI'ları gerçek zamanlı izleyin ve GRC genelinde tam entegrasyonla etkili azaltım sağlayın."
+      },
+      "auditCompliance": {
+        "title": "Denetim ve Uyum",
+        "description": "Denetimleri tek sistemde planlayın, yürütün ve izleyin — bulguları, CAPA'yı ve kanıtları yönetin; iç politika ve uluslararası standartlara sürekli uyumu koruyun."
+      },
+      "taskManagement": {
+        "title": "Görev Yönetimi",
+        "description": "GRC görevlerini merkezileştirin, atamaları ve terminleri otomatikleştirin; riskler, denetimler ve kontrollerde tam hesap verebilirlik sağlayın."
+      },
+      "controlManagement": {
+        "title": "Kontrol Yönetimi",
+        "description": "Riski azaltmak ve sürekli uyumu sağlamak için kontrolleri tek sistemde tasarlayın, uygulayın ve izleyin."
+      },
+      "vulnerabilityManagement": {
+        "title": "Zafiyet Yönetimi",
+        "description": "Tarayıcılar ve manuel kaynaklardan zafiyet verilerini toplayın, düzeltmeleri önceliklendirin ve tespitten kapanışa kadar süreci takip edin."
+      },
+      "operationalRiskManagement": {
+        "title": "Operasyonel Risk Yönetimi",
+        "description": "Süreçlerdeki operasyonel riskleri belirleyip değerlendirin, azaltım önlemlerini tanımlayın ve risk durumunu tek sistemde sürekli izleyin."
+      },
+      "incidentManagement": {
+        "title": "Olay Yönetimi",
+        "description": "Olayları verimli şekilde kaydedin, sınıflandırın ve inceleyin; kök nedenleri belirleyin ve tam izlenebilirlikle zamanında düzeltici aksiyon sağlayın."
+      }
+    }
+  },
+  "assistant": {
+    "title": "Zeus Asistan",
+    "subtitle": "Modülleri anlatır, talep göndermenize yardımcı olurum",
+    "open": "Asistanı aç",
+    "close": "Asistanı kapat",
+    "welcome": "Merhaba! Nasıl yardımcı olabilirim? Aşağıdan bir seçenek seçin.",
+    "moduleLabel": "Modüller",
+    "openForm": "Formu aç",
+    "actions": {
+      "overview": "Platform hakkında",
+      "module": "Belirli bir modül hakkında",
+      "demo": "Demo planla",
+      "operator": "Operatörle görüş",
+      "shareContacts": "İletişim bilgilerini paylaş"
     },
-    "video": {
-        "title": "Zeus GRC'yi çalışırken görün",
-        "subtitle": "Platformun GRC süreçlerini nasıl otomatikleştirdiğini ve ekiplerin daha hızlı karar vermesine nasıl yardımcı olduğunu gösteren kısa bir tanıtım.",
-        "play": "Videoyu oynat",
-        "ctaPrimary": "Demo talep et",
-        "ctaSecondary": "Modülleri görüntüle",
-        "fallback": "Tarayıcınız video oynatmayı desteklemiyor.",
-        "download": "Videoyu indir"
+    "responses": {
+      "overview": "Zeus GRC; varlık, risk, denetim, kontrol ve görev yönetimi için birleşik bir platformdur. Süreçleri otomatikleştirir ve uyumu iyileştirir.",
+      "modulePrompt": "Aşağıdan bir modül seçin, kısaca açıklayayım.",
+      "moduleInfo": "{{module}} modülü bu alandaki temel ihtiyaçları karşılar. İsterseniz sürecinize özel demo hazırlayabiliriz.",
+      "demo": "Harika! Aşağıya iletişim bilgilerinizi bırakın veya talep formunu açın, demo zamanını planlayalım.",
+      "operator": "Elbette. İletişim bilgilerinizi bırakın, uzmanımız çalışma saatlerinde size dönecektir."
     },
-    "modules": {
-        "title": "Platform Modülleri",
-        "subtitle": "Tek bir sistemde etkili GRC yönetimi için gerekli tüm araçlar",
-        "learnMore": "Daha fazla",
+    "contact": {
+      "title": "İletişim bilgilerini bırak",
+      "name": "Ad",
+      "email": "E-posta",
+      "phone": "Telefon",
+      "message": "Yorum / talep",
+      "send": "Gönder",
+      "sending": "Gönderiliyor...",
+      "success": "Teşekkürler! Talebinizi aldık, kısa süre içinde iletişime geçeceğiz.",
+      "error": "Talep gönderilemedi. Lütfen daha sonra tekrar deneyin."
+    }
+  },
+  "tasks": {
+    "title": "Neyi Çözüyoruz",
+    "subtitle": "Zeus GRC'nin çözmeye yardımcı olduğu temel zorluklar",
+    "items": {
+      "001": {
+        "title": "Varlık Yönetimi",
+        "description": "Kurumsal maddi ve maddi olmayan varlıkların otomatik takibi"
+      },
+      "002": {
+        "title": "Risk Yönetimi",
+        "description": "BT ve bilgi güvenliği risklerinin otomatik oluşturulması, nicel ve nitel değerlendirilmesi"
+      },
+      "003": {
+        "title": "Entegrasyon ve Etkileşim",
+        "description": "Üçüncü taraf bilgi sistemleriyle entegrasyon imkanı"
+      },
+      "004": {
+        "title": "Kontrol Etkinliği Değerlendirmesi",
+        "description": "Uygulanan kontrollerin düzenli etkinlik değerlendirmesi"
+      },
+      "005": {
+        "title": "Denetim Otomasyonu",
+        "description": "Rapor ve planın otomatik oluşturulması, denetim sürecinin otomasyonu"
+      },
+      "006": {
+        "title": "Kontrol ve İzleme",
+        "description": "Aksiyon takibi ve görev tamamlanma izleme süreçlerinin otomasyonu"
+      },
+      "007": {
+        "title": "Belge Akışı ve Onay",
+        "description": "Otomatik onay formu üretimi, belge depoları"
+      },
+      "008": {
+        "title": "Süreç Otomasyonu",
+        "description": "Süreç kritiklik değerlendirmesi ve rutin operasyonların otomasyonu"
+      }
+    }
+  },
+  "benefits": {
+    "title": "Neden Zeus GRC",
+    "subtitle": "Bizi rakiplerden ayıran avantajlar",
+    "items": {
+      "costReduction": {
+        "title": "Uyum Maliyeti Azaltımı",
+        "description": "Otomasyon ile düzenleyici uyum ve ceza maliyetlerinde tasarruf",
+        "stats": "25-30%"
+      },
+      "auditEfficiency": {
+        "title": "Denetim Verimliliği",
+        "description": "Veri hazırlama süresinde tasarruf ve denetim sürecinde hızlanma",
+        "stats": "45-90%"
+      },
+      "coverage": {
+        "title": "Kritik Nokta Kapsamı",
+        "description": "Denetim hazırlığında temel kontrol noktalarının kapsama oranını artırma",
+        "stats": "90%"
+      }
+    }
+  },
+  "metrics": {
+    "title": "Ölçülebilir Sonuçlar",
+    "subtitle": "Zeus GRC uygulamalarından gerçek performans göstergeleri",
+    "items": {
+      "costReduction": {
+        "title": "Maliyet Azaltımı",
+        "before": "ZEUS Öncesi",
+        "after": "ZEUS Sonrası",
+        "improvement": "↓ 25-30%",
+        "description": "Dış ceza ve yaptırımlarda %35'e kadar azalma (Forrester)"
+      },
+      "auditEfficiency": {
+        "title": "Denetim Verimliliği",
+        "timeSaving": "Zaman tasarrufu",
+        "coverage": "Kapsama",
+        "resolution": "Uyumsuzluk giderme"
+      },
+      "maturityGrowth": {
+        "title": "Güvenlik Olgunluk Artışı",
+        "before": "Uygulama öncesi",
+        "after": "Uygulama sonrası",
+        "improvement": "↑ seviye 3-4'e",
+        "description": "12-18 ay içinde 3-4 olgunluk seviyesine ulaşma"
+      }
+    },
+    "disclaimer": "*Veriler, 12-18 aylık dönemde farklı ölçeklerdeki kuruluşlarda Zeus GRC uygulama sonuçlarına dayanmaktadır"
+  },
+  "testimonials": {
+    "title": "Müşteri Yorumları",
+    "subtitle": "Zeus GRC kullanan şirketler bizim hakkımızda ne söylüyor",
+    "items": {
+      "1": {
+        "name": "Alexander Petrov",
+        "position": "Bilgi Güvenliği Direktörü",
+        "company": "FinTechBank",
+        "text": "Zeus GRC, risk yönetimini merkezileştirmemizi ve düzenleyici raporlama sürecini ciddi biçimde hızlandırmamızı sağladı. Entegrasyon yalnızca 10 gün sürdü."
+      },
+      "2": {
+        "name": "Maria Sokolova",
+        "position": "Uyum Direktörü",
+        "company": "RosTelecom",
+        "text": "Kullanıcı dostu arayüz ve güçlü analiz. Artık risk resmini gerçek zamanlı görüyor ve hızlı karar alabiliyoruz."
+      },
+      "3": {
+        "name": "Dmitry Ivanov",
+        "position": "CIO",
+        "company": "Energoprom",
+        "text": "Büyük şirketler için mükemmel bir çözüm. Ölçeklenebilirlik ve süreçlerimize göre özelleştirme tam aradığımız şeydi."
+      }
+    }
+  },
+  "integrations": {
+    "title": "Entegrasyonlar",
+    "subtitle": "Mevcut sistemlerinizle kolayca entegre olur",
+    "notFound": "Aradığınız entegrasyonu bulamadınız mı?",
+    "cta": "Özel Entegrasyonu Görüş"
+  },
+  "cta": {
+    "title": "Başlamaya Hazır mısınız?",
+    "description": "Ücretsiz danışmanlık alın ve Zeus GRC'nin şirketinizde risk yönetimini nasıl dönüştüreceğini öğrenin",
+    "button": "Danışmanlık Al"
+  },
+  "footer": {
+    "description": "Risk yönetimi, uyum ve iş sürekliliği için kapsamlı platform.",
+    "columns": {
+      "product": {
+        "title": "Ürün",
         "items": {
-            "assetManagement": {
-                "title": "Varlık Yönetimi",
-                "description": "Varlıkları merkezileştirin, riskler ve süreçlerle ilişkilendirin, daha akıllı kararlar için kritiklik düzeyini otomatik değerlendirin.",
-                "features": {
-                    "registry": "Sahipleriyle varlık envanteri",
-                    "documents": "Belgeler ve ekler",
-                    "connections": "Riskler ve süreçlerle bağlantılar",
-                    "assessment": "Otomatik değerlendirme"
-                }
-            },
-            "riskManagement": {
-                "title": "Risk Yönetimi",
-                "description": "Riskleri tek sistemde belirleyin, değerlendirin ve görselleştirin; KRI'ları gerçek zamanlı izleyin ve GRC genelinde tam entegrasyonla etkili azaltım sağlayın."
-            },
-            "auditCompliance": {
-                "title": "Denetim ve Uyum",
-                "description": "Denetimleri tek sistemde planlayın, yürütün ve izleyin — bulguları, CAPA'yı ve kanıtları yönetin; iç politika ve uluslararası standartlara sürekli uyumu koruyun."
-            },
-            "taskManagement": {
-                "title": "Görev Yönetimi",
-                "description": "GRC görevlerini merkezileştirin, atamaları ve terminleri otomatikleştirin; riskler, denetimler ve kontrollerde tam hesap verebilirlik sağlayın."
-            },
-            "controlManagement": {
-                "title": "Kontrol Yönetimi",
-                "description": "Riski azaltmak ve sürekli uyumu sağlamak için kontrolleri tek sistemde tasarlayın, uygulayın ve izleyin."
-            },
-            "vulnerabilityManagement": {
-                "title": "Zafiyet Yönetimi",
-                "description": "Tarayıcılar ve manuel kaynaklardan zafiyet verilerini toplayın, düzeltmeleri önceliklendirin ve tespitten kapanışa kadar süreci takip edin."
-            },
-            "operationalRiskManagement": {
-                "title": "Operasyonel Risk Yönetimi",
-                "description": "Süreçlerdeki operasyonel riskleri belirleyip değerlendirin, azaltım önlemlerini tanımlayın ve risk durumunu tek sistemde sürekli izleyin."
-            },
-            "incidentManagement": {
-                "title": "Olay Yönetimi",
-                "description": "Olayları verimli şekilde kaydedin, sınıflandırın ve inceleyin; kök nedenleri belirleyin ve tam izlenebilirlikle zamanında düzeltici aksiyon sağlayın."
-            }
+          "modules": "Modüller",
+          "integrations": "Entegrasyonlar"
         }
-    },
-    "assistant": {
-        "title": "Zeus Asistan",
-        "subtitle": "Modülleri anlatır, talep göndermenize yardımcı olurum",
-        "open": "Asistanı aç",
-        "close": "Asistanı kapat",
-        "welcome": "Merhaba! Nasıl yardımcı olabilirim? Aşağıdan bir seçenek seçin.",
-        "moduleLabel": "Modüller",
-        "openForm": "Formu aç",
-        "actions": {
-            "overview": "Platform hakkında",
-            "module": "Belirli bir modül hakkında",
-            "demo": "Demo planla",
-            "operator": "Operatörle görüş",
-            "shareContacts": "İletişim bilgilerini paylaş"
-        },
-        "responses": {
-            "overview": "Zeus GRC; varlık, risk, denetim, kontrol ve görev yönetimi için birleşik bir platformdur. Süreçleri otomatikleştirir ve uyumu iyileştirir.",
-            "modulePrompt": "Aşağıdan bir modül seçin, kısaca açıklayayım.",
-            "moduleInfo": "{{module}} modülü bu alandaki temel ihtiyaçları karşılar. İsterseniz sürecinize özel demo hazırlayabiliriz.",
-            "demo": "Harika! Aşağıya iletişim bilgilerinizi bırakın veya talep formunu açın, demo zamanını planlayalım.",
-            "operator": "Elbette. İletişim bilgilerinizi bırakın, uzmanımız çalışma saatlerinde size dönecektir."
-        },
-        "contact": {
-            "title": "İletişim bilgilerini bırak",
-            "name": "Ad",
-            "email": "E-posta",
-            "phone": "Telefon",
-            "message": "Yorum / talep",
-            "send": "Gönder",
-            "sending": "Gönderiliyor...",
-            "success": "Teşekkürler! Talebinizi aldık, kısa süre içinde iletişime geçeceğiz.",
-            "error": "Talep gönderilemedi. Lütfen daha sonra tekrar deneyin."
-        }
-    },
-    "tasks": {
-        "title": "Neyi Çözüyoruz",
-        "subtitle": "Zeus GRC'nin çözmeye yardımcı olduğu temel zorluklar",
+      },
+      "company": {
+        "title": "Şirket",
         "items": {
-            "001": {
-                "title": "Varlık Yönetimi",
-                "description": "Kurumsal maddi ve maddi olmayan varlıkların otomatik takibi"
-            },
-            "002": {
-                "title": "Risk Yönetimi",
-                "description": "BT ve bilgi güvenliği risklerinin otomatik oluşturulması, nicel ve nitel değerlendirilmesi"
-            },
-            "003": {
-                "title": "Entegrasyon ve Etkileşim",
-                "description": "Üçüncü taraf bilgi sistemleriyle entegrasyon imkanı"
-            },
-            "004": {
-                "title": "Kontrol Etkinliği Değerlendirmesi",
-                "description": "Uygulanan kontrollerin düzenli etkinlik değerlendirmesi"
-            },
-            "005": {
-                "title": "Denetim Otomasyonu",
-                "description": "Rapor ve planın otomatik oluşturulması, denetim sürecinin otomasyonu"
-            },
-            "006": {
-                "title": "Kontrol ve İzleme",
-                "description": "Aksiyon takibi ve görev tamamlanma izleme süreçlerinin otomasyonu"
-            },
-            "007": {
-                "title": "Belge Akışı ve Onay",
-                "description": "Otomatik onay formu üretimi, belge depoları"
-            },
-            "008": {
-                "title": "Süreç Otomasyonu",
-                "description": "Süreç kritiklik değerlendirmesi ve rutin operasyonların otomasyonu"
-            }
+          "about": "Hakkımızda",
+          "careers": "Kariyer",
+          "blog": "Blog"
         }
+      }
+    },
+    "copyright": "© 2025 Zeus GRC. Tüm hakları saklıdır.",
+    "privacy": "Gizlilik Politikası",
+    "terms": "Kullanım Şartları"
+  },
+  "request": {
+    "badge": "Talep",
+    "title": "Formu doldurun, danışmanlık hazırlayalım",
+    "subtitle": "İhtiyaçlarınızı paylaşın — Zeus ekibi en uygun uygulama senaryosunu önersin.",
+    "form": {
+      "title": "Şirket Bilgileri",
+      "fields": {
+        "name": {
+          "label": "Ad Soyad",
+          "placeholder": "John Smith"
+        },
+        "company": {
+          "label": "Şirket",
+          "placeholder": "Zeus Group"
+        },
+        "email": {
+          "label": "E-posta",
+          "placeholder": "you@company.com"
+        },
+        "phone": {
+          "label": "Telefon",
+          "placeholder": "+1 (555) 123-4567"
+        },
+        "role": {
+          "label": "Rol",
+          "options": {
+            "ciso": "CISO / Güvenlik Yöneticisi",
+            "risk": "Risk Yöneticisi",
+            "compliance": "Uyum Sorumlusu",
+            "it": "BT Direktörü",
+            "other": "Diğer Rol"
+          }
+        },
+        "message": {
+          "label": "Görevler veya Bağlam",
+          "placeholder": "Hangi süreçleri otomatikleştirmek istiyorsunuz? Hangi regülasyonlar önemli?..."
+        }
+      },
+      "submit": "Talebi Gönder",
+      "submitting": "Gönderiliyor…",
+      "cooldown": "Tamamlandı! {{seconds}} sn sonra tekrar deneyin"
+    },
+    "perks": {
+      "title": "Neler Kazanırsınız",
+      "subtitle": "Form gönderiminden sonra toplantı planlayıp uygun senaryoyu seçer, şirket içi gerekçelendirme için materyal sunarız.",
+      "items": {
+        "analysis": {
+          "title": "Kişisel Analiz",
+          "description": "Sistemi hedeflerinize, süreçlerinize ve önceliklerinize göre uyarlıyoruz."
+        },
+        "demo": {
+          "title": "Demo Erişimi",
+          "description": "Sisteme hızlı erişim — özellikleri gerçek senaryolarda test edin."
+        }
+      }
+    },
+    "messages": {
+      "success": "Teşekkürler! Bir iş günü içinde sizinle iletişime geçeceğiz.",
+      "successTitle": "Talep Gönderildi",
+      "error": "Bir hata oluştu, lütfen daha sonra tekrar deneyin.",
+      "cooldownError": "Talebinizi zaten aldık. Lütfen yeniden göndermeden önce {{seconds}} sn bekleyin."
+    }
+  },
+  "assetManagement": {
+    "title": "Varlık Yönetimi",
+    "subtitle": "GRC sisteminin temeli — envanter, doküman ve otomatik kritiklik değerlendirmesiyle varlık yönetimi",
+    "backToModules": "Modüllere Dön",
+    "badge": "GRC Modülü",
+    "heroDescription": "Şirket varlıklarının tümü için birleşik bir veri tabanı oluşturun. Kritiklik ve değerlerini otomatik değerlendirin, belgeleri saklayın, sahipleri takip edin ve varlıkları risklerle/kontrollerle ilişkilendirin.",
+    "beforeAfter": {
+      "title": "Çözüm Faydaları",
+      "subtitle": "Neden sistemli varlık yönetimi önemli",
+      "before": "Zorluklar",
+      "solution": "Zeus Çözümü",
+      "result": "Sonuçlar"
+    },
+    "problems": {
+      "scattered": "Birleşik varlık envanteri yok",
+      "noDependencies": "Varlık kritikliğini değerlendirmek zor",
+      "noModel": "Belge yönetimi manuel",
+      "noOwners": "Varlık sahipliği belirsiz",
+      "differentSystems": "Risk ve kontrollerle bağlantı yok",
+      "noTracking": "Analitik ve raporlama karmaşık"
+    },
+    "solutions": {
+      "centralized": "Tüm varlıklar için birleşik envanter",
+      "linkedRisks": "Otomatik kritiklik değerlendirmesi",
+      "autoLinks": "Belge ve ek saklama",
+      "digitalModel": "Sahipler ve departmanlarla bağlantı",
+      "integrations": "Riskler ve kontrollerle entegrasyon",
+      "autoUpdate": "Gerçek zamanlı panolar ve analitik"
+    },
+    "results": {
+      "fullPicture": "Varlıklar üzerinde tam kontrol",
+      "linkedProcesses": "Yönetimde şeffaflık",
+      "digitalModel": "Risk kararlarında bilinçli yaklaşım",
+      "timeSaving": "Yönetimde zaman tasarrufu",
+      "transparency": "Regülasyon uyumu",
+      "riskBasis": "Siber güvenlikte iyileşme"
+    },
+    "features": {
+      "title": "Temel Özellikler",
+      "subtitle": "Etkili varlık yönetimi için eksiksiz araç seti",
+      "registry": {
+        "title": "Varlık Envanteri",
+        "description": "Sahipler, departmanlar ve tiplerle ilişkili birleşik varlık tabanı oluşturma ve yönetme."
+      },
+      "documents": {
+        "title": "Belgeler ve Ekler",
+        "description": "Sözleşmeler, yönergeler ve değerlendirmeler gibi destekleyici dokümanları saklama."
+      },
+      "dashboard": {
+        "title": "Panel ve Analitik",
+        "description": "Durum, kritiklik, değer ve sahiplik gibi temel varlık verilerinin görüntülenmesi."
+      },
+      "connections": {
+        "title": "Risk ve Süreç Bağlantıları",
+        "description": "Varlıkları risk, kontrol, görev ve denetimlerle ilişkilendirme."
+      },
+      "integration": {
+        "title": "GRC Modülleri ile Entegrasyon",
+        "description": "Varlıkların risk, denetim, kontrol ve görev kartlarında görünmesi."
+      },
+      "assessment": {
+        "title": "Otomatik Varlık Değerlendirmesi",
+        "description": "Kaynak yönetimini optimize etmek için analiz, sınıflandırma, kritiklik değerlendirme ve önceliklendirme çözümü"
+      }
+    },
+    "valuation": {
+      "title": "Varlık Değerleme",
+      "subtitle": "Özelleştirilebilir değerlendirme şablonlarıyla varlık değerinin belirlenmesi",
+      "parametersTitle": "Dikkate Alınan Parametreler",
+      "parameters": {
+        "regulatory": "Düzenleyici",
+        "legal": "Hukuki",
+        "reputational": "İtibari",
+        "operational": "Operasyonel",
+        "financial": "Finansal",
+        "security": "İSG ve Bireysel"
+      },
+      "calculationTitle": "Otomatik Hesaplama",
+      "calculation": {
+        "confidentiality": "Gizlilik",
+        "integrity": "Bütünlük",
+        "criticality": "Kritiklik",
+        "financialLoss": "Potansiyel Finansal Kayıplar"
+      },
+      "customization": {
+        "title": "Esnek Özelleştirme",
+        "description": "Yöntem ve kriterleri şirket politikalarına göre esnek şekilde uyarlama."
+      },
+      "standardization": {
+        "title": "Değerlendirme Standardizasyonu",
+        "description": "Değerlendirme standardizasyonu, şeffaf önceliklendirme ve risk yönetimi desteği."
+      },
+      "riskSupport": {
+        "title": "Risk Yönetimi Desteği",
+        "description": "Şeffaf önceliklendirme ile risk yönetimi süreçlerine kapsamlı destek"
+      }
     },
     "benefits": {
-        "title": "Neden Zeus GRC",
-        "subtitle": "Bizi rakiplerden ayıran avantajlar",
-        "items": {
-            "costReduction": {
-                "title": "Uyum Maliyeti Azaltımı",
-                "description": "Otomasyon ile düzenleyici uyum ve ceza maliyetlerinde tasarruf",
-                "stats": "25-30%"
-            },
-            "auditEfficiency": {
-                "title": "Denetim Verimliliği",
-                "description": "Veri hazırlama süresinde tasarruf ve denetim sürecinde hızlanma",
-                "stats": "45-90%"
-            },
-            "coverage": {
-                "title": "Kritik Nokta Kapsamı",
-                "description": "Denetim hazırlığında temel kontrol noktalarının kapsama oranını artırma",
-                "stats": "90%"
-            }
-        }
-    },
-    "metrics": {
-        "title": "Ölçülebilir Sonuçlar",
-        "subtitle": "Zeus GRC uygulamalarından gerçek performans göstergeleri",
-        "items": {
-            "costReduction": {
-                "title": "Maliyet Azaltımı",
-                "before": "ZEUS Öncesi",
-                "after": "ZEUS Sonrası",
-                "improvement": "↓ 25-30%",
-                "description": "Dış ceza ve yaptırımlarda %35'e kadar azalma (Forrester)"
-            },
-            "auditEfficiency": {
-                "title": "Denetim Verimliliği",
-                "timeSaving": "Zaman tasarrufu",
-                "coverage": "Kapsama",
-                "resolution": "Uyumsuzluk giderme"
-            },
-            "maturityGrowth": {
-                "title": "Güvenlik Olgunluk Artışı",
-                "before": "Uygulama öncesi",
-                "after": "Uygulama sonrası",
-                "improvement": "↑ seviye 3-4'e",
-                "description": "12-18 ay içinde 3-4 olgunluk seviyesine ulaşma"
-            }
-        },
-        "disclaimer": "*Veriler, 12-18 aylık dönemde farklı ölçeklerdeki kuruluşlarda Zeus GRC uygulama sonuçlarına dayanmaktadır"
-    },
-    "testimonials": {
-        "title": "Müşteri Yorumları",
-        "subtitle": "Zeus GRC kullanan şirketler bizim hakkımızda ne söylüyor",
-        "items": {
-            "1": {
-                "name": "Alexander Petrov",
-                "position": "Bilgi Güvenliği Direktörü",
-                "company": "FinTechBank",
-                "text": "Zeus GRC, risk yönetimini merkezileştirmemizi ve düzenleyici raporlama sürecini ciddi biçimde hızlandırmamızı sağladı. Entegrasyon yalnızca 10 gün sürdü."
-            },
-            "2": {
-                "name": "Maria Sokolova",
-                "position": "Uyum Direktörü",
-                "company": "RosTelecom",
-                "text": "Kullanıcı dostu arayüz ve güçlü analiz. Artık risk resmini gerçek zamanlı görüyor ve hızlı karar alabiliyoruz."
-            },
-            "3": {
-                "name": "Dmitry Ivanov",
-                "position": "CIO",
-                "company": "Energoprom",
-                "text": "Büyük şirketler için mükemmel bir çözüm. Ölçeklenebilirlik ve süreçlerimize göre özelleştirme tam aradığımız şeydi."
-            }
-        }
-    },
-    "integrations": {
-        "title": "Entegrasyonlar",
-        "subtitle": "Mevcut sistemlerinizle kolayca entegre olur",
-        "notFound": "Aradığınız entegrasyonu bulamadınız mı?",
-        "cta": "Özel Entegrasyonu Görüş"
+      "title": "Faydalar",
+      "transparency": {
+        "title": "Şeffaflık ve Kontrol",
+        "description": "GRC yükümlülüklerinin yerine getirilmesinde şeffaflık ve kontrol."
+      },
+      "taskReduction": {
+        "title": "Gecikmiş Görevlerin Azalması",
+        "description": "Gecikmiş veya unutulmuş görev sayısında azalma."
+      },
+      "centralization": {
+        "title": "Merkezi Sorumluluk",
+        "description": "Sorumluluğun merkezileşmesi ve disiplinin artması."
+      },
+      "compliance": {
+        "title": "Düzenleyici Kanıt",
+        "description": "Düzenleyici uyumun kanıtlanması."
+      }
     },
     "cta": {
         "title": "Başlamaya Hazır mısınız?",
@@ -1187,4 +1394,364 @@
             "Şirketin ilerleyen büyümesi için ölçeklenebilir iç kontrol sistemi oluşturuldu"
         ]
     }
+  },
+  "auditCompliance": {
+    "title": "Denetim ve Uyum",
+    "backToModules": "Modüllere Dön",
+    "heroDescription": "Denetim ve uyum süreçlerini birleşik platformla otomatikleştirin. Denetim planları oluşturun, kontrol listeleriyle denetim yapın, uygunsuzlukları kaydedin ve düzeltici faaliyetleri yönetin.",
+    "beforeAfter": {
+      "title": "Çözüm Faydaları",
+      "subtitle": "Denetim otomasyonu verimliliği nasıl artırır",
+      "before": "Zorluklar",
+      "solution": "Zeus Çözümü",
+      "result": "Sonuçlar"
+    },
+    "problems": {
+      "manual": "Manuel denetim ve kontrol yönetimi",
+      "scattered": "Dağınık belge ve kanıtlar",
+      "noTracking": "CAPA yürütmesi üzerinde kontrol yok",
+      "timeConsuming": "Hazırlık için yüksek zaman maliyeti",
+      "noEvidence": "Kanıt toplamada zorluk",
+      "riskMissed": "Kritik uygunsuzlukları kaçırma riski"
+    },
+    "solutions": {
+      "planning": "Denetim planı oluşturma ve onaylama",
+      "checklists": "Kontrol listeleri ve kanıtlarla denetim yürütme",
+      "capa": "Uygunsuzluk kaydı ve CAPA yönetimi",
+      "monitoring": "Uyum izleme ve otomatik bildirimler",
+      "integration": "Varlık, risk ve kontrol modülleriyle entegrasyon",
+      "automation": "Otomatik rapor ve analitik üretimi"
+    },
+    "results": {
+      "efficiency": "Denetim maliyetlerinde azalma",
+      "transparency": "Şeffaflık ve düzenleyici güvenin artması",
+      "compliance": "İhlallerin hızlı tespiti ve çözümü",
+      "quality": "Merkezi kanıt yönetimi",
+      "centralized": "İç politika ve standartlara uyum",
+      "standards": "Uluslararası standartlara uyum"
+    },
+    "cta": {
+      "title": "Denetim ve Uyumla Başlamaya Hazır mısınız?",
+      "description": "Ücretsiz danışmanlık alın ve denetim modülünün kontrol süreçlerinizi nasıl optimize edeceğini öğrenin",
+      "button": "Danışmanlık Al"
+    }
+  },
+  "taskManagement": {
+    "title": "Görev Yönetimi",
+    "backToModules": "Modüllere Dön",
+    "heroDescription": "Kurumsal görevlerin tamamını tek sistemde merkezileştirin. Risk, denetim ve kontrollerden görev oluşturun, sorumluları atayın, termin belirleyin ve yürütmeyi takip edin.",
+    "beforeAfter": {
+      "title": "Çözüm Faydaları",
+      "subtitle": "Merkezi görev yönetimi verimliliği nasıl artırır",
+      "before": "Zorluklar",
+      "solution": "Zeus Çözümü",
+      "result": "Sonuçlar"
+    },
+    "problems": {
+      "scattered": "Görevler farklı sistemlere dağılmış",
+      "noTracking": "Birleşik yürütme kontrolü yok",
+      "missedDeadlines": "Kaçırılan terminler",
+      "noAccountability": "Sorumlu ve yürütücülerin belirsizliği",
+      "manualReminders": "Manuel hatırlatmalar ve bildirimler",
+      "noIntegration": "Görevlerle risk/kontrol arasında bağlantı yok"
+    },
+    "solutions": {
+      "creation": "Risk, denetim ve kontrollerden görev oluşturma",
+      "assignment": "Sorumlu ve yürütücü atama",
+      "comments": "Görevlere yorum ve ekler",
+      "deadlines": "Otomatik hatırlatmalarla termin yönetimi",
+      "dashboard": "Panel ve görev durumları",
+      "integration": "Diğer GRC modülleriyle entegrasyon"
+    },
+    "results": {
+      "centralized": "Kurumsal varlıklarda merkezi kontrol",
+      "security": "Kritik kaynaklarda güvenlik ve yönetilebilirlik artışı",
+      "risks": "Kayıp veya yetkisiz erişim risklerinde azalma",
+      "compliance": "ISO ve düzenleyici standart uyumu desteği",
+      "transparency": "Görev yönetiminde şeffaflık ve hesap verebilirlik",
+      "efficiency": "Ekip verimliliğinde artış"
+    },
+    "cta": {
+      "title": "Görev Yönetimiyle Başlamaya Hazır mısınız?",
+      "description": "Ücretsiz danışmanlık alın ve görev yönetimi modülünün ekibinizin verimliliğini nasıl artıracağını öğrenin",
+      "button": "Danışmanlık Al"
+    }
+  },
+  "controlManagement": {
+    "title": "Kontrol Yönetimi",
+    "backToModules": "Modüllere Dön",
+    "heroDescription": "Risk azaltma, düzenleyici uyum ve iç politika gereklilikleri için kontrol tedbirlerini merkezi olarak yönetin.",
+    "effectiveness": {
+      "title": "Kontrol Etkinliği",
+      "subtitle": "Kontrol doğrulama ve izleme için kapsamlı yaklaşım",
+      "features": {
+        "monitoring": {
+          "title": "Kontrol Doğrulama ve İzleme",
+          "description": "Sapmaları otomatik tespit ederek kontrol etkinliğini sürekli izleme"
+        },
+        "evidence": {
+          "title": "Merkezi Kanıt Toplama",
+          "description": "Denetimleri kolaylaştırmak için tüm kanıtların tek depoda toplanması"
+        },
+        "identification": {
+          "title": "Etkisiz Kontrollerin Hızlı Tespiti",
+          "description": "Kontrol sistemindeki boşlukların otomatik tespiti ve hızlı müdahale"
+        },
+        "recommendations": {
+          "title": "Öneriler ve İyileştirme Planları",
+          "description": "Kurumsal kontrol ortamını optimize eden akıllı öneriler"
+        }
+      },
+      "clientResults": {
+        "title": "Müşteri Sonuçları",
+        "description": "Operasyonel risklerin azaltılması, denetim eforunun düşmesi, süreç güvenilirliğinin kanıtlanması ve yönetim için şeffaflık."
+      }
+    },
+    "beforeAfter": {
+      "title": "Çözüm Faydaları",
+      "subtitle": "Etkili kontrol yönetimi riskleri nasıl azaltır",
+      "before": "Zorluklar",
+      "solution": "Zeus Çözümü",
+      "result": "Sonuçlar"
+    },
+    "problems": {
+      "scattered": "Birleşik yaklaşım olmadan dağınık kontroller",
+      "noEffectiveness": "Kontrol etkinliği değerlendirmesi yok",
+      "manualTesting": "Manuel kontrol test ve doğrulaması",
+      "noEvidence": "Kanıt toplamada zorluk",
+      "noRiskLink": "Kontrol-riski bağlantısı yok",
+      "inefficient": "Etkisiz veya eksik kontroller"
+    },
+    "solutions": {
+      "catalog": "Açıklama ve sınıflandırmalı kontrol kataloğu",
+      "effectiveness": "Kontrol etkinliği değerlendirmesi",
+      "riskLinks": "Risk ve varlıklarla bağlantılar",
+      "auditControl": "Denetim kontrolü ve iş takibi",
+      "planning": "Kontrol planlama ve yürütme",
+      "evidence": "Merkezi kanıt toplama"
+    },
+    "results": {
+      "operationalRisk": "Operasyonel ve düzenleyici riskte azalma",
+      "efficiency": "Kontrol sistemi verimliliği ve şeffaflığında artış",
+      "audit": "Her an denetime hazır olma",
+      "compliance": "Uyum ve iç kontrol kültürüne destek",
+      "centralized": "Merkezi kanıt toplama",
+      "improvements": "Öneri ve iyileştirme planlarının oluşturulması"
+    },
+    "cta": {
+      "title": "Kontrol Yönetimiyle Başlamaya Hazır mısınız?",
+      "description": "Ücretsiz danışmanlık alın ve kontrol yönetimi modülünün kurumsal risklerinizi nasıl azaltacağını öğrenin",
+      "button": "Danışmanlık Al"
+    }
+  },
+  "riskManagement": {
+    "title": "Risk Yönetimi",
+    "backToModules": "Modüllere Dön",
+    "heroDescription": "Kurumsal seviyelerin tamamında kapsamlı risk yönetimi. Modül; stratejik/operasyonel risk, zafiyet ve olay yönetimini tek sistemde birleştirir.",
+    "subModules": {
+      "title": "Modül Bileşenleri",
+      "subtitle": "Risk Yönetimi, kapsamlı yönetim için üç temel alt modül içerir",
+      "operational": {
+        "title": "Operasyonel Risk Yönetimi",
+        "description": "İş süreçleri genelinde operasyonel risk yönetimi",
+        "features": {
+          "assessment": "Olasılık ve etki değerlendirmesi",
+          "collection": "Risk toplama ve kayıt",
+          "controls": "Kontrol ve azaltım planlaması",
+          "monitoring": "İzleme ve raporlama"
+        }
+      },
+      "vulnerability": {
+        "title": "Zafiyet Yönetimi",
+        "description": "Zafiyetleri tespitten gidermeye yönetme",
+        "features": {
+          "integration": "Tarayıcılardan zafiyet verisi entegre eder",
+          "classification": "Sınıflandırma, kritiklik ve önceliklendirme",
+          "assignment": "Sorumlu atama ve termin kontrolü",
+          "transparency": "Tespitten kapanışa şeffaf süreç"
+        }
+      },
+      "incident": {
+        "title": "Olay Yönetimi",
+        "description": "Her tür olayın hızlı kaydı ve yönetimi",
+        "features": {
+          "registration": "Olay kayıt ve dokümantasyonu",
+          "rootCause": "Kök neden belirleme ve düzeltici aksiyon",
+          "control": "Yürütme kontrolü ve raporlama",
+          "automation": "İnceleme süreci otomasyonu"
+        }
+      }
+    },
+    "beforeAfter": {
+      "title": "Çözüm Faydaları",
+      "subtitle": "Risk yönetimi iş dayanıklılığını nasıl artırır",
+      "before": "Sorunlar",
+      "solution": "Zeus Çözümü",
+      "result": "Sonuç"
+    },
+    "problems": {
+      "noVisibility": "Risk yönetiminde şeffaflık eksikliği",
+      "manualAssessment": "Manuel risk değerlendirme ve sınıflandırma",
+      "noIntegration": "Denetim, varlık ve uyumla entegrasyon yok",
+      "reactiveApproach": "Risk yönetiminde reaktif yaklaşım",
+      "noMonitoring": "Temel gösterge izleme eksikliği",
+      "inconsistentMethodology": "Tutarsız risk değerlendirme metodolojisi"
+    },
+    "solutions": {
+      "riskRegistry": "Risk belirleme/sınıflandırma ve envanter oluşturma",
+      "methodology": "Risk değerlendirme metodolojisi yapılandırması",
+      "integration": "Denetim, varlık ve uyumla entegrasyon",
+      "roleModel": "Rol tabanlı erişim modelini destekleme",
+      "versioning": "Veri versiyonlama ve değişiklik geçmişi",
+      "kri": "KRI izleme ve bildirim yapılandırması"
+    },
+    "results": {
+      "transparency": "Her seviyede risk yönetimi şeffaflığı",
+      "decisions": "Analitik veriye dayalı karar alma",
+      "incidents": "Olay oluşma olasılığında azalma",
+      "compliance": "Standart ve regülasyonlara uyum",
+      "stability": "Süreç kararlılığı ve yönetilebilirlik artışı",
+      "visualization": "Matrisler ve ısı haritalarıyla risk görselleştirmesi"
+    },
+    "cta": {
+      "title": "Risk Yönetimine Başlamaya Hazır mısınız?",
+      "description": "Ücretsiz danışmanlık alın ve risk yönetimi modülünün iş dayanıklılığınızı nasıl artıracağını öğrenin",
+      "button": "Danışmanlık Al"
+    }
+  },
+  "operationalRiskManagement": {
+    "title": "Operasyonel Risk Yönetimi",
+    "backToModules": "Modüllere Dön",
+    "heroDescription": "Süreçlerdeki operasyonel riskleri belirleyin/değerlendirin, azaltım önlemlerini tanımlayın ve risk durumunu tek sistemde sürekli takip edin.",
+    "beforeAfter": {
+      "title": "Çözüm Faydaları",
+      "subtitle": "Operasyonel risk yönetimi iş dayanıklılığını nasıl artırır",
+      "before": "Zorluklar",
+      "solution": "Zeus Çözümü",
+      "result": "Sonuçlar"
+    },
+    "problems": {
+      "systematic": "Operasyonel risk tespitinde sistematik yaklaşım eksikliği",
+      "manual": "Risk olasılığı ve etkisinin manuel değerlendirilmesi",
+      "database": "Birleşik operasyonel risk veritabanı yok",
+      "tracking": "Risk durumunu takip etmede zorluk",
+      "linkage": "Süreç ve kontrollerle bağlantı yok",
+      "monitoring": "Azaltım etkinliğinin izlenmemesi"
+    },
+    "solutions": {
+      "assessment": "Birleşik yöntemlerle risk olasılığı/etki değerlendirmesi",
+      "collection": "Tüm süreçlerde operasyonel risk toplama ve kayıt",
+      "planning": "Kontrol ve risk azaltım önlemlerini planlama",
+      "monitoring": "Gerçek zamanlı risk izleme ve raporlama"
+    },
+    "results": {
+      "proactive": "Proaktif operasyonel risk yönetimi",
+      "reduction": "Risk olaylarının olasılığında azalma",
+      "response": "Süreç değişimlerine hızlı yanıt",
+      "transparency": "Her seviyede şeffaf risk yönetimi",
+      "integration": "Süreç ve kontrollerle entegrasyon",
+      "efficiency": "Operasyonel verimlilik artışı"
+    },
+    "cta": {
+      "title": "Operasyonel Risk Yönetimine Başlamaya Hazır mısınız?",
+      "description": "Ücretsiz danışmanlık alın ve operasyonel risk modülünün iş dayanıklılığınızı nasıl artıracağını öğrenin",
+      "button": "Danışmanlık Al"
+    }
+  },
+  "vulnerabilityManagement": {
+    "title": "Zafiyet Yönetimi",
+    "backToModules": "Modüllere Dön",
+    "heroDescription": "Zafiyetleri tespitten gidermeye yönetin. Tarayıcı verilerini entegre edin, sınıflandırın, önceliklendirin ve giderim sürecini tek sistemde kontrol edin.",
+    "beforeAfter": {
+      "title": "Çözüm Faydaları",
+      "subtitle": "Zafiyet yönetimi güvenliği nasıl güçlendirir",
+      "before": "Zorluklar",
+      "solution": "Zeus Çözümü",
+      "result": "Sonuçlar"
+    },
+    "problems": {
+      "manual": "Farklı kaynaklardan manuel zafiyet verisi toplama",
+      "database": "Birleşik zafiyet veritabanı yok",
+      "prioritization": "Zafiyetleri önceliklendirmede zorluk",
+      "deadlines": "Giderim terminleri üzerinde kontrol yok",
+      "linkage": "Varlık ve risklerle bağlantı yok",
+      "reporting": "Zafiyet durumu raporlaması yok"
+    },
+    "solutions": {
+      "integration": "Tarayıcı ve manuel kaynaklardan zafiyet verisi entegre eder",
+      "classification": "Sınıflandırma, kritiklik değerlendirmesi ve önceliklendirme",
+      "assignment": "Sorumlu atama ve termin kontrolü",
+      "transparency": "Tespitten kapanışa şeffaf süreç"
+    },
+    "results": {
+      "proactive": "Proaktif zafiyet yönetimi",
+      "reduction": "Bilgi güvenliği risklerinde azalma",
+      "remediation": "Kritik zafiyetlerde hızlı giderim",
+      "visibility": "Zafiyet durumunun tam görünürlüğü",
+      "integration": "Tarayıcılar ve varlıklarla entegrasyon",
+      "security": "Güvenlik duruşunda iyileşme"
+    },
+    "cta": {
+      "title": "Zafiyet Yönetimine Başlamaya Hazır mısınız?",
+      "description": "Ücretsiz danışmanlık alın ve zafiyet yönetimi modülünün altyapı güvenliğinizi nasıl güçlendireceğini öğrenin",
+      "button": "Danışmanlık Al"
+    },
+    "features": {
+      "integration": {
+        "title": "Zafiyet verisi entegrasyonu",
+        "description": "tarayıcılardan ve manuel kaynaklardan"
+      },
+      "classification": {
+        "title": "Sınıflandırma ve değerlendirme",
+        "description": "kritiklik ve önceliklere göre"
+      },
+      "assignment": {
+        "title": "Sorumlu atama",
+        "description": "ve termin kontrolü"
+      },
+      "transparency": {
+        "title": "Şeffaf süreç",
+        "description": "tespitten kapanışa"
+      }
+    }
+  },
+  "incidentManagement": {
+    "title": "Olay Yönetimi",
+    "backToModules": "Modüllere Dön",
+    "heroDescription": "Olayları tek sistemde kaydedin, inceleyin ve çözün. Süreçleri otomatikleştirin, kök nedenleri belirleyin ve tekrarları önleyici önlemler geliştirin.",
+    "beforeAfter": {
+      "title": "Çözüm Faydaları",
+      "subtitle": "Olay yönetimi iş dayanıklılığını nasıl artırır",
+      "before": "Zorluklar",
+      "solution": "Zeus Çözümü",
+      "result": "Sonuçlar"
+    },
+    "problems": {
+      "chaotic": "Olayların farklı sistemlerde dağınık kaydı",
+      "noProcess": "Birleşik inceleme süreci yok",
+      "deadlines": "Çözüm terminleri üzerinde kontrol yok",
+      "rootCause": "Kök neden belirlemede zorluk",
+      "linkage": "Risk ve kontrollerle bağlantı yok",
+      "reporting": "Olay raporlaması yok"
+    },
+    "solutions": {
+      "registration": "Her tür olayın kaydı ve dokümantasyonu",
+      "rootCause": "Kök neden analizi ve düzeltici aksiyonlar",
+      "control": "Yürütme kontrolü ve raporlama",
+      "automation": "İnceleme süreci otomasyonu"
+    },
+    "results": {
+      "structured": "Yapılandırılmış olay yönetimi",
+      "reduction": "Olay tekrarlarında azalma",
+      "response": "Hızlı müdahale ve çözüm",
+      "transparency": "İnceleme sürecinde şeffaflık",
+      "linkage": "Risk ve kontrollerle bağlantı",
+      "improvement": "Sürekli süreç iyileştirmesi"
+    },
+    "cta": {
+      "title": "Olay Yönetimine Başlamaya Hazır mısınız?",
+      "description": "Ücretsiz danışmanlık alın ve olay yönetimi modülünün iş dayanıklılığınızı nasıl artıracağını öğrenin",
+      "button": "Danışmanlık Al"
+    }
+  }
 }

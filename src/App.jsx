@@ -1,4 +1,4 @@
-import { useEffect, lazy, Suspense } from 'react';
+import { lazy, Suspense, useEffect } from 'react';
 import { Outlet, Route, Routes, useLocation } from 'react-router-dom';
 import Header from './components/Header.jsx';
 import FloatingParticles from './components/FloatingParticles.jsx';
@@ -33,7 +33,6 @@ const VulnerabilityManagement = lazy(() => import('./pages/VulnerabilityManageme
 const IncidentManagement = lazy(() => import('./pages/IncidentManagement.jsx'));
 const Consulting = lazy(() => import('./pages/Consulting.jsx'));
 const BusinessConsulting = lazy(() => import('./pages/BusinessConsulting.jsx'));
-const IsMaturityCase = lazy(() => import('./pages/IsMaturityCase.jsx'));
 const ProjectManagement = lazy(() => import('./pages/ProjectManagement.jsx'));
 const BizProcessMethodology = lazy(() => import('./pages/BizProcessMethodology.jsx'));
 const IsAudit = lazy(() => import('./pages/IsAudit.jsx'));
@@ -126,7 +125,6 @@ function App() {
           <Route path="/modules/incident-management" element={<IncidentManagement />} />
           <Route path="/consulting" element={<Consulting />} />
           <Route path="/consulting/business" element={<BusinessConsulting />} />
-          <Route path="/consulting/cases/is-maturity" element={<IsMaturityCase />} />
           <Route path="/consulting/project-management" element={<ProjectManagement />} />
           <Route path="/consulting/biz-process-methodology" element={<BizProcessMethodology />} />
           <Route path="/consulting/is-audit" element={<IsAudit />} />

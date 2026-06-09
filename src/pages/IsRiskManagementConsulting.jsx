@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO.jsx';
+import ScrollIndicator from '../components/ScrollIndicator.jsx';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import CTA from '../components/CTA.jsx';
 
@@ -42,6 +43,7 @@ export default function IsRiskManagementConsulting() {
                         </div>
                     </motion.div>
                 </div>
+            <ScrollIndicator />
             </section>
 
             {/* ── Description ── */}

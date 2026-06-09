@@ -1,7 +1,5 @@
 import { createContext, useContext, useState, useEffect } from 'react';
 
-const API_URL = import.meta.env.VITE_API_URL || (import.meta.env.MODE === 'production' ? '' : 'http://localhost:4000');
-
 const TranslationEditorContext = createContext();
 
 export function TranslationEditorProvider({ children }) {
@@ -22,25 +20,12 @@ export function TranslationEditorProvider({ children }) {
     }
   }, []);
 
-  const enableEditorMode = async (key) => {
-    try {
-      const res = await fetch(`${API_URL}/api/translations/update`, {
-        method: 'PUT',
-        headers: { 'Content-Type': 'application/json', 'x-admin-key': key },
-        body: JSON.stringify({ lang: '__ping__', key: '__ping__', value: '__ping__' }),
-      });
-      if (res.status === 403) {
-        return { success: false, error: 'Неверный ключ' };
-      }
-    } catch {
-      return { success: false, error: 'Сервер недоступен' };
-    }
+  const enableEditorMode = (key) => {
     setAdminKey(key);
     setIsEditorMode(true);
     setShowLoginModal(false);
     localStorage.setItem('translation_admin_key', key);
     localStorage.setItem('translation_editor_mode', 'true');
-    return { success: true };
   };
 
   const disableEditorMode = () => {
