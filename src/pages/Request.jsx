@@ -106,7 +106,7 @@ export default function Request() {
                   type="text"
                   name="name"
                   className="rounded-2xl border border-gray-200 px-4 py-3 text-base text-[#1A1A1A] outline-none transition focus:border-[#0066FF] focus:ring-2 focus:ring-[#0066FF]/30"
-                  placeholder=<EditableTranslation translationKey="request.form.fields.name.placeholder">{t('request.form.fields.name.placeholder')}</EditableTranslation>
+                  placeholder={t('request.form.fields.name.placeholder')}
                 />
               </label>
               <label className="flex flex-col gap-2 text-sm font-medium text-gray-700">
@@ -116,7 +116,7 @@ export default function Request() {
                   type="text"
                   name="company"
                   className="rounded-2xl border border-gray-200 px-4 py-3 text-base text-[#1A1A1A] outline-none transition focus:border-[#0066FF] focus:ring-2 focus:ring-[#0066FF]/30"
-                  placeholder=<EditableTranslation translationKey="request.form.fields.company.placeholder">{t('request.form.fields.company.placeholder')}</EditableTranslation>
+                  placeholder={t('request.form.fields.company.placeholder')}
                 />
               </label>
               <label className="flex flex-col gap-2 text-sm font-medium text-gray-700">
@@ -126,7 +126,7 @@ export default function Request() {
                   type="email"
                   name="email"
                   className="rounded-2xl border border-gray-200 px-4 py-3 text-base text-[#1A1A1A] outline-none transition focus:border-[#0066FF] focus:ring-2 focus:ring-[#0066FF]/30"
-                  placeholder=<EditableTranslation translationKey="request.form.fields.email.placeholder">{t('request.form.fields.email.placeholder')}</EditableTranslation>
+                  placeholder={t('request.form.fields.email.placeholder')}
                 />
               </label>
               <label className="flex flex-col gap-2 text-sm font-medium text-gray-700">
@@ -135,7 +135,7 @@ export default function Request() {
                   type="tel"
                   name="phone"
                   className="rounded-2xl border border-gray-200 px-4 py-3 text-base text-[#1A1A1A] outline-none transition focus:border-[#0066FF] focus:ring-2 focus:ring-[#0066FF]/30"
-                  placeholder=<EditableTranslation translationKey="request.form.fields.phone.placeholder">{t('request.form.fields.phone.placeholder')}</EditableTranslation>
+                  placeholder={t('request.form.fields.phone.placeholder')}
                 />
               </label>
               <label className="flex flex-col gap-2 text-sm font-medium text-gray-700 md:col-span-2">
@@ -158,7 +158,7 @@ export default function Request() {
                   rows={4}
                   maxLength={700}
                   className="rounded-2xl border border-gray-200 px-4 py-3 text-base text-[#1A1A1A] outline-none transition focus:border-[#0066FF] focus:ring-2 focus:ring-[#0066FF]/30 resize-none"
-                  placeholder=<EditableTranslation translationKey="request.form.fields.message.placeholder">{t('request.form.fields.message.placeholder')}</EditableTranslation>
+                  placeholder={t('request.form.fields.message.placeholder')}
                 />
               </label>
             </div>
