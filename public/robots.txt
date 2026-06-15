@@ -1,12 +1,27 @@
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /admin/
+Crawl-delay: 2
+
+# Block known aggressive crawlers / scanners
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+User-agent: DataForSeoBot
+Disallow: /
 
 # Sitemap
 Sitemap: https://zeusgrc.com/sitemap.xml
-
-# Crawl-delay
-Crawl-delay: 1
-
-# Disallow specific paths (if any)
-Disallow: /api/
-Disallow: /backend/
