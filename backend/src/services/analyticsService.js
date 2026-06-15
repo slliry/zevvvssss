@@ -1,7 +1,42 @@
 import db from '../db/index.js';
 import geoip from 'geoip-lite';
 
+// Паттерны User-Agent ботов/сканеров (lowercase)
+const BOT_UA_PATTERNS = [
+  'bot', 'crawler', 'spider', 'scraper', 'scanner',
+  'curl', 'wget', 'python-requests', 'python-urllib',
+  'go-http-client', 'java/', 'ruby', 'perl/',
+  'ahrefsbot', 'semrushbot', 'mj12bot', 'dotbot', 'petalbot',
+  'dataforseobot', 'yandexbot', 'baiduspider', 'bingbot',
+  'facebookexternalhit', 'twitterbot', 'linkedinbot',
+  'zgrab', 'masscan', 'nmap', 'nuclei', 'sqlmap',
+  'nikto', 'dirbuster', 'gobuster', 'wfuzz', 'ffuf',
+  'httpx', 'shodan', 'censys', 'zmap',
+];
+
+// Пути которые явно мусорные (сканеры ищут уязвимости)
+const SPAM_PATH_PATTERNS = [
+  '/home/index', '/wp-', '/wordpress', '/wp-admin', '/wp-login',
+  '/.env', '/.git', '/phpinfo', '/phpmyadmin', '/adminer',
+  '/config', '/setup', '/install', '/shell', '/cmd',
+  '/actuator', '/solr', '/jmx', '/.well-known/acme',
+  '/cgi-bin', '/login.php', '/admin.php', '/manager/',
+  '/xmlrpc', '/eval-stdin', '/vendor/', '/composer',
+];
+
 class AnalyticsService {
+  isBot(userAgent) {
+    if (!userAgent) return true;
+    const ua = userAgent.toLowerCase();
+    return BOT_UA_PATTERNS.some(pattern => ua.includes(pattern));
+  }
+
+  isSpamPath(pagePath) {
+    if (!pagePath) return true;
+    const path = pagePath.toLowerCase();
+    return SPAM_PATH_PATTERNS.some(pattern => path.includes(pattern));
+  }
+
   trackVisit(data) {
     const {
       ip,
@@ -13,6 +48,11 @@ class AnalyticsService {
       screenHeight = null,
       sessionId = null
     } = data;
+
+    // Фильтруем ботов и сканеры
+    if (this.isBot(userAgent) || this.isSpamPath(pagePath)) {
+      return { success: false, filtered: true };
+    }
 
     // Определяем геолокацию по IP
     const geo = geoip.lookup(ip);
@@ -53,17 +93,31 @@ class AnalyticsService {
     startDate.setDate(startDate.getDate() - days);
     const startDateStr = startDate.toISOString();
 
-    // Общая статистика
+    // Фильтр ботов для запросов (User-Agent без ботов)
+    const botFilter = `
+      AND (user_agent IS NULL OR (
+        user_agent NOT LIKE '%bot%'
+        AND user_agent NOT LIKE '%crawler%'
+        AND user_agent NOT LIKE '%spider%'
+        AND user_agent NOT LIKE '%curl%'
+        AND user_agent NOT LIKE '%wget%'
+        AND user_agent NOT LIKE '%python%'
+        AND user_agent NOT LIKE '%zgrab%'
+        AND user_agent NOT LIKE '%nuclei%'
+      ))
+    `;
+
+    // Общая статистика (без ботов)
     const totalVisits = db.prepare(`
       SELECT COUNT(*) as count 
       FROM analytics 
-      WHERE visited_at >= ?
+      WHERE visited_at >= ? ${botFilter}
     `).get(startDateStr).count;
 
     const uniqueVisitors = db.prepare(`
       SELECT COUNT(DISTINCT session_id) as count 
       FROM analytics 
-      WHERE visited_at >= ? AND session_id IS NOT NULL
+      WHERE visited_at >= ? AND session_id IS NOT NULL ${botFilter}
     `).get(startDateStr).count;
 
     // По странам
@@ -96,11 +150,27 @@ class AnalyticsService {
       LIMIT 10
     `).all(startDateStr);
 
-    // По страницам
+    // По страницам (исключаем мусорные пути)
     const byPage = db.prepare(`
       SELECT page_path, COUNT(*) as count 
       FROM analytics 
       WHERE visited_at >= ?
+        AND page_path NOT LIKE '%wp-%'
+        AND page_path NOT LIKE '%/home/index%'
+        AND page_path NOT LIKE '%/.env%'
+        AND page_path NOT LIKE '%phpinfo%'
+        AND page_path NOT LIKE '%phpmyadmin%'
+        AND page_path NOT LIKE '%/cgi-bin%'
+        AND (user_agent IS NULL OR (
+          user_agent NOT LIKE '%bot%'
+          AND user_agent NOT LIKE '%crawler%'
+          AND user_agent NOT LIKE '%spider%'
+          AND user_agent NOT LIKE '%curl%'
+          AND user_agent NOT LIKE '%wget%'
+          AND user_agent NOT LIKE '%python%'
+          AND user_agent NOT LIKE '%zgrab%'
+          AND user_agent NOT LIKE '%nuclei%'
+        ))
       GROUP BY page_path 
       ORDER BY count DESC 
       LIMIT 10
